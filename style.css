@@ -63,3 +63,9 @@ header nav ul li a:hover {
 .search-form button:hover {
     background-color: #777;
 }
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
