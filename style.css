@@ -66,8 +66,45 @@ header nav ul li a:hover {
 
 .hero img {
     width: 100%;
+    max-height: 700px;
+    object-fit: cover;
+    display: block;
+}
+
+.motivation {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.motivation-text {
+    flex: 1;
+}
+
+.motivation-text h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.motivation-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.motivation-image {
+    flex: 1;
+}
+
+.motivation-image img {
+    width: 100%;
     height: auto;
     display: block;
+    border-radius: 8px;
 }
 
 footer {
