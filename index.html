@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +8,15 @@
 </head>
 <body>
     <header>
-        <img src="Logo.jpg" alt="IU MTB Community e. V. Logo">
+        <img src="Logo.jpg" alt="">
         <h1>IU MTB Community e. V.</h1>
-        <form class="search-form" role="search">
-            <input type="search" placeholder="Suchen...">
-            <button type="submit">&#128269;</button>
+        <form class="search-form" role="search" aria-label="Suche">
+            <input type="search" aria-label="Suchbegriff eingeben" placeholder="Suchen...">
+            <button type="submit" aria-label="Suche starten">&#128269;</button>
         </form>
-        <nav>
+        <nav aria-label="Hauptnavigation">
             <ul>
-                <li><a href="index.html">Startseite</a></li>
+                <li><a href="index.html" aria-current="page">Startseite</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="team.html">Team</a></li>
                 <li><a href="landing_offer.html">Angebot</a></li>
@@ -26,26 +26,26 @@
         </nav>
     </header>
     <main>
-        <section class="hero">
-            <img src="Hero-Homepage.jpg" alt="Hero Bild">
+        <section class="hero" aria-label="Titelbild">
+            <img src="Hero-Homepage.jpg" alt="">
         </section>
-        <section class="motivation">
+        <section class="motivation" aria-labelledby="motivation-heading">
             <div class="motivation-text">
-                <h2>Warum Mountainbiken?</h2>
+                <h2 id="motivation-heading">Warum Mountainbiken?</h2>
                 <p>Mountainbiken ist mehr als nur ein Sport – es ist eine Leidenschaft, die Körper und Geist in Einklang bringt. Auf zwei Rädern erkundest du unberührte Natur, überwindest Hindernisse und erlebst ein einzigartiges Freiheitsgefühl.</p>
                 <p>Ob steile Trails, technische Abfahrten oder gemütliche Touren durch den Wald – der Mountainbike-Sport bietet für jeden das richtige Abenteuer. Dabei stärkst du nicht nur deine Ausdauer und Koordination, sondern findest auch den perfekten Ausgleich zum Alltag.</p>
                 <p>In unserer Community teilen wir diese Begeisterung gemeinsam – komm dazu und erlebe, was es bedeutet, mit uns die Trails zu erkunden!</p>
             </div>
             <div class="motivation-image">
-                <img src="MTB-Motivation.jpg" alt="Mountainbike Motivation">
+                <img src="MTB-Motivation.jpg" alt="Mountainbiker auf einem Trail im Wald">
             </div>
         </section>
-        <section class="news">
+        <section class="news" aria-labelledby="news-heading">
             <div class="news-image">
-                <img src="Newsbild.jpg" alt="MTB News">
+                <img src="Newsbild.jpg" alt="Mountainbike-Rennen auf einer Strecke">
             </div>
             <div class="news-text">
-                <h2>Aktuelles aus der MTB-Welt</h2>
+                <h2 id="news-heading">Aktuelles aus der MTB-Welt</h2>
                 <article>
                     <h3>UCI Mountain Bike World Series 2026 gestartet</h3>
                     <p>Die neue Saison der UCI Mountain Bike World Series ist in vollem Gange. Mit spannenden Rennen in Val di Sole und Lenzerheide zeigen die Top-Athleten beeindruckende Leistungen auf anspruchsvollen Strecken.</p>
@@ -61,10 +61,10 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer aria-label="Footer">
         <div class="footer-grid">
             <div class="footer-col">
-                <h3>Rechtliches</h3>
+                <h2>Rechtliches</h2>
                 <ul>
                     <li><a href="compliance.html">Impressum</a></li>
                     <li><a href="#">Datenschutzerklärung</a></li>
@@ -73,7 +73,7 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h3>Kontakt</h3>
+                <h2>Kontakt</h2>
                 <ul>
                     <li><a href="team.html">Unser Team</a></li>
                     <li><a href="team.html">Kontakt aufnehmen</a></li>

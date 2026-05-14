@@ -47,7 +47,6 @@ header nav ul li a:hover {
     border: none;
     border-radius: 4px 0 0 4px;
     font-size: 0.9rem;
-    outline: none;
 }
 
 .search-form button {
@@ -62,6 +61,20 @@ header nav ul li a:hover {
 
 .search-form button:hover {
     background-color: #777;
+}
+
+/* WCAG 2.4.7: Fokus-Indikatoren für Tastaturnutzer */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #005fcc;
+    outline-offset: 2px;
+}
+
+/* WCAG 2.4.11: aktueller Navigationslink */
+nav a[aria-current="page"] {
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 .hero img {
@@ -200,6 +213,6 @@ footer {
 .footer-copy {
     text-align: center;
     font-size: 0.8rem;
-    color: #888;
+    color: #aaa;
     margin-top: 20px;
 }
