@@ -9,7 +9,7 @@ Entsprechend der Aufgabenstellung zur Finalisierungsphase ist hier stichpunktart
 
 ## Barrierefreiheit
 
-* **Test auf Barrierefreiheit** mit ...
+* **Test auf Barrierefreiheit** mit Google Lighthouse
 * **serifenfreie Schrift**
 * **Inhaltsbilder** haben beschreibende Texte
 * **aria-label:** HTML-Elementen wird eine textuelle Beschreibung für Screenreader hinzufügt
