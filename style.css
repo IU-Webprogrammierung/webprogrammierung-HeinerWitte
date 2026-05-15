@@ -665,6 +665,181 @@ nav a[aria-current="page"] {
     color: #003a99;
 }
 
+.detail-hero {
+    background-color: #333;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.detail-hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.detail-hero-content h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 14px;
+}
+
+.detail-hero-content p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #ddd;
+}
+
+.detail-levels {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.detail-levels h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 36px;
+    color: #111;
+}
+
+.levels-grid {
+    overflow: hidden;
+}
+
+.level-card {
+    float: left;
+    width: 30.66%;
+    margin-right: 4%;
+    border-radius: 8px;
+    padding: 28px 24px;
+    border-top: 5px solid #333;
+    background-color: #f5f5f5;
+}
+
+.level-card:last-child {
+    margin-right: 0;
+}
+
+.level-card--easy {
+    border-top-color: #3a9e5f;
+}
+
+.level-card--medium {
+    border-top-color: #e07b00;
+}
+
+.level-card--hard {
+    border-top-color: #cc2200;
+}
+
+.level-badge {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #555;
+    letter-spacing: 3px;
+}
+
+.level-card--easy .level-badge  { color: #3a9e5f; }
+.level-card--medium .level-badge { color: #e07b00; }
+.level-card--hard .level-badge  { color: #cc2200; }
+
+.level-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.level-card p {
+    font-size: 0.93rem;
+    line-height: 1.7;
+    color: #222;
+    margin-bottom: 16px;
+}
+
+.level-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.level-list li {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #333;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.level-list li:last-child {
+    border-bottom: none;
+}
+
+.level-list li::before {
+    content: '✓ ';
+    font-weight: 700;
+    color: #555;
+}
+
+.detail-schedule {
+    background-color: #f5f5f5;
+    padding: 60px 20px;
+    margin-top: 0;
+}
+
+.detail-schedule h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 36px;
+    color: #111;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.schedule-table {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 0.92rem;
+}
+
+.schedule-table th {
+    background-color: #333;
+    color: white;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 12px 16px;
+    text-align: left;
+}
+
+.schedule-table td {
+    background-color: white;
+    color: #222;
+    padding: 12px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.schedule-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.level-dot {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+.level-dot--easy   { background-color: #3a9e5f; }
+.level-dot--medium { background-color: #e07b00; }
+.level-dot--hard   { background-color: #cc2200; }
+
 .detail-page {
     max-width: 1100px;
     margin: 40px auto;
