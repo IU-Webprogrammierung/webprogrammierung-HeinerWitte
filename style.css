@@ -404,6 +404,90 @@ nav a[aria-current="page"] {
     color: #003a99;
 }
 
+.detail-page {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px 40px;
+}
+
+.detail-intro {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 28px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.detail-intro h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    color: #222;
+}
+
+.detail-intro p {
+    font-size: 0.97rem;
+    line-height: 1.75;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.detail-intro p:last-child {
+    margin-bottom: 0;
+}
+
+.detail-columns {
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.detail-columns + .detail-columns {
+    margin-top: 60px;
+}
+
+.detail-text {
+    float: left;
+    width: 46%;
+    margin-right: 4%;
+}
+
+.detail-figure {
+    float: left;
+    width: 50%;
+    margin: 0;
+}
+
+.detail-columns--reversed .detail-figure {
+    margin-right: 4%;
+}
+
+.detail-columns--reversed .detail-text {
+    margin-right: 0;
+}
+
+.detail-text h3 {
+    font-size: 1.3rem;
+    margin-bottom: 14px;
+    color: #222;
+}
+
+.detail-text p {
+    font-size: 0.97rem;
+    line-height: 1.75;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.detail-text p:last-child {
+    margin-bottom: 0;
+}
+
+.detail-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
 .offer-section {
     overflow: hidden;
     padding: 40px 20px;
