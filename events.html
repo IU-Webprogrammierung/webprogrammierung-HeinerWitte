@@ -26,8 +26,30 @@
         </form>
     </header>
     <main>
+        <section class="events-hero" aria-label="Veranstaltungen – Einleitung">
+            <div class="events-hero-content">
+                <h2>Veranstaltungen 2026</h2>
+                <p>48 Events. 12 Monate. Ganz Deutschland. Such dir deinen nächsten Trail-Moment aus.</p>
+            </div>
+        </section>
+        <nav class="month-nav" aria-label="Monatsnavigation">
+            <ul>
+                <li><a href="#monat-jan">Jan</a></li>
+                <li><a href="#monat-feb">Feb</a></li>
+                <li><a href="#monat-mar">Mär</a></li>
+                <li><a href="#monat-apr">Apr</a></li>
+                <li><a href="#monat-mai">Mai</a></li>
+                <li><a href="#monat-jun">Jun</a></li>
+                <li><a href="#monat-jul">Jul</a></li>
+                <li><a href="#monat-aug">Aug</a></li>
+                <li><a href="#monat-sep">Sep</a></li>
+                <li><a href="#monat-okt">Okt</a></li>
+                <li><a href="#monat-nov">Nov</a></li>
+                <li><a href="#monat-dez">Dez</a></li>
+            </ul>
+        </nav>
         <section class="events-page" aria-labelledby="events-heading">
-            <h2 id="events-heading">Veranstaltungen 2026</h2>
+            <h2 id="events-heading" class="sr-only">Veranstaltungen 2026</h2>
             <p class="events-intro">
                 Hier findest du alle geplanten Veranstaltungen der IU MTB Community e. V. für das Jahr 2026 – übersichtlich nach Monaten gegliedert und überregional nach Datum sortiert. Von Wettkämpfen und Trainingstouren bis hin zu Vereinstreffen und Trailpflege-Aktionen: Für jeden ist etwas dabei.<br><br>
                 Du kennst eine Veranstaltung, die hier noch fehlt? Melde sie gern über unsere <a href="team.html">Kontaktseite</a> beim Team – wir nehmen sie schnellstmöglich auf.<br><br>
@@ -36,7 +58,7 @@
             <div class="events-grid">
 
                 <!-- Januar -->
-                <details class="event-card">
+                <details class="event-card" id="monat-jan">
                     <summary>Januar 2026</summary>
                     <div class="event-content">
                         <h3>Wintertrail – Schwarzwald</h3>
@@ -53,7 +75,7 @@
                 </details>
 
                 <!-- Februar -->
-                <details class="event-card">
+                <details class="event-card" id="monat-feb">
                     <summary>Februar 2026</summary>
                     <div class="event-content">
                         <h3>Singletrail-Cup – Bayern</h3>
@@ -70,7 +92,7 @@
                 </details>
 
                 <!-- März -->
-                <details class="event-card">
+                <details class="event-card" id="monat-mar">
                     <summary>März 2026</summary>
                     <div class="event-content">
                         <h3>Frühjahrskurs – Niedersachsen</h3>
@@ -87,7 +109,7 @@
                 </details>
 
                 <!-- April -->
-                <details class="event-card">
+                <details class="event-card" id="monat-apr">
                     <summary>April 2026</summary>
                     <div class="event-content">
                         <h3>Trailbau-Workshop – Saarland</h3>
@@ -104,7 +126,7 @@
                 </details>
 
                 <!-- Mai -->
-                <details class="event-card">
+                <details class="event-card" id="monat-mai">
                     <summary>Mai 2026</summary>
                     <div class="event-content">
                         <h3>Bikefestival – Stuttgart</h3>
@@ -121,7 +143,7 @@
                 </details>
 
                 <!-- Juni -->
-                <details class="event-card">
+                <details class="event-card" id="monat-jun">
                     <summary>Juni 2026</summary>
                     <div class="event-content">
                         <h3>Sommertour – Eifel</h3>
@@ -138,7 +160,7 @@
                 </details>
 
                 <!-- Juli -->
-                <details class="event-card">
+                <details class="event-card" id="monat-jul">
                     <summary>Juli 2026</summary>
                     <div class="event-content">
                         <h3>Alpenüberquerung – Berchtesgaden</h3>
@@ -155,7 +177,7 @@
                 </details>
 
                 <!-- August -->
-                <details class="event-card">
+                <details class="event-card" id="monat-aug">
                     <summary>August 2026</summary>
                     <div class="event-content">
                         <h3>Sommerfest & Vereinsrennen – Berlin</h3>
@@ -172,7 +194,7 @@
                 </details>
 
                 <!-- September -->
-                <details class="event-card">
+                <details class="event-card" id="monat-sep">
                     <summary>September 2026</summary>
                     <div class="event-content">
                         <h3>Herbst-Bikecamp – Schwarzwald</h3>
@@ -189,7 +211,7 @@
                 </details>
 
                 <!-- Oktober -->
-                <details class="event-card">
+                <details class="event-card" id="monat-okt">
                     <summary>Oktober 2026</summary>
                     <div class="event-content">
                         <h3>Oktobertour – Rhein-Main</h3>
@@ -206,7 +228,7 @@
                 </details>
 
                 <!-- November -->
-                <details class="event-card">
+                <details class="event-card" id="monat-nov">
                     <summary>November 2026</summary>
                     <div class="event-content">
                         <h3>Saisonabschluss-Tour – Bodensee</h3>
@@ -223,7 +245,7 @@
                 </details>
 
                 <!-- Dezember -->
-                <details class="event-card">
+                <details class="event-card" id="monat-dez">
                     <summary>Dezember 2026</summary>
                     <div class="event-content">
                         <h3>Winterwaldtour – Spessart</h3>
@@ -240,6 +262,11 @@
                 </details>
 
             </div>
+        </section>
+        <section class="events-cta" aria-labelledby="events-cta-heading">
+            <h2 id="events-cta-heading">Noch kein Mitglied?</h2>
+            <p>Alle Veranstaltungen stehen unseren Mitgliedern offen. Werde Teil der Community und fahre mit uns das ganze Jahr.</p>
+            <a href="mailto:kontakt@iu-mtb-community.de" class="team-cta-btn">E-Mail schreiben</a>
         </section>
     </main>
     <footer aria-label="Footer">

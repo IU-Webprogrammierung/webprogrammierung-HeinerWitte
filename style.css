@@ -835,6 +835,91 @@ nav a[aria-current="page"] {
     border-bottom: none;
 }
 
+.events-hero {
+    background-color: #333;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.events-hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.events-hero-content h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 14px;
+}
+
+.events-hero-content p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #ddd;
+}
+
+.month-nav {
+    background-color: #444;
+    padding: 0 20px;
+    position: sticky;
+    top: 70px;
+    z-index: 90;
+}
+
+.month-nav ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1100px;
+    overflow: hidden;
+}
+
+.month-nav ul li {
+    float: left;
+}
+
+.month-nav ul li a {
+    display: block;
+    padding: 12px 16px;
+    color: #ddd;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.month-nav ul li a:hover {
+    color: white;
+    background-color: #555;
+}
+
+.month-nav ul li a:focus-visible {
+    outline: 3px solid #005fcc;
+    outline-offset: -3px;
+}
+
+
+.events-cta {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.events-cta h2 {
+    font-size: 1.8rem;
+    margin-bottom: 14px;
+    color: #111;
+}
+
+.events-cta p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #222;
+    max-width: 520px;
+    margin: 0 auto 28px;
+}
+
 .events-page {
     max-width: 1100px;
     margin: 40px auto;
