@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="Logo.jpg" alt="">
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+    <header role="banner">
+        <img src="Logo.jpg" alt="" role="presentation">
         <h1>IU MTB Community e. V.</h1>
         <nav aria-label="Hauptnavigation">
-            <ul>
+            <ul role="list">
                 <li><a href="index.html">Startseite</a></li>
                 <li><a href="team.html" aria-current="page">Über uns</a></li>
                 <li><a href="landing_offer.html">Was wir bieten</a></li>
@@ -20,68 +21,69 @@
                 <li><a href="compliance.html">Impressum</a></li>
             </ul>
         </nav>
-        <form class="search-form" role="search" aria-label="Suche">
+        <form class="search-form" role="search" aria-label="Suche auf dieser Website">
             <input type="search" aria-label="Suchbegriff eingeben" placeholder="Suchen...">
             <button type="submit" aria-label="Suche starten">&#128269;</button>
         </form>
     </header>
-    <main>
-        <section class="team-hero" aria-label="Über uns – Einleitung">
+    <main id="main-content" role="main">
+        <section class="team-hero" aria-labelledby="team-hero-heading">
             <div class="team-hero-content">
-                <h2>Wir sind die IU MTB Community</h2>
+                <h2 id="team-hero-heading">Wir sind die IU MTB Community</h2>
                 <p>Ein Verein, der verbindet. Gegründet aus Leidenschaft, gewachsen durch Gemeinschaft – überregional, offen und für alle.</p>
             </div>
         </section>
         <section class="team-page" aria-labelledby="team-page-heading">
-            <h2 id="team-page-heading" class="sr-only">Über uns</h2>
+            <h2 id="team-page-heading" class="sr-only">Unser Team</h2>
             <div class="team-columns">
 
                 <!-- Spalte 1: Historie + Community-Bild -->
                 <div class="team-col">
-                    <article class="team-card">
-                        <h3>Unsere Geschichte</h3>
-                        <p>Die IU MTB Community e. V. wurde 2015 von einer kleinen Gruppe begeisterter Mountainbiker gegründet, die einen Ort schaffen 
-                            wollten, an dem Gleichgesinnte aus ganz Deutschland zusammenkommen. Was als loser Zusammenschluss von Freunden begann, 
+                    <article class="team-card" aria-labelledby="history-heading">
+                        <h3 id="history-heading">Unsere Geschichte</h3>
+                        <p>Die IU MTB Community e. V. wurde 2015 von einer kleinen Gruppe begeisterter Mountainbiker gegründet, die einen Ort schaffen
+                            wollten, an dem Gleichgesinnte aus ganz Deutschland zusammenkommen. Was als loser Zusammenschluss von Freunden begann,
                             wuchs schnell zu einem überregionalen Verein mit Mitgliedern aus über 12 Bundesländern.</p>
-                        <p>Heute organisiert der Verein regelmäßige Trainingstouren, überregionale Events und Trailpflege-Aktionen. Unser Ziel ist es, den 
+                        <p>Heute organisiert der Verein regelmäßige Trainingstouren, überregionale Events und Trailpflege-Aktionen. Unser Ziel ist es, den
                             Mountainbike-Sport für alle zugänglich zu machen – unabhängig von Alter oder Erfahrungsstand.</p>
                     </article>
-                    <figure class="team-figure">
-                        <img src="MTB-Community.jpg" alt="Mitglieder der IU MTB Community bei einer gemeinsamen Tour">
+                    <figure class="team-figure" aria-labelledby="community-bild-caption">
+                        <img src="MTB-Community.jpg" alt="">
+                        <figcaption id="community-bild-caption" class="sr-only">Mitglieder der IU MTB Community bei einer gemeinsamen Tour</figcaption>
                     </figure>
                 </div>
 
                 <!-- Spalte 2: Teilnehmer 1 + Teilnehmer 3 -->
                 <div class="team-col">
-                    <article class="team-card">
-                        <h3>Max Mustermann</h3>
-                        <p><strong>Vorsitzender</strong></p>
-                        <p>Max ist seit der Gründung dabei und treibt die Vereinsentwicklung mit viel Leidenschaft voran. Als erfahrener Enduro-Fahrer 
-                            mit über 15 Jahren Fahrerfahrung kennt er die Bedürfnisse der Community genau und setzt sich für eine offene und aktive 
+                    <article class="team-card" aria-labelledby="member-max-heading" aria-describedby="Rolle-von-Mitglied-Max">
+                        <h3 id="member-max-heading">Max Mustermann</h3>
+                        <p id="Rolle-von-Mitglied-Max"><strong>Vorsitzender</strong></p>
+                        <p>Max ist seit der Gründung dabei und treibt die Vereinsentwicklung mit viel Leidenschaft voran. Als erfahrener Enduro-Fahrer
+                            mit über 15 Jahren Fahrerfahrung kennt er die Bedürfnisse der Community genau und setzt sich für eine offene und aktive
                             Vereinskultur ein.</p>
                     </article>
-                    <article class="team-card">
-                        <h3>Lisa Bergmann</h3>
-                        <p><strong>Trainingskoordinatorin</strong></p>
-                        <p>Lisa plant und leitet die wöchentlichen Gruppentrainings und ist die Ansprechpartnerin für alle Fragen rund um Technik und 
+                    <article class="team-card" aria-labelledby="member-lisa-heading" aria-describedby="Rolle-von-Mitglied-Lisa">
+                        <h3 id="member-lisa-heading">Lisa Bergmann</h3>
+                        <p id="Rolle-von-Mitglied-Lisa"><strong>Trainingskoordinatorin</strong></p>
+                        <p>Lisa plant und leitet die wöchentlichen Gruppentrainings und ist die Ansprechpartnerin für alle Fragen rund um Technik und
                             Sicherheit auf dem Trail. Sie ist lizenzierte MTB-Trainerin und bringt frischen Wind in das Vereinsprogramm.</p>
                     </article>
                 </div>
 
                 <!-- Spalte 3: Teilnehmer 2 + Teilnehmer 4 -->
                 <div class="team-col">
-                    <article class="team-card">
-                        <h3>Jonas Stahl</h3>
-                        <p><strong>Eventmanager</strong></p>
-                        <p>Jonas ist für die Organisation unserer überregionalen Events verantwortlich. Von der Streckenplanung bis zur Logistik – er 
-                            sorgt dafür, dass jedes Vereinstreffen zu einem unvergesslichen Erlebnis wird. Seine Markenzeichen: akribische Planung und 
+                    <article class="team-card" aria-labelledby="member-jonas-heading" aria-describedby="Rolle-von-Mitglied-Jonas">
+                        <h3 id="member-jonas-heading">Jonas Stahl</h3>
+                        <p id="Rolle-von-Mitglied-Jonas"><strong>Veranstaltungsleiter</strong></p>
+                        <p>Jonas ist für die Organisation unserer überregionalen Events verantwortlich. Von der Streckenplanung bis zur Logistik – er
+                            sorgt dafür, dass jedes Vereinstreffen zu einem unvergesslichen Erlebnis wird. Seine Markenzeichen: akribische Planung und
                             gute Laune.</p>
                     </article>
-                    <article class="team-card">
-                        <h3>Sarah Müller</h3>
-                        <p><strong>Trailpflege & Umwelt</strong></p>
-                        <p>Sarah koordiniert unsere Trailpflege-Aktionen und setzt sich für einen nachhaltigen Umgang mit der Natur ein. Sie arbeitet 
-                            eng mit Forstverwaltungen und Naturschutzbehörden zusammen, um legale und naturverträgliche Strecken zu erhalten und neu 
+                    <article class="team-card" aria-labelledby="member-sarah-heading" aria-describedby="Rolle-von-Mitglied-Sarah">
+                        <h3 id="member-sarah-heading">Sarah Müller</h3>
+                        <p id="Rolle-von-Mitglied-Sarah"><strong>Trailpflege &amp; Umwelt</strong></p>
+                        <p>Sarah koordiniert unsere Trailpflege-Aktionen und setzt sich für einen nachhaltigen Umgang mit der Natur ein. Sie arbeitet
+                            eng mit Forstverwaltungen und Naturschutzbehörden zusammen, um legale und naturverträgliche Strecken zu erhalten und neu
                             zu schaffen.</p>
                     </article>
                 </div>
@@ -90,25 +92,25 @@
         </section>
         <section class="team-values" aria-labelledby="values-heading">
             <h2 id="values-heading">Unsere Werte</h2>
-            <div class="values-grid">
-                <article class="value-card">
+            <div class="values-grid" role="list">
+                <article class="value-card" role="listitem" aria-labelledby="value-leidenschaft">
                     <span class="value-icon" aria-hidden="true">&#127947;</span>
-                    <h3>Leidenschaft</h3>
+                    <h3 id="value-leidenschaft">Leidenschaft</h3>
                     <p>Mountainbiken ist für uns mehr als Sport – es ist eine Lebenseinstellung. Diese Begeisterung tragen wir in alles, was wir gemeinsam tun.</p>
                 </article>
-                <article class="value-card">
+                <article class="value-card" role="listitem" aria-labelledby="value-gemeinschaft">
                     <span class="value-icon" aria-hidden="true">&#129309;</span>
-                    <h3>Gemeinschaft</h3>
+                    <h3 id="value-gemeinschaft">Gemeinschaft</h3>
                     <p>Wir fahren zusammen, wachsen zusammen. Unsere Community lebt von gegenseitigem Respekt, Hilfsbereitschaft und echter Kameradschaft auf dem Trail.</p>
                 </article>
-                <article class="value-card">
+                <article class="value-card" role="listitem" aria-labelledby="value-nachhaltigkeit">
                     <span class="value-icon" aria-hidden="true">&#127807;</span>
-                    <h3>Nachhaltigkeit</h3>
+                    <h3 id="value-nachhaltigkeit">Nachhaltigkeit</h3>
                     <p>Wir lieben die Natur und tragen Verantwortung für sie. Trailpflege, Naturschutz und nachhaltiges Fahren sind feste Bestandteile unserer Vereinsarbeit.</p>
                 </article>
-                <article class="value-card">
+                <article class="value-card" role="listitem" aria-labelledby="value-offenheit">
                     <span class="value-icon" aria-hidden="true">&#128275;</span>
-                    <h3>Offenheit</h3>
+                    <h3 id="value-offenheit">Offenheit</h3>
                     <p>Egal ob Anfänger oder Profi, jung oder erfahren – bei uns ist jeder willkommen. Kein Leistungsdruck, kein Ausschluss, nur Freude am Fahren.</p>
                 </article>
             </div>
@@ -116,17 +118,17 @@
         <section class="team-contact-cta" aria-labelledby="team-cta-heading">
             <h2 id="team-cta-heading">Du möchtest Mitglied werden?</h2>
             <p>Schreib uns einfach eine Nachricht oder komm bei einem unserer nächsten Vereinstreffen vorbei – wir freuen uns auf dich!</p>
-            <div class="team-cta-actions">
-                <a href="mailto:kontakt@iu-mtb-community.de" class="team-cta-btn">E-Mail schreiben</a>
+            <div class="team-cta-actions" role="group" aria-labelledby="team-cta-heading">
+                <a href="mailto:kontakt@iu-mtb-community.de" class="team-cta-btn" aria-label="E-Mail schreiben an kontakt@iu-mtb-community.de">E-Mail schreiben</a>
                 <a href="events.html" class="team-cta-btn team-cta-btn--outline">Nächstes Treffen finden</a>
             </div>
         </section>
     </main>
-    <footer aria-label="Footer">
+    <footer role="contentinfo" aria-label="Seitenfuß">
         <div class="footer-grid">
             <div class="footer-col">
-                <h2>Rechtliches</h2>
-                <ul>
+                <h3>Rechtliches</h3>
+                <ul role="list">
                     <li><a href="compliance.html">Impressum</a></li>
                     <li><span class="footer-placeholder">Datenschutzerklärung</span></li>
                     <li><span class="footer-placeholder">AGB</span></li>
@@ -134,8 +136,8 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h2>Kontakt</h2>
-                <ul>
+                <h3>Kontakt</h3>
+                <ul role="list">
                     <li><a href="team.html">Unser Team</a></li>
                     <li><a href="team.html">Kontakt aufnehmen</a></li>
                 </ul>
