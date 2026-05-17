@@ -22,9 +22,13 @@ Einige Beispiele zur Umsetzung der Barrierefreiheit:
 * ```role-```Attribut ist ein wesentlicher Bestandteil von WAI-ARIA. Es teilt Hilfstechnologien wie Screenreadern mit, welche Funktion oder Bedeutung ein bestimmtes HTML-Element hat, insbesondere wenn dies nicht durch semantisches HTML (wie button, nav, header) ausgedrückt wird.
 * **```:focus-visible:```** Diese CSS-Pseudoklasse wird verwendet, um interaktive Elemente (Links / Buttons) nur dann visuell hervorzuheben, wenn sie über die Tastatur (z. B. Tab-Taste) fokussiert werden.
  * WCAG 2.4.1: Tastaturnutzer können Navigation mit ``` <a class="skip-link" href="#main-content"> ``` überspringen
- * 
+ 
 
 ## Sonstige Hinweise
 
 * Die HTML-Dateien sind nach Funktionen und nicht nach den Inhalten (wie im Navigationsmenü) benannt
-* Test auf Barrierefreiheit mit Google Lighthouse
+* Test auf mit Google Lighthouse auf Barrierefreiheit, Leistung, Best Practices, Suchmaschinenoptimierung und Progressive Web App, \
+z. B. Umsetzung mit:
+    * in jeder HTML-Datei ```<link rel="preconnect">``` + ```<link rel="stylesheet">``` im Head für schnelleres Font-Laden
+    * ```<meta name="description">``` auf allen 6 Seiten ergänzt – Lighthouse meldet ohne es einen SEO-Fehler
+    * Bilder ohne width/height verursachen potenziell einen Layout-Shift
