@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="Logo.jpg" alt="">
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+    <header role="banner">
+        <img src="Logo.jpg" alt="" role="presentation">
         <h1>IU MTB Community e. V.</h1>
         <nav aria-label="Hauptnavigation">
-            <ul>
+            <ul role="list">
                 <li><a href="index.html">Startseite</a></li>
                 <li><a href="team.html">Über uns</a></li>
                 <li><a href="landing_offer.html">Was wir bieten</a></li>
@@ -20,27 +21,27 @@
                 <li><a href="compliance.html">Impressum</a></li>
             </ul>
         </nav>
-        <form class="search-form" role="search" aria-label="Suche">
+        <form class="search-form" role="search" aria-label="Suche auf dieser Website">
             <input type="search" aria-label="Suchbegriff eingeben" placeholder="Suchen...">
             <button type="submit" aria-label="Suche starten">&#128269;</button>
         </form>
     </header>
-    <main>
-        <section class="detail-hero" aria-label="Treffen und Trainings – Einleitung">
+    <main id="main-content" role="main">
+        <section class="detail-hero" aria-labelledby="detail-hero-heading">
             <div class="detail-hero-content">
-                <h2>Treffen & Trainings</h2>
-                <p>Jede Woche. Überall in Deutschland. Für alle Levels – von der ersten Runde bis zum Profi-Trail.</p>
+                <h2 id="detail-hero-heading">Treffen &amp; Trainings</h2>
+                <p>Jede Woche. Überall in Deutschland. Für alle Schwierigkeitsgrade – von der ersten Runde bis zur Profi-Strecke.</p>
             </div>
         </section>
         <section class="detail-page" aria-labelledby="detail-heading">
-            <article class="detail-intro">
+            <article class="detail-intro" aria-labelledby="detail-heading">
                 <h2 id="detail-heading">Gemeinsam mehr erleben</h2>
-                <p>Mountainbiken macht alleine Spaß – aber gemeinsam macht es noch mehr Spaß. In unserem Verein kommst du regelmäßig mit anderen Fahrern zusammen, lernst neue Strecken kennen und wächst als Fahrer durch den Austausch in der Gruppe. Egal ob du gerade erst anfängst oder schon jahrelange Erfahrung mitbringst: Gemeinsame Aktivitäten stärken nicht nur deine Fahrtechnik, sondern auch den Zusammenhalt der Community.</p>
+                <p>Mountainbiken macht alleine Spaß – aber gemeinsam macht es noch mehr Spaß. In unserem Verein kommst du regelmäßig mit anderen Fahrern zusammen, lernst neue Strecken kennen und wächst als Fahrer durch den Austausch in der Gruppe. Egal ob du gerade erst anfängst oder schon jahrelange Erfahrung mitbringst: Gemeinsame Aktivitäten stärken nicht nur deine Fahrtechnik, sondern auch den Zusammenhalt im Verein.</p>
                 <p>Wer gemeinsam fährt, motiviert sich gegenseitig, überwindet Hemmschwellen und erlebt Momente, die man so schnell nicht vergisst. Der Verein bietet dir den Rahmen dafür – du bringst die Begeisterung mit.</p>
             </article>
             <div class="detail-columns">
-                <article class="detail-text">
-                    <h3>Gruppentreffen & gemeinsame Ausflüge</h3>
+                <article class="detail-text" aria-labelledby="gruppenausflug-heading">
+                    <h3 id="gruppenausflug-heading">Gruppentreffen &amp; gemeinsame Ausflüge</h3>
                     <p>Regelmäßig organisieren wir Gruppentreffen und mehrstündige Ausflüge in die schönsten Mountainbike-Regionen Deutschlands. Vom Schwarzwald über den Harz bis in die Alpen – unsere Touren führen dich durch abwechslungsreiches Gelände für alle Schwierigkeitsgrade.</p>
                     <p>Die Ausflüge werden im Voraus geplant und in unserem Veranstaltungskalender angekündigt. Vor Ort kümmern sich erfahrene Tourenführer um einen reibungslosen Ablauf, sodass du dich ganz auf das Fahren konzentrieren kannst.</p>
                     <p>Nach jeder Tour trifft sich die Gruppe zum gemeinsamen Ausklang – ob am Parkplatz, in einer Hütte oder beim nächsten Gasthaus. Diese Momente des gemeinsamen Entspannens und Erzählens gehören für viele unserer Mitglieder zum schönsten Teil des Vereinslebens.</p>
@@ -53,45 +54,45 @@
                 <figure class="detail-figure">
                     <img src="Gruppentraining.jpg" alt="Mitglieder der IU MTB Community beim gemeinsamen Gruppentraining">
                 </figure>
-                <article class="detail-text">
-                    <h3>Trainingsmöglichkeiten für alle Level</h3>
+                <article class="detail-text" aria-labelledby="training-heading">
+                    <h3 id="training-heading">Trainingsmöglichkeiten für alle Schwierigkeitsgrade</h3>
                     <p>Ob du deine Grundtechnik festigen oder gezielt an speziellen Fähigkeiten arbeiten möchtest – unser Vereinstraining bietet beides. In allgemeinen Gruppentrainings werden Basisfertigkeiten wie Bremstechnik, Kurvenfahrt und Balance gemeinsam geübt und verfeinert.</p>
-                    <p>Darüber hinaus bieten wir spezialisierte Einheiten für Fortgeschrittene an: Drops, Sprünge, steile Abfahrten und technische Passagen werden unter Anleitung lizenzierter MTB-Trainer sicher erlernt. So entwickelst du dich in deinem eigenen Tempo weiter – ohne Druck, aber mit klaren Zielen.</p>
+                    <p>Darüber hinaus bieten wir spezialisierte Einheiten für Fortgeschrittene an: Abfahrtsrampen, Sprünge, steile Abfahrten und technische Passagen werden unter Anleitung lizenzierter Fahrtechniktrainer sicher erlernt. So entwickelst du dich in deinem eigenen Tempo weiter – ohne Druck, aber mit klaren Zielen.</p>
                     <p>Das regelmäßige Training im Verein hält dich nicht nur fahrtechnisch fit, sondern sorgt auch dafür, dass du sicherer und entspannter auf neuen Strecken unterwegs bist. Und das Beste: Du lernst dabei Menschen kennen, die genauso begeistert sind wie du.</p>
                 </article>
             </div>
         </section>
         <section class="detail-levels" aria-labelledby="levels-heading">
-            <h2 id="levels-heading">Für welches Level bist du dabei?</h2>
-            <div class="levels-grid">
-                <article class="level-card level-card--easy">
-                    <div class="level-badge">&#9679;&#9679;&#9675;&#9675;</div>
-                    <h3>Einsteiger</h3>
-                    <p>Erste Ausfahrten auf flachen Waldwegen und einfachen Trails. Tempo und Technik spielen noch keine große Rolle – hier geht es ums Ankommen und Spaß haben.</p>
-                    <ul class="level-list">
+            <h2 id="levels-heading">Für welches Schwierigkeitsniveau bist du dabei?</h2>
+            <div class="levels-grid" role="list">
+                <article class="level-card level-card--easy" role="listitem" aria-labelledby="level-einsteiger-heading">
+                    <div class="level-badge" aria-hidden="true">&#9679;&#9679;&#9675;&#9675;</div>
+                    <h3 id="level-einsteiger-heading">Einsteiger</h3>
+                    <p>Erste Ausfahrten auf flachen Waldwegen und einfachen Strecken. Tempo und Technik spielen noch keine große Rolle – hier geht es ums Ankommen und Spaß haben.</p>
+                    <ul class="level-list" role="list">
                         <li>Flaches bis leicht hügeliges Gelände</li>
                         <li>Strecken 10–25 km</li>
                         <li>Geführte Touren mit Trainer</li>
                         <li>Leihräder verfügbar</li>
                     </ul>
                 </article>
-                <article class="level-card level-card--medium">
-                    <div class="level-badge">&#9679;&#9679;&#9679;&#9675;</div>
-                    <h3>Fortgeschrittene</h3>
-                    <p>Technisch anspruchsvollere Trails, längere Distanzen und gezielte Fahrtechnik-Einheiten. Du kennst dein Bike und willst es weiterentwickeln.</p>
-                    <ul class="level-list">
-                        <li>Singletrails und Wurzelpfade</li>
+                <article class="level-card level-card--medium" role="listitem" aria-labelledby="level-fortgeschrittene-heading">
+                    <div class="level-badge" aria-hidden="true">&#9679;&#9679;&#9679;&#9675;</div>
+                    <h3 id="level-fortgeschrittene-heading">Fortgeschrittene</h3>
+                    <p>Technisch anspruchsvollere Strecken, längere Distanzen und gezielte Fahrtechnik-Einheiten. Du kennst dein Fahrrad und willst es weiterentwickeln.</p>
+                    <ul class="level-list" role="list">
+                        <li>Schmalwege und Wurzelpfade</li>
                         <li>Strecken 30–60 km</li>
                         <li>Technik-Workshops inklusive</li>
                         <li>Videoanalyse auf Anfrage</li>
                     </ul>
                 </article>
-                <article class="level-card level-card--hard">
-                    <div class="level-badge">&#9679;&#9679;&#9679;&#9679;</div>
-                    <h3>Profis & Experten</h3>
-                    <p>Steile Abfahrten, Drops, Sprünge und anspruchsvolle Enduro-Strecken. Für erfahrene Fahrer, die ihre Grenzen kennen und gezielt erweitern wollen.</p>
-                    <ul class="level-list">
-                        <li>Enduro, Downhill, Bikepark</li>
+                <article class="level-card level-card--hard" role="listitem" aria-labelledby="level-profis-heading">
+                    <div class="level-badge" aria-hidden="true">&#9679;&#9679;&#9679;&#9679;</div>
+                    <h3 id="level-profis-heading">Profis &amp; Experten</h3>
+                    <p>Steile Abfahrten, Abfahrtsrampen, Sprünge und anspruchsvolle Geländestrecken. Für erfahrene Fahrer, die ihre Grenzen kennen und gezielt erweitern wollen.</p>
+                    <ul class="level-list" role="list">
+                        <li>Geländerennen, Abfahrt, Fahrpark</li>
                         <li>Strecken 50–100+ km</li>
                         <li>Schutzausrüstung Pflicht</li>
                         <li>Alpen- und Hochgebirgstouren</li>
@@ -101,13 +102,13 @@
         </section>
         <section class="detail-schedule" aria-labelledby="schedule-heading">
             <h2 id="schedule-heading">Regelmäßige Treffen – Wochenplan</h2>
-            <table class="schedule-table">
+            <table class="schedule-table" aria-labelledby="schedule-heading">
                 <thead>
                     <tr>
                         <th scope="col">Tag</th>
                         <th scope="col">Uhrzeit</th>
                         <th scope="col">Art</th>
-                        <th scope="col">Level</th>
+                        <th scope="col">Niveau</th>
                         <th scope="col">Region</th>
                     </tr>
                 </thead>
@@ -115,7 +116,7 @@
                     <tr>
                         <td>Dienstag</td>
                         <td>17:30 Uhr</td>
-                        <td>Feierabend-Ride</td>
+                        <td>Feierabendausfahrt</td>
                         <td><span class="level-dot level-dot--easy">Einsteiger</span></td>
                         <td>Nordrhein-Westfalen</td>
                     </tr>
@@ -129,7 +130,7 @@
                     <tr>
                         <td>Donnerstag</td>
                         <td>17:00 Uhr</td>
-                        <td>Gruppentrail</td>
+                        <td>Gruppenausfahrt</td>
                         <td><span class="level-dot level-dot--easy">Einsteiger</span></td>
                         <td>Hessen &amp; Rheinland-Pfalz</td>
                     </tr>
@@ -143,7 +144,7 @@
                     <tr>
                         <td>Samstag</td>
                         <td>10:00 Uhr</td>
-                        <td>Enduro-Training</td>
+                        <td>Geländetraining</td>
                         <td><span class="level-dot level-dot--hard">Profis</span></td>
                         <td>Alpen &amp; Mittelgebirge</td>
                     </tr>
@@ -151,18 +152,18 @@
                         <td>Sonntag</td>
                         <td>08:30 Uhr</td>
                         <td>Vereinsausfahrt</td>
-                        <td><span class="level-dot level-dot--easy">Alle Levels</span></td>
+                        <td><span class="level-dot level-dot--easy">Alle Niveaus</span></td>
                         <td>Bundesweit rotierend</td>
                     </tr>
                 </tbody>
             </table>
         </section>
     </main>
-    <footer aria-label="Footer">
+    <footer role="contentinfo" aria-label="Seitenfuß">
         <div class="footer-grid">
             <div class="footer-col">
-                <h2>Rechtliches</h2>
-                <ul>
+                <h3>Rechtliches</h3>
+                <ul role="list">
                     <li><a href="compliance.html">Impressum</a></li>
                     <li><span class="footer-placeholder">Datenschutzerklärung</span></li>
                     <li><span class="footer-placeholder">AGB</span></li>
@@ -170,8 +171,8 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h2>Kontakt</h2>
-                <ul>
+                <h3>Kontakt</h3>
+                <ul role="list">
                     <li><a href="team.html">Unser Team</a></li>
                     <li><a href="team.html">Kontakt aufnehmen</a></li>
                 </ul>
@@ -181,3 +182,4 @@
     </footer>
 </body>
 </html>
+

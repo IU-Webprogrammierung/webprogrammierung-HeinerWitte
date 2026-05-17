@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="Logo.jpg" alt="">
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+    <header role="banner">
+        <img src="Logo.jpg" alt="" role="presentation">
         <h1>IU MTB Community e. V.</h1>
         <nav aria-label="Hauptnavigation">
-            <ul>
+            <ul role="list">
                 <li><a href="index.html">Startseite</a></li>
                 <li><a href="team.html">Über uns</a></li>
                 <li><a href="landing_offer.html">Was wir bieten</a></li>
@@ -20,41 +21,41 @@
                 <li><a href="compliance.html">Impressum</a></li>
             </ul>
         </nav>
-        <form class="search-form" role="search" aria-label="Suche">
+        <form class="search-form" role="search" aria-label="Suche auf dieser Website">
             <input type="search" aria-label="Suchbegriff eingeben" placeholder="Suchen...">
             <button type="submit" aria-label="Suche starten">&#128269;</button>
         </form>
     </header>
-    <main>
-        <section class="events-hero" aria-label="Veranstaltungen – Einleitung">
+    <main id="main-content" role="main">
+        <section class="events-hero" aria-labelledby="events-hero-heading">
             <div class="events-hero-content">
-                <h2>Veranstaltungen 2026</h2>
-                <p>48 Events. 12 Monate. Ganz Deutschland. Such dir deinen nächsten Trail-Moment aus.</p>
+                <h2 id="events-hero-heading">Veranstaltungen 2026</h2>
+                <p>48 Veranstaltungen. 12 Monate. Ganz Deutschland. Such dir deinen nächsten Ausfahrt-Moment aus.</p>
             </div>
         </section>
-        <nav class="month-nav" aria-label="Monatsnavigation">
-            <ul>
-                <li><a href="#monat-jan">Jan</a></li>
-                <li><a href="#monat-feb">Feb</a></li>
-                <li><a href="#monat-mar">Mär</a></li>
-                <li><a href="#monat-apr">Apr</a></li>
+        <nav class="month-nav" aria-label="Sprung zu Monaten">
+            <ul role="list">
+                <li><a href="#monat-jan">Januar</a></li>
+                <li><a href="#monat-feb">Februar</a></li>
+                <li><a href="#monat-mar">März</a></li>
+                <li><a href="#monat-apr">April</a></li>
                 <li><a href="#monat-mai">Mai</a></li>
-                <li><a href="#monat-jun">Jun</a></li>
-                <li><a href="#monat-jul">Jul</a></li>
-                <li><a href="#monat-aug">Aug</a></li>
-                <li><a href="#monat-sep">Sep</a></li>
-                <li><a href="#monat-okt">Okt</a></li>
-                <li><a href="#monat-nov">Nov</a></li>
-                <li><a href="#monat-dez">Dez</a></li>
+                <li><a href="#monat-jun">Juni</a></li>
+                <li><a href="#monat-jul">Juli</a></li>
+                <li><a href="#monat-aug">August</a></li>
+                <li><a href="#monat-sep">September</a></li>
+                <li><a href="#monat-okt">Oktober</a></li>
+                <li><a href="#monat-nov">November</a></li>
+                <li><a href="#monat-dez">Dezember</a></li>
             </ul>
         </nav>
         <section class="events-page" aria-labelledby="events-heading">
-            <h2 id="events-heading" class="sr-only">Veranstaltungen 2026</h2>
+            <h2 id="events-heading" class="sr-only">Veranstaltungskalender 2026</h2>
             <p class="events-intro">
-                Hier findest du alle geplanten Veranstaltungen der IU MTB Community e. V. für das Jahr 2026 – übersichtlich nach Monaten gegliedert und überregional nach Datum sortiert. Von Wettkämpfen und Trainingstouren bis hin zu Vereinstreffen und Trailpflege-Aktionen: Für jeden ist etwas dabei.<br><br>
+                Hier findest du alle geplanten Veranstaltungen der IU MTB Community e. V. für das Jahr 2026 – übersichtlich nach Monaten gegliedert und überregional nach Datum sortiert. Von Wettkämpfen und Trainingstouren bis hin zu Vereinstreffen und Streckenpflege-Aktionen: Für jeden ist etwas dabei.<br><br>
                 Du kennst eine Veranstaltung, die hier noch fehlt? Melde sie gern über unsere <a href="team.html">Kontaktseite</a> beim Team – wir nehmen sie schnellstmöglich auf.<br><br>
                 <strong>Bitte beachte:</strong> Alle aufgeführten Termine sind verbindlich geplant. Sollte eine Veranstaltung dennoch nicht wie geplant stattfinden können, wird sie rechtzeitig abgesagt. Da sich der Stand jederzeit ändern kann, empfehlen wir dir, diese Seite regelmäßig zu besuchen, um immer über die aktuellen Termine informiert zu sein.
-            </p>            
+            </p>
             <div class="events-grid">
                 <div class="events-row">
 
@@ -62,16 +63,16 @@
                 <details class="event-card" id="monat-jan">
                     <summary>Januar 2026</summary>
                     <div class="event-content">
-                        <h3>Wintertrail – Schwarzwald</h3>
-                        <p><strong>10.01.2026</strong> – Gemeinsame Wintertour auf verschneiten Trails rund um Freiburg. Geeignet für erfahrene Fahrer. Treffpunkt: Parkplatz Schauinsland.</p>
+                        <h3>Wintertour – Schwarzwald</h3>
+                        <p><strong>10.01.2026</strong> – Gemeinsame Wintertour auf verschneiten Wegen rund um Freiburg. Geeignet für erfahrene Fahrer. Treffpunkt: Parkplatz Schauinsland.</p>
                         <h3>Vereinstreffen – Stuttgart</h3>
                         <p><strong>14.01.2026</strong> – Informelles Vereinstreffen zur Saisonplanung 2026. Alle Mitglieder sind herzlich eingeladen.</p>
-                        <h3>Neujahrskick – Ruhrgebiet</h3>
-                        <p><strong>17.01.2026</strong> – Entspannte Ausfahrt zum Jahresauftakt durch den Teutoburger Wald. Alle Levels willkommen.</p>
-                        <h3>Wintercamp – Brandenburg</h3>
-                        <p><strong>24.01.2026</strong> – Zweitägiges Wintercamp mit Lagerfeuer und Nachttour durch die Märkische Schweiz. Zelt und Schlafsack erforderlich.</p>
-                        <h3>Technik-Training – Münsterland</h3>
-                        <p><strong>31.01.2026</strong> – Fahrtechnik auf flachem Terrain für Einsteiger. Ideale Bedingungen für Kurventechnik und Bremsübungen.</p>
+                        <h3>Neujahrsausfahrt – Ruhrgebiet</h3>
+                        <p><strong>17.01.2026</strong> – Entspannte Ausfahrt zum Jahresauftakt durch den Teutoburger Wald. Alle Fahrniveaus willkommen.</p>
+                        <h3>Winterlager – Brandenburg</h3>
+                        <p><strong>24.01.2026</strong> – Zweitägiges Winterlager mit Lagerfeuer und Nachtausfahrt durch die Märkische Schweiz. Zelt und Schlafsack erforderlich.</p>
+                        <h3>Fahrtechnik-Training – Münsterland</h3>
+                        <p><strong>31.01.2026</strong> – Fahrtechnik auf flachem Gelände für Einsteiger. Ideale Bedingungen für Kurventechnik und Bremsübungen.</p>
                     </div>
                 </details>
 
@@ -79,16 +80,16 @@
                 <details class="event-card" id="monat-feb">
                     <summary>Februar 2026</summary>
                     <div class="event-content">
-                        <h3>Singletrail-Cup – Bayern</h3>
-                        <p><strong>07.02.2026</strong> – Vereinsinterner Wettkampf auf den Trails rund um Garmisch-Partenkirchen. Anmeldung erforderlich.</p>
+                        <h3>Schmalweg-Wettkampf – Bayern</h3>
+                        <p><strong>07.02.2026</strong> – Vereinsinterner Wettkampf auf den Wegen rund um Garmisch-Partenkirchen. Anmeldung erforderlich.</p>
                         <h3>Wintertour – Nordrhein-Westfalen</h3>
                         <p><strong>07.02.2026</strong> – Geführte Tour durch den Bergischen Wald bei Wuppertal. Ca. 40 km, mittleres Niveau.</p>
-                        <h3>Bikepflege-Workshop – Leipzig</h3>
-                        <p><strong>14.02.2026</strong> – Wartung und Reparatur am eigenen Bike. Werkzeug wird gestellt, Ersatzteile bitte selbst mitbringen.</p>
-                        <h3>Technik-Workshop – Sachsen</h3>
+                        <h3>Fahrrad-Pflegeworkshop – Leipzig</h3>
+                        <p><strong>14.02.2026</strong> – Wartung und Reparatur am eigenen Fahrrad. Werkzeug wird gestellt, Ersatzteile bitte selbst mitbringen.</p>
+                        <h3>Fahrtechnik-Workshop – Sachsen</h3>
                         <p><strong>21.02.2026</strong> – Fahrtechnikkurs für Einsteiger im Erzgebirge. Begrenzte Teilnehmerzahl.</p>
-                        <h3>Nachtride – Freiburg</h3>
-                        <p><strong>28.02.2026</strong> – Stimmungsvoller Nachtride mit Stirnlampen durch den Schwarzwald. Licht und Helm Pflicht.</p>
+                        <h3>Nachtausfahrt – Freiburg</h3>
+                        <p><strong>28.02.2026</strong> – Stimmungsvolle Nachtausfahrt mit Stirnlampen durch den Schwarzwald. Beleuchtung und Helm Pflicht.</p>
                     </div>
                 </details>
 
@@ -96,15 +97,15 @@
                 <details class="event-card" id="monat-mar">
                     <summary>März 2026</summary>
                     <div class="event-content">
-                        <h3>Frühjahrskurs – Niedersachsen</h3>
+                        <h3>Einsteigerkurs – Niedersachsen</h3>
                         <p><strong>07.03.2026</strong> – Einsteigerkurs für neue Vereinsmitglieder im Deister bei Hannover. Leihräder verfügbar.</p>
                         <h3>Frühjahrsauftakt – Rheinland-Pfalz</h3>
                         <p><strong>14.03.2026</strong> – Saisonauftakt im Pfälzerwald mit gemütlicher Gruppenrunde. Ca. 35 km, mittleres Niveau.</p>
                         <h3>Vereinstreffen – Köln</h3>
                         <p><strong>14.03.2026</strong> – Regionaltreffen der Westmitglieder zur Planung der Frühjahrssaison.</p>
-                        <h3>Graveltour – Moseltal</h3>
-                        <p><strong>21.03.2026</strong> – Entspannte Graveltour entlang der Mosel. Ca. 55 km, Einkehr ist eingeplant.</p>
-                        <h3>Trailpflege-Aktion – Hessen</h3>
+                        <h3>Schotterweg-Tour – Moseltal</h3>
+                        <p><strong>21.03.2026</strong> – Entspannte Schotterweg-Tour entlang der Mosel. Ca. 55 km, Einkehr ist eingeplant.</p>
+                        <h3>Streckenpflege – Hessen</h3>
                         <p><strong>28.03.2026</strong> – Gemeinsame Streckenpflege im Taunus. Material wird gestellt, Handschuhe mitbringen.</p>
                     </div>
                 </details>
@@ -113,16 +114,16 @@
                 <details class="event-card" id="monat-apr">
                     <summary>April 2026</summary>
                     <div class="event-content">
-                        <h3>Trailbau-Workshop – Saarland</h3>
-                        <p><strong>04.04.2026</strong> – Praktischer Workshop zum naturnahen Trailbau im Saarbrücker Stadtwald. Schaufel und Handschuhe mitbringen.</p>
-                        <h3>Enduro-Rennen – Thüringen</h3>
-                        <p><strong>11.04.2026</strong> – Vereinsrennen auf anspruchsvollen Enduro-Strecken rund um den Rennsteig. Für alle Mitglieder offen.</p>
-                        <h3>Oster-Tour – Nordsee-Küste</h3>
+                        <h3>Streckenbau-Workshop – Saarland</h3>
+                        <p><strong>04.04.2026</strong> – Praktischer Workshop zum naturnahen Streckenbau im Saarbrücker Stadtwald. Schaufel und Handschuhe mitbringen.</p>
+                        <h3>Geländerennen – Thüringen</h3>
+                        <p><strong>11.04.2026</strong> – Vereinsrennen auf anspruchsvollen Geländestrecken rund um den Rennsteig. Für alle Mitglieder offen.</p>
+                        <h3>Osterausfahrt – Nordseeküste</h3>
                         <p><strong>18.04.2026</strong> – Entspannte Mehrtagesfahrt entlang der Küste durch Schleswig-Holstein. Übernachtung in Vereinsunterkunft.</p>
                         <h3>Vereinsausflug – Bayerischer Wald</h3>
                         <p><strong>19.04.2026</strong> – Dreitägiger Vereinsausflug in den Bayerischen Wald. Hüttenübernachtung, Anmeldeschluss 05.04.</p>
-                        <h3>Frühlings-Marathon – Bodensee</h3>
-                        <p><strong>25.04.2026</strong> – 70-km-Marathon rund um den Bodensee. Flaches Gelände, ideal für Ausdauertraining.</p>
+                        <h3>Frühjahrs-Langstrecke – Bodensee</h3>
+                        <p><strong>25.04.2026</strong> – 70-km-Langstreckenfahrt rund um den Bodensee. Flaches Gelände, ideal für Ausdauertraining.</p>
                     </div>
                 </details>
 
@@ -133,16 +134,16 @@
                 <details class="event-card" id="monat-mai">
                     <summary>Mai 2026</summary>
                     <div class="event-content">
-                        <h3>Bikefestival – Stuttgart</h3>
-                        <p><strong>02.05.2026</strong> – Teilnahme am regionalen Bikefestival im Schönbuch. Gemeinsame Anreise ab Vereinstreffpunkt.</p>
-                        <h3>Marathon-Tour – Allgäu</h3>
-                        <p><strong>23.05.2026</strong> – 80-km-Marathon durch das Allgäuer Voralpenland. Nur für geübte Ausdauerfahrer.</p>
+                        <h3>Radmesse – Stuttgart</h3>
+                        <p><strong>02.05.2026</strong> – Teilnahme an der regionalen Radmesse im Schönbuch. Gemeinsame Anreise ab Vereinstreffpunkt.</p>
+                        <h3>Langstrecken-Tour – Allgäu</h3>
+                        <p><strong>23.05.2026</strong> – 80-km-Tour durch das Allgäuer Voralpenland. Nur für geübte Ausdauerfahrer.</p>
                         <h3>Familientag – Münsterland</h3>
                         <p><strong>09.05.2026</strong> – Kinderfreundliche Radtour durch das Münsterland. Kurze Strecke, Picknick inklusive.</p>
-                        <h3>Downhill-Kurs – Harz</h3>
-                        <p><strong>16.05.2026</strong> – Geführter Downhill-Kurs am Brocken für Fortgeschrittene. Schutzausrüstung Pflicht.</p>
-                        <h3>Nachtride – Ruhrgebiet</h3>
-                        <p><strong>30.05.2026</strong> – Stimmungsvoller Abendride durch den Revierpark Vonderort. Start 20:00 Uhr, Licht erforderlich.</p>
+                        <h3>Abfahrtskurs – Harz</h3>
+                        <p><strong>16.05.2026</strong> – Geführter Abfahrtskurs am Brocken für Fortgeschrittene. Schutzausrüstung Pflicht.</p>
+                        <h3>Abendausfahrt – Ruhrgebiet</h3>
+                        <p><strong>30.05.2026</strong> – Stimmungsvolle Abendausfahrt durch den Revierpark Vonderort. Start 20:00 Uhr, Beleuchtung erforderlich.</p>
                     </div>
                 </details>
 
@@ -154,11 +155,11 @@
                         <p><strong>06.06.2026</strong> – Zweitägige Tour durch die Vulkaneifel mit Übernachtung am Laacher See.</p>
                         <h3>Schnupperkurs – Köln</h3>
                         <p><strong>20.06.2026</strong> – Offener Schnupperkurs für Interessierte im Königsforst bei Köln. Leihräder verfügbar.</p>
-                        <h3>Enduro-Camp – Chiemgau</h3>
-                        <p><strong>13.06.2026</strong> – Dreitägiges Enduro-Camp in den Chiemgauer Alpen. Geführte Touren, Videoanalyse, Hüttenübernachtung.</p>
+                        <h3>Geländelager – Chiemgau</h3>
+                        <p><strong>13.06.2026</strong> – Dreitägiges Geländelager in den Chiemgauer Alpen. Geführte Touren, Videoanalyse, Hüttenübernachtung.</p>
                         <h3>Stadtradeln – Bremen</h3>
                         <p><strong>20.06.2026</strong> – Vereinsteilnahme am Stadtradeln in Bremen. Gemeinsam Kilometer sammeln für den guten Zweck.</p>
-                        <h3>Trailpflege – Thüringer Wald</h3>
+                        <h3>Streckenpflege – Thüringer Wald</h3>
                         <p><strong>27.06.2026</strong> – Gemeinschaftliche Streckenpflege im Thüringer Wald. Werkzeug wird gestellt, Verpflegung inklusive.</p>
                     </div>
                 </details>
@@ -169,10 +170,10 @@
                     <div class="event-content">
                         <h3>Alpenüberquerung – Berchtesgaden</h3>
                         <p><strong>11.07.2026</strong> – Mehrtägige Alpenüberquerung von Berchtesgaden nach Südtirol. Erfahrene Bergfahrer, Voranmeldung bis 30.06.</p>
-                        <h3>Feierabendtrail – Hamburg</h3>
-                        <p><strong>23.07.2026</strong> – Wöchentlicher Feierabendtrail im Forst Klövensteen. Jeden Donnerstag im Juli.</p>
-                        <h3>Bikepark-Tag – Winterberg</h3>
-                        <p><strong>04.07.2026</strong> – Gemeinsamer Tag im Bikepark Winterberg. Tagestickets werden gemeinsam organisiert, Anmeldung bis 27.06.</p>
+                        <h3>Feierabendausfahrt – Hamburg</h3>
+                        <p><strong>23.07.2026</strong> – Wöchentliche Feierabendausfahrt im Forst Klövensteen. Jeden Donnerstag im Juli.</p>
+                        <h3>Fahrpark-Tag – Winterberg</h3>
+                        <p><strong>04.07.2026</strong> – Gemeinsamer Tag im Fahrpark Winterberg. Tagestickets werden gemeinsam organisiert, Anmeldung bis 27.06.</p>
                         <h3>Küstentour – Ostsee</h3>
                         <p><strong>18.07.2026</strong> – Zweitägige Radtour entlang der Ostseeküste zwischen Rostock und Stralsund. Gepäcktransport inklusive.</p>
                         <h3>Vereinsgrillen – München</h3>
@@ -184,14 +185,14 @@
                 <details class="event-card" id="monat-aug">
                     <summary>August 2026</summary>
                     <div class="event-content">
-                        <h3>Sommerfest & Vereinsrennen – Berlin</h3>
+                        <h3>Sommerfest &amp; Vereinsrennen – Berlin</h3>
                         <p><strong>08.08.2026</strong> – Großes Vereinssommerfest mit Rennen, Grill und Lagerfeuer im Grunewald. Familien willkommen.</p>
-                        <h3>Gravelbike-Tour – Mecklenburg</h3>
-                        <p><strong>22.08.2026</strong> – Graveltour durch die Mecklenburgische Seenplatte. Ca. 60 km, gemischtes Gelände.</p>
+                        <h3>Schotterwegen-Tour – Mecklenburg</h3>
+                        <p><strong>22.08.2026</strong> – Schotterweg-Tour durch die Mecklenburgische Seenplatte. Ca. 60 km, gemischtes Gelände.</p>
                         <h3>Hochgebirgstour – Zugspitze</h3>
                         <p><strong>01.08.2026</strong> – Anspruchsvolle Hochgebirgstour rund um die Zugspitze. Nur für sehr erfahrene Bergfahrer, Voranmeldung erforderlich.</p>
-                        <h3>Kindercamp – Freiburg</h3>
-                        <p><strong>15.08.2026</strong> – Einwöchiges MTB-Feriencamp für Kinder von 8–14 Jahren im Schwarzwald. Anmeldung bis 01.08.</p>
+                        <h3>Feriencamp – Freiburg</h3>
+                        <p><strong>15.08.2026</strong> – Einwöchiges Fahrrad-Feriencamp für Kinder von 8–14 Jahren im Schwarzwald. Anmeldung bis 01.08.</p>
                         <h3>Abendtour – Düsseldorf</h3>
                         <p><strong>29.08.2026</strong> – Entspannte Abendtour entlang des Rheins bei Düsseldorf. Ca. 25 km, gemütliches Tempo, Einkehr geplant.</p>
                     </div>
@@ -204,14 +205,14 @@
                 <details class="event-card" id="monat-sep">
                     <summary>September 2026</summary>
                     <div class="event-content">
-                        <h3>Herbst-Bikecamp – Schwarzwald</h3>
-                        <p><strong>05.09.2026</strong> – Dreitägiges Bikecamp im herbstlichen Schwarzwald. Geführte Touren verschiedener Schwierigkeitsgrade.</p>
+                        <h3>Herbst-Fahrlager – Schwarzwald</h3>
+                        <p><strong>05.09.2026</strong> – Dreitägiges Fahrlager im herbstlichen Schwarzwald. Geführte Touren verschiedener Schwierigkeitsgrade.</p>
                         <h3>Herbsttour – Sauerland</h3>
                         <p><strong>12.09.2026</strong> – Dreitägige Herbsttour durch das Sauerland mit Übernachtung in der Vereinshütte. Anmeldeschluss: 31.08.</p>
-                        <h3>Technik-Workshop – Hannover</h3>
-                        <p><strong>19.09.2026</strong> – Fortgeschrittenen-Fahrtechnik auf dem Pumptrack in Hannover. Begrenzte Plätze, Anmeldung erforderlich.</p>
-                        <h3>Cross-Country-Rennen – Dresden</h3>
-                        <p><strong>26.09.2026</strong> – Regionaler Cross-Country-Wettkampf in der Dresdner Heide. Zeitmessung und Pokale.</p>
+                        <h3>Fahrtechnik-Workshop – Hannover</h3>
+                        <p><strong>19.09.2026</strong> – Fortgeschrittenen-Fahrtechnik auf dem Übungsgelände in Hannover. Begrenzte Plätze, Anmeldung erforderlich.</p>
+                        <h3>Geländerennen – Dresden</h3>
+                        <p><strong>26.09.2026</strong> – Regionaler Geländewettkampf in der Dresdner Heide. Zeitmessung und Pokale.</p>
                         <h3>Vereinstreffen – Leipzig</h3>
                         <p><strong>27.09.2026</strong> – Regionaltreffen der Ostmitglieder mit Saisonrückblick und Planung des Winterprogramms.</p>
                     </div>
@@ -223,14 +224,14 @@
                     <div class="event-content">
                         <h3>Oktobertour – Rhein-Main</h3>
                         <p><strong>03.10.2026</strong> – Feiertagsausfahrt durch den Taunus. Ca. 45 km, gemütliches Tempo, Einkehr in Vereinsgaststätte.</p>
-                        <h3>Herbstblatt-Tour – Franken</h3>
-                        <p><strong>10.10.2026</strong> – Genussfahrt durch das herbstliche Franken rund um Rothenburg ob der Tauber. Alle Levels.</p>
-                        <h3>Trailpflege – Erzgebirge</h3>
+                        <h3>Herbstfarben-Tour – Franken</h3>
+                        <p><strong>10.10.2026</strong> – Genussfahrt durch das herbstliche Franken rund um Rothenburg ob der Tauber. Alle Fahrniveaus.</p>
+                        <h3>Streckenpflege – Erzgebirge</h3>
                         <p><strong>17.10.2026</strong> – Herbstliche Streckenpflege im Erzgebirge vor dem Winter. Material und Verpflegung werden gestellt.</p>
-                        <h3>Downhill-Day – Harz</h3>
-                        <p><strong>24.10.2026</strong> – Geführter Downhill-Tag am Wurmberg. Schutzausrüstung erforderlich, Helmpflicht.</p>
-                        <h3>Foto-Ride – Moselfranken</h3>
-                        <p><strong>31.10.2026</strong> – Entspannter Fotoride durch die herbstlichen Weinberge an der Mosel. Kamera mitbringen!</p>
+                        <h3>Abfahrtstag – Harz</h3>
+                        <p><strong>24.10.2026</strong> – Geführter Abfahrtstag am Wurmberg. Schutzausrüstung erforderlich, Helmpflicht.</p>
+                        <h3>Fotoausfahrt – Moselfranken</h3>
+                        <p><strong>31.10.2026</strong> – Entspannte Fotoausfahrt durch die herbstlichen Weinberge an der Mosel. Kamera mitbringen!</p>
                     </div>
                 </details>
 
@@ -241,11 +242,11 @@
                         <h3>Saisonabschluss-Tour – Bodensee</h3>
                         <p><strong>07.11.2026</strong> – Saisonabschlusstour rund um den Bodensee. Gemütliches Tempo, Einkehr geplant.</p>
                         <h3>Wintervorbereitung – Köln</h3>
-                        <p><strong>07.11.2026</strong> – Workshop zur Wintervorbereitung des Bikes: Beleuchtung, Bereifung, Pflege. Werkzeug wird gestellt.</p>
-                        <h3>Nebelride – Lüneburger Heide</h3>
-                        <p><strong>14.11.2026</strong> – Stimmungsvolle Herbsttour durch die nebelverhangene Lüneburger Heide. Ca. 30 km, alle Levels.</p>
+                        <p><strong>07.11.2026</strong> – Workshop zur Wintervorbereitung des Fahrrads: Beleuchtung, Bereifung, Pflege. Werkzeug wird gestellt.</p>
+                        <h3>Nebelausfahrt – Lüneburger Heide</h3>
+                        <p><strong>14.11.2026</strong> – Stimmungsvolle Herbsttour durch die nebelverhangene Lüneburger Heide. Ca. 30 km, alle Fahrniveaus.</p>
                         <h3>Vereinsabend – Frankfurt</h3>
-                        <p><strong>21.11.2026</strong> – Geselliger Vereinsabend mit Dia-Show der Saisonhöhepunkte und Planung 2027. Alle Mitglieder eingeladen.</p>
+                        <p><strong>21.11.2026</strong> – Geselliger Vereinsabend mit Bilderschau der Saisonhöhepunkte und Planung 2027. Alle Mitglieder eingeladen.</p>
                         <h3>Jahreshauptversammlung – Online</h3>
                         <p><strong>28.11.2026</strong> – Digitale Jahreshauptversammlung mit Vorstandswahl und Jahresbericht. Einladung folgt per E-Mail.</p>
                     </div>
@@ -257,14 +258,14 @@
                     <div class="event-content">
                         <h3>Winterwaldtour – Spessart</h3>
                         <p><strong>05.12.2026</strong> – Stimmungsvolle Adventstour durch den winterlichen Spessart. Abschluss mit Glühwein am Lagerfeuer.</p>
-                        <h3>Bike-Tauschbörse – Stuttgart</h3>
-                        <p><strong>06.12.2026</strong> – Vereinsinterne Tauschbörse für gebrauchtes Bike-Zubehör und Ersatzteile. Eintritt frei.</p>
-                        <h3>Winterride – Erzgebirge</h3>
-                        <p><strong>12.12.2026</strong> – Geführte Wintertour durch den verschneiten Erzgebirgswald. Winterreifen empfohlen, warme Kleidung Pflicht.</p>
-                        <h3>Jahresrückblick & Weihnachtsfeier – Frankfurt</h3>
+                        <h3>Fahrrad-Tauschbörse – Stuttgart</h3>
+                        <p><strong>06.12.2026</strong> – Vereinsinterne Tauschbörse für gebrauchtes Fahrradzubehör und Ersatzteile. Eintritt frei.</p>
+                        <h3>Winterausfahrt – Erzgebirge</h3>
+                        <p><strong>12.12.2026</strong> – Geführte Winterausfahrt durch den verschneiten Erzgebirgswald. Winterreifen empfohlen, warme Kleidung Pflicht.</p>
+                        <h3>Jahresrückblick &amp; Weihnachtsfeier – Frankfurt</h3>
                         <p><strong>19.12.2026</strong> – Vereinsweihnachtsfeier mit Jahresrückblick, Ehrungen und gemütlichem Beisammensein.</p>
-                        <h3>Silvester-Ride – Berlin</h3>
-                        <p><strong>31.12.2026</strong> – Abschlussride des Jahres durch den Grunewald zum Jahreswechsel. Start 22:00 Uhr, Feuerwerk inklusive.</p>
+                        <h3>Silvesterausfahrt – Berlin</h3>
+                        <p><strong>31.12.2026</strong> – Abschlussausfahrt des Jahres durch den Grunewald zum Jahreswechsel. Start 22:00 Uhr, Feuerwerk inklusive.</p>
                     </div>
                 </details>
 
@@ -273,15 +274,15 @@
         </section>
         <section class="events-cta" aria-labelledby="events-cta-heading">
             <h2 id="events-cta-heading">Noch kein Mitglied?</h2>
-            <p>Alle Veranstaltungen stehen unseren Mitgliedern offen. Werde Teil der Community und fahre mit uns das ganze Jahr.</p>
-            <a href="mailto:kontakt@iu-mtb-community.de" class="team-cta-btn">E-Mail schreiben</a>
+            <p>Alle Veranstaltungen stehen unseren Mitgliedern offen. Werde Teil des Vereins und fahre mit uns das ganze Jahr.</p>
+            <a href="mailto:kontakt@iu-mtb-community.de" class="team-cta-btn" aria-label="E-Mail schreiben an kontakt@iu-mtb-community.de">E-Mail schreiben</a>
         </section>
     </main>
-    <footer aria-label="Footer">
+    <footer role="contentinfo" aria-label="Seitenfuß">
         <div class="footer-grid">
             <div class="footer-col">
-                <h2>Rechtliches</h2>
-                <ul>
+                <h3>Rechtliches</h3>
+                <ul role="list">
                     <li><a href="compliance.html">Impressum</a></li>
                     <li><span class="footer-placeholder">Datenschutzerklärung</span></li>
                     <li><span class="footer-placeholder">AGB</span></li>
@@ -289,8 +290,8 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h2>Kontakt</h2>
-                <ul>
+                <h3>Kontakt</h3>
+                <ul role="list">
                     <li><a href="team.html">Unser Team</a></li>
                     <li><a href="team.html">Kontakt aufnehmen</a></li>
                 </ul>

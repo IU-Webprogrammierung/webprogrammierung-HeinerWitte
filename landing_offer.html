@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="Logo.jpg" alt="">
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+    <header role="banner">
+        <img src="Logo.jpg" alt="" role="presentation">
         <h1>IU MTB Community e. V.</h1>
         <nav aria-label="Hauptnavigation">
-            <ul>
+            <ul role="list">
                 <li><a href="index.html">Startseite</a></li>
                 <li><a href="team.html">Über uns</a></li>
                 <li><a href="landing_offer.html" aria-current="page">Was wir bieten</a></li>
@@ -20,52 +21,55 @@
                 <li><a href="compliance.html">Impressum</a></li>
             </ul>
         </nav>
-        <form class="search-form" role="search" aria-label="Suche">
+        <form class="search-form" role="search" aria-label="Suche auf dieser Website">
             <input type="search" aria-label="Suchbegriff eingeben" placeholder="Suchen...">
             <button type="submit" aria-label="Suche starten">&#128269;</button>
         </form>
     </header>
-    <main>
-        <section class="hero" aria-label="Titelbild">
-            <img src="Wir-bieten-heroimage.jpg" alt="">
+    <main id="main-content" role="main">
+        <section class="hero" aria-hidden="true">
+            <img src="Wir-bieten-heroimage.jpg" alt="" role="presentation">
         </section>
         <section class="offer-section" aria-labelledby="offer-heading">
             <h2 id="offer-heading" class="sr-only">Was wir bieten</h2>
             <div class="offer-columns">
-                <article class="offer-card">
-                    <h3>Gemeinschaft & Netzwerk</h3>
-                    <p>Als Mitglied der IU MTB Community e. V. bist du Teil einer aktiven Gemeinschaft von Gleichgesinnten aus ganz Deutschland. Egal ob Einsteiger oder erfahrener Trailheld – bei uns findest du Mitfahrer auf deinem Level, tauschst dich über Strecken, Ausrüstung und Technik aus und knüpfst Freundschaften, die weit über den Trail hinausgehen.</p>
-                    <p>Unser überregionales Netzwerk verbindet Menschen aus über 12 Bundesländern. Ob spontane Feierabendtour oder geplante Mehrtagesfahrt – du findest immer jemanden, der mitkommt.</p>
+                <article class="offer-card" aria-labelledby="offer-gemeinschaft-heading">
+                    <h3 id="offer-gemeinschaft-heading">Gemeinschaft &amp; Netzwerk</h3>
+                    <p>Als Mitglied der IU MTB Community e. V. bist du Teil einer aktiven Gemeinschaft von Gleichgesinnten aus ganz Deutschland. Egal ob Einsteiger oder erfahrener Fahrer – bei uns findest du Mitfahrer auf deinem Niveau, tauschst dich über Strecken, Ausrüstung und Technik aus und knüpfst Freundschaften, die weit über den Fahrweg hinausgehen.</p>
+                    <p>Unser überregionales Netzwerk verbindet Menschen aus über 12 Bundesländern. Ob spontane Feierabendausfahrt oder geplante Mehrtagesfahrt – du findest immer jemanden, der mitkommt.</p>
                 </article>
-                <article class="offer-card">
-                    <h3>Events, Training & Trails</h3>
-                    <p>Wir organisieren das ganze Jahr über Veranstaltungen: von geführten Techniktrainings und Gruppentouren über überregionale Vereinstreffen bis hin zu Wettkämpfen und Trailpflege-Aktionen. Dabei profitierst du von lizenziertem Trainerpersonal, strukturierten Übungseinheiten und dem Wissen erfahrener Fahrer.</p>
-                    <p>Durch unsere Zusammenarbeit mit Forstverwaltungen und Naturschutzbehörden sichern wir legale Strecken und schaffen neue Trails – damit du auch in Zukunft ungestört und nachhaltig die Natur genießen kannst.</p>
+                <article class="offer-card" aria-labelledby="offer-events-heading">
+                    <h3 id="offer-events-heading">Veranstaltungen, Training &amp; Strecken</h3>
+                    <p>Wir organisieren das ganze Jahr über Veranstaltungen: von geführten Fahrtechniktrainings und Gruppentouren über überregionale Vereinstreffen bis hin zu Wettkämpfen und Streckenpflege-Aktionen. Dabei profitierst du von lizenziertem Lehrpersonal, strukturierten Übungseinheiten und dem Wissen erfahrener Fahrer.</p>
+                    <p>Durch unsere Zusammenarbeit mit Forstverwaltungen und Naturschutzbehörden sichern wir legale Strecken und schaffen neue Fahrwege – damit du auch in Zukunft ungestört und nachhaltig die Natur genießen kannst.</p>
                 </article>
             </div>
         </section>
-        <section class="offer-image" aria-label="Gemeinsam unterwegs">
-            <img src="gemeinsam.jpg" alt="Mountainbiker der IU MTB Community gemeinsam auf einem Trail">
+        <section class="offer-image" aria-labelledby="offer-bild-caption">
+            <figure>
+                <img src="gemeinsam.jpg" alt="">
+                <figcaption id="offer-bild-caption" class="sr-only">Mitglieder der IU MTB Community gemeinsam auf einer Ausfahrt</figcaption>
+            </figure>
         </section>
         <section class="offer-benefits" aria-labelledby="benefits-heading">
             <h2 id="benefits-heading">Deine Vorteile als Vereinsmitglied</h2>
-            <ul>
+            <ul role="list">
                 <li><strong>Neue Freundschaften schließen</strong> – Lerne Gleichgesinnte aus deiner Region und ganz Deutschland kennen, die dieselbe Leidenschaft teilen.</li>
                 <li><strong>Gemeinsam fahren, gemeinsam wachsen</strong> – Profitiere von erfahrenen Mitfahrern, teile dein Wissen und entwickle deine Fahrtechnik kontinuierlich weiter.</li>
-                <li><strong>Nach der Tour entspannen</strong> – Ob gemütliches Grillen am Trailhead, ein kühles Bier in der Vereinshütte oder ein lockeres Zusammensitzen nach einer langen Ausfahrt – bei uns gehört das Miteinander dazu.</li>
-                <li><strong>Organisierte Events ohne Aufwand</strong> – Genieße perfekt geplante Ausfahrten, Touren und Wettkämpfe, ohne selbst stundenlang koordinieren zu müssen.</li>
-                <li><strong>Exklusive Streckenkenntnis</strong> – Entdecke Trails und Routen, die du alleine nie gefunden hättest – dank des überregionalen Netzwerks unserer Mitglieder.</li>
-                <li><strong>Sicherheit auf dem Trail</strong> – Fahre nie allein in unbekanntem Gelände. In der Gruppe bist du besser abgesichert und hast immer jemanden an deiner Seite.</li>
-                <li><strong>Professionelles Training</strong> – Nimm an lizenzierten Techniktrainings teil und verbessere gezielt deine Fähigkeiten – von der Grundtechnik bis zum Fortgeschrittenenkurs.</li>
-                <li><strong>Mitgestalten & Mitentscheiden</strong> – Als eingetragener Verein hast du eine Stimme. Bringe eigene Ideen ein, wähle den Vorstand und forme aktiv die Zukunft der Community.</li>
+                <li><strong>Nach der Tour entspannen</strong> – Ob gemütliches Grillen am Treffpunkt, ein kühles Getränk in der Vereinshütte oder ein lockeres Zusammensitzen nach einer langen Ausfahrt – bei uns gehört das Miteinander dazu.</li>
+                <li><strong>Organisierte Veranstaltungen ohne Aufwand</strong> – Genieße perfekt geplante Ausfahrten, Touren und Wettkämpfe, ohne selbst stundenlang koordinieren zu müssen.</li>
+                <li><strong>Umfangreiche Streckenkenntnis</strong> – Entdecke Fahrwege und Routen, die du alleine nie gefunden hättest – dank des überregionalen Netzwerks unserer Mitglieder.</li>
+                <li><strong>Sicherheit auf der Strecke</strong> – Fahre nie allein in unbekanntem Gelände. In der Gruppe bist du besser abgesichert und hast immer jemanden an deiner Seite.</li>
+                <li><strong>Fachkundiges Training</strong> – Nimm an lizenzierten Fahrtechniktrainings teil und verbessere gezielt deine Fähigkeiten – von der Grundtechnik bis zum Fortgeschrittenenkurs.</li>
+                <li><strong>Mitgestalten &amp; Mitentscheiden</strong> – Als eingetragener Verein hast du eine Stimme. Bringe eigene Ideen ein, wähle den Vorstand und forme aktiv die Zukunft des Vereins.</li>
             </ul>
         </section>
     </main>
-    <footer aria-label="Footer">
+    <footer role="contentinfo" aria-label="Seitenfuß">
         <div class="footer-grid">
             <div class="footer-col">
-                <h2>Rechtliches</h2>
-                <ul>
+                <h3>Rechtliches</h3>
+                <ul role="list">
                     <li><a href="compliance.html">Impressum</a></li>
                     <li><span class="footer-placeholder">Datenschutzerklärung</span></li>
                     <li><span class="footer-placeholder">AGB</span></li>
@@ -73,8 +77,8 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h2>Kontakt</h2>
-                <ul>
+                <h3>Kontakt</h3>
+                <ul role="list">
                     <li><a href="team.html">Unser Team</a></li>
                     <li><a href="team.html">Kontakt aufnehmen</a></li>
                 </ul>
