@@ -27,8 +27,8 @@ Einige Beispiele zur Umsetzung der Barrierefreiheit:
 ## Sonstige Hinweise
 
 * Die HTML-Dateien sind nach Funktionen und nicht nach den Inhalten (wie im Navigationsmenü) benannt
-* Test auf mit Google Lighthouse auf Barrierefreiheit, Leistung, Best Practices, Suchmaschinenoptimierung und Progressive Web App, \
+* Test auf mit Google Lighthouse auf Barrierefreiheit, Leistung, Best Practices und SEO \
 z. B. Umsetzung mit:
     * in jeder HTML-Datei ```<link rel="preconnect">``` + ```<link rel="stylesheet">``` im Head für schnelleres Font-Laden
-    * ```<meta name="description">``` auf allen 6 Seiten ergänzt – Lighthouse meldet ohne es einen SEO-Fehler
+    * ```<meta name="description">``` auf allen 6 Seiten ergänzt
     * Bilder ohne width/height verursachen potenziell einen Layout-Shift
