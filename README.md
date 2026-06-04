@@ -27,6 +27,7 @@ Einige Beispiele zur Umsetzung der Barrierefreiheit:
 ## Sonstige Hinweise
 
 * Die HTML-Dateien sind nach Funktionen und nicht nach den Inhalten (wie im Navigationsmenü) benannt
+* Formatierung des Codes mit *Prettier - Code formatter*
 * Test auf mit Google Lighthouse auf Barrierefreiheit, Leistung, Best Practices und SEO \
 z. B. Umsetzung mit:
     * in jeder HTML-Datei ```<link rel="preconnect">``` + ```<link rel="stylesheet">``` im Head für schnelleres Font-Laden
