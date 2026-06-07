@@ -670,6 +670,32 @@ nav a[aria-current="page"] {
     font-style: normal;
 }
 
+.compliance-page address p {
+    margin: 0;
+}
+
+.compliance-page address {
+    margin-bottom: 8px;
+}
+
+.compliance-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px;
+}
+
+.compliance-list li {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #222;
+    padding: 4px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.compliance-list li:last-child {
+    border-bottom: none;
+}
+
 .compliance-page a {
     color: #005fcc;
     text-decoration: underline;
