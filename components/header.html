@@ -1,5 +1,11 @@
+<input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
 <img src="assets/Logo.jpg" alt="" role="presentation" />
 <h1>IU MTB Community e. V.</h1>
+<label for="nav-toggle" class="nav-toggle-label" aria-label="Navigation ein-/ausblenden">
+  <span></span>
+  <span></span>
+  <span></span>
+</label>
 <nav aria-label="Hauptnavigation">
   <ul role="list">
     <li><a href="index.html" aria-current="page">Startseite</a></li>
@@ -10,7 +16,7 @@
     <li><a href="compliance.html">Impressum</a></li>
   </ul>
 </nav>
-<form class="search-form" role="search" aria-label="Websitesuche">
+<form class="search-form" role="search" aria-label="Suche auf dieser Website">
   <input
     type="search"
     aria-label="Suchbegriff eingeben"

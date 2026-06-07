@@ -1335,3 +1335,982 @@ footer {
         margin: 0 auto 28px;
     }
 }
+
+
+/* ═══════════════════════════════════════════
+   HAMBURGER-MENÜ (alle Breakpoints)
+   ═══════════════════════════════════════════  */
+
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    float: right;
+    margin-top: 7px;
+
+    & span {
+        display: block;
+        height: 3px;
+        background-color: white;
+        border-radius: 2px;
+        transition: transform 0.2s, opacity 0.2s;
+    }
+}
+
+
+/* ═══════════════════════════════════════════
+   INDEX - TABLET  769 – 1024 px
+   ═══════════════════════════════════════════  */
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* Header */
+    header {
+        & nav ul li {
+            margin-left: 12px;
+
+            & a { font-size: 0.88rem; }
+        }
+    }
+
+    .search-form {
+        margin-right: 10px;
+
+        & input[type="search"] { width: 110px; }
+    }
+
+    /* Hero */
+    .hero img { max-height: 440px; }
+
+    /* Motivation */
+    .motivation {
+        display: flex;
+        gap: 5%;
+        padding: 32px 20px;
+    }
+
+    .motivation-text {
+        float: none;
+        width: 50%;
+        margin-right: 0;
+    }
+
+    .motivation-image {
+        float: none;
+        width: 45%;
+    }
+
+    /* Stats: 2 × 2 */
+    .stats-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .stats-item {
+        float: none;
+        width: 50%;
+    }
+
+    /* News */
+    .news {
+        display: flex;
+        gap: 4%;
+        align-items: flex-start;
+    }
+
+    .news-image {
+        float: none;
+        width: 44%;
+        margin-right: 0;
+    }
+
+    .news-text {
+        float: none;
+        width: 52%;
+    }
+
+    /* Erfahrungsberichte: 1-spaltig scrollbar */
+    .testimonials-grid {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .testimonial-card {
+        float: none;
+        width: 80%;
+        flex: 0 0 80%;
+        margin-right: 0;
+    }
+
+    /* Footer */
+    .footer-col {
+        width: 48%;
+    }
+}
+
+
+
+/* ═══════════════════════════════════════════
+   INDEX - MOBILE  320 – 768 px
+   ═══════════════════════════════════════════  */
+
+
+@media (max-width: 768px) {
+
+    /* Header: Hamburger-Menü */
+    header {
+        position: sticky;
+        top: 0;
+        padding: 10px 16px;
+    }
+
+    .nav-toggle-label {
+        display: flex;
+    }
+
+    header nav {
+        display: none;
+        float: none;
+        width: 100%;
+        line-height: normal;
+        background-color: #444;
+        margin-top: 10px;
+
+        & ul {
+            padding: 8px 0;
+
+            & li {
+                display: block;
+                margin: 0;
+
+                & a {
+                    display: block;
+                    padding: 12px 16px;
+                    font-size: 1rem;
+                    border-bottom: 1px solid #555;
+                }
+            }
+        }
+    }
+
+    .nav-toggle:checked ~ nav {
+        display: block;
+    }
+
+    /* Hamburger-Animation bei geöffnetem Menü */
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+        opacity: 0;
+    }
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .search-form {
+        display: none;
+    }
+
+    /* Hero */
+    .hero img { max-height: 220px; }
+
+    /* Motivation: 1-spaltig */
+    .motivation {
+        display: block;
+        padding: 24px 16px;
+    }
+
+    .motivation-text {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+
+        & h2 { font-size: 1.4rem; }
+    }
+
+    .motivation-image {
+        float: none;
+        width: 100%;
+    }
+
+    /* Stats: 2 × 2 */
+    .stats-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .stats-item {
+        float: none;
+        width: 50%;
+        padding: 10px 0;
+    }
+
+    .stats-number { font-size: 2rem; }
+
+    /* News: 1-spaltig, Bild oben */
+    .news {
+        display: block;
+        padding: 24px 16px;
+    }
+
+    .news-image {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .news-text {
+        float: none;
+        width: 100%;
+
+        & h2 { font-size: 1.4rem; }
+    }
+
+    /* Erfahrungsberichte: 1-spaltig gestapelt */
+    .testimonials {
+        padding: 40px 16px;
+
+        & h2 { font-size: 1.4rem; }
+    }
+
+    .testimonials-grid {
+        display: block;
+    }
+
+    .testimonial-card {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+    /* CTA */
+    .cta {
+        padding: 40px 16px;
+
+        & h2 { font-size: 1.5rem; }
+    }
+
+    .cta-btn {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* Footer: 1-spaltig */
+    .footer-grid {
+        display: block;
+    }
+
+    .footer-col {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* ═══════════════════════════════════════════
+   TEAM – TABLET  769 – 1024 px
+   ═══════════════════════════════════════════ */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* Team-Hero */
+    .team-hero-content {
+        & h2 { font-size: 1.6rem; }
+        & p  { font-size: 0.97rem; }
+    }
+
+    /* Team-Spalten: 2-spaltig (Spalte 1 voll, Spalten 2+3 nebeneinander) */
+    .team-columns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .team-col {
+        float: none;
+        width: calc(50% - 10px);
+        margin-right: 0;
+
+        &:first-child {
+            width: 100%;
+        }
+    }
+
+    /* Werte: 2 × 2 */
+    .values-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .value-card {
+        float: none;
+        width: calc(50% - 8px);
+        margin-right: 0;
+    }
+
+    /* CTA-Buttons nebeneinander */
+    .team-cta-actions {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .team-cta-btn {
+        margin: 0;
+    }
+}
+
+/* ═══════════════════════════════════════════
+   TEAM – MOBILE  320 – 768 px
+   ═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+    /* Team-Hero */
+    .team-hero {
+        padding: 40px 16px;
+    }
+
+    .team-hero-content {
+        & h2 { font-size: 1.4rem; }
+        & p  { font-size: 0.95rem; }
+    }
+
+    /* Team-Seite: 1-spaltig */
+    .team-page {
+        padding: 24px 16px;
+    }
+
+    .team-columns {
+        display: block;
+    }
+
+    .team-col {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 24px;
+    }
+
+    /* Werte: 1-spaltig */
+    .team-values {
+        padding: 40px 16px;
+
+        & h2 { font-size: 1.4rem; }
+    }
+
+    .values-grid {
+        display: block;
+    }
+
+    .value-card {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+    /* Kontakt-CTA */
+    .team-contact-cta {
+        padding: 40px 16px;
+
+        & h2 { font-size: 1.4rem; }
+    }
+
+    .team-cta-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+
+    .team-cta-btn {
+        margin: 0;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* ═══════════════════════════════════════════
+   LANDING OFFER – TABLET  769 – 1024 px
+   ═══════════════════════════════════════════ */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* Hero */
+    .hero img { max-height: 440px; }
+
+    /* Angebotskarten: 2-spaltig mit Flexbox */
+    .offer-section {
+        padding: 32px 20px;
+    }
+
+    .offer-columns {
+        display: flex;
+        gap: 3%;
+    }
+
+    .offer-card {
+        float: none;
+        width: calc(50% - 1.5%);
+        margin-right: 0;
+    }
+
+    /* Bild */
+    .offer-image {
+        padding: 0 20px;
+
+        & img { border-radius: 8px; }
+    }
+
+    /* Vorteils-Liste: 2-spaltig mit CSS Columns */
+    .offer-benefits {
+        padding: 28px 20px;
+
+        & ul {
+            column-count: 2;
+            column-gap: 40px;
+        }
+
+        & ul li {
+            break-inside: avoid;
+        }
+    }
+}
+
+/* ═══════════════════════════════════════════
+   LANDING OFFER – MOBILE  320 – 768 px
+   ═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+    /* Hero */
+    .hero img { max-height: 220px; }
+
+    /* Angebotskarten: 1-spaltig gestapelt */
+    .offer-section {
+        padding: 24px 16px;
+    }
+
+    .offer-columns {
+        display: block;
+    }
+
+    .offer-card {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 16px;
+
+        &:last-child { margin-bottom: 0; }
+
+        & h3 { font-size: 1.1rem; }
+    }
+
+    /* Bild */
+    .offer-image {
+        padding: 0 16px;
+        margin-bottom: 24px;
+    }
+
+    /* Vorteils-Liste: 1-spaltig */
+    .offer-benefits {
+        padding: 20px 16px;
+        margin: 0 16px 32px;
+
+        & h2 { font-size: 1.2rem; }
+
+        & ul li {
+            font-size: 0.93rem;
+            padding: 8px 0;
+        }
+    }
+}
+
+/* ═══════════════════════════════════════════
+   EVENTS – TABLET  769 – 1024 px
+   ═══════════════════════════════════════════ */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* Hero */
+    .events-hero {
+        padding: 40px 20px;
+
+        & h2 { font-size: 1.6rem; }
+    }
+
+    /* Monatsnavigation: scrollbar wenn nötig */
+    .month-nav {
+        & ul {
+            display: flex;
+            flex-wrap: wrap;
+
+            & li a {
+                padding: 10px 12px;
+                font-size: 0.82rem;
+            }
+        }
+    }
+
+    /* Intro-Text */
+    .events-page {
+        padding: 28px 20px 32px;
+    }
+
+    /* Kacheln: 2-spaltig mit Flexbox */
+    .events-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+
+    .event-card {
+        float: none;
+        width: calc(50% - 8px);
+        margin-right: 0;
+
+        &:nth-child(4n) {
+            margin-right: 0;
+        }
+    }
+
+    /* CTA */
+    .events-cta {
+        padding: 40px 20px;
+
+        & h2 { font-size: 1.5rem; }
+    }
+}
+
+/* ═══════════════════════════════════════════
+   EVENTS – MOBILE  320 – 768 px
+   ═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+    /* Hero */
+    .events-hero {
+        padding: 32px 16px;
+
+        & h2 { font-size: 1.3rem; }
+        & p  { font-size: 0.93rem; }
+    }
+
+    /* Monatsnavigation: horizontal scrollbar */
+    .month-nav {
+        padding: 0;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        top: 70px;
+
+        & ul {
+            display: flex;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+            width: max-content;
+            padding: 0 8px;
+
+            & li a {
+                padding: 10px 12px;
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    /* Intro-Text */
+    .events-page {
+        padding: 20px 16px 28px;
+    }
+
+    .events-intro {
+        font-size: 0.9rem;
+    }
+
+    /* Kacheln: 1-spaltig gestapelt */
+    .events-row {
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    .event-card {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 12px;
+
+        &:nth-child(4n) {
+            margin-right: 0;
+        }
+
+        & summary {
+            padding: 16px 14px;
+            font-size: 0.95rem;
+        }
+    }
+
+    .event-content {
+        padding: 14px;
+
+        & h3 { font-size: 0.9rem; }
+        & p  { font-size: 0.85rem; }
+    }
+
+    /* CTA */
+    .events-cta {
+        padding: 36px 16px;
+
+        & h2 { font-size: 1.3rem; }
+    }
+
+    .team-cta-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+        margin: 0;
+    }
+}
+
+/* ═══════════════════════════════════════════
+   ERROR – TABLET  769 – 1024 px
+   ═══════════════════════════════════════════ */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* Fehlerbereich zentriert oben, Asides nebeneinander darunter */
+    .error-layout {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 24px;
+        padding: 40px 20px;
+    }
+
+    .error-aside + .error-page {
+        float: none;
+        width: 100%;
+        margin: 0;
+        order: 1;
+    }
+
+    .error-aside {
+        float: none;
+        width: 220px;
+        margin-top: 0;
+        order: 2;
+
+        &:last-child {
+            float: none;
+            margin-top: 0;
+        }
+    }
+
+    .error-page {
+        padding: 40px 20px;
+    }
+
+    .error-code  { font-size: 5rem; }
+    .error-title { font-size: 1.4rem; }
+}
+
+/* ═══════════════════════════════════════════
+   ERROR – MOBILE  320 – 768 px
+   ═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+    /* Layout: nur Fehlermeldung, Asides ausgeblendet */
+    .error-layout {
+        display: block;
+        padding: 24px 16px;
+    }
+
+    .error-aside {
+        display: none;
+    }
+
+    .error-aside + .error-page {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+
+    .error-page {
+        padding: 32px 0;
+        text-align: center;
+    }
+
+    .error-img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .error-code {
+        font-size: 4.5rem;
+    }
+
+    .error-title {
+        font-size: 1.2rem;
+        margin: 8px 0 14px;
+    }
+
+    .error-message {
+        font-size: 0.93rem;
+        max-width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .error-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
+
+/* ═══════════════════════════════════════════
+   DETAIL – TABLET  769 – 1024 px
+   ═══════════════════════════════════════════ */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* Hero */
+    .detail-hero {
+        padding: 40px 20px;
+
+        & h2 { font-size: 1.6rem; }
+    }
+
+    /* Intro */
+    .detail-page {
+        padding: 0 20px 32px;
+        margin-top: 32px;
+    }
+
+    /* Text-Bild-Blöcke: bleiben 2-spaltig, etwas enger */
+    .detail-columns {
+        display: flex;
+        align-items: flex-start;
+        gap: 4%;
+        margin-top: 32px;
+
+        & + .detail-columns { margin-top: 40px; }
+
+        &.detail-columns--reversed {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .detail-text {
+        float: none;
+        width: 50%;
+        margin-right: 0;
+    }
+
+    .detail-figure {
+        float: none;
+        width: 46%;
+        margin: 0;
+    }
+
+    /* Level-Karten: 3-spaltig bleibt, nur Padding enger */
+    .detail-levels {
+        padding: 40px 20px;
+
+        & h2 { font-size: 1.5rem; }
+    }
+
+    .levels-grid {
+        display: flex;
+        gap: 16px;
+    }
+
+    .level-card {
+        float: none;
+        width: calc(33.33% - 11px);
+        margin-right: 0;
+    }
+
+    /* Tabelle: horizontal scrollbar wenn nötig */
+    .detail-schedule {
+        padding: 40px 20px;
+
+        & h2 { font-size: 1.5rem; }
+    }
+
+    .schedule-table {
+        font-size: 0.88rem;
+
+        & th, & td { padding: 10px 12px; }
+    }
+}
+
+/* ═══════════════════════════════════════════
+   DETAIL – MOBILE  320 – 768 px
+   ═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+    /* Hero */
+    .detail-hero {
+        padding: 32px 16px;
+
+        & h2 { font-size: 1.3rem; }
+        & p  { font-size: 0.93rem; }
+    }
+
+    /* Intro */
+    .detail-page {
+        padding: 0 16px 24px;
+        margin-top: 24px;
+    }
+
+    .detail-intro {
+        padding: 20px 16px;
+
+        & h2 { font-size: 1.3rem; }
+        & p  { font-size: 0.93rem; }
+    }
+
+    /* Text-Bild-Blöcke: 1-spaltig, Bild immer unter Text */
+    .detail-columns {
+        display: flex;
+        flex-direction: column;
+        margin-top: 28px;
+
+        & + .detail-columns { margin-top: 32px; }
+
+        &.detail-columns--reversed {
+            flex-direction: column;
+        }
+    }
+
+    .detail-text {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        order: 1;
+
+        & h3 { font-size: 1.1rem; }
+        & p  { font-size: 0.93rem; }
+    }
+
+    .detail-figure {
+        float: none;
+        width: 100%;
+        margin: 16px 0 0;
+        order: 2;
+    }
+
+    /* Level-Karten: 1-spaltig gestapelt */
+    .detail-levels {
+        padding: 32px 16px;
+
+        & h2 { font-size: 1.3rem; }
+    }
+
+    .levels-grid {
+        display: block;
+    }
+
+    .level-card {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 16px;
+
+        &:last-child { margin-bottom: 0; }
+    }
+
+    /* Tabelle: horizontal scrollbar */
+    .detail-schedule {
+        padding: 32px 16px;
+
+        & h2 { font-size: 1.3rem; }
+    }
+
+    .schedule-table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        font-size: 0.85rem;
+
+        & th, & td { padding: 10px 12px; }
+    }
+}
+
+/* ═══════════════════════════════════════════
+   COMPLIANCE – TABLET  769 – 1024 px
+   ═══════════════════════════════════════════ */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .compliance-page {
+        max-width: 680px;
+        margin: 32px auto;
+        padding: 0 24px 32px;
+
+        & h2 { font-size: 1.7rem; }
+
+        & h3 {
+            font-size: 1rem;
+            margin-top: 24px;
+        }
+    }
+
+    .compliance-img {
+        max-height: 280px;
+        margin-bottom: 24px;
+    }
+}
+
+/* ═══════════════════════════════════════════
+   COMPLIANCE – MOBILE  320 – 768 px
+   ═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+    .compliance-page {
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 0 16px 28px;
+
+        & h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+        }
+
+        & h3 {
+            font-size: 0.97rem;
+            margin-top: 20px;
+            margin-bottom: 6px;
+        }
+
+        & p,
+        & address {
+            font-size: 0.9rem;
+        }
+    }
+
+    .compliance-img {
+        max-height: 180px;
+        margin-bottom: 20px;
+    }
+
+    .compliance-list {
+        & li { font-size: 0.9rem; }
+    }
+}
