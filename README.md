@@ -6,7 +6,7 @@ Entsprechend der Aufgabenstellung zur Finalisierungsphase ist hier stichpunktart
 
 * HTML (Hypertext Markup Language): Strukturiert den Inhalt (Texte, Bilder, Links)
 * CSS: Definiert das Design und Layout (Farben, Schriftarten, Abstände)
-* script.js steuert seitenübergreifend den header und footer
+* Javascript: script.js steuert seitenübergreifend den header und footer
 * Über ```.htaccess``` wird auf einem Apache-Webserver (Annahme, um die 404-Seite einzubinden zu können) auf die error.html-Seite umgeleitet, sobald ein 
 Besucher eine nicht vorhandene Seite aufruft.
 
@@ -36,3 +36,6 @@ z. B. Umsetzung mit:
     * in jeder HTML-Datei ```<link rel="preconnect">``` + ```<link rel="stylesheet">``` im Head für schnelleres Font-Laden
     * ```<meta name="description">``` auf allen 6 Seiten ergänzt
     * Bilder ohne width/height verursachen potenziell einen Layout-Shift
+* Leere ```alt```-Tags: dekorative Bilder, die keinen inhaltlichen Mehrwert haben, sind WCAG-konform. Screenreader überspringen diese Bilder
+dann vollständig. \
+Leere ```alt```-Tags sind auch gewollt, wo Screenreader die Beschriftung aus ```<figcaption>``` lesen und das Bild selbst dabei korrekt übersprungen wird. Das ist die empfohlene WCAG-Methode für Bilder mit Bildunterschrift.
