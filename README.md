@@ -6,6 +6,9 @@ Entsprechend der Aufgabenstellung zur Finalisierungsphase ist hier stichpunktart
 
 * HTML (Hypertext Markup Language): Strukturiert den Inhalt (Texte, Bilder, Links)
 * CSS: Definiert das Design und Layout (Farben, Schriftarten, Abstände)
+* script.js steuert seitenübergreifend den header und footer
+* Über ```.htaccess``` wird auf einem Apache-Webserver (Annahme, um die 404-Seite einzubinden zu können) auf die error.html-Seite umgeleitet, sobald ein 
+Besucher eine nicht vorhandene Seite aufruft.
 
 ## Barrierefreiheit
 
