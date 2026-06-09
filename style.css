@@ -1431,6 +1431,114 @@ footer {
 }
 
 /* ═══════════════════════════════════════════
+   TIMELINE (team.html)
+   ═══════════════════════════════════════════ */
+
+.timeline {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+
+    & h2 {
+        font-size: 1.8rem;
+        color: #111;
+        margin-bottom: 48px;
+    }
+}
+
+.timeline-list {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 720px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background-color: #ddd;
+        transform: translateX(-50%);
+    }
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 40px;
+    position: relative;
+
+    &:nth-child(odd) {
+        flex-direction: row-reverse;
+
+        & .timeline-content { text-align: right; }
+    }
+
+    &:last-child { margin-bottom: 0; }
+}
+
+.timeline-marker {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #e8a000;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 3px #e8a000;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 4px;
+    z-index: 1;
+}
+
+.timeline-item--current .timeline-marker {
+    background-color: #2a7a2a;
+    box-shadow: 0 0 0 3px #2a7a2a;
+}
+
+.timeline-content {
+    width: calc(50% - 32px);
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    text-align: left;
+}
+
+.timeline-year {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #e8a000;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+}
+
+.timeline-item--current .timeline-year {
+    color: #2a7a2a;
+}
+
+.timeline-content h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 8px;
+}
+
+.timeline-content p {
+    font-size: 0.93rem;
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ═══════════════════════════════════════════
    HAMBURGER-MENÜ (alle Breakpoints)
    ═══════════════════════════════════════════  */
 
@@ -1786,6 +1894,11 @@ footer {
         }
     }
 
+    /* Timeline: schmalere Karten */
+    .timeline-list { max-width: 600px; }
+
+    .timeline-content { padding: 16px 18px; }
+
     /* Werte: 2 × 2 */
     .values-grid {
         display: flex;
@@ -1840,6 +1953,38 @@ footer {
         width: 100%;
         margin-right: 0;
         margin-bottom: 24px;
+    }
+
+    /* Timeline: 1-spaltig, Linie links */
+    .timeline {
+        padding: 40px 16px;
+
+        & h2 { font-size: 1.4rem; margin-bottom: 32px; }
+    }
+
+    .timeline-list {
+        max-width: 100%;
+
+        &::before {
+            left: 9px;
+            transform: none;
+        }
+    }
+
+    .timeline-item {
+        flex-direction: column !important;
+        padding-left: 36px;
+        gap: 8px;
+    }
+
+    .timeline-marker {
+        left: 0;
+        transform: none;
+    }
+
+    .timeline-content {
+        width: 100%;
+        text-align: left !important;
     }
 
     /* Werte: 1-spaltig */
