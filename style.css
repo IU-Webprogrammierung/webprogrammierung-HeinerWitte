@@ -1445,6 +1445,132 @@ footer {
 }
 
 /* ═══════════════════════════════════════════
+   VEREINSVORTEILE ICON-GRID (index.html)
+   ═══════════════════════════════════════════ */
+
+.benefits {
+    padding: 60px 20px;
+    background-color: #111;
+    text-align: center;
+
+    & h2 {
+        font-size: 1.9rem;
+        color: #fff;
+        margin-bottom: 36px;
+    }
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 860px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+.benefits-tile {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 28px 16px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: border-color 0.2s, background-color 0.2s;
+
+    &:hover {
+        background-color: #252525;
+        border-color: #e8a000;
+    }
+}
+
+.benefits-icon {
+    font-size: 2.4rem;
+    line-height: 1;
+}
+
+.benefits-label {
+    color: #ddd;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ═══════════════════════════════════════════
+   WETTERBANNER (index.html)
+   ═══════════════════════════════════════════ */
+
+.weather-banner {
+    position: relative;
+    background-image: url('assets/Hero-Homepage.jpg');
+    background-size: cover;
+    background-position: center 60%;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-banner-overlay {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 60px 24px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.72) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.weather-banner-eyebrow {
+    font-size: 1.1rem;
+    color: #e8c96a;
+    letter-spacing: 0.06em;
+    margin: 0;
+}
+
+.weather-banner h2 {
+    font-size: 2.4rem;
+    color: #fff;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.weather-banner-sub {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin: 0;
+}
+
+.weather-banner-btn {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 12px 32px;
+    background-color: #e8a000;
+    color: #111;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.15s;
+
+    &:hover {
+        background-color: #ffb800;
+        transform: translateY(-2px);
+    }
+
+    &:focus-visible {
+        outline: 3px solid #fff;
+        outline-offset: 3px;
+    }
+}
+
+/* ═══════════════════════════════════════════
    SICHERHEITSHINWEISE (detail.html)
    ═══════════════════════════════════════════ */
 
@@ -2856,6 +2982,20 @@ footer {
         & img { height: 360px; }
     }
 
+    /* Vereinsvorteile: 3-spaltig bleibt, leicht kompakter */
+    .benefits-grid {
+        gap: 14px;
+    }
+
+    .benefits-tile {
+        padding: 22px 12px 18px;
+    }
+
+    /* Wetterbanner */
+    .weather-banner h2 {
+        font-size: 2rem;
+    }
+
     /* News */
     .news {
         display: flex;
@@ -3017,6 +3157,38 @@ footer {
     }
 
     .stats-number { font-size: 2rem; }
+
+    /* Vereinsvorteile: 2-spaltig */
+    .benefits {
+        padding: 40px 16px;
+
+        & h2 { font-size: 1.5rem; margin-bottom: 24px; }
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .benefits-icon { font-size: 2rem; }
+
+    /* Wetterbanner */
+    .weather-banner {
+        min-height: 220px;
+    }
+
+    .weather-banner h2 {
+        font-size: 1.5rem;
+    }
+
+    .weather-banner-sub {
+        font-size: 0.95rem;
+    }
+
+    .weather-banner-btn {
+        padding: 10px 24px;
+        font-size: 0.95rem;
+    }
 
     /* Galerie */
     .gallery {
