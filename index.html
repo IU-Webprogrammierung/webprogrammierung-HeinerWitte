@@ -83,6 +83,39 @@
           </li>
         </ul>
       </section>
+      <section class="gallery" aria-labelledby="gallery-heading">
+        <h2 id="gallery-heading">Eindrücke aus unserem Vereinsleben</h2>
+        <div class="gallery-slider" role="group" aria-label="Bildergalerie">
+          <input type="radio" name="gallery" id="slide-1" class="gallery-radio" checked aria-label="Bild 1 von 4" />
+          <input type="radio" name="gallery" id="slide-2" class="gallery-radio" aria-label="Bild 2 von 4" />
+          <input type="radio" name="gallery" id="slide-3" class="gallery-radio" aria-label="Bild 3 von 4" />
+          <input type="radio" name="gallery" id="slide-4" class="gallery-radio" aria-label="Bild 4 von 4" />
+          <div class="gallery-track">
+            <figure class="gallery-slide">
+              <img src="assets/gemeinsam.jpg" alt="Vereinsmitglieder gemeinsam auf einer MTB-Tour" loading="lazy" width="1200" height="600" />
+              <figcaption>Gemeinsam auf Tour</figcaption>
+            </figure>
+            <figure class="gallery-slide">
+              <img src="assets/Gruppenausflug.jpg" alt="Gruppe von Mountainbikern beim Ausflug in der Natur" loading="lazy" width="1200" height="600" />
+              <figcaption>Gruppenausflug ins Grüne</figcaption>
+            </figure>
+            <figure class="gallery-slide">
+              <img src="assets/Gruppentraining.jpg" alt="Vereinsmitglieder beim gemeinsamen Techniktraining" loading="lazy" width="1200" height="600" />
+              <figcaption>Techniktraining für alle Levels</figcaption>
+            </figure>
+            <figure class="gallery-slide">
+              <img src="assets/MTB-Community.jpg" alt="MTB-Community beim Vereinstreffen" loading="lazy" width="1200" height="600" />
+              <figcaption>Unsere Community</figcaption>
+            </figure>
+          </div>
+          <nav class="gallery-dots" aria-label="Galerie-Navigation">
+            <label for="slide-1" aria-label="Bild 1 anzeigen"></label>
+            <label for="slide-2" aria-label="Bild 2 anzeigen"></label>
+            <label for="slide-3" aria-label="Bild 3 anzeigen"></label>
+            <label for="slide-4" aria-label="Bild 4 anzeigen"></label>
+          </nav>
+        </div>
+      </section>
       <section class="news" aria-labelledby="news-heading">
         <div class="news-image" aria-hidden="true">
           <img
