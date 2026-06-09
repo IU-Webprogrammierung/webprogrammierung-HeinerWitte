@@ -79,6 +79,7 @@
               src="assets/Gruppenausflug.jpg"
               alt="Mitglieder der IU MTB Community auf einem gemeinsamen Gruppenausflug"
             />
+            <figcaption class="sr-only">Mitglieder der IU MTB Community auf einem gemeinsamen Gruppenausflug</figcaption>
           </figure>
         </div>
         <div class="detail-columns detail-columns--reversed">
@@ -87,6 +88,7 @@
               src="assets/Gruppentraining.jpg"
               alt="Mitglieder der IU MTB Community beim gemeinsamen Gruppentraining"
             />
+            <figcaption class="sr-only">Mitglieder der IU MTB Community beim gemeinsamen Gruppentraining</figcaption>
           </figure>
           <article class="detail-text" aria-labelledby="training-heading">
             <h3 id="training-heading">
@@ -188,6 +190,7 @@
       <section class="detail-schedule" aria-labelledby="schedule-heading">
         <h2 id="schedule-heading">Regelmäßige Treffen – Wochenplan</h2>
         <table class="schedule-table" aria-labelledby="schedule-heading">
+          <caption class="sr-only">Regelmäßige Vereinstreffen nach Wochentag, Uhrzeit, Art, Niveau und Region</caption>
           <thead>
             <tr>
               <th scope="col">Tag</th>
@@ -303,14 +306,14 @@
         <input type="radio" name="equip-tab" id="equip-fortgeschrittene" class="equip-radio" />
         <input type="radio" name="equip-tab" id="equip-profis"           class="equip-radio" />
 
-        <div class="equip-tabs" role="tablist">
-          <label for="equip-einsteiger"      role="tab" class="equip-tab-label equip-tab-label--easy">&#9679;&#9679;&#9675;&#9675; Einsteiger</label>
-          <label for="equip-fortgeschrittene" role="tab" class="equip-tab-label equip-tab-label--medium">&#9679;&#9679;&#9679;&#9675; Fortgeschrittene</label>
-          <label for="equip-profis"           role="tab" class="equip-tab-label equip-tab-label--hard">&#9679;&#9679;&#9679;&#9679; Profis</label>
+        <div class="equip-tabs" role="group" aria-label="Niveau auswählen">
+          <label for="equip-einsteiger"       class="equip-tab-label equip-tab-label--easy">&#9679;&#9679;&#9675;&#9675; Einsteiger</label>
+          <label for="equip-fortgeschrittene" class="equip-tab-label equip-tab-label--medium">&#9679;&#9679;&#9679;&#9675; Fortgeschrittene</label>
+          <label for="equip-profis"           class="equip-tab-label equip-tab-label--hard">&#9679;&#9679;&#9679;&#9679; Profis</label>
         </div>
 
         <div class="equip-panels">
-          <div class="equip-panel" id="panel-einsteiger" role="tabpanel" aria-labelledby="equip-einsteiger">
+          <div class="equip-panel" id="panel-einsteiger" role="region" aria-label="Checkliste Einsteiger">
             <ul class="equip-list" role="list">
               <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Fahrtüchtiges MTB (Hardtail oder Fully)</li>
               <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Helm (EN 1078 zertifiziert)</li>
@@ -323,7 +326,7 @@
               <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Mobiltelefon (für Notfälle)</li>
             </ul>
           </div>
-          <div class="equip-panel" id="panel-fortgeschrittene" role="tabpanel" aria-labelledby="equip-fortgeschrittene">
+          <div class="equip-panel" id="panel-fortgeschrittene" role="region" aria-label="Checkliste Fortgeschrittene">
             <ul class="equip-list" role="list">
               <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Fully oder Hardtail mit Federgabel</li>
               <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Helm (EN 1078, Visier empfohlen)</li>
@@ -337,7 +340,7 @@
               <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Erste-Hilfe-Set (kompakt)</li>
             </ul>
           </div>
-          <div class="equip-panel" id="panel-profis" role="tabpanel" aria-labelledby="equip-profis">
+          <div class="equip-panel" id="panel-profis" role="region" aria-label="Checkliste Profis">
             <ul class="equip-list" role="list">
               <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Fully mit Enduro- oder DH-Geometrie</li>
               <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Fullface-Helm (für Abfahrt &amp; Gelände)</li>
