@@ -1,0 +1,191 @@
+/* ── Fehlerseite ── */
+.error-layout {
+    overflow: hidden;
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.error-aside {
+    float: left;
+    width: 220px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 24px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #222;
+    margin-top: 400px;
+
+    & + .error-page {
+        float: left;
+        width: calc(100% - 480px - 80px);
+        margin: 0 40px;
+    }
+
+    &:last-child {
+        float: right;
+        margin-top: 400px;
+    }
+
+    & a {
+        display: inline-block;
+        margin-top: 12px;
+        color: #005fcc;
+        text-decoration: underline;
+        font-weight: 600;
+
+        &:hover {
+            color: #003a99;
+        }
+    }
+}
+
+.error-page {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.error-img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto 30px;
+    border-radius: 8px;
+}
+
+.error-code {
+    font-size: 6rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0;
+}
+
+.error-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #222;
+    margin: 10px 0 20px;
+}
+
+.error-message {
+    font-size: 1rem;
+    color: #444;
+    max-width: 480px;
+    margin: 0 auto 30px;
+    line-height: 1.7;
+}
+
+.error-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+
+    &:hover {
+        background-color: #555;
+    }
+
+    &:focus-visible {
+        outline: 3px solid #005fcc;
+        outline-offset: 2px;
+    }
+}
+
+/* ═══════════════════════════════════════════
+   ERROR – TABLET  769 – 1024 px
+   ═══════════════════════════════════════════ */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .error-layout {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 24px;
+        padding: 40px 20px;
+    }
+
+    .error-aside + .error-page {
+        float: none;
+        width: 100%;
+        margin: 0;
+        order: 1;
+    }
+
+    .error-aside {
+        float: none;
+        width: 220px;
+        margin-top: 0;
+        order: 2;
+
+        &:last-child {
+            float: none;
+            margin-top: 0;
+        }
+    }
+
+    .error-page {
+        padding: 40px 20px;
+    }
+
+    .error-code  { font-size: 5rem; }
+    .error-title { font-size: 1.4rem; }
+}
+
+/* ═══════════════════════════════════════════
+   ERROR – MOBILE  320 – 768 px
+   ═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+    .error-layout {
+        display: block;
+        padding: 24px 16px;
+    }
+
+    .error-aside {
+        display: none;
+    }
+
+    .error-aside + .error-page {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+
+    .error-page {
+        padding: 32px 0;
+        text-align: center;
+    }
+
+    .error-img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .error-code {
+        font-size: 4.5rem;
+    }
+
+    .error-title {
+        font-size: 1.2rem;
+        margin: 8px 0 14px;
+    }
+
+    .error-message {
+        font-size: 0.93rem;
+        max-width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .error-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}

@@ -2583,7 +2583,7 @@ footer {
 
 .pricing-age {
     font-size: 0.85rem;
-    color: #888;
+    color: #595959;
     margin-bottom: 16px;
 }
 
@@ -2599,7 +2599,7 @@ footer {
 
 .pricing-period {
     font-size: 0.9rem;
-    color: #888;
+    color: #595959;
 }
 
 .pricing-list {
@@ -2610,8 +2610,8 @@ footer {
     & li {
         padding: 8px 0;
         font-size: 0.93rem;
-        color: #444;
-        border-bottom: 1px solid #f0f0f0;
+        color: #333;
+        border-bottom: 1px solid #e8e8e8;
         display: flex;
         align-items: baseline;
         gap: 8px;
@@ -2620,7 +2620,7 @@ footer {
 
         &::before {
             content: "✓";
-            color: #e8a000;
+            color: #7a5200;
             font-weight: 700;
             flex-shrink: 0;
         }
@@ -2893,23 +2893,29 @@ footer {
 .contact-role {
     font-size: 0.85rem;
     font-weight: 600;
-    color: #e8a000;
+    color: #7a5200;
     margin: 0 0 4px;
 }
 
 .contact-scope {
     font-size: 0.88rem;
-    color: #666;
+    color: #555;
     margin: 0 0 8px;
 }
 
 .contact-link {
     font-size: 0.88rem;
-    color: #333;
+    color: #005fcc;
     text-decoration: underline;
     word-break: break-all;
 
-    &:hover { color: #e8a000; }
+    &:hover { color: #003a99; }
+
+    &:focus-visible {
+        outline: 3px solid #005fcc;
+        outline-offset: 2px;
+        border-radius: 2px;
+    }
 }
 
 /* ═══════════════════════════════════════════
