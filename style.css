@@ -1038,6 +1038,20 @@ footer {
     & tbody tr:last-child td {
         border-bottom: none;
     }
+
+    & tbody tr {
+        transition: background-color 0.15s;
+
+        &:hover td,
+        &:focus-within td {
+            background-color: #fdefc3;
+        }
+
+        &:focus-within {
+            outline: 3px solid #b87200;
+            outline-offset: -3px;
+        }
+    }
 }
 
 .level-dot {
