@@ -1544,6 +1544,231 @@ footer {
 }
 
 /* ═══════════════════════════════════════════
+   NÄCHSTES EVENT (events.html)
+   ═══════════════════════════════════════════ */
+
+.next-event {
+    background: linear-gradient(135deg, #1a1a1a 60%, #2a2000);
+    padding: 32px 20px;
+    border-bottom: 3px solid #e8a000;
+}
+
+.next-event-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #e8a000;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+}
+
+.next-event-body {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.next-event-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e8a000;
+    color: #111;
+    border-radius: 8px;
+    padding: 12px 20px;
+    flex-shrink: 0;
+}
+
+.next-event-day {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.next-event-month {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.next-event-info {
+    flex: 1;
+
+    & h2 {
+        font-size: 1.4rem;
+        color: #fff;
+        margin: 0 0 6px;
+    }
+}
+
+.next-event-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    font-size: 0.88rem;
+    color: #bbb;
+    margin: 0 0 8px;
+}
+
+.next-event-type {
+    color: #e8a000;
+    font-weight: 600;
+}
+
+.next-event-sep { color: #555; }
+
+.next-event-desc {
+    font-size: 0.92rem;
+    color: #ccc;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.next-event-btn {
+    display: inline-block;
+    background-color: #e8a000;
+    color: #111;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 12px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background-color 0.2s;
+
+    &:hover { background-color: #c78800; color: #fff; }
+}
+
+/* ═══════════════════════════════════════════
+   JAHRESÜBERSICHT (events.html)
+   ═══════════════════════════════════════════ */
+
+.events-overview {
+    background-color: #1a1a1a;
+    padding: 40px 20px;
+    text-align: center;
+
+    & h2 {
+        font-size: 1.4rem;
+        color: #fff;
+        margin-bottom: 6px;
+    }
+}
+
+.overview-intro {
+    font-size: 0.88rem;
+    color: #888;
+    margin-bottom: 24px;
+}
+
+.overview-grid {
+    border-collapse: separate;
+    border-spacing: 6px;
+    margin: 0 auto 20px;
+    max-width: 720px;
+    width: 100%;
+
+    & thead th {
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: #aaa;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        padding-bottom: 4px;
+        text-align: center;
+    }
+}
+
+.overview-cell {
+    border-radius: 6px;
+    padding: 10px 4px;
+    text-align: center;
+    cursor: default;
+    transition: transform 0.15s;
+
+    &:hover { transform: translateY(-2px); }
+
+    &:focus-within { outline: 3px solid #fff; outline-offset: 2px; }
+}
+
+.overview-count {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111;
+}
+
+/* Heatmap-Farbstufen (Blau → Grün → Gelb → Orange → Rot) */
+.overview-cell--1 { background-color: #1a4a7a; & .overview-count { color: #e8f4ff; } }
+.overview-cell--2 { background-color: #1e7a5a; & .overview-count { color: #e0fff4; } }
+.overview-cell--3 { background-color: #c7a800; & .overview-count { color: #111;    } }
+.overview-cell--4 { background-color: #e07020; & .overview-count { color: #fff;    } }
+.overview-cell--5 { background-color: #c0392b; & .overview-count { color: #fff;    } }
+
+.overview-legend {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 0.78rem;
+    color: #aaa;
+    margin: 0;
+}
+
+.overview-swatch {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+}
+
+.overview-swatch--1 { background-color: #1a4a7a; }
+.overview-swatch--2 { background-color: #1e7a5a; }
+.overview-swatch--3 { background-color: #c7a800; }
+.overview-swatch--4 { background-color: #e07020; }
+.overview-swatch--5 { background-color: #c0392b; }
+
+/* ═══════════════════════════════════════════
+   FILTER-LEGENDE (events.html)
+   ═══════════════════════════════════════════ */
+
+.filter-legend {
+    background-color: #2a2a2a;
+    padding: 16px 20px;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+.filter-legend-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 28px;
+    justify-content: center;
+
+    & li {
+        font-size: 0.88rem;
+        color: #ccc;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        & strong { color: #fff; }
+    }
+}
+
+.filter-legend-icon { font-size: 1rem; }
+
+/* ═══════════════════════════════════════════
    VERANSTALTUNGSFILTER (events.html)
    ═══════════════════════════════════════════ */
 
@@ -3032,6 +3257,14 @@ footer {
         }
     }
 
+    /* Nächstes Event */
+    .next-event-body { gap: 20px; }
+
+    /* Jahresübersicht */
+    .overview-grid { border-spacing: 4px; }
+
+    .overview-cell { padding: 8px 2px; }
+
     /* CTA */
     .events-cta {
         padding: 40px 20px;
@@ -3081,6 +3314,42 @@ footer {
 
     .events-intro {
         font-size: 0.9rem;
+    }
+
+    /* Nächstes Event */
+    .next-event { padding: 24px 16px; }
+
+    .next-event-body {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .next-event-info h2 { font-size: 1.2rem; }
+
+    .next-event-btn { width: 100%; text-align: center; box-sizing: border-box; }
+
+    /* Jahresübersicht */
+    .events-overview {
+        padding: 32px 16px;
+
+        & h2 { font-size: 1.2rem; }
+    }
+
+    .overview-grid {
+        border-spacing: 4px;
+        font-size: 0.8rem;
+    }
+
+    .overview-cell { padding: 10px 2px; }
+
+    /* Filter-Legende */
+    .filter-legend { padding: 14px 16px; }
+
+    .filter-legend-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
     }
 
     /* Kacheln: 1-spaltig gestapelt */

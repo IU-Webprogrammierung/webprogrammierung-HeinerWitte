@@ -30,6 +30,28 @@
           </p>
         </div>
       </section>
+      <section class="next-event" aria-labelledby="next-event-heading">
+        <div class="next-event-label" aria-hidden="true">&#128197; Nächstes Event</div>
+        <div class="next-event-body">
+          <div class="next-event-date" aria-hidden="true">
+            <span class="next-event-day">06</span>
+            <span class="next-event-month">Jun</span>
+          </div>
+          <div class="next-event-info">
+            <h2 id="next-event-heading">Sommertour – Eifel</h2>
+            <p class="next-event-meta">
+              <span class="next-event-type">&#127758; Tour</span>
+              <span class="next-event-sep" aria-hidden="true">·</span>
+              <span>Vulkaneifel, Laacher See</span>
+              <span class="next-event-sep" aria-hidden="true">·</span>
+              <span>2 Tage</span>
+            </p>
+            <p class="next-event-desc">Zweitägige Tour durch die Vulkaneifel mit Übernachtung am Laacher See. Für alle Niveaus geeignet.</p>
+          </div>
+          <a href="#monat-jun" class="next-event-btn">Zum Event ↓</a>
+        </div>
+      </section>
+
       <nav class="month-nav" aria-label="Sprung zu Monaten">
         <ul role="list">
           <li><a href="#monat-jan">Januar</a></li>
@@ -46,6 +68,61 @@
           <li><a href="#monat-dez">Dezember</a></li>
         </ul>
       </nav>
+      <section class="events-overview" aria-labelledby="overview-heading">
+        <h2 id="overview-heading">Jahresübersicht 2026</h2>
+        <p class="overview-intro" id="overview-desc">Anzahl der Events pro Monat. Die Hintergrundfarbe zeigt die Intensität: je heller, desto mehr Veranstaltungen.</p>
+        <table class="overview-grid" aria-labelledby="overview-heading" aria-describedby="overview-desc">
+          <caption class="sr-only">Veranstaltungsanzahl pro Monat im Jahr 2026</caption>
+          <thead>
+            <tr>
+              <th scope="col">Jan</th>
+              <th scope="col">Feb</th>
+              <th scope="col">Mär</th>
+              <th scope="col">Apr</th>
+              <th scope="col">Mai</th>
+              <th scope="col">Jun</th>
+              <th scope="col">Jul</th>
+              <th scope="col">Aug</th>
+              <th scope="col">Sep</th>
+              <th scope="col">Okt</th>
+              <th scope="col">Nov</th>
+              <th scope="col">Dez</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="overview-cell overview-cell--3"><span class="overview-count" aria-label="5 Events, mittlere Aktivität">5</span></td>
+              <td class="overview-cell overview-cell--3"><span class="overview-count" aria-label="5 Events, mittlere Aktivität">5</span></td>
+              <td class="overview-cell overview-cell--3"><span class="overview-count" aria-label="5 Events, mittlere Aktivität">5</span></td>
+              <td class="overview-cell overview-cell--4"><span class="overview-count" aria-label="5 Events, hohe Aktivität">5</span></td>
+              <td class="overview-cell overview-cell--4"><span class="overview-count" aria-label="5 Events, hohe Aktivität">5</span></td>
+              <td class="overview-cell overview-cell--5"><span class="overview-count" aria-label="5 Events, sehr hohe Aktivität">5</span></td>
+              <td class="overview-cell overview-cell--5"><span class="overview-count" aria-label="5 Events, sehr hohe Aktivität">5</span></td>
+              <td class="overview-cell overview-cell--5"><span class="overview-count" aria-label="5 Events, sehr hohe Aktivität">5</span></td>
+              <td class="overview-cell overview-cell--4"><span class="overview-count" aria-label="5 Events, hohe Aktivität">5</span></td>
+              <td class="overview-cell overview-cell--4"><span class="overview-count" aria-label="5 Events, hohe Aktivität">5</span></td>
+              <td class="overview-cell overview-cell--3"><span class="overview-count" aria-label="5 Events, mittlere Aktivität">5</span></td>
+              <td class="overview-cell overview-cell--3"><span class="overview-count" aria-label="5 Events, mittlere Aktivität">5</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="overview-legend" aria-label="Erklärung der Farbstufen">
+          Intensität:
+          <span class="overview-swatch overview-swatch--1" aria-hidden="true"></span><span class="sr-only">Stufe 1 –</span> sehr wenig,
+          <span class="overview-swatch overview-swatch--3" aria-hidden="true"></span><span class="sr-only">Stufe 3 –</span> mittel,
+          <span class="overview-swatch overview-swatch--5" aria-hidden="true"></span><span class="sr-only">Stufe 5 –</span> sehr viel
+        </p>
+      </section>
+
+      <section class="filter-legend" aria-label="Erklärung der Veranstaltungstypen">
+        <ul class="filter-legend-list" role="list">
+          <li><span class="filter-legend-icon" aria-hidden="true">&#127758;</span> <strong>Tour</strong> – Gruppenausfahrten &amp; Mehrtagestouren</li>
+          <li><span class="filter-legend-icon" aria-hidden="true">&#127947;</span> <strong>Training</strong> – Fahrtechnik, Kurse &amp; Lager</li>
+          <li><span class="filter-legend-icon" aria-hidden="true">&#127942;</span> <strong>Wettkampf</strong> – Rennen &amp; vereinsinterne Wettbewerbe</li>
+          <li><span class="filter-legend-icon" aria-hidden="true">&#129309;</span> <strong>Pflege &amp; Treffen</strong> – Streckenpflege, Vereinsabende &amp; Versammlungen</li>
+        </ul>
+      </section>
+
       <input type="radio" name="filter" id="filter-alle"      class="filter-radio" checked />
       <input type="radio" name="filter" id="filter-tour"      class="filter-radio" />
       <input type="radio" name="filter" id="filter-training"  class="filter-radio" />
