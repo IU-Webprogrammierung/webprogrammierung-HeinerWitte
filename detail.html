@@ -253,6 +253,64 @@
           </tbody>
         </table>
       </section>
+      <section class="equipment" aria-labelledby="equipment-heading">
+        <h2 id="equipment-heading">Ausrüstungs-Checkliste</h2>
+        <p class="equipment-intro">Was brauchst du für dein nächstes Training? Wähle dein Niveau und pack die Tasche.</p>
+
+        <input type="radio" name="equip-tab" id="equip-einsteiger"      class="equip-radio" checked />
+        <input type="radio" name="equip-tab" id="equip-fortgeschrittene" class="equip-radio" />
+        <input type="radio" name="equip-tab" id="equip-profis"           class="equip-radio" />
+
+        <div class="equip-tabs" role="tablist">
+          <label for="equip-einsteiger"      role="tab" class="equip-tab-label equip-tab-label--easy">&#9679;&#9679;&#9675;&#9675; Einsteiger</label>
+          <label for="equip-fortgeschrittene" role="tab" class="equip-tab-label equip-tab-label--medium">&#9679;&#9679;&#9679;&#9675; Fortgeschrittene</label>
+          <label for="equip-profis"           role="tab" class="equip-tab-label equip-tab-label--hard">&#9679;&#9679;&#9679;&#9679; Profis</label>
+        </div>
+
+        <div class="equip-panels">
+          <div class="equip-panel" id="panel-einsteiger" role="tabpanel" aria-labelledby="equip-einsteiger">
+            <ul class="equip-list" role="list">
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Fahrtüchtiges MTB (Hardtail oder Fully)</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Helm (EN 1078 zertifiziert)</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Handschuhe</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Wasser (mind. 1,5 l)</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Kleines Werkzeug (Multitool, Reifenheber)</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Ersatzschlauch oder Flickzeug</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Funktionskleidung (kein Baumwoll-T-Shirt)</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Sonnenschutz &amp; Insektenschutz (saisonal)</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Mobiltelefon (für Notfälle)</li>
+            </ul>
+          </div>
+          <div class="equip-panel" id="panel-fortgeschrittene" role="tabpanel" aria-labelledby="equip-fortgeschrittene">
+            <ul class="equip-list" role="list">
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Fully oder Hardtail mit Federgabel</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Helm (EN 1078, Visier empfohlen)</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Knieprotektoren</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Handschuhe mit Polsterung</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Trinkrucksack (mind. 2 l)</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Erweitertes Werkzeug (Pumpe, Kettenöl)</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Tubeless-Reparaturset</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Energieriegel / Verpflegung</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Regenjacke (komprimierbar)</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Erste-Hilfe-Set (kompakt)</li>
+            </ul>
+          </div>
+          <div class="equip-panel" id="panel-profis" role="tabpanel" aria-labelledby="equip-profis">
+            <ul class="equip-list" role="list">
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Fully mit Enduro- oder DH-Geometrie</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Fullface-Helm (für Abfahrt &amp; Gelände)</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Knie- &amp; Schienbeinprotektoren</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Rückenprotektor</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Ellenbogen- &amp; Schulterprotektoren</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Trinkrucksack (3+ l) mit Werkzeugfach</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Profiwerkzeug (Speichenschlüssel, Bremsbeläge)</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> CO₂-Kartuschen und Tubeless-Plug-Kit</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> GPS-Gerät / Navi-App offline geladen</li>
+              <li><span class="equip-icon" aria-hidden="true">&#10003;</span> Notfallkontakte &amp; Vereinsnotruf</li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
     <footer role="contentinfo" aria-label="Seitenfuß"></footer>
   </body>

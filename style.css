@@ -1431,6 +1431,105 @@ footer {
 }
 
 /* ═══════════════════════════════════════════
+   AUSRÜSTUNGS-CHECKLISTE (detail.html)
+   ═══════════════════════════════════════════ */
+
+.equipment {
+    padding: 60px 20px;
+    background-color: #1a1a1a;
+    text-align: center;
+
+    & h2 {
+        font-size: 1.8rem;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+}
+
+.equipment-intro {
+    color: #aaa;
+    font-size: 0.97rem;
+    margin-bottom: 32px;
+}
+
+.equip-radio {
+    display: none;
+}
+
+.equip-tabs {
+    display: inline-flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.equip-tab-label {
+    padding: 10px 22px;
+    border-radius: 24px;
+    border: 2px solid #555;
+    color: #ccc;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+
+    &:hover { border-color: #aaa; color: #fff; }
+}
+
+/* Aktiver Tab */
+#equip-einsteiger:checked      ~ .equip-tabs .equip-tab-label--easy,
+#equip-fortgeschrittene:checked ~ .equip-tabs .equip-tab-label--medium,
+#equip-profis:checked           ~ .equip-tabs .equip-tab-label--hard {
+    border-color: #e8a000;
+    background-color: #e8a000;
+    color: #111;
+}
+
+/* Alle Panels verstecken */
+.equip-panel {
+    display: none;
+}
+
+/* Aktives Panel anzeigen */
+#equip-einsteiger:checked      ~ .equip-panels #panel-einsteiger,
+#equip-fortgeschrittene:checked ~ .equip-panels #panel-fortgeschrittene,
+#equip-profis:checked           ~ .equip-panels #panel-profis {
+    display: block;
+}
+
+.equip-panels {
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.equip-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    & li {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        padding: 10px 0;
+        border-bottom: 1px solid #2e2e2e;
+        color: #ddd;
+        font-size: 0.95rem;
+        line-height: 1.5;
+
+        &:last-child { border-bottom: none; }
+    }
+}
+
+.equip-icon {
+    color: #e8a000;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════
    VERANSTALTUNGSFILTER (events.html)
    ═══════════════════════════════════════════ */
 
@@ -2617,6 +2716,15 @@ footer {
 
         & th, & td { padding: 10px 12px; }
     }
+
+    /* Checkliste */
+    .equipment {
+        padding: 48px 20px;
+
+        & h2 { font-size: 1.6rem; }
+    }
+
+    .equip-panels { max-width: 480px; }
 }
 
 /* ═══════════════════════════════════════════
@@ -2710,6 +2818,22 @@ footer {
         font-size: 0.85rem;
 
         & th, & td { padding: 10px 12px; }
+    }
+
+    /* Checkliste */
+    .equipment {
+        padding: 36px 16px;
+
+        & h2 { font-size: 1.4rem; }
+    }
+
+    .equip-tab-label {
+        font-size: 0.82rem;
+        padding: 8px 14px;
+    }
+
+    .equip-list {
+        & li { font-size: 0.9rem; }
     }
 }
 
