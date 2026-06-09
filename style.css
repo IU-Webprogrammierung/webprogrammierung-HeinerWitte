@@ -1431,6 +1431,89 @@ footer {
 }
 
 /* ═══════════════════════════════════════════
+   VERANSTALTUNGSFILTER (events.html)
+   ═══════════════════════════════════════════ */
+
+.filter-radio {
+    display: none;
+}
+
+.events-filter {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+}
+
+.filter-labels {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+
+    & label {
+        display: inline-block;
+        padding: 8px 18px;
+        border-radius: 24px;
+        border: 2px solid #555;
+        color: #ccc;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+
+        &:hover {
+            border-color: #e8a000;
+            color: #fff;
+        }
+    }
+}
+
+/* Aktiver Filter-Button */
+#filter-alle:checked     ~ .events-filter .filter-labels label[for="filter-alle"],
+#filter-tour:checked     ~ .events-filter .filter-labels label[for="filter-tour"],
+#filter-training:checked ~ .events-filter .filter-labels label[for="filter-training"],
+#filter-wettkampf:checked ~ .events-filter .filter-labels label[for="filter-wettkampf"],
+#filter-pflege:checked   ~ .events-filter .filter-labels label[for="filter-pflege"] {
+    background-color: #e8a000;
+    border-color: #e8a000;
+    color: #111;
+}
+
+/* Alle sichtbar wenn "Alle" aktiv */
+#filter-alle:checked ~ .events-page .event-card {
+    display: block;
+}
+
+/* Typ-Filter: nur passende Karten zeigen */
+#filter-tour:checked ~ .events-page .event-card {
+    display: none;
+}
+#filter-tour:checked ~ .events-page .event-card--tour {
+    display: block;
+}
+
+#filter-training:checked ~ .events-page .event-card {
+    display: none;
+}
+#filter-training:checked ~ .events-page .event-card--training {
+    display: block;
+}
+
+#filter-wettkampf:checked ~ .events-page .event-card {
+    display: none;
+}
+#filter-wettkampf:checked ~ .events-page .event-card--wettkampf {
+    display: block;
+}
+
+#filter-pflege:checked ~ .events-page .event-card {
+    display: none;
+}
+#filter-pflege:checked ~ .events-page .event-card--pflege {
+    display: block;
+}
+
+/* ═══════════════════════════════════════════
    FAQ-AKKORDEON (landing_offer.html)
    ═══════════════════════════════════════════ */
 

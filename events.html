@@ -46,6 +46,20 @@
           <li><a href="#monat-dez">Dezember</a></li>
         </ul>
       </nav>
+      <input type="radio" name="filter" id="filter-alle"      class="filter-radio" checked />
+      <input type="radio" name="filter" id="filter-tour"      class="filter-radio" />
+      <input type="radio" name="filter" id="filter-training"  class="filter-radio" />
+      <input type="radio" name="filter" id="filter-wettkampf" class="filter-radio" />
+      <input type="radio" name="filter" id="filter-pflege"    class="filter-radio" />
+      <div class="events-filter" role="group" aria-label="Veranstaltungen filtern">
+        <div class="filter-labels" role="list">
+          <label for="filter-alle"      role="listitem">Alle</label>
+          <label for="filter-tour"      role="listitem">&#127758; Tour</label>
+          <label for="filter-training"  role="listitem">&#127947; Training</label>
+          <label for="filter-wettkampf" role="listitem">&#127942; Wettkampf</label>
+          <label for="filter-pflege"    role="listitem">&#129309; Pflege &amp; Treffen</label>
+        </div>
+      </div>
       <section class="events-page" aria-labelledby="events-heading">
         <h2 id="events-heading" class="sr-only">Veranstaltungskalender 2026</h2>
         <p class="events-intro">
@@ -66,7 +80,7 @@
         <div class="events-grid">
           <div class="events-row">
             <!-- Januar -->
-            <details class="event-card" id="monat-jan">
+            <details class="event-card event-card--tour" id="monat-jan">
               <summary>Januar 2026</summary>
               <div class="event-content">
                 <h3>Wintertour – Schwarzwald</h3>
@@ -102,7 +116,7 @@
             </details>
 
             <!-- Februar -->
-            <details class="event-card" id="monat-feb">
+            <details class="event-card event-card--training" id="monat-feb">
               <summary>Februar 2026</summary>
               <div class="event-content">
                 <h3>Schmalweg-Wettkampf – Bayern</h3>
@@ -137,7 +151,7 @@
             </details>
 
             <!-- März -->
-            <details class="event-card" id="monat-mar">
+            <details class="event-card event-card--pflege" id="monat-mar">
               <summary>März 2026</summary>
               <div class="event-content">
                 <h3>Einsteigerkurs – Niedersachsen</h3>
@@ -170,7 +184,7 @@
             </details>
 
             <!-- April -->
-            <details class="event-card" id="monat-apr">
+            <details class="event-card event-card--tour" id="monat-apr">
               <summary>April 2026</summary>
               <div class="event-content">
                 <h3>Streckenbau-Workshop – Saarland</h3>
@@ -208,7 +222,7 @@
           <!-- /.events-row -->
           <div class="events-row">
             <!-- Mai -->
-            <details class="event-card" id="monat-mai">
+            <details class="event-card event-card--training" id="monat-mai">
               <summary>Mai 2026</summary>
               <div class="event-content">
                 <h3>Radmesse – Stuttgart</h3>
@@ -242,7 +256,7 @@
             </details>
 
             <!-- Juni -->
-            <details class="event-card" id="monat-jun">
+            <details class="event-card event-card--pflege" id="monat-jun">
               <summary>Juni 2026</summary>
               <div class="event-content">
                 <h3>Sommertour – Eifel</h3>
@@ -276,7 +290,7 @@
             </details>
 
             <!-- Juli -->
-            <details class="event-card" id="monat-jul">
+            <details class="event-card event-card--tour" id="monat-jul">
               <summary>Juli 2026</summary>
               <div class="event-content">
                 <h3>Alpenüberquerung – Berchtesgaden</h3>
@@ -312,7 +326,7 @@
             </details>
 
             <!-- August -->
-            <details class="event-card" id="monat-aug">
+            <details class="event-card event-card--wettkampf" id="monat-aug">
               <summary>August 2026</summary>
               <div class="event-content">
                 <h3>Sommerfest &amp; Vereinsrennen – Berlin</h3>
@@ -350,7 +364,7 @@
           <!-- /.events-row -->
           <div class="events-row">
             <!-- September -->
-            <details class="event-card" id="monat-sep">
+            <details class="event-card event-card--wettkampf" id="monat-sep">
               <summary>September 2026</summary>
               <div class="event-content">
                 <h3>Herbst-Fahrlager – Schwarzwald</h3>
@@ -386,7 +400,7 @@
             </details>
 
             <!-- Oktober -->
-            <details class="event-card" id="monat-okt">
+            <details class="event-card event-card--tour" id="monat-okt">
               <summary>Oktober 2026</summary>
               <div class="event-content">
                 <h3>Oktobertour – Rhein-Main</h3>
@@ -421,7 +435,7 @@
             </details>
 
             <!-- November -->
-            <details class="event-card" id="monat-nov">
+            <details class="event-card event-card--pflege" id="monat-nov">
               <summary>November 2026</summary>
               <div class="event-content">
                 <h3>Saisonabschluss-Tour – Bodensee</h3>
@@ -457,7 +471,7 @@
             </details>
 
             <!-- Dezember -->
-            <details class="event-card" id="monat-dez">
+            <details class="event-card event-card--tour" id="monat-dez">
               <summary>Dezember 2026</summary>
               <div class="event-content">
                 <h3>Winterwaldtour – Spessart</h3>
