@@ -5,10 +5,13 @@ Entsprechend der Aufgabenstellung zur Finalisierungsphase ist hier stichpunktart
 ## Technologien
 
 * HTML (Hypertext Markup Language): Strukturiert den Inhalt (Texte, Bilder, Links)
-* CSS: Definiert das Design und Layout (Farben, Schriftarten, Abstände)
+* CSS: Definiert das Design und Layout (Farben, Schriftarten, Abstände), außerdem:
+    * CSS Nesting (```&```-Selektor) in jeder Datei
+    * Pseudo-Elemente ```::before```/```::after``` für Akkordeon-Icons, Timeline-Linie, Steps-Linie
+    * Transitions auf Hover/Focus (Farbe, Transform, Border)
+    * ```position: sticky``` für Header, Monatsnav, Compliance-TOC
 * Javascript: script.js steuert seitenübergreifend den header und footer
-* Über ```.htaccess``` wird auf einem Apache-Webserver (Annahme, um die 404-Seite einzubinden zu können) auf die error.html-Seite umgeleitet, sobald ein 
-Besucher eine nicht vorhandene Seite aufruft.
+* Über ```.htaccess``` wird auf einem Apache-Webserver (Annahme, um die 404-Seite einzubinden zu können) auf die error.html-Seite umgeleitet, sobald ein Besucher eine nicht vorhandene Seite aufruft.
 
 ## Barrierefreiheit
 
