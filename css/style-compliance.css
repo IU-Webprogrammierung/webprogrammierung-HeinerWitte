@@ -14,7 +14,7 @@
 .compliance-toc {
     flex: 0 0 200px;
     position: sticky;
-    top: 80px;
+    top: calc(var(--header-height) + 10px);
     background-color: #f7f7f7;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
@@ -293,7 +293,7 @@
     .compliance-toc {
         flex: 0 0 170px;
         font-size: 0.84rem;
-        top: 70px;
+        top: calc(var(--header-height-tablet) + 10px);
     }
 
     .compliance-page {
@@ -327,7 +327,9 @@
     }
 
     .compliance-toc {
-        position: static;
+        position: sticky;
+        top: var(--header-height-mobile);
+        z-index: 90;
         flex: none;
         width: 100%;
         box-sizing: border-box;
