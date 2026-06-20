@@ -143,22 +143,34 @@
 @media (max-width: 768px) {
 
     .error-layout {
-        display: block;
+        display: flex;
+        flex-direction: column;
         padding: 24px 16px;
+        gap: 20px;
     }
 
     .error-aside {
-        display: none;
+        float: none;
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+        order: 2;
+
+        &:last-child {
+            float: none;
+            margin-top: 0;
+        }
     }
 
     .error-aside + .error-page {
         float: none;
         width: 100%;
         margin: 0;
+        order: 1;
     }
 
     .error-page {
-        padding: 32px 0;
+        padding: 32px 0 0;
         text-align: center;
     }
 
