@@ -27,7 +27,7 @@
     background-color: #444;
     padding: 0 20px;
     position: sticky;
-    top: 70px;
+    top: var(--header-height);
     z-index: 90;
 
     & ul {
@@ -512,6 +512,8 @@
     }
 
     .month-nav {
+        top: var(--header-height-tablet);
+
         & ul {
             display: flex;
             flex-wrap: wrap;
@@ -573,7 +575,7 @@
         padding: 0;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-        top: 70px;
+        top: var(--header-height-mobile);
 
         & ul {
             display: flex;

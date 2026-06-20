@@ -48,6 +48,12 @@ nav a[aria-current="page"] {
 }
 
 /* ── Header ── */
+:root {
+    --header-height: 113px;
+    --header-height-tablet: 152px;
+    --header-height-mobile: 70px;
+}
+
 header {
     padding: 10px 20px;
     background-color: #333;
