@@ -31,7 +31,10 @@ input:focus-visible {
     outline-offset: 2px;
 }
 
-/* WCAG 2.4.11: aktueller Navigationslink */
+/* WCAG 2.4.11: aktueller Navigationslink.
+   Der Header wird per fetch() seitenübergreifend eingebunden, daher kann
+   aria-current="page" ohne JS nicht pro Seite gesetzt werden. Die Regel
+   bleibt als Konvention erhalten, falls der aktive Link künftig markiert wird. */
 nav a[aria-current="page"] {
     text-decoration: underline;
     font-weight: bold;
