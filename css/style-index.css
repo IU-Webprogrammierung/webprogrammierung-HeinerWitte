@@ -227,7 +227,7 @@
 
 .weather-banner {
     position: relative;
-    background-image: url('../assets/Hero-Homepage.jpg');
+    background-image: url('../assets/hero-homepage.jpg');
     background-size: cover;
     background-position: center 60%;
     min-height: 300px;
