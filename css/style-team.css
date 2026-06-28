@@ -151,37 +151,7 @@
     display: inline-block;
 }
 
-.team-cta-btn {
-    display: inline-block;
-    padding: 13px 28px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    font-weight: 600;
-    margin: 0 8px;
-
-    &:hover {
-        background-color: #555;
-    }
-
-    &:focus-visible {
-        outline: 3px solid #005fcc;
-        outline-offset: 2px;
-    }
-
-    &.team-cta-btn--outline {
-        background-color: transparent;
-        color: #333;
-        border: 2px solid #333;
-
-        &:hover {
-            background-color: #333;
-            color: white;
-        }
-    }
-}
+/* .cta-btn / .cta-btn--outline: siehe style-base.css */
 
 /* ═══════════════════════════════════════════
    KONTAKTKARTEN
@@ -353,6 +323,10 @@
         line-height: 1.6;
         margin: 0;
     }
+
+    & .partner-type {
+        margin-bottom: 6px;
+    }
 }
 
 .partner-type {
@@ -361,7 +335,6 @@
     color: #e8a000;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    margin-bottom: 6px !important;
 }
 
 /* ═══════════════════════════════════════════
@@ -524,7 +497,7 @@
         gap: 12px;
     }
 
-    .team-cta-btn { margin: 0; }
+    .cta-btn { margin: 0; }
 }
 
 /* ═══════════════════════════════════════════
@@ -571,8 +544,9 @@
         }
     }
 
-    .timeline-item {
-        flex-direction: column !important;
+    .timeline-item,
+    .timeline-item:nth-child(odd) {
+        flex-direction: column;
         padding-left: 36px;
         gap: 8px;
     }
@@ -582,9 +556,10 @@
         transform: none;
     }
 
-    .timeline-content {
+    .timeline-content,
+    .timeline-item:nth-child(odd) .timeline-content {
         width: 100%;
-        text-align: left !important;
+        text-align: left;
     }
 
     .team-values {
@@ -648,7 +623,7 @@
         align-items: stretch;
     }
 
-    .team-cta-btn {
+    .cta-btn {
         margin: 0;
         text-align: center;
         width: 100%;

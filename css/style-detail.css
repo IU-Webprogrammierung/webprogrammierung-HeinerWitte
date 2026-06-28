@@ -447,11 +447,11 @@
 
         &:last-child { margin: 0; }
     }
-}
 
-.trail-scale-gear {
-    font-size: 0.85rem !important;
-    color: #888 !important;
+    & .trail-scale-gear {
+        font-size: 0.85rem;
+        color: #888;
+    }
 }
 
 /* ═══════════════════════════════════════════

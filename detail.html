@@ -374,19 +374,22 @@
           class="equip-radio"
         />
 
-        <div class="equip-tabs" role="group" aria-label="Niveau auswählen">
+        <div class="equip-tabs" role="radiogroup" aria-label="Niveau auswählen">
           <label
             for="equip-einsteiger"
+            id="tab-einsteiger"
             class="equip-tab-label equip-tab-label--easy"
             >&#9679;&#9679;&#9675;&#9675; Einsteiger</label
           >
           <label
             for="equip-fortgeschrittene"
+            id="tab-fortgeschrittene"
             class="equip-tab-label equip-tab-label--medium"
             >&#9679;&#9679;&#9679;&#9675; Fortgeschrittene</label
           >
           <label
             for="equip-profis"
+            id="tab-profis"
             class="equip-tab-label equip-tab-label--hard"
             >&#9679;&#9679;&#9679;&#9679; Profis</label
           >
@@ -397,7 +400,7 @@
             class="equip-panel"
             id="panel-einsteiger"
             role="region"
-            aria-label="Checkliste Einsteiger"
+            aria-labelledby="tab-einsteiger"
           >
             <ul class="equip-list" role="list">
               <li>
@@ -442,7 +445,7 @@
             class="equip-panel"
             id="panel-fortgeschrittene"
             role="region"
-            aria-label="Checkliste Fortgeschrittene"
+            aria-labelledby="tab-fortgeschrittene"
           >
             <ul class="equip-list" role="list">
               <li>
@@ -491,7 +494,7 @@
             class="equip-panel"
             id="panel-profis"
             role="region"
-            aria-label="Checkliste Profis"
+            aria-labelledby="tab-profis"
           >
             <ul class="equip-list" role="list">
               <li>

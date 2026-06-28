@@ -124,16 +124,9 @@
 
 .dsgvo-item {
     border-bottom: 1px solid #e8e8e8;
+    width: 100%;
 
     &:first-child { border-top: 1px solid #e8e8e8; }
-}
-
-.dsgvo-item dt {
-    margin: 0;
-}
-
-.dsgvo-item details {
-    width: 100%;
 }
 
 .dsgvo-item summary {
@@ -170,7 +163,7 @@
     }
 }
 
-.dsgvo-item details[open] summary {
+.dsgvo-item[open] summary {
     color: #e8a000;
 
     &::after {
@@ -179,7 +172,7 @@
     }
 }
 
-.dsgvo-item dd {
+.dsgvo-item .dsgvo-answer {
     margin: 0;
     padding: 0 6px 18px;
 

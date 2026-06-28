@@ -109,14 +109,9 @@
 
 .faq-item {
     border-bottom: 1px solid #ddd;
+    width: 100%;
 
     &:first-child { border-top: 1px solid #ddd; }
-}
-
-.faq-item dt { margin: 0; }
-
-.faq-item details {
-    width: 100%;
 }
 
 .faq-item summary {
@@ -144,11 +139,11 @@
     }
 }
 
-.faq-item details[open] summary::after {
+.faq-item[open] summary::after {
     transform: rotate(45deg);
 }
 
-.faq-item dd {
+.faq-item .faq-answer {
     margin: 0;
     padding: 0 4px 20px;
     font-size: 0.95rem;
@@ -577,7 +572,7 @@
         padding: 16px 4px;
     }
 
-    .faq-item dd { font-size: 0.9rem; }
+    .faq-item .faq-answer { font-size: 0.9rem; }
 
     .offer-compare {
         padding: 36px 16px;
