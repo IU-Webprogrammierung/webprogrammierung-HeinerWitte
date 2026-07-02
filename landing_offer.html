@@ -24,15 +24,37 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       />
     </noscript>
-    <link rel="stylesheet" href="css/style-base.css" />
-    <link rel="stylesheet" href="css/style-offer.css" />
+    <!-- Tailwind CSS (Play CDN – kein Build-Schritt, siehe README für Hinweise zum Produktivbetrieb) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Projekt-eigene Breakpoints statt Tailwind-Standardwerten, damit sie zu
+      // den anderen Seiten passen: Tablet 769–1024px, Mobile ≤768px.
+      tailwind.config = {
+        theme: {
+          screens: {
+            'max-md': { max: '768px' },
+            md: { min: '769px', max: '1024px' },
+          },
+          extend: {
+            fontFamily: { sans: ['Inter', 'Arial', 'sans-serif'] },
+          },
+        },
+      };
+    </script>
     <script src="js/script.js" defer></script>
   </head>
-  <body>
-    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
-    <header role="banner"></header>
+  <body class="m-0 font-sans">
+    <a
+      href="#main-content"
+      class="absolute left-0 top-[-100px] z-[9999] bg-[#005fcc] px-5 py-2.5 font-bold text-white no-underline focus:top-0"
+      >Zum Hauptinhalt springen</a
+    >
+    <header
+      role="banner"
+      class="sticky top-0 z-[100] bg-[#333] px-5 py-2.5 max-md:px-4"
+    ></header>
     <main id="main-content" role="main">
-      <section class="hero" aria-label="Headerbild">
+      <section aria-label="Headerbild">
         <img
           src="assets/wir-bieten-heroimage.jpg"
           alt=""
@@ -40,17 +62,28 @@
           width="2750"
           height="1536"
           fetchpriority="high"
+          class="block max-h-[700px] w-full object-cover md:max-h-[440px] max-md:max-h-[220px]"
         />
       </section>
-      <section class="offer-section" aria-labelledby="offer-heading">
+      <section
+        class="mx-auto max-w-[1100px] overflow-hidden px-5 py-10 max-md:px-4 max-md:py-6"
+        aria-labelledby="offer-heading"
+      >
         <h2 id="offer-heading" class="sr-only">Was wir bieten</h2>
-        <div class="offer-columns">
+        <div
+          class="overflow-hidden md:flex md:gap-[3%] max-md:block"
+        >
           <article
-            class="offer-card"
+            class="float-left mr-[4%] w-[48%] rounded-lg bg-[#f5f5f5] p-7 md:float-none md:w-[calc(50%-1.5%)] md:mr-0 max-md:float-none max-md:mb-4 max-md:w-full max-md:mr-0"
             aria-labelledby="offer-gemeinschaft-heading"
           >
-            <h3 id="offer-gemeinschaft-heading">Gemeinschaft &amp; Netzwerk</h3>
-            <p>
+            <h3
+              id="offer-gemeinschaft-heading"
+              class="mb-3.5 text-[1.3rem] text-[#222] max-md:text-[1.1rem]"
+            >
+              Gemeinschaft &amp; Netzwerk
+            </h3>
+            <p class="mb-3 text-[0.97rem] leading-[1.75] text-[#222]">
               Als Mitglied der IU MTB Community e. V. bist du Teil einer aktiven
               Gemeinschaft von Gleichgesinnten aus ganz Deutschland. Egal ob
               Einsteiger oder erfahrener Fahrer – bei uns findest du Mitfahrer
@@ -58,17 +91,23 @@
               Technik aus und knüpfst Freundschaften, die weit über den Fahrweg
               hinausgehen.
             </p>
-            <p>
+            <p class="text-[0.97rem] leading-[1.75] text-[#222]">
               Unser überregionales Netzwerk verbindet Menschen aus über 12
               Bundesländern. Ob spontane Feierabendausfahrt oder geplante
               Mehrtagesfahrt – du findest immer jemanden, der mitkommt.
             </p>
           </article>
-          <article class="offer-card" aria-labelledby="offer-events-heading">
-            <h3 id="offer-events-heading">
+          <article
+            class="float-left w-[48%] rounded-lg bg-[#f5f5f5] p-7 md:float-none md:w-[calc(50%-1.5%)] max-md:float-none max-md:w-full"
+            aria-labelledby="offer-events-heading"
+          >
+            <h3
+              id="offer-events-heading"
+              class="mb-3.5 text-[1.3rem] text-[#222] max-md:text-[1.1rem]"
+            >
               Veranstaltungen, Training &amp; Strecken
             </h3>
-            <p>
+            <p class="mb-3 text-[0.97rem] leading-[1.75] text-[#222]">
               Wir organisieren das ganze Jahr über Veranstaltungen: von
               geführten Fahrtechniktrainings und Gruppentouren über
               überregionale Vereinstreffen bis hin zu Wettkämpfen und
@@ -76,7 +115,7 @@
               Lehrpersonal, strukturierten Übungseinheiten und dem Wissen
               erfahrener Fahrer.
             </p>
-            <p>
+            <p class="text-[0.97rem] leading-[1.75] text-[#222]">
               Durch unsere Zusammenarbeit mit Forstverwaltungen und
               Naturschutzbehörden sichern wir legale Strecken und schaffen neue
               Fahrwege – damit du auch in Zukunft ungestört und nachhaltig die
@@ -85,97 +124,163 @@
           </article>
         </div>
       </section>
-      <section class="offer-image" aria-labelledby="offer-bild-caption">
-        <figure>
-          <img src="assets/gemeinsam.jpg" alt="" />
+      <section
+        class="mx-auto mb-10 max-w-[1100px] px-5 max-md:mb-6 max-md:px-4"
+        aria-labelledby="offer-bild-caption"
+      >
+        <figure class="m-0">
+          <img
+            src="assets/gemeinsam.jpg"
+            alt=""
+            class="block h-auto w-full rounded-lg"
+          />
           <figcaption id="offer-bild-caption" class="sr-only">
             Mitglieder der IU MTB Community gemeinsam auf einer Ausfahrt
           </figcaption>
         </figure>
       </section>
-      <section class="offer-benefits" aria-labelledby="benefits-heading">
-        <h2 id="benefits-heading">Deine Vorteile als Vereinsmitglied</h2>
-        <ul role="list">
-          <li>
+      <section
+        class="mx-auto mb-10 max-w-[1100px] rounded-lg bg-[#f5f5f5] p-7 max-md:mx-4 max-md:mb-8 max-md:p-5"
+        aria-labelledby="benefits-heading"
+      >
+        <h2
+          id="benefits-heading"
+          class="mb-[18px] text-[1.3rem] text-[#222] max-md:text-[1.2rem]"
+        >
+          Deine Vorteile als Vereinsmitglied
+        </h2>
+        <ul
+          role="list"
+          class="m-0 list-none p-0 md:columns-2 md:gap-x-10"
+        >
+          <li
+            class="border-b border-[#ddd] py-2.5 text-[0.97rem] leading-[1.75] text-[#222] last:border-b-0 md:break-inside-avoid max-md:py-2 max-md:text-[0.93rem]"
+          >
             <strong>Neue Freundschaften schließen</strong> – Lerne
             Gleichgesinnte aus deiner Region und ganz Deutschland kennen, die
             dieselbe Leidenschaft teilen.
           </li>
-          <li>
+          <li
+            class="border-b border-[#ddd] py-2.5 text-[0.97rem] leading-[1.75] text-[#222] last:border-b-0 md:break-inside-avoid max-md:py-2 max-md:text-[0.93rem]"
+          >
             <strong>Gemeinsam fahren, gemeinsam wachsen</strong> – Profitiere
             von erfahrenen Mitfahrern, teile dein Wissen und entwickle deine
             Fahrtechnik kontinuierlich weiter.
           </li>
-          <li>
+          <li
+            class="border-b border-[#ddd] py-2.5 text-[0.97rem] leading-[1.75] text-[#222] last:border-b-0 md:break-inside-avoid max-md:py-2 max-md:text-[0.93rem]"
+          >
             <strong>Nach der Tour entspannen</strong> – Ob gemütliches Grillen
             am Treffpunkt, ein kühles Getränk in der Vereinshütte oder ein
             lockeres Zusammensitzen nach einer langen Ausfahrt – bei uns gehört
             das Miteinander dazu.
           </li>
-          <li>
+          <li
+            class="border-b border-[#ddd] py-2.5 text-[0.97rem] leading-[1.75] text-[#222] last:border-b-0 md:break-inside-avoid max-md:py-2 max-md:text-[0.93rem]"
+          >
             <strong>Organisierte Veranstaltungen ohne Aufwand</strong> – Genieße
             perfekt geplante Ausfahrten, Touren und Wettkämpfe, ohne selbst
             stundenlang koordinieren zu müssen.
           </li>
-          <li>
+          <li
+            class="border-b border-[#ddd] py-2.5 text-[0.97rem] leading-[1.75] text-[#222] last:border-b-0 md:break-inside-avoid max-md:py-2 max-md:text-[0.93rem]"
+          >
             <strong>Umfangreiche Streckenkenntnis</strong> – Entdecke Fahrwege
             und Routen, die du alleine nie gefunden hättest – dank des
             überregionalen Netzwerks unserer Mitglieder.
           </li>
-          <li>
+          <li
+            class="border-b border-[#ddd] py-2.5 text-[0.97rem] leading-[1.75] text-[#222] last:border-b-0 md:break-inside-avoid max-md:py-2 max-md:text-[0.93rem]"
+          >
             <strong>Sicherheit auf der Strecke</strong> – Fahre nie allein in
             unbekanntem Gelände. In der Gruppe bist du besser abgesichert und
             hast immer jemanden an deiner Seite.
           </li>
-          <li>
+          <li
+            class="border-b border-[#ddd] py-2.5 text-[0.97rem] leading-[1.75] text-[#222] last:border-b-0 md:break-inside-avoid max-md:py-2 max-md:text-[0.93rem]"
+          >
             <strong>Fachkundiges Training</strong> – Nimm an lizenzierten
             Fahrtechniktrainings teil und verbessere gezielt deine Fähigkeiten –
             von der Grundtechnik bis zum Fortgeschrittenenkurs.
           </li>
-          <li>
+          <li
+            class="border-b border-[#ddd] py-2.5 text-[0.97rem] leading-[1.75] text-[#222] last:border-b-0 md:break-inside-avoid max-md:py-2 max-md:text-[0.93rem]"
+          >
             <strong>Mitgestalten &amp; Mitentscheiden</strong> – Als
             eingetragener Verein hast du eine Stimme. Bringe eigene Ideen ein,
             wähle den Vorstand und forme aktiv die Zukunft des Vereins.
           </li>
         </ul>
       </section>
-      <section class="offer-faq" aria-labelledby="faq-heading">
-        <h2 id="faq-heading">Häufige Fragen zur Mitgliedschaft</h2>
-        <div class="faq-list">
-          <details class="faq-item">
-            <summary>Wie werde ich Mitglied?</summary>
-            <div class="faq-answer">
+      <section
+        class="bg-[#f9f9f9] px-5 py-[60px] text-center md:py-12 max-md:px-4 max-md:py-9"
+        aria-labelledby="faq-heading"
+      >
+        <h2
+          id="faq-heading"
+          class="mb-9 text-[1.8rem] text-[#111] md:text-[1.6rem] max-md:mb-6 max-md:text-[1.4rem]"
+        >
+          Häufige Fragen zur Mitgliedschaft
+        </h2>
+        <div class="mx-auto max-w-[720px] text-left">
+          <details
+            class="w-full border-b border-[#ddd] first:border-t open:[&_summary::after]:rotate-45"
+          >
+            <summary
+              class="flex cursor-pointer list-none items-center justify-between px-1 py-[18px] text-base font-semibold text-[#111] [&::-webkit-details-marker]:hidden after:ml-4 after:shrink-0 after:text-[1.4rem] after:font-normal after:text-[#e8a000] after:transition-transform after:duration-[250ms] after:ease-in-out after:content-['+'] max-md:px-1 max-md:py-4 max-md:text-[0.95rem]"
+            >
+              Wie werde ich Mitglied?
+            </summary>
+            <div class="px-1 pb-5 text-[0.95rem] leading-[1.7] text-[#444] max-md:text-[0.9rem]">
               Komm einfach zu einem unserer Vereinstreffen oder schreib uns
               eine E-Mail an
-              <a href="mailto:kontakt@iu-mtb-community.de"
+              <a
+                href="mailto:kontakt@iu-mtb-community.de"
+                class="text-[#e8a000] underline"
                 >kontakt@iu-mtb-community.de</a
               >. Wir schicken dir das Anmeldeformular zu – die Aufnahme ist
               unkompliziert und innerhalb weniger Tage abgeschlossen.
             </div>
           </details>
-          <details class="faq-item">
-            <summary>Wie hoch ist der Mitgliedsbeitrag?</summary>
-            <div class="faq-answer">
+          <details
+            class="w-full border-b border-[#ddd] open:[&_summary::after]:rotate-45"
+          >
+            <summary
+              class="flex cursor-pointer list-none items-center justify-between px-1 py-[18px] text-base font-semibold text-[#111] [&::-webkit-details-marker]:hidden after:ml-4 after:shrink-0 after:text-[1.4rem] after:font-normal after:text-[#e8a000] after:transition-transform after:duration-[250ms] after:ease-in-out after:content-['+'] max-md:px-1 max-md:py-4 max-md:text-[0.95rem]"
+            >
+              Wie hoch ist der Mitgliedsbeitrag?
+            </summary>
+            <div class="px-1 pb-5 text-[0.95rem] leading-[1.7] text-[#444] max-md:text-[0.9rem]">
               Der Jahresbeitrag beträgt 48 € für Erwachsene und 24 € für
               Jugendliche unter 18 Jahren. Im Beitrag enthalten sind alle
               regulären Vereinstouren sowie der Zugang zum geschlossenen
               Mitgliederbereich unserer Kommunikationsplattform.
             </div>
           </details>
-          <details class="faq-item">
-            <summary>
+          <details
+            class="w-full border-b border-[#ddd] open:[&_summary::after]:rotate-45"
+          >
+            <summary
+              class="flex cursor-pointer list-none items-center justify-between px-1 py-[18px] text-base font-semibold text-[#111] [&::-webkit-details-marker]:hidden after:ml-4 after:shrink-0 after:text-[1.4rem] after:font-normal after:text-[#e8a000] after:transition-transform after:duration-[250ms] after:ease-in-out after:content-['+'] max-md:px-1 max-md:py-4 max-md:text-[0.95rem]"
+            >
               Brauche ich ein bestimmtes Fahrrad oder Fitnesslevel?
             </summary>
-            <div class="faq-answer">
+            <div class="px-1 pb-5 text-[0.95rem] leading-[1.7] text-[#444] max-md:text-[0.9rem]">
               Nein – du brauchst lediglich ein fahrtüchtiges Mountainbike
               (Hardtail oder Fully) und einen Helm. Wir haben Gruppen für
               alle Levels: von entspannten Waldwegen für Einsteiger bis zu
               technisch anspruchsvollen Trails für Fortgeschrittene.
             </div>
           </details>
-          <details class="faq-item">
-            <summary>Wie oft finden Touren und Trainings statt?</summary>
-            <div class="faq-answer">
+          <details
+            class="w-full border-b border-[#ddd] open:[&_summary::after]:rotate-45"
+          >
+            <summary
+              class="flex cursor-pointer list-none items-center justify-between px-1 py-[18px] text-base font-semibold text-[#111] [&::-webkit-details-marker]:hidden after:ml-4 after:shrink-0 after:text-[1.4rem] after:font-normal after:text-[#e8a000] after:transition-transform after:duration-[250ms] after:ease-in-out after:content-['+'] max-md:px-1 max-md:py-4 max-md:text-[0.95rem]"
+            >
+              Wie oft finden Touren und Trainings statt?
+            </summary>
+            <div class="px-1 pb-5 text-[0.95rem] leading-[1.7] text-[#444] max-md:text-[0.9rem]">
               Wir organisieren wöchentliche Feierabendausfahrten (meist
               mittwochs), monatliche Tagestouren sowie quartalsweise
               überregionale Events. Insgesamt kannst du an über 48
@@ -183,11 +288,15 @@
               2-Stunden-Runden bis zu Mehrtagestouren.
             </div>
           </details>
-          <details class="faq-item">
-            <summary>
+          <details
+            class="w-full border-b border-[#ddd] open:[&_summary::after]:rotate-45"
+          >
+            <summary
+              class="flex cursor-pointer list-none items-center justify-between px-1 py-[18px] text-base font-semibold text-[#111] [&::-webkit-details-marker]:hidden after:ml-4 after:shrink-0 after:text-[1.4rem] after:font-normal after:text-[#e8a000] after:transition-transform after:duration-[250ms] after:ease-in-out after:content-['+'] max-md:px-1 max-md:py-4 max-md:text-[0.95rem]"
+            >
               Kann ich erst schnuppern, bevor ich Mitglied werde?
             </summary>
-            <div class="faq-answer">
+            <div class="px-1 pb-5 text-[0.95rem] leading-[1.7] text-[#444] max-md:text-[0.9rem]">
               Ja, du kannst einmalig kostenlos an einer Schnuppertour
               teilnehmen. Schreib uns einfach kurz an, und wir laden dich
               zur nächsten passenden Ausfahrt ein – ganz unverbindlich.
@@ -196,95 +305,86 @@
         </div>
       </section>
       <!-- Vorher-Nachher-Vergleich -->
-      <section class="offer-compare" aria-labelledby="compare-heading">
-        <h2 id="compare-heading">Alleine vs. mit dem Verein</h2>
-        <div class="compare-grid" role="list">
+      <section
+        class="bg-[#111] px-5 py-[60px] text-center md:py-12 max-md:px-4 max-md:py-9"
+        aria-labelledby="compare-heading"
+      >
+        <h2
+          id="compare-heading"
+          class="mb-10 text-[1.8rem] text-white md:text-[1.6rem] max-md:mb-6 max-md:text-[1.4rem]"
+        >
+          Alleine vs. mit dem Verein
+        </h2>
+        <div
+          role="list"
+          class="mx-auto flex max-w-[760px] gap-0 overflow-hidden rounded-[10px] max-md:flex-col"
+        >
           <div
-            class="compare-col compare-col--solo"
             role="listitem"
+            class="flex-1 bg-[#2a1a1a] px-6 py-7 text-left text-[#ccc] max-md:px-4 max-md:py-5"
             aria-label="Alleine fahren"
           >
-            <h3 aria-hidden="true">&#128683; Alleine</h3>
-            <ul role="list">
-              <li>
-                <span class="compare-icon compare-icon--no" aria-hidden="true"
-                  >✗</span
-                >
+            <h3 class="mb-5 text-[1.1rem] font-bold text-[#e07070]" aria-hidden="true">
+              &#128683; Alleine
+            </h3>
+            <ul role="list" class="m-0 list-none p-0">
+              <li class="flex items-baseline gap-2.5 border-b border-white/[0.08] py-[9px] text-[0.95rem] last:border-b-0">
+                <span class="shrink-0 text-[0.95rem] text-[#e07070]" aria-hidden="true">✗</span>
                 Keine festen Mitfahrer
               </li>
-              <li>
-                <span class="compare-icon compare-icon--no" aria-hidden="true"
-                  >✗</span
-                >
+              <li class="flex items-baseline gap-2.5 border-b border-white/[0.08] py-[9px] text-[0.95rem] last:border-b-0">
+                <span class="shrink-0 text-[0.95rem] text-[#e07070]" aria-hidden="true">✗</span>
                 Strecken selbst recherchieren
               </li>
-              <li>
-                <span class="compare-icon compare-icon--no" aria-hidden="true"
-                  >✗</span
-                >
+              <li class="flex items-baseline gap-2.5 border-b border-white/[0.08] py-[9px] text-[0.95rem] last:border-b-0">
+                <span class="shrink-0 text-[0.95rem] text-[#e07070]" aria-hidden="true">✗</span>
                 Kein Feedback zur Technik
               </li>
-              <li>
-                <span class="compare-icon compare-icon--no" aria-hidden="true"
-                  >✗</span
-                >
+              <li class="flex items-baseline gap-2.5 border-b border-white/[0.08] py-[9px] text-[0.95rem] last:border-b-0">
+                <span class="shrink-0 text-[0.95rem] text-[#e07070]" aria-hidden="true">✗</span>
                 Kein Ansprechpartner bei Problemen
               </li>
-              <li>
-                <span class="compare-icon compare-icon--no" aria-hidden="true"
-                  >✗</span
-                >
+              <li class="flex items-baseline gap-2.5 border-b border-white/[0.08] py-[9px] text-[0.95rem] last:border-b-0">
+                <span class="shrink-0 text-[0.95rem] text-[#e07070]" aria-hidden="true">✗</span>
                 Keine organisierten Events
               </li>
-              <li>
-                <span class="compare-icon compare-icon--no" aria-hidden="true"
-                  >✗</span
-                >
+              <li class="flex items-baseline gap-2.5 py-[9px] text-[0.95rem]">
+                <span class="shrink-0 text-[0.95rem] text-[#e07070]" aria-hidden="true">✗</span>
                 Allein im Notfall
               </li>
             </ul>
           </div>
           <div
-            class="compare-col compare-col--club"
             role="listitem"
+            class="flex-1 bg-[#1a2a1a] px-6 py-7 text-left text-[#ccc] max-md:px-4 max-md:py-5"
             aria-label="Mit dem Verein fahren"
           >
-            <h3 aria-hidden="true">&#9989; Mit dem Verein</h3>
-            <ul role="list">
-              <li>
-                <span class="compare-icon compare-icon--yes" aria-hidden="true"
-                  >✓</span
-                >
+            <h3 class="mb-5 text-[1.1rem] font-bold text-[#6abf6a]" aria-hidden="true">
+              &#9989; Mit dem Verein
+            </h3>
+            <ul role="list" class="m-0 list-none p-0">
+              <li class="flex items-baseline gap-2.5 border-b border-white/[0.08] py-[9px] text-[0.95rem] last:border-b-0">
+                <span class="shrink-0 text-[0.95rem] text-[#6abf6a]" aria-hidden="true">✓</span>
                 Feste Gruppe, immer Mitfahrer
               </li>
-              <li>
-                <span class="compare-icon compare-icon--yes" aria-hidden="true"
-                  >✓</span
-                >
+              <li class="flex items-baseline gap-2.5 border-b border-white/[0.08] py-[9px] text-[0.95rem] last:border-b-0">
+                <span class="shrink-0 text-[0.95rem] text-[#6abf6a]" aria-hidden="true">✓</span>
                 Geprüfte Strecken &amp; Tourenführer
               </li>
-              <li>
-                <span class="compare-icon compare-icon--yes" aria-hidden="true"
-                  >✓</span
-                >
+              <li class="flex items-baseline gap-2.5 border-b border-white/[0.08] py-[9px] text-[0.95rem] last:border-b-0">
+                <span class="shrink-0 text-[0.95rem] text-[#6abf6a]" aria-hidden="true">✓</span>
                 Lizenziertes Fahrtechniktraining
               </li>
-              <li>
-                <span class="compare-icon compare-icon--yes" aria-hidden="true"
-                  >✓</span
-                >
+              <li class="flex items-baseline gap-2.5 border-b border-white/[0.08] py-[9px] text-[0.95rem] last:border-b-0">
+                <span class="shrink-0 text-[0.95rem] text-[#6abf6a]" aria-hidden="true">✓</span>
                 Ansprechpartner &amp; Gemeinschaft
               </li>
-              <li>
-                <span class="compare-icon compare-icon--yes" aria-hidden="true"
-                  >✓</span
-                >
+              <li class="flex items-baseline gap-2.5 border-b border-white/[0.08] py-[9px] text-[0.95rem] last:border-b-0">
+                <span class="shrink-0 text-[0.95rem] text-[#6abf6a]" aria-hidden="true">✓</span>
                 48 organisierte Events im Jahr
               </li>
-              <li>
-                <span class="compare-icon compare-icon--yes" aria-hidden="true"
-                  >✓</span
-                >
+              <li class="flex items-baseline gap-2.5 py-[9px] text-[0.95rem]">
+                <span class="shrink-0 text-[0.95rem] text-[#6abf6a]" aria-hidden="true">✓</span>
                 Sicherheit in der Gruppe
               </li>
             </ul>
@@ -293,56 +393,88 @@
       </section>
 
       <!-- Preiskarte -->
-      <section class="offer-pricing" aria-labelledby="pricing-heading">
-        <h2 id="pricing-heading">Mitgliedschaft</h2>
-        <p class="pricing-intro">
+      <section
+        class="bg-[#f9f9f9] px-5 py-[60px] text-center md:py-12 max-md:px-4 max-md:py-9"
+        aria-labelledby="pricing-heading"
+      >
+        <h2 id="pricing-heading" class="mb-2 text-[1.8rem] text-[#111] max-md:text-[1.4rem]">
+          Mitgliedschaft
+        </h2>
+        <p class="mb-9 text-[0.97rem] text-[#666]">
           Transparent, fair und ohne versteckte Kosten.
         </p>
-        <div class="pricing-cards">
+        <div
+          class="flex flex-wrap justify-center gap-6 md:gap-4 max-md:flex-col max-md:items-center"
+        >
           <article
-            class="pricing-card"
+            class="relative w-[280px] rounded-xl border-2 border-[#ddd] bg-white p-8 text-left md:w-[calc(50%-8px)] max-md:w-full max-md:max-w-[340px]"
             aria-labelledby="pricing-jugend-heading"
           >
-            <h3 id="pricing-jugend-heading">Jugendmitglied</h3>
-            <p class="pricing-age">unter 18 Jahren</p>
-            <p class="pricing-price">
-              <span class="pricing-amount">24 €</span
-              ><span class="pricing-period"> / Jahr</span>
+            <h3 id="pricing-jugend-heading" class="mb-1 text-[1.1rem] font-bold text-[#111]">
+              Jugendmitglied
+            </h3>
+            <p class="mb-4 text-[0.85rem] text-[#595959]">unter 18 Jahren</p>
+            <p class="mb-5">
+              <span class="text-[2.2rem] font-bold text-[#111]">24 €</span
+              ><span class="text-[0.9rem] text-[#595959]"> / Jahr</span>
             </p>
-            <ul class="pricing-list" role="list">
-              <li>Alle Vereinstouren inklusive</li>
-              <li>Geführte Einsteigerkurse</li>
-              <li>Mitgliederbereich &amp; Community</li>
-              <li>Stimmrecht ab 16 Jahren</li>
+            <ul role="list" class="m-0 mb-6 list-none p-0">
+              <li class="flex items-baseline gap-2 border-b border-[#e8e8e8] py-2 text-[0.93rem] text-[#333] before:shrink-0 before:font-bold before:text-[#7a5200] before:content-['✓']">
+                Alle Vereinstouren inklusive
+              </li>
+              <li class="flex items-baseline gap-2 border-b border-[#e8e8e8] py-2 text-[0.93rem] text-[#333] before:shrink-0 before:font-bold before:text-[#7a5200] before:content-['✓']">
+                Geführte Einsteigerkurse
+              </li>
+              <li class="flex items-baseline gap-2 border-b border-[#e8e8e8] py-2 text-[0.93rem] text-[#333] before:shrink-0 before:font-bold before:text-[#7a5200] before:content-['✓']">
+                Mitgliederbereich &amp; Community
+              </li>
+              <li class="flex items-baseline gap-2 py-2 text-[0.93rem] text-[#333] before:shrink-0 before:font-bold before:text-[#7a5200] before:content-['✓']">
+                Stimmrecht ab 16 Jahren
+              </li>
             </ul>
             <a
               href="mailto:kontakt@iu-mtb-community.de"
-              class="pricing-btn"
+              class="block rounded-md bg-[#333] px-5 py-3 text-center text-[0.95rem] font-semibold text-white no-underline transition-colors duration-200 hover:bg-[#e8a000] hover:text-[#111] focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2"
               aria-label="Jetzt als Jugendmitglied anmelden"
               >Jetzt anmelden</a
             >
           </article>
           <article
-            class="pricing-card pricing-card--featured"
+            class="relative w-[280px] rounded-xl border-2 border-[#e8a000] bg-white p-8 text-left shadow-[0_4px_20px_rgba(232,160,0,0.2)] md:w-[calc(50%-8px)] max-md:w-full max-md:max-w-[340px]"
             aria-labelledby="pricing-erwachsen-heading"
           >
-            <span class="pricing-badge">Beliebteste Wahl</span>
-            <h3 id="pricing-erwachsen-heading">Erwachsenenmitglied</h3>
-            <p class="pricing-age">ab 18 Jahren</p>
-            <p class="pricing-price">
-              <span class="pricing-amount">48 €</span
-              ><span class="pricing-period"> / Jahr</span>
+            <span
+              class="mb-3 inline-block rounded-xl bg-[#e8a000] px-2.5 py-1 text-[0.75rem] font-bold uppercase tracking-[0.06em] text-[#111]"
+              >Beliebteste Wahl</span
+            >
+            <h3 id="pricing-erwachsen-heading" class="mb-1 text-[1.1rem] font-bold text-[#111]">
+              Erwachsenenmitglied
+            </h3>
+            <p class="mb-4 text-[0.85rem] text-[#595959]">ab 18 Jahren</p>
+            <p class="mb-5">
+              <span class="text-[2.2rem] font-bold text-[#111]">48 €</span
+              ><span class="text-[0.9rem] text-[#595959]"> / Jahr</span>
             </p>
-            <ul class="pricing-list" role="list">
-              <li>Alle Vereinstouren inklusive</li>
-              <li>Trainings aller Schwierigkeitsgrade</li>
-              <li>Mitgliederbereich &amp; Community</li>
-              <li>Volles Stimmrecht</li>
-              <li>Kostenlose Schnuppertour</li>
+            <ul role="list" class="m-0 mb-6 list-none p-0">
+              <li class="flex items-baseline gap-2 border-b border-[#e8e8e8] py-2 text-[0.93rem] text-[#333] before:shrink-0 before:font-bold before:text-[#7a5200] before:content-['✓']">
+                Alle Vereinstouren inklusive
+              </li>
+              <li class="flex items-baseline gap-2 border-b border-[#e8e8e8] py-2 text-[0.93rem] text-[#333] before:shrink-0 before:font-bold before:text-[#7a5200] before:content-['✓']">
+                Trainings aller Schwierigkeitsgrade
+              </li>
+              <li class="flex items-baseline gap-2 border-b border-[#e8e8e8] py-2 text-[0.93rem] text-[#333] before:shrink-0 before:font-bold before:text-[#7a5200] before:content-['✓']">
+                Mitgliederbereich &amp; Community
+              </li>
+              <li class="flex items-baseline gap-2 border-b border-[#e8e8e8] py-2 text-[0.93rem] text-[#333] before:shrink-0 before:font-bold before:text-[#7a5200] before:content-['✓']">
+                Volles Stimmrecht
+              </li>
+              <li class="flex items-baseline gap-2 py-2 text-[0.93rem] text-[#333] before:shrink-0 before:font-bold before:text-[#7a5200] before:content-['✓']">
+                Kostenlose Schnuppertour
+              </li>
             </ul>
             <a
               href="mailto:kontakt@iu-mtb-community.de"
-              class="pricing-btn"
+              class="block rounded-md bg-[#e8a000] px-5 py-3 text-center text-[0.95rem] font-semibold text-[#111] no-underline transition-colors duration-200 hover:bg-[#c78800] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2"
               aria-label="Jetzt als Erwachsenenmitglied anmelden"
               >Jetzt anmelden</a
             >
@@ -351,34 +483,60 @@
       </section>
 
       <!-- Anmeldeprozess -->
-      <section class="offer-steps" aria-labelledby="steps-heading">
-        <h2 id="steps-heading">In 3 Schritten dabei</h2>
-        <ol class="steps-list" role="list">
-          <li class="steps-item">
-            <div class="steps-number" aria-hidden="true">1</div>
-            <div class="steps-content">
-              <h3>Kontakt aufnehmen</h3>
-              <p>
+      <section
+        class="bg-white px-5 py-[60px] text-center md:py-12 max-md:px-4 max-md:py-9"
+        aria-labelledby="steps-heading"
+      >
+        <h2
+          id="steps-heading"
+          class="mb-12 text-[1.8rem] text-[#111] md:text-[1.6rem] max-md:mb-8 max-md:text-[1.4rem]"
+        >
+          In 3 Schritten dabei
+        </h2>
+        <ol
+          role="list"
+          class="relative mx-auto mb-10 flex max-w-[800px] list-none gap-0 p-0 before:absolute before:top-7 before:left-[calc(16.66%+14px)] before:right-[calc(16.66%+14px)] before:z-0 before:h-[3px] before:bg-[#e8a000] before:content-[''] max-md:flex-col max-md:gap-8 max-md:before:hidden"
+        >
+          <li class="relative z-[1] flex flex-1 flex-col items-center px-4 text-center max-md:flex-row max-md:gap-4 max-md:text-left">
+            <div
+              class="mb-4 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-4 border-white bg-[#e8a000] text-[1.3rem] font-bold text-[#111] shadow-[0_0_0_3px_#e8a000] max-md:mb-0 max-md:h-11 max-md:w-11 max-md:text-[1.1rem]"
+              aria-hidden="true"
+            >
+              1
+            </div>
+            <div>
+              <h3 class="mb-2 text-base font-bold text-[#111]">Kontakt aufnehmen</h3>
+              <p class="text-[0.9rem] leading-[1.6] text-[#555]">
                 Schreib uns eine kurze E-Mail oder komm zu einem unserer
                 Vereinstreffen. Wir melden uns innerhalb von 48 Stunden.
               </p>
             </div>
           </li>
-          <li class="steps-item">
-            <div class="steps-number" aria-hidden="true">2</div>
-            <div class="steps-content">
-              <h3>Kostenlose Schnuppertour</h3>
-              <p>
+          <li class="relative z-[1] flex flex-1 flex-col items-center px-4 text-center max-md:flex-row max-md:gap-4 max-md:text-left">
+            <div
+              class="mb-4 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-4 border-white bg-[#e8a000] text-[1.3rem] font-bold text-[#111] shadow-[0_0_0_3px_#e8a000] max-md:mb-0 max-md:h-11 max-md:w-11 max-md:text-[1.1rem]"
+              aria-hidden="true"
+            >
+              2
+            </div>
+            <div>
+              <h3 class="mb-2 text-base font-bold text-[#111]">Kostenlose Schnuppertour</h3>
+              <p class="text-[0.9rem] leading-[1.6] text-[#555]">
                 Lerne die Community kennen, fahr eine Runde mit und schau ob es
                 passt – ganz unverbindlich und kostenlos.
               </p>
             </div>
           </li>
-          <li class="steps-item">
-            <div class="steps-number" aria-hidden="true">3</div>
-            <div class="steps-content">
-              <h3>Mitglied werden</h3>
-              <p>
+          <li class="relative z-[1] flex flex-1 flex-col items-center px-4 text-center max-md:flex-row max-md:gap-4 max-md:text-left">
+            <div
+              class="mb-4 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-4 border-white bg-[#e8a000] text-[1.3rem] font-bold text-[#111] shadow-[0_0_0_3px_#e8a000] max-md:mb-0 max-md:h-11 max-md:w-11 max-md:text-[1.1rem]"
+              aria-hidden="true"
+            >
+              3
+            </div>
+            <div>
+              <h3 class="mb-2 text-base font-bold text-[#111]">Mitglied werden</h3>
+              <p class="text-[0.9rem] leading-[1.6] text-[#555]">
                 Füll das Anmeldeformular aus, überweise den Jahresbeitrag – und
                 du bist dabei. Willkommen in der IU MTB Community!
               </p>
@@ -387,12 +545,16 @@
         </ol>
         <a
           href="mailto:kontakt@iu-mtb-community.de"
-          class="steps-cta"
+          class="inline-block rounded-md bg-[#e8a000] px-8 py-3.5 text-base font-bold text-[#111] no-underline transition-colors duration-200 hover:bg-[#c78800] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2"
           aria-label="E-Mail schreiben und Mitglied werden"
           >Jetzt Kontakt aufnehmen</a
         >
       </section>
     </main>
-    <footer role="contentinfo" aria-label="Seitenfuß"></footer>
+    <footer
+      role="contentinfo"
+      aria-label="Seitenfuß"
+      class="mt-10 overflow-hidden bg-[#333] px-5 pb-[15px] pt-[30px] text-white"
+    ></footer>
   </body>
 </html>

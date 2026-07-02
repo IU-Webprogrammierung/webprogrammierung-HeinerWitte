@@ -1,35 +1,94 @@
 <input
   type="checkbox"
   id="nav-toggle"
-  class="nav-toggle"
+  class="peer/nav absolute h-px w-px overflow-hidden whitespace-nowrap [clip-path:inset(50%)]"
   aria-label="Menü ein-/ausblenden"
 />
-<div class="header-brand">
-  <img src="assets/logo.jpg" alt="" role="presentation" />
-  <h1>IU MTB Community e. V.</h1>
-  <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
-    <span></span>
-    <span></span>
-    <span></span>
+<div class="flex items-center gap-3">
+  <img src="assets/logo.jpg" alt="" role="presentation" class="h-[50px] w-auto shrink-0" />
+  <h1 class="m-0 flex-1 text-lg font-normal text-white md:text-xl">IU MTB Community e. V.</h1>
+  <label
+    for="nav-toggle"
+    aria-hidden="true"
+    class="hidden h-11 w-11 shrink-0 cursor-pointer flex-col justify-center gap-1.5 rounded p-2 max-md:flex peer-focus-visible/nav:outline peer-focus-visible/nav:outline-[3px] peer-focus-visible/nav:outline-[#005fcc] peer-focus-visible/nav:outline-offset-2"
+  >
+    <span
+      class="block h-[3px] rounded-sm bg-white transition-transform duration-200 peer-checked/nav:translate-y-[9px] peer-checked/nav:rotate-45"
+    ></span>
+    <span
+      class="block h-[3px] rounded-sm bg-white transition-opacity duration-200 peer-checked/nav:opacity-0"
+    ></span>
+    <span
+      class="block h-[3px] rounded-sm bg-white transition-transform duration-200 peer-checked/nav:-translate-y-[9px] peer-checked/nav:-rotate-45"
+    ></span>
   </label>
 </div>
-<div class="header-bar">
-  <form class="search-form" role="search" aria-label="Suche auf dieser Website">
+<div
+  class="mt-2 flex items-center justify-between gap-4 max-md:hidden max-md:peer-checked/nav:flex max-md:mt-0 max-md:flex-col max-md:items-stretch max-md:gap-0 md:flex md:mt-2 md:flex-row md:items-center md:justify-between md:gap-4 lg:flex-row"
+>
+  <form
+    class="flex shrink-0 items-center max-md:box-border max-md:bg-[#444] max-md:px-4 max-md:py-3"
+    role="search"
+    aria-label="Suche auf dieser Website"
+  >
     <input
       type="search"
       aria-label="Suchbegriff eingeben"
       placeholder="Suchen..."
+      class="rounded-l border-none px-2.5 py-[5px] text-sm max-md:flex-1 max-md:p-3 max-md:text-base focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2"
     />
-    <button type="submit" aria-label="Suche starten">&#128269;</button>
+    <button
+      type="submit"
+      aria-label="Suche starten"
+      class="rounded-r border-none bg-[#555] px-2.5 py-[5px] text-sm text-white hover:bg-[#777] max-md:p-3 max-md:text-base focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2"
+    >
+      &#128269;
+    </button>
   </form>
-  <nav aria-label="Hauptnavigation">
-    <ul role="list">
-      <li><a href="index.html">Startseite</a></li>
-      <li><a href="team.html">Über uns</a></li>
-      <li><a href="landing_offer.html">Was wir bieten</a></li>
-      <li><a href="events.html">Veranstaltungen</a></li>
-      <li><a href="detail.html">Treffen und Trainings</a></li>
-      <li><a href="compliance.html">Impressum</a></li>
+  <nav aria-label="Hauptnavigation" class="max-md:bg-[#444]">
+    <ul role="list" class="m-0 flex list-none gap-5 p-0 max-md:flex-col max-md:gap-0 max-md:py-2">
+      <li>
+        <a
+          href="index.html"
+          class="text-base leading-none text-white hover:underline max-md:block max-md:border-b max-md:border-[#555] max-md:px-5 max-md:py-[15px] max-md:text-[1.05rem] focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2"
+          >Startseite</a
+        >
+      </li>
+      <li>
+        <a
+          href="team.html"
+          class="text-base leading-none text-white hover:underline max-md:block max-md:border-b max-md:border-[#555] max-md:px-5 max-md:py-[15px] max-md:text-[1.05rem] focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2"
+          >Über uns</a
+        >
+      </li>
+      <li>
+        <a
+          href="landing_offer.html"
+          class="text-base leading-none text-white hover:underline max-md:block max-md:border-b max-md:border-[#555] max-md:px-5 max-md:py-[15px] max-md:text-[1.05rem] focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2"
+          >Was wir bieten</a
+        >
+      </li>
+      <li>
+        <a
+          href="events.html"
+          class="text-base leading-none text-white hover:underline max-md:block max-md:border-b max-md:border-[#555] max-md:px-5 max-md:py-[15px] max-md:text-[1.05rem] focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2"
+          >Veranstaltungen</a
+        >
+      </li>
+      <li>
+        <a
+          href="detail.html"
+          class="text-base leading-none text-white hover:underline max-md:block max-md:border-b max-md:border-[#555] max-md:px-5 max-md:py-[15px] max-md:text-[1.05rem] focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2"
+          >Treffen und Trainings</a
+        >
+      </li>
+      <li>
+        <a
+          href="compliance.html"
+          class="text-base leading-none text-white hover:underline max-md:block max-md:border-b max-md:border-[#555] max-md:px-5 max-md:py-[15px] max-md:text-[1.05rem] focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2"
+          >Impressum</a
+        >
+      </li>
     </ul>
   </nav>
 </div>
