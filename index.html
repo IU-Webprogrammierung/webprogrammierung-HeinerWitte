@@ -1,551 +1,348 @@
 <!doctype html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Startseite – IU MTB Community e. V.</title>
-    <meta
-      name="description"
-      content="IU MTB Community e. V. – Der überregionale Mountainbike-Verein für alle Fahrergruppen. Gruppentouren, Trainings und Veranstaltungen in ganz Deutschland."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      media="print"
-      onload="this.media = 'all'"
-    />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      />
-    </noscript>
-    <!-- Tailwind CSS (Play CDN – kein Build-Schritt, siehe README für Hinweise zum Produktivbetrieb) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      // Projekt-eigene Breakpoints statt Tailwind-Standardwerten, damit sie zu
-      // den anderen Seiten passen: Tablet 769–1024px, Mobile ≤768px.
-      tailwind.config = {
-        theme: {
-          screens: {
-            'max-md': { max: '768px' },
-            md: { min: '769px', max: '1024px' },
-          },
-          extend: {
-            fontFamily: { sans: ['Inter', 'Arial', 'sans-serif'] },
-          },
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Startseite – IU MTB Community e. V.</title>
+  <meta name="description"
+    content="IU MTB Community e. V. – Der überregionale Mountainbike-Verein für alle Fahrergruppen. Gruppentouren, Trainings und Veranstaltungen in ganz Deutschland." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    media="print" onload="this.media = 'all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+  </noscript>
+  <!-- Tailwind CSS (Play CDN – kein Build-Schritt) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Projekt-eigene Breakpoints statt Tailwind-Standardwerten, damit sie zu
+    // den anderen Seiten passen: Tablet 769–1024px, Mobile ≤768px.
+    tailwind.config = {
+      theme: {
+        screens: {
+          "max-md": { max: "768px" },
+          md: { min: "769px", max: "1024px" },
         },
-      };
-    </script>
-    <script src="js/script.js" defer></script>
-  </head>
-  <body class="m-0 font-sans">
-    <a
-      href="#main-content"
-      class="absolute left-0 top-[-100px] z-[9999] bg-[#005fcc] px-5 py-2.5 font-bold text-white no-underline focus:top-0"
-      >Zum Hauptinhalt springen</a
-    >
-    <header
-      role="banner"
-      class="sticky top-0 z-[100] bg-[#333] px-5 py-2.5 max-md:px-4"
-    ></header>
-    <main id="main-content" role="main">
-      <section aria-label="Headerbild">
-        <img
-          src="assets/hero-homepage.jpg"
-          alt=""
-          role="presentation"
-          width="1920"
-          height="700"
-          fetchpriority="high"
-          class="block max-h-[700px] w-full object-cover md:max-h-[440px] max-md:max-h-[220px]"
-        />
-      </section>
-      <section
-        class="mx-auto max-w-[1100px] overflow-hidden px-5 py-10 md:flex md:gap-[5%] md:px-5 md:py-8 max-md:block max-md:px-4 max-md:py-6"
-        aria-labelledby="motivation-heading"
-      >
-        <div class="float-left mr-[4%] w-[48%] md:float-none md:w-1/2 md:mr-0 max-md:float-none max-md:mb-5 max-md:w-full max-md:mr-0">
-          <h2
-            id="motivation-heading"
-            class="mb-[15px] text-2xl max-md:text-[1.4rem]"
-          >
-            Warum Mountainbiken?
-          </h2>
-          <p class="mb-3 text-base leading-[1.7] text-[#222]">
-            Mountainbiken ist mehr als nur ein Sport – es ist eine Leidenschaft,
-            die Körper und Geist in Einklang bringt. Auf zwei Rädern erkundest
-            du die Natur, überwindest Hindernisse und erlebst ein einzigartiges
-            Freiheitsgefühl.
-          </p>
-          <p class="mb-3 text-base leading-[1.7] text-[#222]">
-            Ob steile Trails, technische Abfahrten oder gemütliche Touren durch
-            den Wald – der Mountainbike-Sport bietet für jeden das richtige
-            Abenteuer. Dabei stärkst du nicht nur deine Ausdauer und
-            Koordination, sondern findest auch den perfekten Ausgleich zum
-            Alltag.
-          </p>
-          <p class="mb-3 text-base leading-[1.7] text-[#222]">
-            In unserer Community teilen wir diese Begeisterung gemeinsam – komm
-            dazu und erlebe, was es bedeutet, mit uns die Trails zu erkunden!
-          </p>
-        </div>
-        <div
-          class="float-left w-[48%] md:float-none md:w-[45%] max-md:float-none max-md:w-full"
-          aria-hidden="true"
-        >
-          <img
-            src="assets/mtb-motivation.jpg"
-            alt=""
-            role="presentation"
-            loading="lazy"
-            width="540"
-            height="400"
-            class="block h-auto w-full rounded-lg"
-          />
-        </div>
-      </section>
-      <section
-        class="bg-[#333] px-5 py-9"
-        aria-labelledby="stats-heading"
-      >
-        <h2 id="stats-heading" class="sr-only">Vereinsstatistiken</h2>
-        <ul
-          role="list"
-          class="mx-auto max-w-[1100px] list-none overflow-hidden p-0 md:flex md:flex-wrap max-md:flex max-md:flex-wrap"
-        >
-          <li
-            class="float-left w-1/4 text-center md:float-none md:w-1/2 max-md:float-none max-md:w-1/2 max-md:py-2.5"
-            aria-label="Über 320 Mitglieder"
-          >
-            <span
-              class="block text-[2.6rem] font-bold leading-[1.1] text-white max-md:text-[2rem]"
-              aria-hidden="true"
-              >320+</span
-            >
-            <span
-              class="mt-1.5 block text-sm uppercase tracking-[0.08em] text-[#ccc]"
-              aria-hidden="true"
-              >Mitglieder</span
-            >
-          </li>
-          <li
-            class="float-left w-1/4 text-center md:float-none md:w-1/2 max-md:float-none max-md:w-1/2 max-md:py-2.5"
-            aria-label="Mitglieder in 12 Bundesländern"
-          >
-            <span
-              class="block text-[2.6rem] font-bold leading-[1.1] text-white max-md:text-[2rem]"
-              aria-hidden="true"
-              >12</span
-            >
-            <span
-              class="mt-1.5 block text-sm uppercase tracking-[0.08em] text-[#ccc]"
-              aria-hidden="true"
-              >Bundesländer</span
-            >
-          </li>
-          <li
-            class="float-left w-1/4 text-center md:float-none md:w-1/2 max-md:float-none max-md:w-1/2 max-md:py-2.5"
-            aria-label="48 Events pro Jahr"
-          >
-            <span
-              class="block text-[2.6rem] font-bold leading-[1.1] text-white max-md:text-[2rem]"
-              aria-hidden="true"
-              >48</span
-            >
-            <span
-              class="mt-1.5 block text-sm uppercase tracking-[0.08em] text-[#ccc]"
-              aria-hidden="true"
-              >Events pro Jahr</span
-            >
-          </li>
-          <li
-            class="float-left w-1/4 text-center md:float-none md:w-1/2 max-md:float-none max-md:w-1/2 max-md:py-2.5"
-            aria-label="Gegründet 2015"
-          >
-            <span
-              class="block text-[2.6rem] font-bold leading-[1.1] text-white max-md:text-[2rem]"
-              aria-hidden="true"
-              >2015</span
-            >
-            <span
-              class="mt-1.5 block text-sm uppercase tracking-[0.08em] text-[#ccc]"
-              aria-hidden="true"
-              >Gegründet</span
-            >
-          </li>
-        </ul>
-      </section>
-      <section
-        class="bg-[#1a1a1a] px-5 py-[60px] text-center max-md:px-4 max-md:py-9"
-        aria-labelledby="gallery-heading"
-      >
-        <h2
-          id="gallery-heading"
-          class="mb-8 text-[1.8rem] text-white max-md:mb-5 max-md:text-[1.4rem]"
-        >
-          Eindrücke aus unserem Vereinsleben
-        </h2>
-        <div
-          class="relative mx-auto max-w-[900px]"
-          role="group"
-          aria-label="Bildergalerie"
-        >
-          <input
-            type="radio"
-            name="gallery"
-            id="slide-1"
-            class="peer/s1 hidden"
-            checked
-            aria-label="Bild 1 von 4"
-          />
-          <input
-            type="radio"
-            name="gallery"
-            id="slide-2"
-            class="peer/s2 hidden"
-            aria-label="Bild 2 von 4"
-          />
-          <input
-            type="radio"
-            name="gallery"
-            id="slide-3"
-            class="peer/s3 hidden"
-            aria-label="Bild 3 von 4"
-          />
-          <input
-            type="radio"
-            name="gallery"
-            id="slide-4"
-            class="peer/s4 hidden"
-            aria-label="Bild 4 von 4"
-          />
-          <div
-            class="relative overflow-hidden rounded-lg [&>figure]:hidden peer-checked/s1:[&>figure:nth-child(1)]:block peer-checked/s2:[&>figure:nth-child(2)]:block peer-checked/s3:[&>figure:nth-child(3)]:block peer-checked/s4:[&>figure:nth-child(4)]:block"
-          >
-            <figure class="relative m-0">
-              <img
-                src="assets/gemeinsam.jpg"
-                alt="Vereinsmitglieder gemeinsam auf einer MTB-Tour"
-                loading="lazy"
-                width="1200"
-                height="600"
-                class="block h-[480px] w-full rounded-lg object-cover max-md:h-[220px]"
-              />
-              <figcaption
-                class="absolute inset-x-0 bottom-0 rounded-b-lg bg-gradient-to-t from-black/65 to-transparent px-5 pb-4 pt-7 text-left text-base font-semibold text-white max-md:px-3.5 max-md:pb-3 max-md:pt-5 max-md:text-sm"
-              >
-                Gemeinsam auf Tour
-              </figcaption>
-            </figure>
-            <figure class="relative m-0">
-              <img
-                src="assets/gruppenausflug.jpg"
-                alt="Gruppe von Mountainbikern beim Ausflug in der Natur"
-                loading="lazy"
-                width="1200"
-                height="600"
-                class="block h-[480px] w-full rounded-lg object-cover max-md:h-[220px]"
-              />
-              <figcaption
-                class="absolute inset-x-0 bottom-0 rounded-b-lg bg-gradient-to-t from-black/65 to-transparent px-5 pb-4 pt-7 text-left text-base font-semibold text-white max-md:px-3.5 max-md:pb-3 max-md:pt-5 max-md:text-sm"
-              >
-                Gruppenausflug ins Grüne
-              </figcaption>
-            </figure>
-            <figure class="relative m-0">
-              <img
-                src="assets/gruppentraining.jpg"
-                alt="Vereinsmitglieder beim gemeinsamen Techniktraining"
-                loading="lazy"
-                width="1200"
-                height="600"
-                class="block h-[480px] w-full rounded-lg object-cover max-md:h-[220px]"
-              />
-              <figcaption
-                class="absolute inset-x-0 bottom-0 rounded-b-lg bg-gradient-to-t from-black/65 to-transparent px-5 pb-4 pt-7 text-left text-base font-semibold text-white max-md:px-3.5 max-md:pb-3 max-md:pt-5 max-md:text-sm"
-              >
-                Techniktraining für alle Levels
-              </figcaption>
-            </figure>
-            <figure class="relative m-0">
-              <img
-                src="assets/mtb-community.jpg"
-                alt="MTB-Community beim Vereinstreffen"
-                loading="lazy"
-                width="1200"
-                height="600"
-                class="block h-[480px] w-full rounded-lg object-cover max-md:h-[220px]"
-              />
-              <figcaption
-                class="absolute inset-x-0 bottom-0 rounded-b-lg bg-gradient-to-t from-black/65 to-transparent px-5 pb-4 pt-7 text-left text-base font-semibold text-white max-md:px-3.5 max-md:pb-3 max-md:pt-5 max-md:text-sm"
-              >
-                Unsere Community
-              </figcaption>
-            </figure>
-          </div>
-          <nav
-            class="mt-5 flex justify-center gap-2.5"
-            aria-label="Galerie-Navigation"
-          >
-            <label
-              for="slide-1"
-              aria-label="Bild 1 anzeigen"
-              class="h-3 w-3 cursor-pointer rounded-full bg-[#666] transition-colors duration-300 hover:bg-[#aaa] peer-checked/s1:bg-[#e8a000]"
-            ></label>
-            <label
-              for="slide-2"
-              aria-label="Bild 2 anzeigen"
-              class="h-3 w-3 cursor-pointer rounded-full bg-[#666] transition-colors duration-300 hover:bg-[#aaa] peer-checked/s2:bg-[#e8a000]"
-            ></label>
-            <label
-              for="slide-3"
-              aria-label="Bild 3 anzeigen"
-              class="h-3 w-3 cursor-pointer rounded-full bg-[#666] transition-colors duration-300 hover:bg-[#aaa] peer-checked/s3:bg-[#e8a000]"
-            ></label>
-            <label
-              for="slide-4"
-              aria-label="Bild 4 anzeigen"
-              class="h-3 w-3 cursor-pointer rounded-full bg-[#666] transition-colors duration-300 hover:bg-[#aaa] peer-checked/s4:bg-[#e8a000]"
-            ></label>
-          </nav>
-        </div>
-      </section>
-      <!-- Vereinsvorteile Icon-Grid -->
-      <section
-        class="bg-[#111] px-5 py-[60px] text-center max-md:px-4 max-md:py-10"
-        aria-labelledby="benefits-grid-heading"
-      >
-        <h2
-          id="benefits-grid-heading"
-          class="mb-9 text-[1.9rem] text-white max-md:mb-6 max-md:text-2xl"
-        >
-          Warum IU MTB Community?
-        </h2>
-        <ul
-          role="list"
-          class="mx-auto grid max-w-[860px] list-none grid-cols-3 gap-5 p-0 md:gap-3.5 max-md:grid-cols-2 max-md:gap-3"
-        >
-          <li
-            class="flex flex-col items-center gap-3 rounded-[10px] border border-[#333] bg-[#1e1e1e] px-4 pb-[22px] pt-7 transition-colors duration-200 hover:border-[#e8a000] hover:bg-[#252525] md:px-3 md:pb-[18px] md:pt-[22px]"
-          >
-            <span class="text-[2.4rem] leading-none max-md:text-2xl" aria-hidden="true">🚵</span>
-            <span class="text-center text-[0.95rem] font-semibold text-[#ddd]"
-              >Kostenlose Schnuppertour</span
-            >
-          </li>
-          <li
-            class="flex flex-col items-center gap-3 rounded-[10px] border border-[#333] bg-[#1e1e1e] px-4 pb-[22px] pt-7 transition-colors duration-200 hover:border-[#e8a000] hover:bg-[#252525] md:px-3 md:pb-[18px] md:pt-[22px]"
-          >
-            <span class="text-[2.4rem] leading-none max-md:text-2xl" aria-hidden="true">📅</span>
-            <span class="text-center text-[0.95rem] font-semibold text-[#ddd]"
-              >48 Events pro Jahr</span
-            >
-          </li>
-          <li
-            class="flex flex-col items-center gap-3 rounded-[10px] border border-[#333] bg-[#1e1e1e] px-4 pb-[22px] pt-7 transition-colors duration-200 hover:border-[#e8a000] hover:bg-[#252525] md:px-3 md:pb-[18px] md:pt-[22px]"
-          >
-            <span class="text-[2.4rem] leading-none max-md:text-2xl" aria-hidden="true">🗺️</span>
-            <span class="text-center text-[0.95rem] font-semibold text-[#ddd]"
-              >Bundesweit aktiv</span
-            >
-          </li>
-          <li
-            class="flex flex-col items-center gap-3 rounded-[10px] border border-[#333] bg-[#1e1e1e] px-4 pb-[22px] pt-7 transition-colors duration-200 hover:border-[#e8a000] hover:bg-[#252525] md:px-3 md:pb-[18px] md:pt-[22px]"
-          >
-            <span class="text-[2.4rem] leading-none max-md:text-2xl" aria-hidden="true">🎓</span>
-            <span class="text-center text-[0.95rem] font-semibold text-[#ddd]"
-              >Lizenziertes Training</span
-            >
-          </li>
-          <li
-            class="flex flex-col items-center gap-3 rounded-[10px] border border-[#333] bg-[#1e1e1e] px-4 pb-[22px] pt-7 transition-colors duration-200 hover:border-[#e8a000] hover:bg-[#252525] md:px-3 md:pb-[18px] md:pt-[22px]"
-          >
-            <span class="text-[2.4rem] leading-none max-md:text-2xl" aria-hidden="true">👥</span>
-            <span class="text-center text-[0.95rem] font-semibold text-[#ddd]"
-              >320+ Mitglieder</span
-            >
-          </li>
-          <li
-            class="flex flex-col items-center gap-3 rounded-[10px] border border-[#333] bg-[#1e1e1e] px-4 pb-[22px] pt-7 transition-colors duration-200 hover:border-[#e8a000] hover:bg-[#252525] md:px-3 md:pb-[18px] md:pt-[22px]"
-          >
-            <span class="text-[2.4rem] leading-none max-md:text-2xl" aria-hidden="true">🛡️</span>
-            <span class="text-center text-[0.95rem] font-semibold text-[#ddd]"
-              >Sicherheit in der Gruppe</span
-            >
-          </li>
-        </ul>
-      </section>
+        extend: {
+          fontFamily: { sans: ["Inter", "Arial", "sans-serif"] },
+        },
+      },
+    };
+  </script>
+  <script src="js/script.js" defer></script>
+</head>
 
-      <!-- Wetterbanner -->
-      <section
-        class="relative flex min-h-[300px] items-center justify-center bg-[url('assets/hero-homepage.jpg')] bg-cover bg-[center_60%] max-md:min-h-[220px]"
-        aria-labelledby="weather-banner-heading"
-      >
-        <div
-          class="relative z-[1] flex w-full flex-col items-center gap-3.5 bg-gradient-to-b from-black/55 to-black/70 px-6 py-[60px] text-center"
-        >
-          <p class="m-0 text-[1.1rem] tracking-[0.06em] text-[#e8c96a]" aria-hidden="true">
-            &#9925; Regen &#9728; Sonne &#10052; Schnee
-          </p>
-          <h2
-            id="weather-banner-heading"
-            class="m-0 text-[2.4rem] text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.5)] md:text-[2rem] max-md:text-2xl"
-          >
-            Nächste Tour bei jedem Wetter
-          </h2>
-          <p class="m-0 text-[1.1rem] text-[#ddd] max-md:text-[0.95rem]">
-            Wir fahren 365 Tage im Jahr – komm dazu.
-          </p>
-          <a
-            href="events.html"
-            class="mt-1.5 inline-block rounded-md bg-[#e8a000] px-8 py-3 text-base font-bold text-[#111] no-underline transition-[background-color,transform] duration-200 hover:-translate-y-0.5 hover:bg-[#ffb800] focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-white focus-visible:outline-offset-[3px] max-md:px-6 max-md:py-2.5 max-md:text-[0.95rem]"
-            >Touren entdecken</a
-          >
-        </div>
-      </section>
-
-      <section
-        class="mx-auto max-w-[1100px] overflow-hidden rounded-lg bg-[#f5f5f5] px-5 py-10 md:flex md:items-start md:gap-[4%] max-md:block max-md:px-4 max-md:py-6"
-        aria-labelledby="news-heading"
-      >
-        <div
-          class="float-left mr-[4%] w-[48%] md:float-none md:w-[44%] md:mr-0 max-md:float-none max-md:mb-5 max-md:w-full max-md:mr-0"
-          aria-hidden="true"
-        >
-          <img
-            src="assets/newsbild.jpg"
-            alt=""
-            role="presentation"
-            loading="lazy"
-            width="530"
-            height="400"
-            class="block h-auto w-full rounded-lg"
-          />
-        </div>
-        <div class="float-left w-[48%] md:float-none md:w-[52%] max-md:float-none max-md:w-full">
-          <h2 id="news-heading" class="mb-5 text-2xl max-md:text-[1.4rem]">
-            Aktuelles aus der MTB-Welt
-          </h2>
-          <article aria-labelledby="news-1-heading" class="mb-5">
-            <h3 id="news-1-heading" class="mb-1.5 text-base text-[#111]">
-              UCI Mountain Bike World Series 2026 gestartet
-            </h3>
-            <p class="text-[0.95rem] leading-[1.6] text-[#222]">
-              Die neue Saison der UCI Mountain Bike World Series ist in vollem
-              Gange. Mit spannenden Rennen in Val di Sole und Lenzerheide zeigen
-              die Top-Athleten beeindruckende Leistungen auf anspruchsvollen
-              Strecken.
-            </p>
-          </article>
-          <article aria-labelledby="news-2-heading" class="mb-5">
-            <h3 id="news-2-heading" class="mb-1.5 text-base text-[#111]">
-              Neue Trailprojekte in Deutschland
-            </h3>
-            <p class="text-[0.95rem] leading-[1.6] text-[#222]">
-              Der Deutsche Olympische Sportbund fördert in 2026 zahlreiche neue
-              Trailprojekte. Insgesamt entstehen bundesweit über 200 km neue,
-              legale Mountainbike-Strecken für alle Schwierigkeitsgrade.
-            </p>
-          </article>
-          <article aria-labelledby="news-3-heading" class="mb-5">
-            <h3 id="news-3-heading" class="mb-1.5 text-base text-[#111]">
-              E-MTB: Neue Akku-Generation revolutioniert den Sport
-            </h3>
-            <p class="text-[0.95rem] leading-[1.6] text-[#222]">
-              Führende Hersteller präsentieren die nächste Generation von
-              E-MTB-Akkus mit bis zu 1000 Wh Kapazität. Längere Touren und
-              steilere Anstiege werden damit für alle Fahrergruppen zugänglich.
-            </p>
-          </article>
-        </div>
-      </section>
-      <section
-        class="mx-auto max-w-[1100px] px-5 py-[60px] max-md:px-4 max-md:py-10"
-        aria-labelledby="testimonials-heading"
-      >
-        <h2
-          id="testimonials-heading"
-          class="mb-9 text-center text-[1.8rem] text-[#111] max-md:mb-6 max-md:text-[1.4rem]"
-        >
-          Was unsere Mitglieder sagen
+<body class="m-0 font-sans">
+  <a href="#main-content"
+    class="absolute left-0 top-[-100px] z-[9999] bg-[#005fcc] px-5 py-2.5 font-bold text-white no-underline focus:top-0">Zum
+    Hauptinhalt springen</a>
+  <header role="banner" class="sticky top-0 z-[100] bg-[#333] px-5 py-2.5 max-md:px-4"></header>
+  <main id="main-content" role="main">
+    <section aria-label="Headerbild">
+      <img src="assets/hero-homepage.jpg" alt="" role="presentation" width="1920" height="700" fetchpriority="high"
+        class="block max-h-[700px] w-full object-cover md:max-h-[440px] max-md:max-h-[220px]" />
+    </section>
+    <section
+      class="mx-auto max-w-[1100px] overflow-hidden px-5 py-10 md:flex md:gap-[5%] md:px-5 md:py-8 max-md:block max-md:px-4 max-md:py-6"
+      aria-labelledby="motivation-heading">
+      <div
+        class="float-left mr-[4%] w-[48%] md:float-none md:w-1/2 md:mr-0 max-md:float-none max-md:mb-5 max-md:w-full max-md:mr-0">
+        <h2 id="motivation-heading" class="mb-[15px] text-2xl max-md:text-[1.4rem]">
+          Warum Mountainbiken?
         </h2>
-        <div
-          class="overflow-hidden md:flex md:gap-5 md:overflow-x-auto md:pb-2.5 max-md:block"
-        >
-          <figure
-            class="float-left mr-[4%] w-[30.66%] rounded-lg border-l-4 border-[#333] bg-[#f5f5f5] p-7 md:float-none md:w-4/5 md:flex-[0_0_80%] md:mr-0 max-md:float-none max-md:mb-4 max-md:w-full max-md:mr-0"
-            aria-label="Erfahrungsbericht von Markus R."
-          >
-            <blockquote class="m-0 mb-4 p-0">
-              <p class="m-0 text-[0.97rem] italic leading-[1.75] text-[#222]">
-                „Seit ich beim Verein bin, habe ich nicht nur meine Technik
-                enorm verbessert, sondern auch die besten Freunde meines Lebens
-                gefunden. Jedes Wochenende auf dem Trail ist ein Highlight."
-              </p>
-            </blockquote>
-            <figcaption class="text-[0.88rem] font-semibold text-[#555]">
-              – Markus R., Mitglied seit 2018
-            </figcaption>
-          </figure>
-          <figure
-            class="float-left mr-[4%] w-[30.66%] rounded-lg border-l-4 border-[#333] bg-[#f5f5f5] p-7 md:float-none md:w-4/5 md:flex-[0_0_80%] md:mr-0 max-md:float-none max-md:mb-4 max-md:w-full max-md:mr-0"
-            aria-label="Erfahrungsbericht von Julia K."
-          >
-            <blockquote class="m-0 mb-4 p-0">
-              <p class="m-0 text-[0.97rem] italic leading-[1.75] text-[#222]">
-                „Als Einsteigerin hatte ich anfangs Respekt vor den erfahrenen
-                Fahrern – aber die Community hat mich sofort aufgenommen und mir
-                geduldig alles gezeigt. Heute leite ich selbst Trainingstouren."
-              </p>
-            </blockquote>
-            <figcaption class="text-[0.88rem] font-semibold text-[#555]">
-              – Julia K., Mitglied seit 2021
-            </figcaption>
-          </figure>
-          <figure
-            class="float-left w-[30.66%] rounded-lg border-l-4 border-[#333] bg-[#f5f5f5] p-7 md:float-none md:w-4/5 md:flex-[0_0_80%] max-md:float-none max-md:w-full"
-            aria-label="Erfahrungsbericht von Thomas B."
-          >
-            <blockquote class="m-0 mb-4 p-0">
-              <p class="m-0 text-[0.97rem] italic leading-[1.75] text-[#222]">
-                „Die überregionalen Events sind unschlagbar. Man entdeckt
-                Trails, die man alleine nie gefunden hätte, und abends sitzen
-                alle gemeinsam zusammen. So macht Vereinsleben Spaß."
-              </p>
-            </blockquote>
-            <figcaption class="text-[0.88rem] font-semibold text-[#555]">
-              – Thomas B., Mitglied seit 2016
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-      <section
-        class="bg-[#333] px-5 py-[60px] text-center text-white max-md:px-4 max-md:py-10"
-        aria-labelledby="cta-heading"
-      >
-        <h2 id="cta-heading" class="mb-3.5 text-[2rem] text-white max-md:text-2xl">
-          Bereit für das nächste Abenteuer?
-        </h2>
-        <p class="mx-auto mb-7 max-w-[560px] text-base leading-[1.7] text-[#ddd]">
-          Entdecke unsere Veranstaltungen und sei beim nächsten Vereinstreffen
-          dabei – egal ob Einsteiger oder Profi.
+        <p class="mb-3 text-base leading-[1.7] text-[#222]">
+          Mountainbiken ist mehr als nur ein Sport – es ist eine Leidenschaft,
+          die Körper und Geist in Einklang bringt. Auf zwei Rädern erkundest
+          du die Natur, überwindest Hindernisse und erlebst ein einzigartiges
+          Freiheitsgefühl.
         </p>
-        <a
-          href="events.html"
-          class="inline-block rounded bg-white px-8 py-3.5 text-base font-bold text-[#333] no-underline hover:bg-[#eee] focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2 max-md:block max-md:w-full max-md:box-border"
-          >Alle Veranstaltungen ansehen</a
-        >
-      </section>
-    </main>
-    <footer
-      role="contentinfo"
-      aria-label="Seitenfuß"
-      class="mt-10 overflow-hidden bg-[#333] px-5 pb-[15px] pt-[30px] text-white"
-    ></footer>
-  </body>
+        <p class="mb-3 text-base leading-[1.7] text-[#222]">
+          Ob steile Trails, technische Abfahrten oder gemütliche Touren durch
+          den Wald – der Mountainbike-Sport bietet für jeden das richtige
+          Abenteuer. Dabei stärkst du nicht nur deine Ausdauer und
+          Koordination, sondern findest auch den perfekten Ausgleich zum
+          Alltag.
+        </p>
+        <p class="mb-3 text-base leading-[1.7] text-[#222]">
+          In unserer Community teilen wir diese Begeisterung gemeinsam – komm
+          dazu und erlebe, was es bedeutet, mit uns die Trails zu erkunden!
+        </p>
+      </div>
+      <div class="float-left w-[48%] md:float-none md:w-[45%] max-md:float-none max-md:w-full" aria-hidden="true">
+        <img src="assets/mtb-motivation.jpg" alt="" role="presentation" loading="lazy" width="540" height="400"
+          class="block h-auto w-full rounded-lg" />
+      </div>
+    </section>
+    <section class="bg-[#333] px-5 py-9" aria-labelledby="stats-heading">
+      <h2 id="stats-heading" class="sr-only">Vereinsstatistiken</h2>
+      <ul role="list"
+        class="mx-auto max-w-[1100px] list-none overflow-hidden p-0 md:flex md:flex-wrap max-md:flex max-md:flex-wrap">
+        <li class="float-left w-1/4 text-center md:float-none md:w-1/2 max-md:float-none max-md:w-1/2 max-md:py-2.5"
+          aria-label="Über 320 Mitglieder">
+          <span class="block text-[2.6rem] font-bold leading-[1.1] text-white max-md:text-[2rem]"
+            aria-hidden="true">320+</span>
+          <span class="mt-1.5 block text-sm uppercase tracking-[0.08em] text-[#ccc]"
+            aria-hidden="true">Mitglieder</span>
+        </li>
+        <li class="float-left w-1/4 text-center md:float-none md:w-1/2 max-md:float-none max-md:w-1/2 max-md:py-2.5"
+          aria-label="Mitglieder in 12 Bundesländern">
+          <span class="block text-[2.6rem] font-bold leading-[1.1] text-white max-md:text-[2rem]"
+            aria-hidden="true">12</span>
+          <span class="mt-1.5 block text-sm uppercase tracking-[0.08em] text-[#ccc]"
+            aria-hidden="true">Bundesländer</span>
+        </li>
+        <li class="float-left w-1/4 text-center md:float-none md:w-1/2 max-md:float-none max-md:w-1/2 max-md:py-2.5"
+          aria-label="48 Events pro Jahr">
+          <span class="block text-[2.6rem] font-bold leading-[1.1] text-white max-md:text-[2rem]"
+            aria-hidden="true">48</span>
+          <span class="mt-1.5 block text-sm uppercase tracking-[0.08em] text-[#ccc]" aria-hidden="true">Events pro
+            Jahr</span>
+        </li>
+        <li class="float-left w-1/4 text-center md:float-none md:w-1/2 max-md:float-none max-md:w-1/2 max-md:py-2.5"
+          aria-label="Gegründet 2015">
+          <span class="block text-[2.6rem] font-bold leading-[1.1] text-white max-md:text-[2rem]"
+            aria-hidden="true">2015</span>
+          <span class="mt-1.5 block text-sm uppercase tracking-[0.08em] text-[#ccc]" aria-hidden="true">Gegründet</span>
+        </li>
+      </ul>
+    </section>
+    <section class="bg-[#1a1a1a] px-5 py-[60px] text-center max-md:px-4 max-md:py-9" aria-labelledby="gallery-heading">
+      <h2 id="gallery-heading" class="mb-8 text-[1.8rem] text-white max-md:mb-5 max-md:text-[1.4rem]">
+        Eindrücke aus unserem Vereinsleben
+      </h2>
+      <div class="relative mx-auto max-w-[900px]" role="group" aria-label="Bildergalerie">
+        <input type="radio" name="gallery" id="slide-1" class="peer/s1 hidden" checked aria-label="Bild 1 von 4" />
+        <input type="radio" name="gallery" id="slide-2" class="peer/s2 hidden" aria-label="Bild 2 von 4" />
+        <input type="radio" name="gallery" id="slide-3" class="peer/s3 hidden" aria-label="Bild 3 von 4" />
+        <input type="radio" name="gallery" id="slide-4" class="peer/s4 hidden" aria-label="Bild 4 von 4" />
+        <div
+          class="relative overflow-hidden rounded-lg [&>figure]:hidden peer-checked/s1:[&>figure:nth-child(1)]:block peer-checked/s2:[&>figure:nth-child(2)]:block peer-checked/s3:[&>figure:nth-child(3)]:block peer-checked/s4:[&>figure:nth-child(4)]:block">
+          <figure class="relative m-0">
+            <img src="assets/gemeinsam.jpg" alt="Vereinsmitglieder gemeinsam auf einer MTB-Tour" loading="lazy"
+              width="1200" height="600" class="block h-[480px] w-full rounded-lg object-cover max-md:h-[220px]" />
+            <figcaption
+              class="absolute inset-x-0 bottom-0 rounded-b-lg bg-gradient-to-t from-black/65 to-transparent px-5 pb-4 pt-7 text-left text-base font-semibold text-white max-md:px-3.5 max-md:pb-3 max-md:pt-5 max-md:text-sm">
+              Gemeinsam auf Tour
+            </figcaption>
+          </figure>
+          <figure class="relative m-0">
+            <img src="assets/gruppenausflug.jpg" alt="Gruppe von Mountainbikern beim Ausflug in der Natur"
+              loading="lazy" width="1200" height="600"
+              class="block h-[480px] w-full rounded-lg object-cover max-md:h-[220px]" />
+            <figcaption
+              class="absolute inset-x-0 bottom-0 rounded-b-lg bg-gradient-to-t from-black/65 to-transparent px-5 pb-4 pt-7 text-left text-base font-semibold text-white max-md:px-3.5 max-md:pb-3 max-md:pt-5 max-md:text-sm">
+              Gruppenausflug ins Grüne
+            </figcaption>
+          </figure>
+          <figure class="relative m-0">
+            <img src="assets/gruppentraining.jpg" alt="Vereinsmitglieder beim gemeinsamen Techniktraining"
+              loading="lazy" width="1200" height="600"
+              class="block h-[480px] w-full rounded-lg object-cover max-md:h-[220px]" />
+            <figcaption
+              class="absolute inset-x-0 bottom-0 rounded-b-lg bg-gradient-to-t from-black/65 to-transparent px-5 pb-4 pt-7 text-left text-base font-semibold text-white max-md:px-3.5 max-md:pb-3 max-md:pt-5 max-md:text-sm">
+              Techniktraining für alle Levels
+            </figcaption>
+          </figure>
+          <figure class="relative m-0">
+            <img src="assets/mtb-community.jpg" alt="MTB-Community beim Vereinstreffen" loading="lazy" width="1200"
+              height="600" class="block h-[480px] w-full rounded-lg object-cover max-md:h-[220px]" />
+            <figcaption
+              class="absolute inset-x-0 bottom-0 rounded-b-lg bg-gradient-to-t from-black/65 to-transparent px-5 pb-4 pt-7 text-left text-base font-semibold text-white max-md:px-3.5 max-md:pb-3 max-md:pt-5 max-md:text-sm">
+              Unsere Community
+            </figcaption>
+          </figure>
+        </div>
+        <nav class="mt-5 flex justify-center gap-2.5" aria-label="Galerie-Navigation">
+          <label for="slide-1" aria-label="Bild 1 anzeigen"
+            class="h-3 w-3 cursor-pointer rounded-full bg-[#666] transition-colors duration-300 hover:bg-[#aaa] peer-checked/s1:bg-[#e8a000]"></label>
+          <label for="slide-2" aria-label="Bild 2 anzeigen"
+            class="h-3 w-3 cursor-pointer rounded-full bg-[#666] transition-colors duration-300 hover:bg-[#aaa] peer-checked/s2:bg-[#e8a000]"></label>
+          <label for="slide-3" aria-label="Bild 3 anzeigen"
+            class="h-3 w-3 cursor-pointer rounded-full bg-[#666] transition-colors duration-300 hover:bg-[#aaa] peer-checked/s3:bg-[#e8a000]"></label>
+          <label for="slide-4" aria-label="Bild 4 anzeigen"
+            class="h-3 w-3 cursor-pointer rounded-full bg-[#666] transition-colors duration-300 hover:bg-[#aaa] peer-checked/s4:bg-[#e8a000]"></label>
+        </nav>
+      </div>
+    </section>
+    <!-- Vereinsvorteile Icon-Grid -->
+    <section class="bg-[#111] px-5 py-[60px] text-center max-md:px-4 max-md:py-10"
+      aria-labelledby="benefits-grid-heading">
+      <h2 id="benefits-grid-heading" class="mb-9 text-[1.9rem] text-white max-md:mb-6 max-md:text-2xl">
+        Warum IU MTB Community?
+      </h2>
+      <ul role="list"
+        class="mx-auto grid max-w-[860px] list-none grid-cols-3 gap-5 p-0 md:gap-3.5 max-md:grid-cols-2 max-md:gap-3">
+        <li
+          class="flex flex-col items-center gap-3 rounded-[10px] border border-[#333] bg-[#1e1e1e] px-4 pb-[22px] pt-7 transition-colors duration-200 hover:border-[#e8a000] hover:bg-[#252525] md:px-3 md:pb-[18px] md:pt-[22px]">
+          <span class="text-[2.4rem] leading-none max-md:text-2xl" aria-hidden="true">🚵</span>
+          <span class="text-center text-[0.95rem] font-semibold text-[#ddd]">Kostenlose Schnuppertour</span>
+        </li>
+        <li
+          class="flex flex-col items-center gap-3 rounded-[10px] border border-[#333] bg-[#1e1e1e] px-4 pb-[22px] pt-7 transition-colors duration-200 hover:border-[#e8a000] hover:bg-[#252525] md:px-3 md:pb-[18px] md:pt-[22px]">
+          <span class="text-[2.4rem] leading-none max-md:text-2xl" aria-hidden="true">📅</span>
+          <span class="text-center text-[0.95rem] font-semibold text-[#ddd]">48 Events pro Jahr</span>
+        </li>
+        <li
+          class="flex flex-col items-center gap-3 rounded-[10px] border border-[#333] bg-[#1e1e1e] px-4 pb-[22px] pt-7 transition-colors duration-200 hover:border-[#e8a000] hover:bg-[#252525] md:px-3 md:pb-[18px] md:pt-[22px]">
+          <span class="text-[2.4rem] leading-none max-md:text-2xl" aria-hidden="true">🗺️</span>
+          <span class="text-center text-[0.95rem] font-semibold text-[#ddd]">Bundesweit aktiv</span>
+        </li>
+        <li
+          class="flex flex-col items-center gap-3 rounded-[10px] border border-[#333] bg-[#1e1e1e] px-4 pb-[22px] pt-7 transition-colors duration-200 hover:border-[#e8a000] hover:bg-[#252525] md:px-3 md:pb-[18px] md:pt-[22px]">
+          <span class="text-[2.4rem] leading-none max-md:text-2xl" aria-hidden="true">🎓</span>
+          <span class="text-center text-[0.95rem] font-semibold text-[#ddd]">Lizenziertes Training</span>
+        </li>
+        <li
+          class="flex flex-col items-center gap-3 rounded-[10px] border border-[#333] bg-[#1e1e1e] px-4 pb-[22px] pt-7 transition-colors duration-200 hover:border-[#e8a000] hover:bg-[#252525] md:px-3 md:pb-[18px] md:pt-[22px]">
+          <span class="text-[2.4rem] leading-none max-md:text-2xl" aria-hidden="true">👥</span>
+          <span class="text-center text-[0.95rem] font-semibold text-[#ddd]">320+ Mitglieder</span>
+        </li>
+        <li
+          class="flex flex-col items-center gap-3 rounded-[10px] border border-[#333] bg-[#1e1e1e] px-4 pb-[22px] pt-7 transition-colors duration-200 hover:border-[#e8a000] hover:bg-[#252525] md:px-3 md:pb-[18px] md:pt-[22px]">
+          <span class="text-[2.4rem] leading-none max-md:text-2xl" aria-hidden="true">🛡️</span>
+          <span class="text-center text-[0.95rem] font-semibold text-[#ddd]">Sicherheit in der Gruppe</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Wetterbanner -->
+    <section
+      class="relative flex min-h-[300px] items-center justify-center bg-[url('assets/hero-homepage.jpg')] bg-cover bg-[center_60%] max-md:min-h-[220px]"
+      aria-labelledby="weather-banner-heading">
+      <div
+        class="relative z-[1] flex w-full flex-col items-center gap-3.5 bg-gradient-to-b from-black/55 to-black/70 px-6 py-[60px] text-center">
+        <p class="m-0 text-[1.1rem] tracking-[0.06em] text-[#e8c96a]" aria-hidden="true">
+          &#9925; Regen &#9728; Sonne &#10052; Schnee
+        </p>
+        <h2 id="weather-banner-heading"
+          class="m-0 text-[2.4rem] text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.5)] md:text-[2rem] max-md:text-2xl">
+          Nächste Tour bei jedem Wetter
+        </h2>
+        <p class="m-0 text-[1.1rem] text-[#ddd] max-md:text-[0.95rem]">
+          Wir fahren 365 Tage im Jahr – komm dazu.
+        </p>
+        <a href="events.html"
+          class="mt-1.5 inline-block rounded-md bg-[#e8a000] px-8 py-3 text-base font-bold text-[#111] no-underline transition-[background-color,transform] duration-200 hover:-translate-y-0.5 hover:bg-[#ffb800] focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-white focus-visible:outline-offset-[3px] max-md:px-6 max-md:py-2.5 max-md:text-[0.95rem]">Touren
+          entdecken</a>
+      </div>
+    </section>
+
+    <section
+      class="mx-auto max-w-[1100px] overflow-hidden rounded-lg bg-[#f5f5f5] px-5 py-10 md:flex md:items-start md:gap-[4%] max-md:block max-md:px-4 max-md:py-6"
+      aria-labelledby="news-heading">
+      <div
+        class="float-left mr-[4%] w-[48%] md:float-none md:w-[44%] md:mr-0 max-md:float-none max-md:mb-5 max-md:w-full max-md:mr-0"
+        aria-hidden="true">
+        <img src="assets/newsbild.jpg" alt="" role="presentation" loading="lazy" width="530" height="400"
+          class="block h-auto w-full rounded-lg" />
+      </div>
+      <div class="float-left w-[48%] md:float-none md:w-[52%] max-md:float-none max-md:w-full">
+        <h2 id="news-heading" class="mb-5 text-2xl max-md:text-[1.4rem]">
+          Aktuelles aus der MTB-Welt
+        </h2>
+        <article aria-labelledby="news-1-heading" class="mb-5">
+          <h3 id="news-1-heading" class="mb-1.5 text-base text-[#111]">
+            UCI Mountain Bike World Series 2026 gestartet
+          </h3>
+          <p class="text-[0.95rem] leading-[1.6] text-[#222]">
+            Die neue Saison der UCI Mountain Bike World Series ist in vollem
+            Gange. Mit spannenden Rennen in Val di Sole und Lenzerheide zeigen
+            die Top-Athleten beeindruckende Leistungen auf anspruchsvollen
+            Strecken.
+          </p>
+        </article>
+        <article aria-labelledby="news-2-heading" class="mb-5">
+          <h3 id="news-2-heading" class="mb-1.5 text-base text-[#111]">
+            Neue Trailprojekte in Deutschland
+          </h3>
+          <p class="text-[0.95rem] leading-[1.6] text-[#222]">
+            Der Deutsche Olympische Sportbund fördert in 2026 zahlreiche neue
+            Trailprojekte. Insgesamt entstehen bundesweit über 200 km neue,
+            legale Mountainbike-Strecken für alle Schwierigkeitsgrade.
+          </p>
+        </article>
+        <article aria-labelledby="news-3-heading" class="mb-5">
+          <h3 id="news-3-heading" class="mb-1.5 text-base text-[#111]">
+            E-MTB: Neue Akku-Generation revolutioniert den Sport
+          </h3>
+          <p class="text-[0.95rem] leading-[1.6] text-[#222]">
+            Führende Hersteller präsentieren die nächste Generation von
+            E-MTB-Akkus mit bis zu 1000 Wh Kapazität. Längere Touren und
+            steilere Anstiege werden damit für alle Fahrergruppen zugänglich.
+          </p>
+        </article>
+      </div>
+    </section>
+    <section class="mx-auto max-w-[1100px] px-5 py-[60px] max-md:px-4 max-md:py-10"
+      aria-labelledby="testimonials-heading">
+      <h2 id="testimonials-heading" class="mb-9 text-center text-[1.8rem] text-[#111] max-md:mb-6 max-md:text-[1.4rem]">
+        Was unsere Mitglieder sagen
+      </h2>
+      <div class="overflow-hidden md:flex md:gap-5 md:overflow-x-auto md:pb-2.5 max-md:block">
+        <figure
+          class="float-left mr-[4%] w-[30.66%] rounded-lg border-l-4 border-[#333] bg-[#f5f5f5] p-7 md:float-none md:w-4/5 md:flex-[0_0_80%] md:mr-0 max-md:float-none max-md:mb-4 max-md:w-full max-md:mr-0"
+          aria-label="Erfahrungsbericht von Markus R.">
+          <blockquote class="m-0 mb-4 p-0">
+            <p class="m-0 text-[0.97rem] italic leading-[1.75] text-[#222]">
+              „Seit ich beim Verein bin, habe ich nicht nur meine Technik
+              enorm verbessert, sondern auch die besten Freunde meines Lebens
+              gefunden. Jedes Wochenende auf dem Trail ist ein Highlight."
+            </p>
+          </blockquote>
+          <figcaption class="text-[0.88rem] font-semibold text-[#555]">
+            – Markus R., Mitglied seit 2018
+          </figcaption>
+        </figure>
+        <figure
+          class="float-left mr-[4%] w-[30.66%] rounded-lg border-l-4 border-[#333] bg-[#f5f5f5] p-7 md:float-none md:w-4/5 md:flex-[0_0_80%] md:mr-0 max-md:float-none max-md:mb-4 max-md:w-full max-md:mr-0"
+          aria-label="Erfahrungsbericht von Julia K.">
+          <blockquote class="m-0 mb-4 p-0">
+            <p class="m-0 text-[0.97rem] italic leading-[1.75] text-[#222]">
+              „Als Einsteigerin hatte ich anfangs Respekt vor den erfahrenen
+              Fahrern – aber die Community hat mich sofort aufgenommen und mir
+              geduldig alles gezeigt. Heute leite ich selbst Trainingstouren."
+            </p>
+          </blockquote>
+          <figcaption class="text-[0.88rem] font-semibold text-[#555]">
+            – Julia K., Mitglied seit 2021
+          </figcaption>
+        </figure>
+        <figure
+          class="float-left w-[30.66%] rounded-lg border-l-4 border-[#333] bg-[#f5f5f5] p-7 md:float-none md:w-4/5 md:flex-[0_0_80%] max-md:float-none max-md:w-full"
+          aria-label="Erfahrungsbericht von Thomas B.">
+          <blockquote class="m-0 mb-4 p-0">
+            <p class="m-0 text-[0.97rem] italic leading-[1.75] text-[#222]">
+              „Die überregionalen Events sind unschlagbar. Man entdeckt
+              Trails, die man alleine nie gefunden hätte, und abends sitzen
+              alle gemeinsam zusammen. So macht Vereinsleben Spaß."
+            </p>
+          </blockquote>
+          <figcaption class="text-[0.88rem] font-semibold text-[#555]">
+            – Thomas B., Mitglied seit 2016
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="bg-[#333] px-5 py-[60px] text-center text-white max-md:px-4 max-md:py-10"
+      aria-labelledby="cta-heading">
+      <h2 id="cta-heading" class="mb-3.5 text-[2rem] text-white max-md:text-2xl">
+        Bereit für das nächste Abenteuer?
+      </h2>
+      <p class="mx-auto mb-7 max-w-[560px] text-base leading-[1.7] text-[#ddd]">
+        Entdecke unsere Veranstaltungen und sei beim nächsten Vereinstreffen
+        dabei – egal ob Einsteiger oder Profi.
+      </p>
+      <a href="events.html"
+        class="inline-block rounded bg-white px-8 py-3.5 text-base font-bold text-[#333] no-underline hover:bg-[#eee] focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2 max-md:block max-md:w-full max-md:box-border">Alle
+        Veranstaltungen ansehen</a>
+    </section>
+  </main>
+  <footer role="contentinfo" aria-label="Seitenfuß"
+    class="mt-10 overflow-hidden bg-[#333] px-5 pb-[15px] pt-[30px] text-white"></footer>
+</body>
+
 </html>

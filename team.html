@@ -1,740 +1,556 @@
 <!doctype html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Über uns – IU MTB Community e. V.</title>
-    <meta
-      name="description"
-      content="Das Team der IU MTB Community e. V.: Vorstand, Trainer und Koordinatoren. Lerne unsere Mitglieder kennen und erfahre mehr über unsere Vereinsgeschichte."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      media="print"
-      onload="this.media = 'all'"
-    />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      />
-    </noscript>
-    <!-- Tailwind CSS (Play CDN – kein Build-Schritt, siehe README für Hinweise zum Produktivbetrieb) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      // Projekt-eigene Breakpoints statt Tailwind-Standardwerten, damit sie zu
-      // den anderen Seiten passen: Tablet 769–1024px, Mobile ≤768px.
-      tailwind.config = {
-        theme: {
-          screens: {
-            'max-md': { max: '768px' },
-            md: { min: '769px', max: '1024px' },
-          },
-          extend: {
-            fontFamily: { sans: ['Inter', 'Arial', 'sans-serif'] },
-          },
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Über uns – IU MTB Community e. V.</title>
+  <meta name="description"
+    content="Das Team der IU MTB Community e. V.: Vorstand, Trainer und Koordinatoren. Lerne unsere Mitglieder kennen und erfahre mehr über unsere Vereinsgeschichte." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    media="print" onload="this.media = 'all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+  </noscript>
+  <!-- Tailwind CSS (Play CDN – kein Build-Schritt) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Projekt-eigene Breakpoints statt Tailwind-Standardwerten, damit sie zu
+    // den anderen Seiten passen: Tablet 769–1024px, Mobile ≤768px.
+    tailwind.config = {
+      theme: {
+        screens: {
+          'max-md': { max: '768px' },
+          md: { min: '769px', max: '1024px' },
         },
-      };
-    </script>
-    <script src="js/script.js" defer></script>
-  </head>
-  <body class="m-0 font-sans">
-    <a
-      href="#main-content"
-      class="absolute left-0 top-[-100px] z-[9999] bg-[#005fcc] px-5 py-2.5 font-bold text-white no-underline focus:top-0"
-      >Zum Hauptinhalt springen</a
-    >
-    <header
-      role="banner"
-      class="sticky top-0 z-[100] bg-[#333] px-5 py-2.5 max-md:px-4"
-    ></header>
-    <main id="main-content" role="main">
-      <section
-        class="bg-[#333] px-5 py-[60px] text-center max-md:px-4 max-md:py-10"
-        aria-labelledby="team-hero-heading"
-      >
-        <div class="mx-auto max-w-[700px]">
-          <h2
-            id="team-hero-heading"
-            class="mb-4 text-[2rem] text-white md:text-[1.6rem] max-md:text-[1.4rem]"
-          >
-            Wir sind die IU MTB Community
-          </h2>
-          <p class="text-[1.05rem] leading-[1.75] text-[#ddd] md:text-[0.97rem] max-md:text-[0.95rem]">
-            Ein Verein, der verbindet. Gegründet aus Leidenschaft, gewachsen
-            durch Gemeinschaft – überregional, offen und für alle.
+        extend: {
+          fontFamily: { sans: ['Inter', 'Arial', 'sans-serif'] },
+        },
+      },
+    };
+  </script>
+  <script src="js/script.js" defer></script>
+</head>
+
+<body class="m-0 font-sans">
+  <a href="#main-content"
+    class="absolute left-0 top-[-100px] z-[9999] bg-[#005fcc] px-5 py-2.5 font-bold text-white no-underline focus:top-0">Zum
+    Hauptinhalt springen</a>
+  <header role="banner" class="sticky top-0 z-[100] bg-[#333] px-5 py-2.5 max-md:px-4"></header>
+  <main id="main-content" role="main">
+    <section class="bg-[#333] px-5 py-[60px] text-center max-md:px-4 max-md:py-10" aria-labelledby="team-hero-heading">
+      <div class="mx-auto max-w-[700px]">
+        <h2 id="team-hero-heading" class="mb-4 text-[2rem] text-white md:text-[1.6rem] max-md:text-[1.4rem]">
+          Wir sind die IU MTB Community
+        </h2>
+        <p class="text-[1.05rem] leading-[1.75] text-[#ddd] md:text-[0.97rem] max-md:text-[0.95rem]">
+          Ein Verein, der verbindet. Gegründet aus Leidenschaft, gewachsen
+          durch Gemeinschaft – überregional, offen und für alle.
+        </p>
+      </div>
+    </section>
+    <section class="mx-auto max-w-[1100px] overflow-hidden px-5 py-10 max-md:px-4 max-md:py-6"
+      aria-labelledby="team-page-heading">
+      <h2 id="team-page-heading" class="sr-only">Unser Team</h2>
+      <div class="overflow-hidden md:flex md:flex-wrap md:gap-5 max-md:block">
+        <!-- Spalte 1: Historie + Community-Bild -->
+        <div
+          class="float-left mr-[4%] w-[30.66%] md:float-none md:mr-0 md:w-full max-md:float-none max-md:mb-0 max-md:w-full">
+          <article class="mb-5 rounded-lg bg-[#f5f5f5] p-5" aria-labelledby="history-heading">
+            <h3 id="history-heading" class="mb-2 text-[1.1rem]">
+              Unsere Geschichte
+            </h3>
+            <p class="mb-2 text-[0.95rem] leading-[1.6] text-[#222]">
+              Die IU MTB Community e. V. wurde 2015 von einer kleinen Gruppe
+              begeisterter Mountainbiker gegründet, die einen Ort schaffen
+              wollten, an dem Gleichgesinnte aus ganz Deutschland
+              zusammenkommen. Was als loser Zusammenschluss von Freunden
+              begann, wuchs schnell zu einem überregionalen Verein mit
+              Mitgliedern aus über 12 Bundesländern.
+            </p>
+            <p class="mb-2 text-[0.95rem] leading-[1.6] text-[#222]">
+              Heute organisiert der Verein regelmäßige Trainingstouren,
+              überregionale Events und Trailpflege-Aktionen. Unser Ziel ist
+              es, den Mountainbike-Sport für alle zugänglich zu machen –
+              unabhängig von Alter oder Erfahrungsstand.
+            </p>
+          </article>
+          <figure class="m-0" aria-labelledby="community-bild-caption">
+            <img src="assets/mtb-community.jpg" alt="" class="block h-auto w-full rounded-lg" />
+            <figcaption id="community-bild-caption" class="sr-only">
+              Mitglieder der IU MTB Community bei einer gemeinsamen Tour
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Spalte 2: Teilnehmer 1 + Teilnehmer 3 -->
+        <div
+          class="float-left mr-[4%] w-[30.66%] md:float-none md:mr-0 md:w-[calc(50%-10px)] max-md:float-none max-md:mt-5 max-md:w-full max-md:mr-0">
+          <article class="mb-5 rounded-lg bg-[#f5f5f5] p-5" aria-labelledby="member-max-heading"
+            aria-describedby="Rolle-von-Mitglied-Max">
+            <h3 id="member-max-heading" class="mb-2 text-[1.1rem]">
+              Max Mustermann
+            </h3>
+            <p id="Rolle-von-Mitglied-Max" class="mb-2 text-[0.95rem] leading-[1.6] text-[#222]">
+              <strong>Vorsitzender</strong>
+            </p>
+            <p class="mb-2 text-[0.95rem] leading-[1.6] text-[#222]">
+              Max ist seit der Gründung dabei und treibt die
+              Vereinsentwicklung mit viel Leidenschaft voran. Als erfahrener
+              Enduro-Fahrer mit über 15 Jahren Fahrerfahrung kennt er die
+              Bedürfnisse der Community genau und setzt sich für eine offene
+              und aktive Vereinskultur ein.
+            </p>
+          </article>
+          <article class="mb-5 rounded-lg bg-[#f5f5f5] p-5" aria-labelledby="member-lisa-heading"
+            aria-describedby="Rolle-von-Mitglied-Lisa">
+            <h3 id="member-lisa-heading" class="mb-2 text-[1.1rem]">
+              Lisa Bergmann
+            </h3>
+            <p id="Rolle-von-Mitglied-Lisa" class="mb-2 text-[0.95rem] leading-[1.6] text-[#222]">
+              <strong>Trainingskoordinatorin</strong>
+            </p>
+            <p class="mb-2 text-[0.95rem] leading-[1.6] text-[#222]">
+              Lisa plant und leitet die wöchentlichen Gruppentrainings und ist
+              die Ansprechpartnerin für alle Fragen rund um Technik und
+              Sicherheit auf dem Trail. Sie ist lizenzierte MTB-Trainerin und
+              bringt frischen Wind in das Vereinsprogramm.
+            </p>
+          </article>
+        </div>
+
+        <!-- Spalte 3: Teilnehmer 2 + Teilnehmer 4 -->
+        <div
+          class="float-left w-[30.66%] md:float-none md:w-[calc(50%-10px)] max-md:float-none max-md:mt-5 max-md:w-full">
+          <article class="mb-5 rounded-lg bg-[#f5f5f5] p-5" aria-labelledby="member-jonas-heading"
+            aria-describedby="Rolle-von-Mitglied-Jonas">
+            <h3 id="member-jonas-heading" class="mb-2 text-[1.1rem]">
+              Jonas Stahl
+            </h3>
+            <p id="Rolle-von-Mitglied-Jonas" class="mb-2 text-[0.95rem] leading-[1.6] text-[#222]">
+              <strong>Veranstaltungsleiter</strong>
+            </p>
+            <p class="mb-2 text-[0.95rem] leading-[1.6] text-[#222]">
+              Jonas ist für die Organisation unserer überregionalen Events
+              verantwortlich. Von der Streckenplanung bis zur Logistik – er
+              sorgt dafür, dass jedes Vereinstreffen zu einem unvergesslichen
+              Erlebnis wird. Seine Markenzeichen: akribische Planung und gute
+              Laune.
+            </p>
+          </article>
+          <article class="mb-5 rounded-lg bg-[#f5f5f5] p-5" aria-labelledby="member-sarah-heading"
+            aria-describedby="Rolle-von-Mitglied-Sarah">
+            <h3 id="member-sarah-heading" class="mb-2 text-[1.1rem]">
+              Sarah Müller
+            </h3>
+            <p id="Rolle-von-Mitglied-Sarah" class="mb-2 text-[0.95rem] leading-[1.6] text-[#222]">
+              <strong>Trailpflege &amp; Umwelt</strong>
+            </p>
+            <p class="mb-2 text-[0.95rem] leading-[1.6] text-[#222]">
+              Sarah koordiniert unsere Trailpflege-Aktionen und setzt sich für
+              einen nachhaltigen Umgang mit der Natur ein. Sie arbeitet eng
+              mit Forstverwaltungen und Naturschutzbehörden zusammen, um
+              legale und naturverträgliche Strecken zu erhalten und neu zu
+              schaffen.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="bg-[#f9f9f9] px-5 py-[60px] text-center max-md:px-4 max-md:py-10"
+      aria-labelledby="timeline-heading">
+      <h2 id="timeline-heading" class="mb-12 text-[1.8rem] text-[#111] max-md:mb-8 max-md:text-[1.4rem]">
+        Unsere Geschichte im Überblick
+      </h2>
+      <ol role="list"
+        class="relative mx-auto max-w-[720px] list-none p-0 md:max-w-[600px] before:absolute before:inset-y-0 before:left-1/2 before:w-[3px] before:-translate-x-1/2 before:bg-[#ddd] before:content-[''] max-md:before:left-[9px] max-md:before:translate-x-0">
+        <li
+          class="relative mb-10 flex items-start gap-6 flex-row-reverse [&:nth-child(odd)>div:last-child]:text-right max-md:flex-col max-md:!flex-col max-md:gap-2 max-md:pl-9 max-md:text-left max-md:[&>div:last-child]:!text-left">
+          <div
+            class="absolute left-1/2 top-1 z-[1] h-[18px] w-[18px] -translate-x-1/2 rounded-full border-[3px] border-white bg-[#e8a000] shadow-[0_0_0_3px_#e8a000] max-md:left-0 max-md:translate-x-0"
+            aria-hidden="true"></div>
+          <div
+            class="w-[calc(50%-32px)] rounded-lg bg-white p-5 px-6 text-left shadow-[0_2px_8px_rgba(0,0,0,0.07)] md:p-[16px_18px] max-md:w-full">
+            <span
+              class="mb-1.5 inline-block text-[0.8rem] font-bold uppercase tracking-[0.08em] text-[#e8a000]">2015</span>
+            <h3 class="mb-2 text-base font-bold text-[#111]">
+              Vereinsgründung
+            </h3>
+            <p class="text-[0.93rem] leading-[1.6] text-[#444]">
+              Sieben Freunde gründen die IU MTB Community e. V. in
+              Musterstadt. Die erste Vereinstour führt 12 Mitglieder durch den
+              Teutoburger Wald.
+            </p>
+          </div>
+        </li>
+        <li class="relative mb-10 flex items-start gap-6 max-md:flex-col max-md:gap-2 max-md:pl-9">
+          <div
+            class="absolute left-1/2 top-1 z-[1] h-[18px] w-[18px] -translate-x-1/2 rounded-full border-[3px] border-white bg-[#e8a000] shadow-[0_0_0_3px_#e8a000] max-md:left-0 max-md:translate-x-0"
+            aria-hidden="true"></div>
+          <div
+            class="w-[calc(50%-32px)] rounded-lg bg-white p-5 px-6 text-left shadow-[0_2px_8px_rgba(0,0,0,0.07)] md:p-[16px_18px] max-md:w-full">
+            <span
+              class="mb-1.5 inline-block text-[0.8rem] font-bold uppercase tracking-[0.08em] text-[#e8a000]">2017</span>
+            <h3 class="mb-2 text-base font-bold text-[#111]">
+              100 Mitglieder
+            </h3>
+            <p class="text-[0.93rem] leading-[1.6] text-[#444]">
+              Der Verein wächst auf 100 eingetragene Mitglieder. Das erste
+              überregionale Event mit Teilnehmern aus 5 Bundesländern findet
+              statt.
+            </p>
+          </div>
+        </li>
+        <li
+          class="relative mb-10 flex items-start gap-6 flex-row-reverse max-md:flex-col max-md:!flex-col max-md:gap-2 max-md:pl-9 max-md:text-left max-md:[&>div:last-child]:!text-left">
+          <div
+            class="absolute left-1/2 top-1 z-[1] h-[18px] w-[18px] -translate-x-1/2 rounded-full border-[3px] border-white bg-[#e8a000] shadow-[0_0_0_3px_#e8a000] max-md:left-0 max-md:translate-x-0"
+            aria-hidden="true"></div>
+          <div
+            class="w-[calc(50%-32px)] rounded-lg bg-white p-5 px-6 text-right shadow-[0_2px_8px_rgba(0,0,0,0.07)] md:p-[16px_18px] max-md:w-full">
+            <span
+              class="mb-1.5 inline-block text-[0.8rem] font-bold uppercase tracking-[0.08em] text-[#e8a000]">2019</span>
+            <h3 class="mb-2 text-base font-bold text-[#111]">
+              Trailpflege-Programm
+            </h3>
+            <p class="text-[0.93rem] leading-[1.6] text-[#444]">
+              Start des regelmäßigen Trailpflege-Programms in Zusammenarbeit
+              mit lokalen Forstverwaltungen. Über 40 km Strecke werden
+              gesichert und ausgebaut.
+            </p>
+          </div>
+        </li>
+        <li class="relative mb-10 flex items-start gap-6 max-md:flex-col max-md:gap-2 max-md:pl-9">
+          <div
+            class="absolute left-1/2 top-1 z-[1] h-[18px] w-[18px] -translate-x-1/2 rounded-full border-[3px] border-white bg-[#e8a000] shadow-[0_0_0_3px_#e8a000] max-md:left-0 max-md:translate-x-0"
+            aria-hidden="true"></div>
+          <div
+            class="w-[calc(50%-32px)] rounded-lg bg-white p-5 px-6 text-left shadow-[0_2px_8px_rgba(0,0,0,0.07)] md:p-[16px_18px] max-md:w-full">
+            <span
+              class="mb-1.5 inline-block text-[0.8rem] font-bold uppercase tracking-[0.08em] text-[#e8a000]">2021</span>
+            <h3 class="mb-2 text-base font-bold text-[#111]">
+              Lizenzierte Trainerausbildung
+            </h3>
+            <p class="text-[0.93rem] leading-[1.6] text-[#444]">
+              Drei Vereinsmitglieder schließen die Trainer-C-Lizenz ab.
+              Wöchentliche Techniktrainings für Einsteiger werden eingeführt.
+            </p>
+          </div>
+        </li>
+        <li
+          class="relative mb-10 flex items-start gap-6 flex-row-reverse max-md:flex-col max-md:!flex-col max-md:gap-2 max-md:pl-9 max-md:text-left max-md:[&>div:last-child]:!text-left">
+          <div
+            class="absolute left-1/2 top-1 z-[1] h-[18px] w-[18px] -translate-x-1/2 rounded-full border-[3px] border-white bg-[#e8a000] shadow-[0_0_0_3px_#e8a000] max-md:left-0 max-md:translate-x-0"
+            aria-hidden="true"></div>
+          <div
+            class="w-[calc(50%-32px)] rounded-lg bg-white p-5 px-6 text-right shadow-[0_2px_8px_rgba(0,0,0,0.07)] md:p-[16px_18px] max-md:w-full">
+            <span
+              class="mb-1.5 inline-block text-[0.8rem] font-bold uppercase tracking-[0.08em] text-[#e8a000]">2023</span>
+            <h3 class="mb-2 text-base font-bold text-[#111]">
+              250 Mitglieder &amp; 12 Bundesländer
+            </h3>
+            <p class="text-[0.93rem] leading-[1.6] text-[#444]">
+              Die Community wächst auf 250 Mitglieder aus 12 Bundesländern.
+              Das Jahresprogramm umfasst erstmals 48 organisierte Touren und
+              Events.
+            </p>
+          </div>
+        </li>
+        <li class="relative flex items-start gap-6 max-md:flex-col max-md:gap-2 max-md:pl-9">
+          <div
+            class="absolute left-1/2 top-1 z-[1] h-[18px] w-[18px] -translate-x-1/2 rounded-full border-[3px] border-white bg-[#2a7a2a] shadow-[0_0_0_3px_#2a7a2a] max-md:left-0 max-md:translate-x-0"
+            aria-hidden="true"></div>
+          <div
+            class="w-[calc(50%-32px)] rounded-lg bg-white p-5 px-6 text-left shadow-[0_2px_8px_rgba(0,0,0,0.07)] md:p-[16px_18px] max-md:w-full">
+            <span
+              class="mb-1.5 inline-block text-[0.8rem] font-bold uppercase tracking-[0.08em] text-[#2a7a2a]">2026</span>
+            <h3 class="mb-2 text-base font-bold text-[#111]">
+              Heute – 320+ Mitglieder
+            </h3>
+            <p class="text-[0.93rem] leading-[1.6] text-[#444]">
+              Über 320 Mitglieder, neue Kooperationen mit regionalen Bikeparks
+              und ein wachsendes Nachwuchsprogramm. Die Community lebt – sei
+              dabei!
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+    <section class="mx-auto max-w-[1100px] px-5 py-[60px] max-md:px-4 max-md:py-10" aria-labelledby="values-heading">
+      <h2 id="values-heading" class="mb-9 text-center text-[1.8rem] text-[#111] max-md:mb-6 max-md:text-[1.4rem]">
+        Unsere Werte
+      </h2>
+      <div role="list" class="overflow-hidden md:flex md:flex-wrap md:gap-4 max-md:block">
+        <article role="listitem"
+          class="float-left mr-[2.66%] w-[23%] rounded-lg bg-[#f5f5f5] px-5 py-7 text-center md:float-none md:w-[calc(50%-8px)] md:mr-0 max-md:float-none max-md:mb-4 max-md:w-full max-md:mr-0"
+          aria-labelledby="value-leidenschaft">
+          <span class="mb-3.5 block text-[2.4rem]" aria-hidden="true">&#127947;</span>
+          <h3 id="value-leidenschaft" class="mb-2.5 text-[1.1rem] text-[#111]">
+            Leidenschaft
+          </h3>
+          <p class="m-0 text-[0.93rem] leading-[1.7] text-[#222]">
+            Mountainbiken ist für uns mehr als Sport – es ist eine
+            Lebenseinstellung. Diese Begeisterung tragen wir in alles, was wir
+            gemeinsam tun.
           </p>
-        </div>
-      </section>
-      <section
-        class="mx-auto max-w-[1100px] overflow-hidden px-5 py-10 max-md:px-4 max-md:py-6"
-        aria-labelledby="team-page-heading"
-      >
-        <h2 id="team-page-heading" class="sr-only">Unser Team</h2>
-        <div
-          class="overflow-hidden md:flex md:flex-wrap md:gap-5 max-md:block"
-        >
-          <!-- Spalte 1: Historie + Community-Bild -->
+        </article>
+        <article role="listitem"
+          class="float-left mr-[2.66%] w-[23%] rounded-lg bg-[#f5f5f5] px-5 py-7 text-center md:float-none md:w-[calc(50%-8px)] md:mr-0 max-md:float-none max-md:mb-4 max-md:w-full max-md:mr-0"
+          aria-labelledby="value-gemeinschaft">
+          <span class="mb-3.5 block text-[2.4rem]" aria-hidden="true">&#129309;</span>
+          <h3 id="value-gemeinschaft" class="mb-2.5 text-[1.1rem] text-[#111]">
+            Gemeinschaft
+          </h3>
+          <p class="m-0 text-[0.93rem] leading-[1.7] text-[#222]">
+            Wir fahren zusammen, wachsen zusammen. Unsere Community lebt von
+            gegenseitigem Respekt, Hilfsbereitschaft und echter Kameradschaft
+            auf dem Trail.
+          </p>
+        </article>
+        <article role="listitem"
+          class="float-left mr-[2.66%] w-[23%] rounded-lg bg-[#f5f5f5] px-5 py-7 text-center md:float-none md:w-[calc(50%-8px)] md:mr-0 max-md:float-none max-md:mb-4 max-md:w-full max-md:mr-0"
+          aria-labelledby="value-nachhaltigkeit">
+          <span class="mb-3.5 block text-[2.4rem]" aria-hidden="true">&#127807;</span>
+          <h3 id="value-nachhaltigkeit" class="mb-2.5 text-[1.1rem] text-[#111]">
+            Nachhaltigkeit
+          </h3>
+          <p class="m-0 text-[0.93rem] leading-[1.7] text-[#222]">
+            Wir lieben die Natur und tragen Verantwortung für sie.
+            Trailpflege, Naturschutz und nachhaltiges Fahren sind feste
+            Bestandteile unserer Vereinsarbeit.
+          </p>
+        </article>
+        <article role="listitem"
+          class="float-left w-[23%] rounded-lg bg-[#f5f5f5] px-5 py-7 text-center md:float-none md:w-[calc(50%-8px)] max-md:float-none max-md:w-full"
+          aria-labelledby="value-offenheit">
+          <span class="mb-3.5 block text-[2.4rem]" aria-hidden="true">&#128275;</span>
+          <h3 id="value-offenheit" class="mb-2.5 text-[1.1rem] text-[#111]">
+            Offenheit
+          </h3>
+          <p class="m-0 text-[0.93rem] leading-[1.7] text-[#222]">
+            Egal ob Anfänger oder Profi, jung oder erfahren – bei uns ist
+            jeder willkommen. Kein Leistungsdruck, kein Ausschluss, nur Freude
+            am Fahren.
+          </p>
+        </article>
+      </div>
+    </section>
+    <section class="bg-white px-5 py-[60px] text-center max-md:px-4 max-md:py-10" aria-labelledby="contacts-heading">
+      <h2 id="contacts-heading" class="mb-2 text-[1.8rem] text-[#111] max-md:text-[1.4rem]">
+        Dein direkter Draht zum Vorstand
+      </h2>
+      <p class="mb-9 text-[0.97rem] text-[#666]">
+        Fragen, Ideen oder Anliegen? Hier erreichst du die richtigen Personen.
+      </p>
+      <ul role="list" class="mx-auto flex max-w-[900px] flex-col gap-4 p-0 md:max-w-full">
+        <li role="listitem"
+          class="flex items-center gap-6 rounded-[10px] border border-[#e8e8e8] bg-[#f9f9f9] px-6 py-5 text-left transition-shadow duration-200 hover:shadow-[0_4px_14px_rgba(0,0,0,0.08)] max-md:gap-4 max-md:p-4">
           <div
-            class="float-left mr-[4%] w-[30.66%] md:float-none md:mr-0 md:w-full max-md:float-none max-md:mb-0 max-md:w-full"
-          >
-            <article
-              class="mb-5 rounded-lg bg-[#f5f5f5] p-5"
-              aria-labelledby="history-heading"
-            >
-              <h3 id="history-heading" class="mb-2 text-[1.1rem]">
-                Unsere Geschichte
-              </h3>
-              <p class="mb-2 text-[0.95rem] leading-[1.6] text-[#222]">
-                Die IU MTB Community e. V. wurde 2015 von einer kleinen Gruppe
-                begeisterter Mountainbiker gegründet, die einen Ort schaffen
-                wollten, an dem Gleichgesinnte aus ganz Deutschland
-                zusammenkommen. Was als loser Zusammenschluss von Freunden
-                begann, wuchs schnell zu einem überregionalen Verein mit
-                Mitgliedern aus über 12 Bundesländern.
-              </p>
-              <p class="mb-2 text-[0.95rem] leading-[1.6] text-[#222]">
-                Heute organisiert der Verein regelmäßige Trainingstouren,
-                überregionale Events und Trailpflege-Aktionen. Unser Ziel ist
-                es, den Mountainbike-Sport für alle zugänglich zu machen –
-                unabhängig von Alter oder Erfahrungsstand.
-              </p>
-            </article>
-            <figure class="m-0" aria-labelledby="community-bild-caption">
-              <img
-                src="assets/mtb-community.jpg"
-                alt=""
-                class="block h-auto w-full rounded-lg"
-              />
-              <figcaption id="community-bild-caption" class="sr-only">
-                Mitglieder der IU MTB Community bei einer gemeinsamen Tour
-              </figcaption>
-            </figure>
+            class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#e8a000] text-base font-bold text-[#111] max-md:h-11 max-md:w-11 max-md:text-[0.85rem]"
+            aria-hidden="true">
+            MM
           </div>
-
-          <!-- Spalte 2: Teilnehmer 1 + Teilnehmer 3 -->
+          <div class="flex-1">
+            <h3 class="m-0 mb-0.5 text-base font-bold text-[#111] max-md:text-[0.95rem]">
+              Max Mustermann
+            </h3>
+            <p class="m-0 mb-1 text-[0.85rem] font-semibold text-[#7a5200]">
+              1. Vorsitzender
+            </p>
+            <p class="m-0 mb-2 text-[0.88rem] text-[#555]">
+              Vereinsleitung, Strategie &amp; Außenvertretung
+            </p>
+            <a href="mailto:max.mustermann@iu-mtb-community.de"
+              class="break-all text-[0.88rem] text-[#005fcc] underline hover:text-[#003a99] focus-visible:rounded-sm focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2"
+              aria-label="E-Mail an Max Mustermann, 1. Vorsitzender">max.mustermann@iu-mtb-community.de</a>
+          </div>
+        </li>
+        <li role="listitem"
+          class="flex items-center gap-6 rounded-[10px] border border-[#e8e8e8] bg-[#f9f9f9] px-6 py-5 text-left transition-shadow duration-200 hover:shadow-[0_4px_14px_rgba(0,0,0,0.08)] max-md:gap-4 max-md:p-4">
           <div
-            class="float-left mr-[4%] w-[30.66%] md:float-none md:mr-0 md:w-[calc(50%-10px)] max-md:float-none max-md:mt-5 max-md:w-full max-md:mr-0"
-          >
-            <article
-              class="mb-5 rounded-lg bg-[#f5f5f5] p-5"
-              aria-labelledby="member-max-heading"
-              aria-describedby="Rolle-von-Mitglied-Max"
-            >
-              <h3 id="member-max-heading" class="mb-2 text-[1.1rem]">
-                Max Mustermann
-              </h3>
-              <p
-                id="Rolle-von-Mitglied-Max"
-                class="mb-2 text-[0.95rem] leading-[1.6] text-[#222]"
-              >
-                <strong>Vorsitzender</strong>
-              </p>
-              <p class="mb-2 text-[0.95rem] leading-[1.6] text-[#222]">
-                Max ist seit der Gründung dabei und treibt die
-                Vereinsentwicklung mit viel Leidenschaft voran. Als erfahrener
-                Enduro-Fahrer mit über 15 Jahren Fahrerfahrung kennt er die
-                Bedürfnisse der Community genau und setzt sich für eine offene
-                und aktive Vereinskultur ein.
-              </p>
-            </article>
-            <article
-              class="mb-5 rounded-lg bg-[#f5f5f5] p-5"
-              aria-labelledby="member-lisa-heading"
-              aria-describedby="Rolle-von-Mitglied-Lisa"
-            >
-              <h3 id="member-lisa-heading" class="mb-2 text-[1.1rem]">
-                Lisa Bergmann
-              </h3>
-              <p
-                id="Rolle-von-Mitglied-Lisa"
-                class="mb-2 text-[0.95rem] leading-[1.6] text-[#222]"
-              >
-                <strong>Trainingskoordinatorin</strong>
-              </p>
-              <p class="mb-2 text-[0.95rem] leading-[1.6] text-[#222]">
-                Lisa plant und leitet die wöchentlichen Gruppentrainings und ist
-                die Ansprechpartnerin für alle Fragen rund um Technik und
-                Sicherheit auf dem Trail. Sie ist lizenzierte MTB-Trainerin und
-                bringt frischen Wind in das Vereinsprogramm.
-              </p>
-            </article>
+            class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#e8a000] text-base font-bold text-[#111] max-md:h-11 max-md:w-11 max-md:text-[0.85rem]"
+            aria-hidden="true">
+            JS
           </div>
-
-          <!-- Spalte 3: Teilnehmer 2 + Teilnehmer 4 -->
+          <div class="flex-1">
+            <h3 class="m-0 mb-0.5 text-base font-bold text-[#111] max-md:text-[0.95rem]">
+              Jonas Stahl
+            </h3>
+            <p class="m-0 mb-1 text-[0.85rem] font-semibold text-[#7a5200]">
+              2. Vorsitzender &amp; Veranstaltungsleiter
+            </p>
+            <p class="m-0 mb-2 text-[0.88rem] text-[#555]">
+              Events, Tourplanung &amp; Logistik
+            </p>
+            <a href="mailto:jonas.stahl@iu-mtb-community.de"
+              class="break-all text-[0.88rem] text-[#005fcc] underline hover:text-[#003a99] focus-visible:rounded-sm focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2"
+              aria-label="E-Mail an Jonas Stahl, 2. Vorsitzender">jonas.stahl@iu-mtb-community.de</a>
+          </div>
+        </li>
+        <li role="listitem"
+          class="flex items-center gap-6 rounded-[10px] border border-[#e8e8e8] bg-[#f9f9f9] px-6 py-5 text-left transition-shadow duration-200 hover:shadow-[0_4px_14px_rgba(0,0,0,0.08)] max-md:gap-4 max-md:p-4">
           <div
-            class="float-left w-[30.66%] md:float-none md:w-[calc(50%-10px)] max-md:float-none max-md:mt-5 max-md:w-full"
-          >
-            <article
-              class="mb-5 rounded-lg bg-[#f5f5f5] p-5"
-              aria-labelledby="member-jonas-heading"
-              aria-describedby="Rolle-von-Mitglied-Jonas"
-            >
-              <h3 id="member-jonas-heading" class="mb-2 text-[1.1rem]">
-                Jonas Stahl
-              </h3>
-              <p
-                id="Rolle-von-Mitglied-Jonas"
-                class="mb-2 text-[0.95rem] leading-[1.6] text-[#222]"
-              >
-                <strong>Veranstaltungsleiter</strong>
-              </p>
-              <p class="mb-2 text-[0.95rem] leading-[1.6] text-[#222]">
-                Jonas ist für die Organisation unserer überregionalen Events
-                verantwortlich. Von der Streckenplanung bis zur Logistik – er
-                sorgt dafür, dass jedes Vereinstreffen zu einem unvergesslichen
-                Erlebnis wird. Seine Markenzeichen: akribische Planung und gute
-                Laune.
-              </p>
-            </article>
-            <article
-              class="mb-5 rounded-lg bg-[#f5f5f5] p-5"
-              aria-labelledby="member-sarah-heading"
-              aria-describedby="Rolle-von-Mitglied-Sarah"
-            >
-              <h3 id="member-sarah-heading" class="mb-2 text-[1.1rem]">
-                Sarah Müller
-              </h3>
-              <p
-                id="Rolle-von-Mitglied-Sarah"
-                class="mb-2 text-[0.95rem] leading-[1.6] text-[#222]"
-              >
-                <strong>Trailpflege &amp; Umwelt</strong>
-              </p>
-              <p class="mb-2 text-[0.95rem] leading-[1.6] text-[#222]">
-                Sarah koordiniert unsere Trailpflege-Aktionen und setzt sich für
-                einen nachhaltigen Umgang mit der Natur ein. Sie arbeitet eng
-                mit Forstverwaltungen und Naturschutzbehörden zusammen, um
-                legale und naturverträgliche Strecken zu erhalten und neu zu
-                schaffen.
-              </p>
-            </article>
+            class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#e8a000] text-base font-bold text-[#111] max-md:h-11 max-md:w-11 max-md:text-[0.85rem]"
+            aria-hidden="true">
+            LB
           </div>
-        </div>
-      </section>
-      <section
-        class="bg-[#f9f9f9] px-5 py-[60px] text-center max-md:px-4 max-md:py-10"
-        aria-labelledby="timeline-heading"
-      >
-        <h2
-          id="timeline-heading"
-          class="mb-12 text-[1.8rem] text-[#111] max-md:mb-8 max-md:text-[1.4rem]"
-        >
-          Unsere Geschichte im Überblick
-        </h2>
-        <ol
-          role="list"
-          class="relative mx-auto max-w-[720px] list-none p-0 md:max-w-[600px] before:absolute before:inset-y-0 before:left-1/2 before:w-[3px] before:-translate-x-1/2 before:bg-[#ddd] before:content-[''] max-md:before:left-[9px] max-md:before:translate-x-0"
-        >
-          <li
-            class="relative mb-10 flex items-start gap-6 flex-row-reverse [&:nth-child(odd)>div:last-child]:text-right max-md:flex-col max-md:!flex-col max-md:gap-2 max-md:pl-9 max-md:text-left max-md:[&>div:last-child]:!text-left"
-          >
-            <div
-              class="absolute left-1/2 top-1 z-[1] h-[18px] w-[18px] -translate-x-1/2 rounded-full border-[3px] border-white bg-[#e8a000] shadow-[0_0_0_3px_#e8a000] max-md:left-0 max-md:translate-x-0"
-              aria-hidden="true"
-            ></div>
-            <div
-              class="w-[calc(50%-32px)] rounded-lg bg-white p-5 px-6 text-left shadow-[0_2px_8px_rgba(0,0,0,0.07)] md:p-[16px_18px] max-md:w-full"
-            >
-              <span
-                class="mb-1.5 inline-block text-[0.8rem] font-bold uppercase tracking-[0.08em] text-[#e8a000]"
-                >2015</span
-              >
-              <h3 class="mb-2 text-base font-bold text-[#111]">
-                Vereinsgründung
-              </h3>
-              <p class="text-[0.93rem] leading-[1.6] text-[#444]">
-                Sieben Freunde gründen die IU MTB Community e. V. in
-                Musterstadt. Die erste Vereinstour führt 12 Mitglieder durch den
-                Teutoburger Wald.
-              </p>
-            </div>
-          </li>
-          <li
-            class="relative mb-10 flex items-start gap-6 max-md:flex-col max-md:gap-2 max-md:pl-9"
-          >
-            <div
-              class="absolute left-1/2 top-1 z-[1] h-[18px] w-[18px] -translate-x-1/2 rounded-full border-[3px] border-white bg-[#e8a000] shadow-[0_0_0_3px_#e8a000] max-md:left-0 max-md:translate-x-0"
-              aria-hidden="true"
-            ></div>
-            <div
-              class="w-[calc(50%-32px)] rounded-lg bg-white p-5 px-6 text-left shadow-[0_2px_8px_rgba(0,0,0,0.07)] md:p-[16px_18px] max-md:w-full"
-            >
-              <span
-                class="mb-1.5 inline-block text-[0.8rem] font-bold uppercase tracking-[0.08em] text-[#e8a000]"
-                >2017</span
-              >
-              <h3 class="mb-2 text-base font-bold text-[#111]">
-                100 Mitglieder
-              </h3>
-              <p class="text-[0.93rem] leading-[1.6] text-[#444]">
-                Der Verein wächst auf 100 eingetragene Mitglieder. Das erste
-                überregionale Event mit Teilnehmern aus 5 Bundesländern findet
-                statt.
-              </p>
-            </div>
-          </li>
-          <li
-            class="relative mb-10 flex items-start gap-6 flex-row-reverse max-md:flex-col max-md:!flex-col max-md:gap-2 max-md:pl-9 max-md:text-left max-md:[&>div:last-child]:!text-left"
-          >
-            <div
-              class="absolute left-1/2 top-1 z-[1] h-[18px] w-[18px] -translate-x-1/2 rounded-full border-[3px] border-white bg-[#e8a000] shadow-[0_0_0_3px_#e8a000] max-md:left-0 max-md:translate-x-0"
-              aria-hidden="true"
-            ></div>
-            <div
-              class="w-[calc(50%-32px)] rounded-lg bg-white p-5 px-6 text-right shadow-[0_2px_8px_rgba(0,0,0,0.07)] md:p-[16px_18px] max-md:w-full"
-            >
-              <span
-                class="mb-1.5 inline-block text-[0.8rem] font-bold uppercase tracking-[0.08em] text-[#e8a000]"
-                >2019</span
-              >
-              <h3 class="mb-2 text-base font-bold text-[#111]">
-                Trailpflege-Programm
-              </h3>
-              <p class="text-[0.93rem] leading-[1.6] text-[#444]">
-                Start des regelmäßigen Trailpflege-Programms in Zusammenarbeit
-                mit lokalen Forstverwaltungen. Über 40 km Strecke werden
-                gesichert und ausgebaut.
-              </p>
-            </div>
-          </li>
-          <li
-            class="relative mb-10 flex items-start gap-6 max-md:flex-col max-md:gap-2 max-md:pl-9"
-          >
-            <div
-              class="absolute left-1/2 top-1 z-[1] h-[18px] w-[18px] -translate-x-1/2 rounded-full border-[3px] border-white bg-[#e8a000] shadow-[0_0_0_3px_#e8a000] max-md:left-0 max-md:translate-x-0"
-              aria-hidden="true"
-            ></div>
-            <div
-              class="w-[calc(50%-32px)] rounded-lg bg-white p-5 px-6 text-left shadow-[0_2px_8px_rgba(0,0,0,0.07)] md:p-[16px_18px] max-md:w-full"
-            >
-              <span
-                class="mb-1.5 inline-block text-[0.8rem] font-bold uppercase tracking-[0.08em] text-[#e8a000]"
-                >2021</span
-              >
-              <h3 class="mb-2 text-base font-bold text-[#111]">
-                Lizenzierte Trainerausbildung
-              </h3>
-              <p class="text-[0.93rem] leading-[1.6] text-[#444]">
-                Drei Vereinsmitglieder schließen die Trainer-C-Lizenz ab.
-                Wöchentliche Techniktrainings für Einsteiger werden eingeführt.
-              </p>
-            </div>
-          </li>
-          <li
-            class="relative mb-10 flex items-start gap-6 flex-row-reverse max-md:flex-col max-md:!flex-col max-md:gap-2 max-md:pl-9 max-md:text-left max-md:[&>div:last-child]:!text-left"
-          >
-            <div
-              class="absolute left-1/2 top-1 z-[1] h-[18px] w-[18px] -translate-x-1/2 rounded-full border-[3px] border-white bg-[#e8a000] shadow-[0_0_0_3px_#e8a000] max-md:left-0 max-md:translate-x-0"
-              aria-hidden="true"
-            ></div>
-            <div
-              class="w-[calc(50%-32px)] rounded-lg bg-white p-5 px-6 text-right shadow-[0_2px_8px_rgba(0,0,0,0.07)] md:p-[16px_18px] max-md:w-full"
-            >
-              <span
-                class="mb-1.5 inline-block text-[0.8rem] font-bold uppercase tracking-[0.08em] text-[#e8a000]"
-                >2023</span
-              >
-              <h3 class="mb-2 text-base font-bold text-[#111]">
-                250 Mitglieder &amp; 12 Bundesländer
-              </h3>
-              <p class="text-[0.93rem] leading-[1.6] text-[#444]">
-                Die Community wächst auf 250 Mitglieder aus 12 Bundesländern.
-                Das Jahresprogramm umfasst erstmals 48 organisierte Touren und
-                Events.
-              </p>
-            </div>
-          </li>
-          <li
-            class="relative flex items-start gap-6 max-md:flex-col max-md:gap-2 max-md:pl-9"
-          >
-            <div
-              class="absolute left-1/2 top-1 z-[1] h-[18px] w-[18px] -translate-x-1/2 rounded-full border-[3px] border-white bg-[#2a7a2a] shadow-[0_0_0_3px_#2a7a2a] max-md:left-0 max-md:translate-x-0"
-              aria-hidden="true"
-            ></div>
-            <div
-              class="w-[calc(50%-32px)] rounded-lg bg-white p-5 px-6 text-left shadow-[0_2px_8px_rgba(0,0,0,0.07)] md:p-[16px_18px] max-md:w-full"
-            >
-              <span
-                class="mb-1.5 inline-block text-[0.8rem] font-bold uppercase tracking-[0.08em] text-[#2a7a2a]"
-                >2026</span
-              >
-              <h3 class="mb-2 text-base font-bold text-[#111]">
-                Heute – 320+ Mitglieder
-              </h3>
-              <p class="text-[0.93rem] leading-[1.6] text-[#444]">
-                Über 320 Mitglieder, neue Kooperationen mit regionalen Bikeparks
-                und ein wachsendes Nachwuchsprogramm. Die Community lebt – sei
-                dabei!
-              </p>
-            </div>
-          </li>
-        </ol>
-      </section>
-      <section
-        class="mx-auto max-w-[1100px] px-5 py-[60px] max-md:px-4 max-md:py-10"
-        aria-labelledby="values-heading"
-      >
-        <h2
-          id="values-heading"
-          class="mb-9 text-center text-[1.8rem] text-[#111] max-md:mb-6 max-md:text-[1.4rem]"
-        >
-          Unsere Werte
-        </h2>
-        <div
-          role="list"
-          class="overflow-hidden md:flex md:flex-wrap md:gap-4 max-md:block"
-        >
-          <article
-            role="listitem"
-            class="float-left mr-[2.66%] w-[23%] rounded-lg bg-[#f5f5f5] px-5 py-7 text-center md:float-none md:w-[calc(50%-8px)] md:mr-0 max-md:float-none max-md:mb-4 max-md:w-full max-md:mr-0"
-            aria-labelledby="value-leidenschaft"
-          >
-            <span class="mb-3.5 block text-[2.4rem]" aria-hidden="true"
-              >&#127947;</span
-            >
-            <h3 id="value-leidenschaft" class="mb-2.5 text-[1.1rem] text-[#111]">
-              Leidenschaft
+          <div class="flex-1">
+            <h3 class="m-0 mb-0.5 text-base font-bold text-[#111] max-md:text-[0.95rem]">
+              Lisa Bergmann
             </h3>
-            <p class="m-0 text-[0.93rem] leading-[1.7] text-[#222]">
-              Mountainbiken ist für uns mehr als Sport – es ist eine
-              Lebenseinstellung. Diese Begeisterung tragen wir in alles, was wir
-              gemeinsam tun.
+            <p class="m-0 mb-1 text-[0.85rem] font-semibold text-[#7a5200]">
+              Trainingskoordinatorin
             </p>
-          </article>
-          <article
-            role="listitem"
-            class="float-left mr-[2.66%] w-[23%] rounded-lg bg-[#f5f5f5] px-5 py-7 text-center md:float-none md:w-[calc(50%-8px)] md:mr-0 max-md:float-none max-md:mb-4 max-md:w-full max-md:mr-0"
-            aria-labelledby="value-gemeinschaft"
-          >
-            <span class="mb-3.5 block text-[2.4rem]" aria-hidden="true"
-              >&#129309;</span
-            >
-            <h3 id="value-gemeinschaft" class="mb-2.5 text-[1.1rem] text-[#111]">
-              Gemeinschaft
+            <p class="m-0 mb-2 text-[0.88rem] text-[#555]">
+              Gruppentrainings, Technik &amp; Sicherheit
+            </p>
+            <a href="mailto:lisa.bergmann@iu-mtb-community.de"
+              class="break-all text-[0.88rem] text-[#005fcc] underline hover:text-[#003a99] focus-visible:rounded-sm focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2"
+              aria-label="E-Mail an Lisa Bergmann, Trainingskoordinatorin">lisa.bergmann@iu-mtb-community.de</a>
+          </div>
+        </li>
+        <li role="listitem"
+          class="flex items-center gap-6 rounded-[10px] border border-[#e8e8e8] bg-[#f9f9f9] px-6 py-5 text-left transition-shadow duration-200 hover:shadow-[0_4px_14px_rgba(0,0,0,0.08)] max-md:gap-4 max-md:p-4">
+          <div
+            class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#e8a000] text-base font-bold text-[#111] max-md:h-11 max-md:w-11 max-md:text-[0.85rem]"
+            aria-hidden="true">
+            SM
+          </div>
+          <div class="flex-1">
+            <h3 class="m-0 mb-0.5 text-base font-bold text-[#111] max-md:text-[0.95rem]">
+              Sarah Müller
             </h3>
-            <p class="m-0 text-[0.93rem] leading-[1.7] text-[#222]">
-              Wir fahren zusammen, wachsen zusammen. Unsere Community lebt von
-              gegenseitigem Respekt, Hilfsbereitschaft und echter Kameradschaft
-              auf dem Trail.
+            <p class="m-0 mb-1 text-[0.85rem] font-semibold text-[#7a5200]">
+              Trailpflege &amp; Umwelt
             </p>
-          </article>
-          <article
-            role="listitem"
-            class="float-left mr-[2.66%] w-[23%] rounded-lg bg-[#f5f5f5] px-5 py-7 text-center md:float-none md:w-[calc(50%-8px)] md:mr-0 max-md:float-none max-md:mb-4 max-md:w-full max-md:mr-0"
-            aria-labelledby="value-nachhaltigkeit"
-          >
-            <span class="mb-3.5 block text-[2.4rem]" aria-hidden="true"
-              >&#127807;</span
-            >
-            <h3 id="value-nachhaltigkeit" class="mb-2.5 text-[1.1rem] text-[#111]">
-              Nachhaltigkeit
-            </h3>
-            <p class="m-0 text-[0.93rem] leading-[1.7] text-[#222]">
-              Wir lieben die Natur und tragen Verantwortung für sie.
-              Trailpflege, Naturschutz und nachhaltiges Fahren sind feste
-              Bestandteile unserer Vereinsarbeit.
+            <p class="m-0 mb-2 text-[0.88rem] text-[#555]">
+              Streckenpflege, Naturschutz &amp; Behördenkontakte
             </p>
-          </article>
-          <article
-            role="listitem"
-            class="float-left w-[23%] rounded-lg bg-[#f5f5f5] px-5 py-7 text-center md:float-none md:w-[calc(50%-8px)] max-md:float-none max-md:w-full"
-            aria-labelledby="value-offenheit"
-          >
-            <span class="mb-3.5 block text-[2.4rem]" aria-hidden="true"
-              >&#128275;</span
-            >
-            <h3 id="value-offenheit" class="mb-2.5 text-[1.1rem] text-[#111]">
-              Offenheit
-            </h3>
-            <p class="m-0 text-[0.93rem] leading-[1.7] text-[#222]">
-              Egal ob Anfänger oder Profi, jung oder erfahren – bei uns ist
-              jeder willkommen. Kein Leistungsdruck, kein Ausschluss, nur Freude
-              am Fahren.
-            </p>
-          </article>
-        </div>
-      </section>
-      <section
-        class="bg-white px-5 py-[60px] text-center max-md:px-4 max-md:py-10"
-        aria-labelledby="contacts-heading"
-      >
-        <h2
-          id="contacts-heading"
-          class="mb-2 text-[1.8rem] text-[#111] max-md:text-[1.4rem]"
-        >
-          Dein direkter Draht zum Vorstand
-        </h2>
-        <p class="mb-9 text-[0.97rem] text-[#666]">
-          Fragen, Ideen oder Anliegen? Hier erreichst du die richtigen Personen.
-        </p>
-        <ul
-          role="list"
-          class="mx-auto flex max-w-[900px] flex-col gap-4 p-0 md:max-w-full"
-        >
-          <li
-            role="listitem"
-            class="flex items-center gap-6 rounded-[10px] border border-[#e8e8e8] bg-[#f9f9f9] px-6 py-5 text-left transition-shadow duration-200 hover:shadow-[0_4px_14px_rgba(0,0,0,0.08)] max-md:gap-4 max-md:p-4"
-          >
-            <div
-              class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#e8a000] text-base font-bold text-[#111] max-md:h-11 max-md:w-11 max-md:text-[0.85rem]"
-              aria-hidden="true"
-            >
-              MM
-            </div>
-            <div class="flex-1">
-              <h3 class="m-0 mb-0.5 text-base font-bold text-[#111] max-md:text-[0.95rem]">
-                Max Mustermann
-              </h3>
-              <p class="m-0 mb-1 text-[0.85rem] font-semibold text-[#7a5200]">
-                1. Vorsitzender
-              </p>
-              <p class="m-0 mb-2 text-[0.88rem] text-[#555]">
-                Vereinsleitung, Strategie &amp; Außenvertretung
-              </p>
-              <a
-                href="mailto:max.mustermann@iu-mtb-community.de"
-                class="break-all text-[0.88rem] text-[#005fcc] underline hover:text-[#003a99] focus-visible:rounded-sm focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2"
-                aria-label="E-Mail an Max Mustermann, 1. Vorsitzender"
-                >max.mustermann@iu-mtb-community.de</a
-              >
-            </div>
-          </li>
-          <li
-            role="listitem"
-            class="flex items-center gap-6 rounded-[10px] border border-[#e8e8e8] bg-[#f9f9f9] px-6 py-5 text-left transition-shadow duration-200 hover:shadow-[0_4px_14px_rgba(0,0,0,0.08)] max-md:gap-4 max-md:p-4"
-          >
-            <div
-              class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#e8a000] text-base font-bold text-[#111] max-md:h-11 max-md:w-11 max-md:text-[0.85rem]"
-              aria-hidden="true"
-            >
-              JS
-            </div>
-            <div class="flex-1">
-              <h3 class="m-0 mb-0.5 text-base font-bold text-[#111] max-md:text-[0.95rem]">
-                Jonas Stahl
-              </h3>
-              <p class="m-0 mb-1 text-[0.85rem] font-semibold text-[#7a5200]">
-                2. Vorsitzender &amp; Veranstaltungsleiter
-              </p>
-              <p class="m-0 mb-2 text-[0.88rem] text-[#555]">
-                Events, Tourplanung &amp; Logistik
-              </p>
-              <a
-                href="mailto:jonas.stahl@iu-mtb-community.de"
-                class="break-all text-[0.88rem] text-[#005fcc] underline hover:text-[#003a99] focus-visible:rounded-sm focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2"
-                aria-label="E-Mail an Jonas Stahl, 2. Vorsitzender"
-                >jonas.stahl@iu-mtb-community.de</a
-              >
-            </div>
-          </li>
-          <li
-            role="listitem"
-            class="flex items-center gap-6 rounded-[10px] border border-[#e8e8e8] bg-[#f9f9f9] px-6 py-5 text-left transition-shadow duration-200 hover:shadow-[0_4px_14px_rgba(0,0,0,0.08)] max-md:gap-4 max-md:p-4"
-          >
-            <div
-              class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#e8a000] text-base font-bold text-[#111] max-md:h-11 max-md:w-11 max-md:text-[0.85rem]"
-              aria-hidden="true"
-            >
-              LB
-            </div>
-            <div class="flex-1">
-              <h3 class="m-0 mb-0.5 text-base font-bold text-[#111] max-md:text-[0.95rem]">
-                Lisa Bergmann
-              </h3>
-              <p class="m-0 mb-1 text-[0.85rem] font-semibold text-[#7a5200]">
-                Trainingskoordinatorin
-              </p>
-              <p class="m-0 mb-2 text-[0.88rem] text-[#555]">
-                Gruppentrainings, Technik &amp; Sicherheit
-              </p>
-              <a
-                href="mailto:lisa.bergmann@iu-mtb-community.de"
-                class="break-all text-[0.88rem] text-[#005fcc] underline hover:text-[#003a99] focus-visible:rounded-sm focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2"
-                aria-label="E-Mail an Lisa Bergmann, Trainingskoordinatorin"
-                >lisa.bergmann@iu-mtb-community.de</a
-              >
-            </div>
-          </li>
-          <li
-            role="listitem"
-            class="flex items-center gap-6 rounded-[10px] border border-[#e8e8e8] bg-[#f9f9f9] px-6 py-5 text-left transition-shadow duration-200 hover:shadow-[0_4px_14px_rgba(0,0,0,0.08)] max-md:gap-4 max-md:p-4"
-          >
-            <div
-              class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#e8a000] text-base font-bold text-[#111] max-md:h-11 max-md:w-11 max-md:text-[0.85rem]"
-              aria-hidden="true"
-            >
-              SM
-            </div>
-            <div class="flex-1">
-              <h3 class="m-0 mb-0.5 text-base font-bold text-[#111] max-md:text-[0.95rem]">
-                Sarah Müller
-              </h3>
-              <p class="m-0 mb-1 text-[0.85rem] font-semibold text-[#7a5200]">
-                Trailpflege &amp; Umwelt
-              </p>
-              <p class="m-0 mb-2 text-[0.88rem] text-[#555]">
-                Streckenpflege, Naturschutz &amp; Behördenkontakte
-              </p>
-              <a
-                href="mailto:sarah.mueller@iu-mtb-community.de"
-                class="break-all text-[0.88rem] text-[#005fcc] underline hover:text-[#003a99] focus-visible:rounded-sm focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2"
-                aria-label="E-Mail an Sarah Müller, Trailpflege und Umwelt"
-                >sarah.mueller@iu-mtb-community.de</a
-              >
-            </div>
-          </li>
-        </ul>
-      </section>
+            <a href="mailto:sarah.mueller@iu-mtb-community.de"
+              class="break-all text-[0.88rem] text-[#005fcc] underline hover:text-[#003a99] focus-visible:rounded-sm focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2"
+              aria-label="E-Mail an Sarah Müller, Trailpflege und Umwelt">sarah.mueller@iu-mtb-community.de</a>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-      <section
-        class="bg-[#f2f2f2] px-5 py-[60px] text-center max-md:px-4 max-md:py-10"
-        aria-labelledby="partners-heading"
-      >
-        <h2
-          id="partners-heading"
-          class="mb-2 text-[1.8rem] text-[#111] max-md:text-[1.4rem]"
-        >
-          Partner &amp; Kooperationen
-        </h2>
-        <p class="mx-auto mb-10 max-w-[640px] text-[0.97rem] leading-[1.7] text-[#555]">
-          Wir arbeiten mit regionalen und überregionalen Partnern zusammen, um
-          legale Strecken, sichere Trainings und nachhaltige Vereinsarbeit zu
-          ermöglichen.
-        </p>
-        <ul
-          role="list"
-          class="mx-auto grid max-w-[900px] grid-cols-2 gap-5 p-0 max-md:grid-cols-1"
-        >
-          <li
-            role="listitem"
-            class="flex items-start gap-5 rounded-[10px] border border-[#e0e0e0] bg-white px-5 py-6 text-left transition-shadow duration-200 hover:shadow-[0_4px_14px_rgba(0,0,0,0.08)] max-md:px-4 max-md:py-[18px]"
-            aria-labelledby="partner-dosb"
-          >
-            <div class="w-[52px] shrink-0 text-center text-2xl" aria-hidden="true">
-              &#127946;
-            </div>
-            <div class="flex-1">
-              <h3 id="partner-dosb" class="mb-1 text-[0.97rem] font-bold text-[#111]">
-                Deutscher Olympischer Sportbund
-              </h3>
-              <p class="mb-1.5 text-[0.78rem] font-semibold uppercase tracking-[0.06em] text-[#e8a000]">
-                Dachverband
-              </p>
-              <p class="m-0 text-[0.88rem] leading-[1.6] text-[#555]">
-                Fördert unsere Trailprojekte und unterstützt die Ausbildung
-                lizenzierter Trainer im Vereinssport.
-              </p>
-            </div>
-          </li>
-          <li
-            role="listitem"
-            class="flex items-start gap-5 rounded-[10px] border border-[#e0e0e0] bg-white px-5 py-6 text-left transition-shadow duration-200 hover:shadow-[0_4px_14px_rgba(0,0,0,0.08)] max-md:px-4 max-md:py-[18px]"
-            aria-labelledby="partner-forst"
-          >
-            <div class="w-[52px] shrink-0 text-center text-2xl" aria-hidden="true">
-              &#127795;
-            </div>
-            <div class="flex-1">
-              <h3 id="partner-forst" class="mb-1 text-[0.97rem] font-bold text-[#111]">
-                Regionale Forstverwaltungen
-              </h3>
-              <p class="mb-1.5 text-[0.78rem] font-semibold uppercase tracking-[0.06em] text-[#e8a000]">
-                Behörden &amp; Ämter
-              </p>
-              <p class="m-0 text-[0.88rem] leading-[1.6] text-[#555]">
-                Enge Zusammenarbeit zur Genehmigung und Pflege legaler
-                Mountainbike-Strecken in Staats- und Bundesforsten.
-              </p>
-            </div>
-          </li>
-          <li
-            role="listitem"
-            class="flex items-start gap-5 rounded-[10px] border border-[#e0e0e0] bg-white px-5 py-6 text-left transition-shadow duration-200 hover:shadow-[0_4px_14px_rgba(0,0,0,0.08)] max-md:px-4 max-md:py-[18px]"
-            aria-labelledby="partner-bikeparks"
-          >
-            <div class="w-[52px] shrink-0 text-center text-2xl" aria-hidden="true">
-              &#127947;
-            </div>
-            <div class="flex-1">
-              <h3 id="partner-bikeparks" class="mb-1 text-[0.97rem] font-bold text-[#111]">
-                Kooperations-Bikeparks
-              </h3>
-              <p class="mb-1.5 text-[0.78rem] font-semibold uppercase tracking-[0.06em] text-[#e8a000]">
-                Freizeitanlagen
-              </p>
-              <p class="m-0 text-[0.88rem] leading-[1.6] text-[#555]">
-                Mitglieder erhalten vergünstigte Tagestickets in ausgewählten
-                Bikeparks – darunter Winterberg und Geisskopf.
-              </p>
-            </div>
-          </li>
-          <li
-            role="listitem"
-            class="flex items-start gap-5 rounded-[10px] border border-[#e0e0e0] bg-white px-5 py-6 text-left transition-shadow duration-200 hover:shadow-[0_4px_14px_rgba(0,0,0,0.08)] max-md:px-4 max-md:py-[18px]"
-            aria-labelledby="partner-naturschutz"
-          >
-            <div class="w-[52px] shrink-0 text-center text-2xl" aria-hidden="true">
-              &#127807;
-            </div>
-            <div class="flex-1">
-              <h3 id="partner-naturschutz" class="mb-1 text-[0.97rem] font-bold text-[#111]">
-                Naturschutzbehörden
-              </h3>
-              <p class="mb-1.5 text-[0.78rem] font-semibold uppercase tracking-[0.06em] text-[#e8a000]">
-                Behörden &amp; Verbände
-              </p>
-              <p class="m-0 text-[0.88rem] leading-[1.6] text-[#555]">
-                Gemeinsame Projekte zum naturverträglichen Mountainbiken – für
-                den Erhalt von Lebensräumen und dauerhaft legalen Trails.
-              </p>
-            </div>
-          </li>
-        </ul>
-      </section>
+    <section class="bg-[#f2f2f2] px-5 py-[60px] text-center max-md:px-4 max-md:py-10"
+      aria-labelledby="partners-heading">
+      <h2 id="partners-heading" class="mb-2 text-[1.8rem] text-[#111] max-md:text-[1.4rem]">
+        Partner &amp; Kooperationen
+      </h2>
+      <p class="mx-auto mb-10 max-w-[640px] text-[0.97rem] leading-[1.7] text-[#555]">
+        Wir arbeiten mit regionalen und überregionalen Partnern zusammen, um
+        legale Strecken, sichere Trainings und nachhaltige Vereinsarbeit zu
+        ermöglichen.
+      </p>
+      <ul role="list" class="mx-auto grid max-w-[900px] grid-cols-2 gap-5 p-0 max-md:grid-cols-1">
+        <li role="listitem"
+          class="flex items-start gap-5 rounded-[10px] border border-[#e0e0e0] bg-white px-5 py-6 text-left transition-shadow duration-200 hover:shadow-[0_4px_14px_rgba(0,0,0,0.08)] max-md:px-4 max-md:py-[18px]"
+          aria-labelledby="partner-dosb">
+          <div class="w-[52px] shrink-0 text-center text-2xl" aria-hidden="true">
+            &#127946;
+          </div>
+          <div class="flex-1">
+            <h3 id="partner-dosb" class="mb-1 text-[0.97rem] font-bold text-[#111]">
+              Deutscher Olympischer Sportbund
+            </h3>
+            <p class="mb-1.5 text-[0.78rem] font-semibold uppercase tracking-[0.06em] text-[#e8a000]">
+              Dachverband
+            </p>
+            <p class="m-0 text-[0.88rem] leading-[1.6] text-[#555]">
+              Fördert unsere Trailprojekte und unterstützt die Ausbildung
+              lizenzierter Trainer im Vereinssport.
+            </p>
+          </div>
+        </li>
+        <li role="listitem"
+          class="flex items-start gap-5 rounded-[10px] border border-[#e0e0e0] bg-white px-5 py-6 text-left transition-shadow duration-200 hover:shadow-[0_4px_14px_rgba(0,0,0,0.08)] max-md:px-4 max-md:py-[18px]"
+          aria-labelledby="partner-forst">
+          <div class="w-[52px] shrink-0 text-center text-2xl" aria-hidden="true">
+            &#127795;
+          </div>
+          <div class="flex-1">
+            <h3 id="partner-forst" class="mb-1 text-[0.97rem] font-bold text-[#111]">
+              Regionale Forstverwaltungen
+            </h3>
+            <p class="mb-1.5 text-[0.78rem] font-semibold uppercase tracking-[0.06em] text-[#e8a000]">
+              Behörden &amp; Ämter
+            </p>
+            <p class="m-0 text-[0.88rem] leading-[1.6] text-[#555]">
+              Enge Zusammenarbeit zur Genehmigung und Pflege legaler
+              Mountainbike-Strecken in Staats- und Bundesforsten.
+            </p>
+          </div>
+        </li>
+        <li role="listitem"
+          class="flex items-start gap-5 rounded-[10px] border border-[#e0e0e0] bg-white px-5 py-6 text-left transition-shadow duration-200 hover:shadow-[0_4px_14px_rgba(0,0,0,0.08)] max-md:px-4 max-md:py-[18px]"
+          aria-labelledby="partner-bikeparks">
+          <div class="w-[52px] shrink-0 text-center text-2xl" aria-hidden="true">
+            &#127947;
+          </div>
+          <div class="flex-1">
+            <h3 id="partner-bikeparks" class="mb-1 text-[0.97rem] font-bold text-[#111]">
+              Kooperations-Bikeparks
+            </h3>
+            <p class="mb-1.5 text-[0.78rem] font-semibold uppercase tracking-[0.06em] text-[#e8a000]">
+              Freizeitanlagen
+            </p>
+            <p class="m-0 text-[0.88rem] leading-[1.6] text-[#555]">
+              Mitglieder erhalten vergünstigte Tagestickets in ausgewählten
+              Bikeparks – darunter Winterberg und Geisskopf.
+            </p>
+          </div>
+        </li>
+        <li role="listitem"
+          class="flex items-start gap-5 rounded-[10px] border border-[#e0e0e0] bg-white px-5 py-6 text-left transition-shadow duration-200 hover:shadow-[0_4px_14px_rgba(0,0,0,0.08)] max-md:px-4 max-md:py-[18px]"
+          aria-labelledby="partner-naturschutz">
+          <div class="w-[52px] shrink-0 text-center text-2xl" aria-hidden="true">
+            &#127807;
+          </div>
+          <div class="flex-1">
+            <h3 id="partner-naturschutz" class="mb-1 text-[0.97rem] font-bold text-[#111]">
+              Naturschutzbehörden
+            </h3>
+            <p class="mb-1.5 text-[0.78rem] font-semibold uppercase tracking-[0.06em] text-[#e8a000]">
+              Behörden &amp; Verbände
+            </p>
+            <p class="m-0 text-[0.88rem] leading-[1.6] text-[#555]">
+              Gemeinsame Projekte zum naturverträglichen Mountainbiken – für
+              den Erhalt von Lebensräumen und dauerhaft legalen Trails.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-      <section
-        class="bg-[#f5f5f5] px-5 py-[60px] text-center max-md:px-4 max-md:py-10"
-        aria-labelledby="team-cta-heading"
-      >
-        <h2
-          id="team-cta-heading"
-          class="mb-3.5 text-[1.8rem] text-[#111] max-md:text-[1.4rem]"
-        >
-          Du möchtest Mitglied werden?
-        </h2>
-        <p class="mx-auto mb-7 max-w-[560px] text-base leading-[1.7] text-[#222]">
-          Schreib uns einfach eine Nachricht oder komm bei einem unserer
-          nächsten Vereinstreffen vorbei – wir freuen uns auf dich!
-        </p>
-        <div
-          class="inline-block overflow-hidden md:flex md:justify-center md:gap-3 max-md:flex max-md:flex-col max-md:items-stretch max-md:gap-3"
-          role="group"
-          aria-labelledby="team-cta-heading"
-        >
-          <a
-            href="mailto:kontakt@iu-mtb-community.de"
-            class="mx-2 inline-block rounded bg-[#333] px-7 py-[13px] text-base font-semibold text-white no-underline hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2 md:m-0 max-md:m-0 max-md:w-full max-md:box-border max-md:text-center"
-            aria-label="E-Mail schreiben an kontakt@iu-mtb-community.de"
-            >E-Mail schreiben</a
-          >
-          <a
-            href="events.html"
-            class="mx-2 inline-block rounded border-2 border-[#333] bg-transparent px-7 py-[13px] text-base font-semibold text-[#333] no-underline hover:bg-[#333] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2 md:m-0 max-md:m-0 max-md:w-full max-md:box-border max-md:text-center"
-            >Nächstes Treffen finden</a
-          >
-        </div>
-      </section>
-    </main>
-    <footer
-      role="contentinfo"
-      aria-label="Seitenfuß"
-      class="mt-10 overflow-hidden bg-[#333] px-5 pb-[15px] pt-[30px] text-white"
-    ></footer>
-  </body>
+    <section class="bg-[#f5f5f5] px-5 py-[60px] text-center max-md:px-4 max-md:py-10"
+      aria-labelledby="team-cta-heading">
+      <h2 id="team-cta-heading" class="mb-3.5 text-[1.8rem] text-[#111] max-md:text-[1.4rem]">
+        Du möchtest Mitglied werden?
+      </h2>
+      <p class="mx-auto mb-7 max-w-[560px] text-base leading-[1.7] text-[#222]">
+        Schreib uns einfach eine Nachricht oder komm bei einem unserer
+        nächsten Vereinstreffen vorbei – wir freuen uns auf dich!
+      </p>
+      <div
+        class="inline-block overflow-hidden md:flex md:justify-center md:gap-3 max-md:flex max-md:flex-col max-md:items-stretch max-md:gap-3"
+        role="group" aria-labelledby="team-cta-heading">
+        <a href="mailto:kontakt@iu-mtb-community.de"
+          class="mx-2 inline-block rounded bg-[#333] px-7 py-[13px] text-base font-semibold text-white no-underline hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2 md:m-0 max-md:m-0 max-md:w-full max-md:box-border max-md:text-center"
+          aria-label="E-Mail schreiben an kontakt@iu-mtb-community.de">E-Mail schreiben</a>
+        <a href="events.html"
+          class="mx-2 inline-block rounded border-2 border-[#333] bg-transparent px-7 py-[13px] text-base font-semibold text-[#333] no-underline hover:bg-[#333] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2 md:m-0 max-md:m-0 max-md:w-full max-md:box-border max-md:text-center">Nächstes
+          Treffen finden</a>
+      </div>
+    </section>
+  </main>
+  <footer role="contentinfo" aria-label="Seitenfuß"
+    class="mt-10 overflow-hidden bg-[#333] px-5 pb-[15px] pt-[30px] text-white"></footer>
+</body>
+
 </html>

@@ -1,973 +1,908 @@
 <!doctype html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Veranstaltungen – IU MTB Community e. V.</title>
-    <meta
-      name="description"
-      content="Alle Vereinsveranstaltungen der IU MTB Community e. V. im Überblick: Gruppentouren, Streckenpflege, Wettkämpfe und mehr – jeden Monat in ganz Deutschland."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      media="print"
-      onload="this.media = 'all'"
-    />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      />
-    </noscript>
-    <!-- Tailwind CSS (Play CDN – kein Build-Schritt, siehe README für Hinweise zum Produktivbetrieb) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      // Projekt-eigene Breakpoints statt Tailwind-Standardwerten, damit sie zu
-      // den anderen Seiten passen: Tablet 769–1024px, Mobile ≤768px.
-      tailwind.config = {
-        theme: {
-          screens: {
-            'max-md': { max: '768px' },
-            md: { min: '769px', max: '1024px' },
-          },
-          extend: {
-            fontFamily: { sans: ['Inter', 'Arial', 'sans-serif'] },
-          },
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veranstaltungen – IU MTB Community e. V.</title>
+  <meta name="description"
+    content="Alle Vereinsveranstaltungen der IU MTB Community e. V. im Überblick: Gruppentouren, Streckenpflege, Wettkämpfe und mehr – jeden Monat in ganz Deutschland." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    media="print" onload="this.media = 'all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+  </noscript>
+  <!-- Tailwind CSS (Play CDN – kein Build-Schritt) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Projekt-eigene Breakpoints statt Tailwind-Standardwerten, damit sie zu
+    // den anderen Seiten passen: Tablet 769–1024px, Mobile ≤768px.
+    tailwind.config = {
+      theme: {
+        screens: {
+          'max-md': { max: '768px' },
+          md: { min: '769px', max: '1024px' },
         },
-      };
-    </script>
-    <script src="js/script.js" defer></script>
-  </head>
-  <body class="m-0 font-sans">
-    <a
-      href="#main-content"
-      class="absolute left-0 top-[-100px] z-[9999] bg-[#005fcc] px-5 py-2.5 font-bold text-white no-underline focus:top-0"
-      >Zum Hauptinhalt springen</a
-    >
-    <header
-      role="banner"
-      class="sticky top-0 z-[100] bg-[#333] px-5 py-2.5 max-md:px-4"
-    ></header>
-    <main id="main-content" role="main">
-      <section
-        class="bg-[#333] px-5 py-[60px] text-center max-md:px-4 max-md:py-8"
-        aria-labelledby="events-hero-heading"
-      >
-        <div class="mx-auto max-w-[700px]">
-          <h2
-            id="events-hero-heading"
-            class="mb-3.5 text-[2rem] text-white md:text-[1.6rem] max-md:text-[1.3rem]"
-          >
-            Veranstaltungen 2026
-          </h2>
-          <p class="text-[1.05rem] leading-[1.75] text-[#ddd] max-md:text-[0.93rem]">
-            48 Veranstaltungen. 12 Monate. Ganz Deutschland. Such dir deinen
-            nächsten Ausfahrt-Moment aus.
-          </p>
-        </div>
-      </section>
-      <section
-        class="border-b-[3px] border-[#e8a000] bg-gradient-to-br from-[#1a1a1a] from-60% to-[#2a2000] px-5 py-8 max-md:px-4 max-md:py-6"
-        aria-labelledby="next-event-heading"
-      >
-            <div
-          class="mb-4 text-[0.8rem] font-bold uppercase tracking-[0.1em] text-[#e8a000]"
-          aria-hidden="true"
-        >
-          &#128197; Nächstes Event
-        </div>
-            <div
-          class="mx-auto flex max-w-[900px] flex-wrap items-center gap-7 max-md:flex-col max-md:items-start max-md:gap-4"
-        >
-            <div
-            class="flex shrink-0 flex-col items-center rounded-lg bg-[#e8a000] px-5 py-3 text-[#111]"
-            aria-hidden="true"
-          >
-            <span class="text-[2.2rem] font-bold leading-none">06</span>
-            <span class="text-[0.85rem] font-semibold uppercase tracking-[0.08em]">Jun</span>
-          </div>
-          <div class="flex-1">
-            <h2 id="next-event-heading" class="mb-1.5 text-[1.4rem] text-white max-md:text-[1.2rem]">
-              Sommertour – Eifel <span class="sr-only">(06. Juni 2026)</span>
-            </h2>
-            <p class="mb-2 flex flex-wrap items-center gap-1.5 text-[0.88rem] text-[#bbb]">
-              <span class="font-semibold text-[#e8a000]">&#127758; Tour</span>
-              <span class="text-[#555]" aria-hidden="true">·</span>
-              <span>Vulkaneifel, Laacher See</span>
-              <span class="text-[#555]" aria-hidden="true">·</span>
-              <span>2 Tage</span>
-            </p>
-            <p class="text-[0.92rem] leading-[1.6] text-[#ccc]">
-              Zweitägige Tour durch die Vulkaneifel mit Übernachtung am Laacher
-              See. Für alle Niveaus geeignet.
-            </p>
-          </div>
-          <a
-            href="#monat-jun"
-            class="inline-block shrink-0 whitespace-nowrap rounded-md bg-[#e8a000] px-[22px] py-3 text-[0.9rem] font-bold text-[#111] no-underline transition-colors duration-200 hover:bg-[#c78800] hover:text-white max-md:w-full max-md:text-center"
-            >Zum Event ↓</a
-          >
-        </div>
-      </section>
+        extend: {
+          fontFamily: { sans: ['Inter', 'Arial', 'sans-serif'] },
+        },
+      },
+    };
+  </script>
+  <script src="js/script.js" defer></script>
+</head>
 
-      <nav
-        aria-label="Sprung zu Monaten"
-        class="sticky z-[90] bg-[#444] px-5 top-[113px] md:top-[152px] md:px-0 max-md:top-[70px] max-md:overflow-x-auto max-md:px-0 max-md:[-webkit-overflow-scrolling:touch]"
-      >
-        <ul
-          role="list"
-          class="m-0 max-w-[1100px] list-none overflow-hidden p-0 md:mx-auto md:flex md:flex-wrap max-md:mx-0 max-md:flex max-md:w-max max-md:flex-nowrap max-md:whitespace-nowrap max-md:px-2"
-        >
-          <li class="float-left md:float-none">
-            <a
-              href="#monat-jan"
-              class="block px-4 py-3 text-[0.88rem] font-semibold uppercase tracking-[0.05em] text-[#ddd] no-underline hover:bg-[#555] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] md:px-3 md:py-2.5 md:text-[0.82rem] max-md:px-3 max-md:py-2.5 max-md:text-[0.8rem]"
-              >Januar</a
-            >
-          </li>
-          <li class="float-left md:float-none">
-            <a
-              href="#monat-feb"
-              class="block px-4 py-3 text-[0.88rem] font-semibold uppercase tracking-[0.05em] text-[#ddd] no-underline hover:bg-[#555] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] md:px-3 md:py-2.5 md:text-[0.82rem] max-md:px-3 max-md:py-2.5 max-md:text-[0.8rem]"
-              >Februar</a
-            >
-          </li>
-          <li class="float-left md:float-none">
-            <a
-              href="#monat-mar"
-              class="block px-4 py-3 text-[0.88rem] font-semibold uppercase tracking-[0.05em] text-[#ddd] no-underline hover:bg-[#555] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] md:px-3 md:py-2.5 md:text-[0.82rem] max-md:px-3 max-md:py-2.5 max-md:text-[0.8rem]"
-              >März</a
-            >
-          </li>
-          <li class="float-left md:float-none">
-            <a
-              href="#monat-apr"
-              class="block px-4 py-3 text-[0.88rem] font-semibold uppercase tracking-[0.05em] text-[#ddd] no-underline hover:bg-[#555] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] md:px-3 md:py-2.5 md:text-[0.82rem] max-md:px-3 max-md:py-2.5 max-md:text-[0.8rem]"
-              >April</a
-            >
-          </li>
-          <li class="float-left md:float-none">
-            <a
-              href="#monat-mai"
-              class="block px-4 py-3 text-[0.88rem] font-semibold uppercase tracking-[0.05em] text-[#ddd] no-underline hover:bg-[#555] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] md:px-3 md:py-2.5 md:text-[0.82rem] max-md:px-3 max-md:py-2.5 max-md:text-[0.8rem]"
-              >Mai</a
-            >
-          </li>
-          <li class="float-left md:float-none">
-            <a
-              href="#monat-jun"
-              class="block px-4 py-3 text-[0.88rem] font-semibold uppercase tracking-[0.05em] text-[#ddd] no-underline hover:bg-[#555] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] md:px-3 md:py-2.5 md:text-[0.82rem] max-md:px-3 max-md:py-2.5 max-md:text-[0.8rem]"
-              >Juni</a
-            >
-          </li>
-          <li class="float-left md:float-none">
-            <a
-              href="#monat-jul"
-              class="block px-4 py-3 text-[0.88rem] font-semibold uppercase tracking-[0.05em] text-[#ddd] no-underline hover:bg-[#555] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] md:px-3 md:py-2.5 md:text-[0.82rem] max-md:px-3 max-md:py-2.5 max-md:text-[0.8rem]"
-              >Juli</a
-            >
-          </li>
-          <li class="float-left md:float-none">
-            <a
-              href="#monat-aug"
-              class="block px-4 py-3 text-[0.88rem] font-semibold uppercase tracking-[0.05em] text-[#ddd] no-underline hover:bg-[#555] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] md:px-3 md:py-2.5 md:text-[0.82rem] max-md:px-3 max-md:py-2.5 max-md:text-[0.8rem]"
-              >August</a
-            >
-          </li>
-          <li class="float-left md:float-none">
-            <a
-              href="#monat-sep"
-              class="block px-4 py-3 text-[0.88rem] font-semibold uppercase tracking-[0.05em] text-[#ddd] no-underline hover:bg-[#555] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] md:px-3 md:py-2.5 md:text-[0.82rem] max-md:px-3 max-md:py-2.5 max-md:text-[0.8rem]"
-              >September</a
-            >
-          </li>
-          <li class="float-left md:float-none">
-            <a
-              href="#monat-okt"
-              class="block px-4 py-3 text-[0.88rem] font-semibold uppercase tracking-[0.05em] text-[#ddd] no-underline hover:bg-[#555] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] md:px-3 md:py-2.5 md:text-[0.82rem] max-md:px-3 max-md:py-2.5 max-md:text-[0.8rem]"
-              >Oktober</a
-            >
-          </li>
-          <li class="float-left md:float-none">
-            <a
-              href="#monat-nov"
-              class="block px-4 py-3 text-[0.88rem] font-semibold uppercase tracking-[0.05em] text-[#ddd] no-underline hover:bg-[#555] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] md:px-3 md:py-2.5 md:text-[0.82rem] max-md:px-3 max-md:py-2.5 max-md:text-[0.8rem]"
-              >November</a
-            >
-          </li>
-          <li class="float-left md:float-none">
-            <a
-              href="#monat-dez"
-              class="block px-4 py-3 text-[0.88rem] font-semibold uppercase tracking-[0.05em] text-[#ddd] no-underline hover:bg-[#555] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] md:px-3 md:py-2.5 md:text-[0.82rem] max-md:px-3 max-md:py-2.5 max-md:text-[0.8rem]"
-              >Dezember</a
-            >
-          </li>
-        </ul>
-      </nav>
-      <section
-        class="bg-[#1a1a1a] px-5 py-10 text-center max-md:px-4 max-md:py-8"
-        aria-labelledby="overview-heading"
-      >
-        <h2 id="overview-heading" class="mb-1.5 text-[1.4rem] text-white max-md:text-[1.2rem]">
-          Jahresübersicht 2026
+<body class="m-0 font-sans">
+  <a href="#main-content"
+    class="absolute left-0 top-[-100px] z-[9999] bg-[#005fcc] px-5 py-2.5 font-bold text-white no-underline focus:top-0">Zum
+    Hauptinhalt springen</a>
+  <header role="banner" class="sticky top-0 z-[100] bg-[#333] px-5 py-2.5 max-md:px-4"></header>
+  <main id="main-content" role="main">
+    <section class="bg-[#333] px-5 py-[60px] text-center max-md:px-4 max-md:py-8" aria-labelledby="events-hero-heading">
+      <div class="mx-auto max-w-[700px]">
+        <h2 id="events-hero-heading" class="mb-3.5 text-[2rem] text-white md:text-[1.6rem] max-md:text-[1.3rem]">
+          Veranstaltungen 2026
         </h2>
-        <p class="mb-6 text-[0.88rem] text-[#888]" id="overview-desc">
-          Anzahl der Events pro Monat. Die Hintergrundfarbe zeigt die
-          Intensität: je heller, desto mehr Veranstaltungen.
+        <p class="text-[1.05rem] leading-[1.75] text-[#ddd] max-md:text-[0.93rem]">
+          48 Veranstaltungen. 12 Monate. Ganz Deutschland. Such dir deinen
+          nächsten Ausfahrt-Moment aus.
         </p>
-        <table
-          class="mx-auto mb-5 w-full max-w-[720px] border-separate [border-spacing:6px] max-md:text-[0.8rem]"
-          aria-labelledby="overview-heading"
-          aria-describedby="overview-desc"
-        >
-          <caption class="sr-only">
-            Veranstaltungsanzahl pro Monat im Jahr 2026
-          </caption>
-          <thead>
-            <tr>
-              <th scope="col" class="pb-1 text-center text-[0.7rem] font-semibold uppercase tracking-[0.04em] text-[#aaa]">Jan</th>
-              <th scope="col" class="pb-1 text-center text-[0.7rem] font-semibold uppercase tracking-[0.04em] text-[#aaa]">Feb</th>
-              <th scope="col" class="pb-1 text-center text-[0.7rem] font-semibold uppercase tracking-[0.04em] text-[#aaa]">Mär</th>
-              <th scope="col" class="pb-1 text-center text-[0.7rem] font-semibold uppercase tracking-[0.04em] text-[#aaa]">Apr</th>
-              <th scope="col" class="pb-1 text-center text-[0.7rem] font-semibold uppercase tracking-[0.04em] text-[#aaa]">Mai</th>
-              <th scope="col" class="pb-1 text-center text-[0.7rem] font-semibold uppercase tracking-[0.04em] text-[#aaa]">Jun</th>
-              <th scope="col" class="pb-1 text-center text-[0.7rem] font-semibold uppercase tracking-[0.04em] text-[#aaa]">Jul</th>
-              <th scope="col" class="pb-1 text-center text-[0.7rem] font-semibold uppercase tracking-[0.04em] text-[#aaa]">Aug</th>
-              <th scope="col" class="pb-1 text-center text-[0.7rem] font-semibold uppercase tracking-[0.04em] text-[#aaa]">Sep</th>
-              <th scope="col" class="pb-1 text-center text-[0.7rem] font-semibold uppercase tracking-[0.04em] text-[#aaa]">Okt</th>
-              <th scope="col" class="pb-1 text-center text-[0.7rem] font-semibold uppercase tracking-[0.04em] text-[#aaa]">Nov</th>
-              <th scope="col" class="pb-1 text-center text-[0.7rem] font-semibold uppercase tracking-[0.04em] text-[#aaa]">Dez</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="cursor-default rounded-md bg-[#1a4a7a] px-1 py-2.5 text-center transition-transform duration-150 hover:-translate-y-0.5 focus-within:outline focus-within:outline-[3px] focus-within:outline-white focus-within:outline-offset-2">
-                <span class="block text-base font-bold text-[#e8f4ff]" aria-label="2 Events im Januar, sehr geringe Aktivität">2</span>
-              </td>
-              <td class="cursor-default rounded-md bg-[#1a4a7a] px-1 py-2.5 text-center transition-transform duration-150 hover:-translate-y-0.5 focus-within:outline focus-within:outline-[3px] focus-within:outline-white focus-within:outline-offset-2">
-                <span class="block text-base font-bold text-[#e8f4ff]" aria-label="2 Events im Februar, sehr geringe Aktivität">2</span>
-              </td>
-              <td class="cursor-default rounded-md bg-[#1e7a5a] px-1 py-2.5 text-center transition-transform duration-150 hover:-translate-y-0.5 focus-within:outline focus-within:outline-[3px] focus-within:outline-white focus-within:outline-offset-2">
-                <span class="block text-base font-bold text-[#e0fff4]" aria-label="3 Events im März, geringe Aktivität">3</span>
-              </td>
-              <td class="cursor-default rounded-md bg-[#c7a800] px-1 py-2.5 text-center transition-transform duration-150 hover:-translate-y-0.5 focus-within:outline focus-within:outline-[3px] focus-within:outline-white focus-within:outline-offset-2">
-                <span class="block text-base font-bold text-[#111]" aria-label="4 Events im April, mittlere Aktivität">4</span>
-              </td>
-              <td class="cursor-default rounded-md bg-[#e07020] px-1 py-2.5 text-center transition-transform duration-150 hover:-translate-y-0.5 focus-within:outline focus-within:outline-[3px] focus-within:outline-white focus-within:outline-offset-2">
-                <span class="block text-base font-bold text-white" aria-label="5 Events im Mai, hohe Aktivität">5</span>
-              </td>
-              <td class="cursor-default rounded-md bg-[#c0392b] px-1 py-2.5 text-center transition-transform duration-150 hover:-translate-y-0.5 focus-within:outline focus-within:outline-[3px] focus-within:outline-white focus-within:outline-offset-2">
-                <span class="block text-base font-bold text-white" aria-label="6 Events im Juni, sehr hohe Aktivität">6</span>
-              </td>
-              <td class="cursor-default rounded-md bg-[#c0392b] px-1 py-2.5 text-center transition-transform duration-150 hover:-translate-y-0.5 focus-within:outline focus-within:outline-[3px] focus-within:outline-white focus-within:outline-offset-2">
-                <span class="block text-base font-bold text-white" aria-label="6 Events im Juli, sehr hohe Aktivität">6</span>
-              </td>
-              <td class="cursor-default rounded-md bg-[#c0392b] px-1 py-2.5 text-center transition-transform duration-150 hover:-translate-y-0.5 focus-within:outline focus-within:outline-[3px] focus-within:outline-white focus-within:outline-offset-2">
-                <span class="block text-base font-bold text-white" aria-label="6 Events im August, sehr hohe Aktivität">6</span>
-              </td>
-              <td class="cursor-default rounded-md bg-[#e07020] px-1 py-2.5 text-center transition-transform duration-150 hover:-translate-y-0.5 focus-within:outline focus-within:outline-[3px] focus-within:outline-white focus-within:outline-offset-2">
-                <span class="block text-base font-bold text-white" aria-label="5 Events im September, hohe Aktivität">5</span>
-              </td>
-              <td class="cursor-default rounded-md bg-[#c7a800] px-1 py-2.5 text-center transition-transform duration-150 hover:-translate-y-0.5 focus-within:outline focus-within:outline-[3px] focus-within:outline-white focus-within:outline-offset-2">
-                <span class="block text-base font-bold text-[#111]" aria-label="4 Events im Oktober, mittlere Aktivität">4</span>
-              </td>
-              <td class="cursor-default rounded-md bg-[#1e7a5a] px-1 py-2.5 text-center transition-transform duration-150 hover:-translate-y-0.5 focus-within:outline focus-within:outline-[3px] focus-within:outline-white focus-within:outline-offset-2">
-                <span class="block text-base font-bold text-[#e0fff4]" aria-label="3 Events im November, geringe Aktivität">3</span>
-              </td>
-              <td class="cursor-default rounded-md bg-[#1a4a7a] px-1 py-2.5 text-center transition-transform duration-150 hover:-translate-y-0.5 focus-within:outline focus-within:outline-[3px] focus-within:outline-white focus-within:outline-offset-2">
-                <span class="block text-base font-bold text-[#e8f4ff]" aria-label="2 Events im Dezember, sehr geringe Aktivität">2</span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <p class="inline-flex flex-wrap items-center justify-center gap-1.5 text-[0.78rem] text-[#aaa]" aria-label="Erklärung der Farbstufen">
-          Intensität:
-          <span class="inline-block h-[18px] w-[18px] rounded-[3px] bg-[#1a4a7a]" aria-hidden="true"></span
-          ><span class="sr-only">Stufe 1 –</span> sehr wenig,
-          <span class="inline-block h-[18px] w-[18px] rounded-[3px] bg-[#1e7a5a]" aria-hidden="true"></span
-          ><span class="sr-only">Stufe 2 –</span> wenig,
-          <span class="inline-block h-[18px] w-[18px] rounded-[3px] bg-[#c7a800]" aria-hidden="true"></span
-          ><span class="sr-only">Stufe 3 –</span> mittel,
-          <span class="inline-block h-[18px] w-[18px] rounded-[3px] bg-[#e07020]" aria-hidden="true"></span
-          ><span class="sr-only">Stufe 4 –</span> viel,
-          <span class="inline-block h-[18px] w-[18px] rounded-[3px] bg-[#c0392b]" aria-hidden="true"></span
-          ><span class="sr-only">Stufe 5 –</span> sehr viel
-        </p>
-      </section>
-
-      <section
-        class="border-b border-[#3a3a3a] bg-[#2a2a2a] px-5 py-4"
-        aria-label="Erklärung der Veranstaltungstypen"
-      >
-        <ul
-          role="list"
-          class="mx-auto flex max-w-[900px] flex-wrap justify-center gap-x-7 gap-y-2 p-0 max-md:flex-col max-md:items-start"
-        >
-          <li class="flex items-center gap-1.5 text-[0.88rem] text-[#ccc]">
-            <span class="text-base" aria-hidden="true">&#127758;</span>
-            <strong class="text-white">Tour</strong> – Gruppenausfahrten &amp; Mehrtagestouren
-          </li>
-          <li class="flex items-center gap-1.5 text-[0.88rem] text-[#ccc]">
-            <span class="text-base" aria-hidden="true">&#127947;</span>
-            <strong class="text-white">Training</strong> – Fahrtechnik, Kurse &amp; Lager
-          </li>
-          <li class="flex items-center gap-1.5 text-[0.88rem] text-[#ccc]">
-            <span class="text-base" aria-hidden="true">&#127942;</span>
-            <strong class="text-white">Wettkampf</strong> – Rennen &amp; vereinsinterne Wettbewerbe
-          </li>
-          <li class="flex items-center gap-1.5 text-[0.88rem] text-[#ccc]">
-            <span class="text-base" aria-hidden="true">&#129309;</span>
-            <strong class="text-white">Pflege &amp; Treffen</strong> – Streckenpflege,
-            Vereinsabende &amp; Versammlungen
-          </li>
-        </ul>
-      </section>
-
-      <input type="radio" name="filter" id="filter-alle" class="peer/alle hidden" checked />
-      <input type="radio" name="filter" id="filter-tour" class="peer/tour hidden" />
-      <input type="radio" name="filter" id="filter-training" class="peer/training hidden" />
-      <input type="radio" name="filter" id="filter-wettkampf" class="peer/wettkampf hidden" />
-      <input type="radio" name="filter" id="filter-pflege" class="peer/pflege hidden" />
-            <div
-        class="bg-[#222] p-5 text-center"
-        role="radiogroup"
-        aria-label="Veranstaltungen filtern"
-      >
-        <div class="inline-flex flex-wrap justify-center gap-2.5">
-          <label
-            for="filter-alle"
-            class="inline-block cursor-pointer rounded-3xl border-2 border-[#555] px-[18px] py-2 text-[0.9rem] font-semibold text-[#ccc] transition-colors duration-200 hover:border-[#e8a000] hover:text-white peer-checked/alle:!border-[#e8a000] peer-checked/alle:!bg-[#e8a000] peer-checked/alle:!text-[#111]"
-            >Alle</label
-          >
-          <label
-            for="filter-tour"
-            class="inline-block cursor-pointer rounded-3xl border-2 border-[#555] px-[18px] py-2 text-[0.9rem] font-semibold text-[#ccc] transition-colors duration-200 hover:border-[#e8a000] hover:text-white peer-checked/tour:!border-[#e8a000] peer-checked/tour:!bg-[#e8a000] peer-checked/tour:!text-[#111]"
-            >&#127758; Tour</label
-          >
-          <label
-            for="filter-training"
-            class="inline-block cursor-pointer rounded-3xl border-2 border-[#555] px-[18px] py-2 text-[0.9rem] font-semibold text-[#ccc] transition-colors duration-200 hover:border-[#e8a000] hover:text-white peer-checked/training:!border-[#e8a000] peer-checked/training:!bg-[#e8a000] peer-checked/training:!text-[#111]"
-            >&#127947; Training</label
-          >
-          <label
-            for="filter-wettkampf"
-            class="inline-block cursor-pointer rounded-3xl border-2 border-[#555] px-[18px] py-2 text-[0.9rem] font-semibold text-[#ccc] transition-colors duration-200 hover:border-[#e8a000] hover:text-white peer-checked/wettkampf:!border-[#e8a000] peer-checked/wettkampf:!bg-[#e8a000] peer-checked/wettkampf:!text-[#111]"
-            >&#127942; Wettkampf</label
-          >
-          <label
-            for="filter-pflege"
-            class="inline-block cursor-pointer rounded-3xl border-2 border-[#555] px-[18px] py-2 text-[0.9rem] font-semibold text-[#ccc] transition-colors duration-200 hover:border-[#e8a000] hover:text-white peer-checked/pflege:!border-[#e8a000] peer-checked/pflege:!bg-[#e8a000] peer-checked/pflege:!text-[#111]"
-            >&#129309; Pflege &amp; Treffen</label
-          >
-        </div>
       </div>
-      <section
-        class="mx-auto my-10 max-w-[1100px] px-5 pb-10 peer-checked/tour:[&_.ev-tour]:!block peer-checked/tour:[&_.ev-not-tour]:!hidden peer-checked/training:[&_.ev-training]:!block peer-checked/training:[&_.ev-not-training]:!hidden peer-checked/wettkampf:[&_.ev-wettkampf]:!block peer-checked/wettkampf:[&_.ev-not-wettkampf]:!hidden peer-checked/pflege:[&_.ev-pflege]:!block peer-checked/pflege:[&_.ev-not-pflege]:!hidden max-md:px-4 max-md:pb-7"
-        aria-labelledby="events-heading"
-      >
-        <h2 id="events-heading" class="sr-only">Veranstaltungskalender 2026</h2>
-        <div class="mb-[30px]">
-          <p class="mb-[1.2em] text-[0.97rem] leading-[1.8] text-[#222] max-md:text-[0.9rem]">
-            Hier findest du alle geplanten Veranstaltungen der IU MTB Community
-            e. V. für das Jahr 2026 – übersichtlich nach Monaten gegliedert und
-            überregional nach Datum sortiert. Von Wettkämpfen und
-            Trainingstouren bis hin zu Vereinstreffen und
-            Streckenpflege-Aktionen: Für jeden ist etwas dabei.
+    </section>
+    <section
+      class="border-b-[3px] border-[#e8a000] bg-gradient-to-br from-[#1a1a1a] from-60% to-[#2a2000] px-5 py-8 max-md:px-4 max-md:py-6"
+      aria-labelledby="next-event-heading">
+      <div class="mb-4 text-[0.8rem] font-bold uppercase tracking-[0.1em] text-[#e8a000]" aria-hidden="true">
+        &#128197; Nächstes Event
+      </div>
+      <div
+        class="mx-auto flex max-w-[900px] flex-wrap items-center gap-7 max-md:flex-col max-md:items-start max-md:gap-4">
+        <div class="flex shrink-0 flex-col items-center rounded-lg bg-[#e8a000] px-5 py-3 text-[#111]"
+          aria-hidden="true">
+          <span class="text-[2.2rem] font-bold leading-none">06</span>
+          <span class="text-[0.85rem] font-semibold uppercase tracking-[0.08em]">Jun</span>
+        </div>
+        <div class="flex-1">
+          <h2 id="next-event-heading" class="mb-1.5 text-[1.4rem] text-white max-md:text-[1.2rem]">
+            Sommertour – Eifel <span class="sr-only">(06. Juni 2026)</span>
+          </h2>
+          <p class="mb-2 flex flex-wrap items-center gap-1.5 text-[0.88rem] text-[#bbb]">
+            <span class="font-semibold text-[#e8a000]">&#127758; Tour</span>
+            <span class="text-[#555]" aria-hidden="true">·</span>
+            <span>Vulkaneifel, Laacher See</span>
+            <span class="text-[#555]" aria-hidden="true">·</span>
+            <span>2 Tage</span>
           </p>
-          <p class="mb-[1.2em] text-[0.97rem] leading-[1.8] text-[#222] max-md:text-[0.9rem]">
-            Du kennst eine Veranstaltung, die hier noch fehlt? Melde sie gern
-            über unsere
-            <a href="team.html" class="text-[#005fcc] underline hover:text-[#003a99]">Kontaktseite</a> beim Team – wir
-            nehmen sie schnellstmöglich auf.
-          </p>
-          <p class="text-[0.97rem] leading-[1.8] text-[#222] max-md:text-[0.9rem]">
-            <strong>Bitte beachte:</strong> Alle aufgeführten Termine sind
-            verbindlich geplant. Sollte eine Veranstaltung dennoch nicht wie
-            geplant stattfinden können, wird sie rechtzeitig abgesagt. Da sich
-            der Stand jederzeit ändern kann, empfehlen wir dir, diese Seite
-            regelmäßig zu besuchen, um immer über die aktuellen Termine
-            informiert zu sein.
+          <p class="text-[0.92rem] leading-[1.6] text-[#ccc]">
+            Zweitägige Tour durch die Vulkaneifel mit Übernachtung am Laacher
+            See. Für alle Niveaus geeignet.
           </p>
         </div>
-        <div class="overflow-hidden">
-          <div class="mb-4 overflow-hidden md:flex md:flex-wrap md:gap-4 max-md:block">
-            <!-- Januar -->
-            <div
-              id="monat-jan"
-              class="ev-tour ev-not-training ev-not-wettkampf ev-not-pflege scroll-mt-[175px] md:scroll-mt-[250px] max-md:scroll-mt-[125px] float-left mr-[2.66%] w-[23%] overflow-hidden rounded-lg border border-[#ddd] bg-[#f5f5f5] md:float-none md:mr-0 md:w-[calc(50%-8px)] max-md:float-none max-md:mb-3 max-md:mr-0 max-md:w-full"
-            >
-              <input type="checkbox" id="toggle-jan" class="peer/jan hidden" />
-              <label
-                for="toggle-jan"
-                aria-label="Veranstaltungen Januar 2026 anzeigen"
-                class="peer-checked/jan:after:content-['_−'] block cursor-pointer select-none bg-[#333] px-[18px] py-7 font-semibold text-white after:float-right after:font-bold after:content-['_+'] hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] max-md:px-[14px] max-md:py-4 max-md:text-[0.95rem]"
-              >
-                Januar 2026
-              </label>
-              <div class="peer-checked/jan:!block hidden px-[18px] py-4 max-md:p-[14px]">
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] first:mt-0 max-md:text-[0.9rem]">Wintertour – Schwarzwald</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>10.01.2026</strong> – Gemeinsame Wintertour auf
-                  verschneiten Wegen rund um Freiburg. Geeignet für erfahrene
-                  Fahrer. Treffpunkt: Parkplatz Schauinsland.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Vereinstreffen – Stuttgart</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>14.01.2026</strong> – Informelles Vereinstreffen zur
-                  Saisonplanung 2026. Alle Mitglieder sind herzlich eingeladen.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Neujahrsausfahrt – Ruhrgebiet</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>17.01.2026</strong> – Entspannte Ausfahrt zum
-                  Jahresauftakt durch den Teutoburger Wald. Alle Fahrniveaus
-                  willkommen.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Winterlager – Brandenburg</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>24.01.2026</strong> – Zweitägiges Winterlager mit
-                  Lagerfeuer und Nachtausfahrt durch die Märkische Schweiz. Zelt
-                  und Schlafsack erforderlich.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Fahrtechnik-Training – Münsterland</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>31.01.2026</strong> – Fahrtechnik auf flachem Gelände
-                  für Einsteiger. Ideale Bedingungen für Kurventechnik und
-                  Bremsübungen.
-                </p>
-              </div>
-            </div>
+        <a href="#monat-jun"
+          class="inline-block shrink-0 whitespace-nowrap rounded-md bg-[#e8a000] px-[22px] py-3 text-[0.9rem] font-bold text-[#111] no-underline transition-colors duration-200 hover:bg-[#c78800] hover:text-white max-md:w-full max-md:text-center">Zum
+          Event ↓</a>
+      </div>
+    </section>
 
-            <!-- Februar -->
-            <div
-              id="monat-feb"
-              class="ev-training ev-not-tour ev-not-wettkampf ev-not-pflege scroll-mt-[175px] md:scroll-mt-[250px] max-md:scroll-mt-[125px] float-left mr-[2.66%] w-[23%] overflow-hidden rounded-lg border border-[#ddd] bg-[#f5f5f5] md:float-none md:mr-0 md:w-[calc(50%-8px)] max-md:float-none max-md:mb-3 max-md:mr-0 max-md:w-full"
-            >
-              <input type="checkbox" id="toggle-feb" class="peer/feb hidden" />
-              <label
-                for="toggle-feb"
-                aria-label="Veranstaltungen Februar 2026 anzeigen"
-                class="peer-checked/feb:after:content-['_−'] block cursor-pointer select-none bg-[#333] px-[18px] py-7 font-semibold text-white after:float-right after:font-bold after:content-['_+'] hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] max-md:px-[14px] max-md:py-4 max-md:text-[0.95rem]"
-              >
-                Februar 2026
-              </label>
-              <div class="peer-checked/feb:!block hidden px-[18px] py-4 max-md:p-[14px]">
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] first:mt-0 max-md:text-[0.9rem]">Schmalweg-Wettkampf – Bayern</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>07.02.2026</strong> – Vereinsinterner Wettkampf auf
-                  den Wegen rund um Garmisch-Partenkirchen. Anmeldung
-                  erforderlich.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Wintertour – Nordrhein-Westfalen</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>07.02.2026</strong> – Geführte Tour durch den
-                  Bergischen Wald bei Wuppertal. Ca. 40 km, mittleres Niveau.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Fahrrad-Pflegeworkshop – Leipzig</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>14.02.2026</strong> – Wartung und Reparatur am eigenen
-                  Fahrrad. Werkzeug wird gestellt, Ersatzteile bitte selbst
-                  mitbringen.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Fahrtechnik-Workshop – Sachsen</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>21.02.2026</strong> – Fahrtechnikkurs für Einsteiger
-                  im Erzgebirge. Begrenzte Teilnehmerzahl.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Nachtausfahrt – Freiburg</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>28.02.2026</strong> – Stimmungsvolle Nachtausfahrt mit
-                  Stirnlampen durch den Schwarzwald. Beleuchtung und Helm
-                  Pflicht.
-                </p>
-              </div>
-            </div>
+    <nav aria-label="Sprung zu Monaten"
+      class="sticky z-[90] bg-[#444] px-5 top-[113px] md:top-[152px] md:px-0 max-md:top-[70px] max-md:overflow-x-auto max-md:px-0 max-md:[-webkit-overflow-scrolling:touch]">
+      <ul role="list"
+        class="m-0 max-w-[1100px] list-none overflow-hidden p-0 md:mx-auto md:flex md:flex-wrap max-md:mx-0 max-md:flex max-md:w-max max-md:flex-nowrap max-md:whitespace-nowrap max-md:px-2">
+        <li class="float-left md:float-none">
+          <a href="#monat-jan"
+            class="block px-4 py-3 text-[0.88rem] font-semibold uppercase tracking-[0.05em] text-[#ddd] no-underline hover:bg-[#555] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] md:px-3 md:py-2.5 md:text-[0.82rem] max-md:px-3 max-md:py-2.5 max-md:text-[0.8rem]">Januar</a>
+        </li>
+        <li class="float-left md:float-none">
+          <a href="#monat-feb"
+            class="block px-4 py-3 text-[0.88rem] font-semibold uppercase tracking-[0.05em] text-[#ddd] no-underline hover:bg-[#555] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] md:px-3 md:py-2.5 md:text-[0.82rem] max-md:px-3 max-md:py-2.5 max-md:text-[0.8rem]">Februar</a>
+        </li>
+        <li class="float-left md:float-none">
+          <a href="#monat-mar"
+            class="block px-4 py-3 text-[0.88rem] font-semibold uppercase tracking-[0.05em] text-[#ddd] no-underline hover:bg-[#555] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] md:px-3 md:py-2.5 md:text-[0.82rem] max-md:px-3 max-md:py-2.5 max-md:text-[0.8rem]">März</a>
+        </li>
+        <li class="float-left md:float-none">
+          <a href="#monat-apr"
+            class="block px-4 py-3 text-[0.88rem] font-semibold uppercase tracking-[0.05em] text-[#ddd] no-underline hover:bg-[#555] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] md:px-3 md:py-2.5 md:text-[0.82rem] max-md:px-3 max-md:py-2.5 max-md:text-[0.8rem]">April</a>
+        </li>
+        <li class="float-left md:float-none">
+          <a href="#monat-mai"
+            class="block px-4 py-3 text-[0.88rem] font-semibold uppercase tracking-[0.05em] text-[#ddd] no-underline hover:bg-[#555] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] md:px-3 md:py-2.5 md:text-[0.82rem] max-md:px-3 max-md:py-2.5 max-md:text-[0.8rem]">Mai</a>
+        </li>
+        <li class="float-left md:float-none">
+          <a href="#monat-jun"
+            class="block px-4 py-3 text-[0.88rem] font-semibold uppercase tracking-[0.05em] text-[#ddd] no-underline hover:bg-[#555] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] md:px-3 md:py-2.5 md:text-[0.82rem] max-md:px-3 max-md:py-2.5 max-md:text-[0.8rem]">Juni</a>
+        </li>
+        <li class="float-left md:float-none">
+          <a href="#monat-jul"
+            class="block px-4 py-3 text-[0.88rem] font-semibold uppercase tracking-[0.05em] text-[#ddd] no-underline hover:bg-[#555] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] md:px-3 md:py-2.5 md:text-[0.82rem] max-md:px-3 max-md:py-2.5 max-md:text-[0.8rem]">Juli</a>
+        </li>
+        <li class="float-left md:float-none">
+          <a href="#monat-aug"
+            class="block px-4 py-3 text-[0.88rem] font-semibold uppercase tracking-[0.05em] text-[#ddd] no-underline hover:bg-[#555] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] md:px-3 md:py-2.5 md:text-[0.82rem] max-md:px-3 max-md:py-2.5 max-md:text-[0.8rem]">August</a>
+        </li>
+        <li class="float-left md:float-none">
+          <a href="#monat-sep"
+            class="block px-4 py-3 text-[0.88rem] font-semibold uppercase tracking-[0.05em] text-[#ddd] no-underline hover:bg-[#555] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] md:px-3 md:py-2.5 md:text-[0.82rem] max-md:px-3 max-md:py-2.5 max-md:text-[0.8rem]">September</a>
+        </li>
+        <li class="float-left md:float-none">
+          <a href="#monat-okt"
+            class="block px-4 py-3 text-[0.88rem] font-semibold uppercase tracking-[0.05em] text-[#ddd] no-underline hover:bg-[#555] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] md:px-3 md:py-2.5 md:text-[0.82rem] max-md:px-3 max-md:py-2.5 max-md:text-[0.8rem]">Oktober</a>
+        </li>
+        <li class="float-left md:float-none">
+          <a href="#monat-nov"
+            class="block px-4 py-3 text-[0.88rem] font-semibold uppercase tracking-[0.05em] text-[#ddd] no-underline hover:bg-[#555] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] md:px-3 md:py-2.5 md:text-[0.82rem] max-md:px-3 max-md:py-2.5 max-md:text-[0.8rem]">November</a>
+        </li>
+        <li class="float-left md:float-none">
+          <a href="#monat-dez"
+            class="block px-4 py-3 text-[0.88rem] font-semibold uppercase tracking-[0.05em] text-[#ddd] no-underline hover:bg-[#555] hover:text-white focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] md:px-3 md:py-2.5 md:text-[0.82rem] max-md:px-3 max-md:py-2.5 max-md:text-[0.8rem]">Dezember</a>
+        </li>
+      </ul>
+    </nav>
+    <section class="bg-[#1a1a1a] px-5 py-10 text-center max-md:px-4 max-md:py-8" aria-labelledby="overview-heading">
+      <h2 id="overview-heading" class="mb-1.5 text-[1.4rem] text-white max-md:text-[1.2rem]">
+        Jahresübersicht 2026
+      </h2>
+      <p class="mb-6 text-[0.88rem] text-[#888]" id="overview-desc">
+        Anzahl der Events pro Monat. Die Hintergrundfarbe zeigt die
+        Intensität: je heller, desto mehr Veranstaltungen.
+      </p>
+      <table class="mx-auto mb-5 w-full max-w-[720px] border-separate [border-spacing:6px] max-md:text-[0.8rem]"
+        aria-labelledby="overview-heading" aria-describedby="overview-desc">
+        <caption class="sr-only">
+          Veranstaltungsanzahl pro Monat im Jahr 2026
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col"
+              class="pb-1 text-center text-[0.7rem] font-semibold uppercase tracking-[0.04em] text-[#aaa]">Jan</th>
+            <th scope="col"
+              class="pb-1 text-center text-[0.7rem] font-semibold uppercase tracking-[0.04em] text-[#aaa]">Feb</th>
+            <th scope="col"
+              class="pb-1 text-center text-[0.7rem] font-semibold uppercase tracking-[0.04em] text-[#aaa]">Mär</th>
+            <th scope="col"
+              class="pb-1 text-center text-[0.7rem] font-semibold uppercase tracking-[0.04em] text-[#aaa]">Apr</th>
+            <th scope="col"
+              class="pb-1 text-center text-[0.7rem] font-semibold uppercase tracking-[0.04em] text-[#aaa]">Mai</th>
+            <th scope="col"
+              class="pb-1 text-center text-[0.7rem] font-semibold uppercase tracking-[0.04em] text-[#aaa]">Jun</th>
+            <th scope="col"
+              class="pb-1 text-center text-[0.7rem] font-semibold uppercase tracking-[0.04em] text-[#aaa]">Jul</th>
+            <th scope="col"
+              class="pb-1 text-center text-[0.7rem] font-semibold uppercase tracking-[0.04em] text-[#aaa]">Aug</th>
+            <th scope="col"
+              class="pb-1 text-center text-[0.7rem] font-semibold uppercase tracking-[0.04em] text-[#aaa]">Sep</th>
+            <th scope="col"
+              class="pb-1 text-center text-[0.7rem] font-semibold uppercase tracking-[0.04em] text-[#aaa]">Okt</th>
+            <th scope="col"
+              class="pb-1 text-center text-[0.7rem] font-semibold uppercase tracking-[0.04em] text-[#aaa]">Nov</th>
+            <th scope="col"
+              class="pb-1 text-center text-[0.7rem] font-semibold uppercase tracking-[0.04em] text-[#aaa]">Dez</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              class="cursor-default rounded-md bg-[#1a4a7a] px-1 py-2.5 text-center transition-transform duration-150 hover:-translate-y-0.5 focus-within:outline focus-within:outline-[3px] focus-within:outline-white focus-within:outline-offset-2">
+              <span class="block text-base font-bold text-[#e8f4ff]"
+                aria-label="2 Events im Januar, sehr geringe Aktivität">2</span>
+            </td>
+            <td
+              class="cursor-default rounded-md bg-[#1a4a7a] px-1 py-2.5 text-center transition-transform duration-150 hover:-translate-y-0.5 focus-within:outline focus-within:outline-[3px] focus-within:outline-white focus-within:outline-offset-2">
+              <span class="block text-base font-bold text-[#e8f4ff]"
+                aria-label="2 Events im Februar, sehr geringe Aktivität">2</span>
+            </td>
+            <td
+              class="cursor-default rounded-md bg-[#1e7a5a] px-1 py-2.5 text-center transition-transform duration-150 hover:-translate-y-0.5 focus-within:outline focus-within:outline-[3px] focus-within:outline-white focus-within:outline-offset-2">
+              <span class="block text-base font-bold text-[#e0fff4]"
+                aria-label="3 Events im März, geringe Aktivität">3</span>
+            </td>
+            <td
+              class="cursor-default rounded-md bg-[#c7a800] px-1 py-2.5 text-center transition-transform duration-150 hover:-translate-y-0.5 focus-within:outline focus-within:outline-[3px] focus-within:outline-white focus-within:outline-offset-2">
+              <span class="block text-base font-bold text-[#111]"
+                aria-label="4 Events im April, mittlere Aktivität">4</span>
+            </td>
+            <td
+              class="cursor-default rounded-md bg-[#e07020] px-1 py-2.5 text-center transition-transform duration-150 hover:-translate-y-0.5 focus-within:outline focus-within:outline-[3px] focus-within:outline-white focus-within:outline-offset-2">
+              <span class="block text-base font-bold text-white" aria-label="5 Events im Mai, hohe Aktivität">5</span>
+            </td>
+            <td
+              class="cursor-default rounded-md bg-[#c0392b] px-1 py-2.5 text-center transition-transform duration-150 hover:-translate-y-0.5 focus-within:outline focus-within:outline-[3px] focus-within:outline-white focus-within:outline-offset-2">
+              <span class="block text-base font-bold text-white"
+                aria-label="6 Events im Juni, sehr hohe Aktivität">6</span>
+            </td>
+            <td
+              class="cursor-default rounded-md bg-[#c0392b] px-1 py-2.5 text-center transition-transform duration-150 hover:-translate-y-0.5 focus-within:outline focus-within:outline-[3px] focus-within:outline-white focus-within:outline-offset-2">
+              <span class="block text-base font-bold text-white"
+                aria-label="6 Events im Juli, sehr hohe Aktivität">6</span>
+            </td>
+            <td
+              class="cursor-default rounded-md bg-[#c0392b] px-1 py-2.5 text-center transition-transform duration-150 hover:-translate-y-0.5 focus-within:outline focus-within:outline-[3px] focus-within:outline-white focus-within:outline-offset-2">
+              <span class="block text-base font-bold text-white"
+                aria-label="6 Events im August, sehr hohe Aktivität">6</span>
+            </td>
+            <td
+              class="cursor-default rounded-md bg-[#e07020] px-1 py-2.5 text-center transition-transform duration-150 hover:-translate-y-0.5 focus-within:outline focus-within:outline-[3px] focus-within:outline-white focus-within:outline-offset-2">
+              <span class="block text-base font-bold text-white"
+                aria-label="5 Events im September, hohe Aktivität">5</span>
+            </td>
+            <td
+              class="cursor-default rounded-md bg-[#c7a800] px-1 py-2.5 text-center transition-transform duration-150 hover:-translate-y-0.5 focus-within:outline focus-within:outline-[3px] focus-within:outline-white focus-within:outline-offset-2">
+              <span class="block text-base font-bold text-[#111]"
+                aria-label="4 Events im Oktober, mittlere Aktivität">4</span>
+            </td>
+            <td
+              class="cursor-default rounded-md bg-[#1e7a5a] px-1 py-2.5 text-center transition-transform duration-150 hover:-translate-y-0.5 focus-within:outline focus-within:outline-[3px] focus-within:outline-white focus-within:outline-offset-2">
+              <span class="block text-base font-bold text-[#e0fff4]"
+                aria-label="3 Events im November, geringe Aktivität">3</span>
+            </td>
+            <td
+              class="cursor-default rounded-md bg-[#1a4a7a] px-1 py-2.5 text-center transition-transform duration-150 hover:-translate-y-0.5 focus-within:outline focus-within:outline-[3px] focus-within:outline-white focus-within:outline-offset-2">
+              <span class="block text-base font-bold text-[#e8f4ff]"
+                aria-label="2 Events im Dezember, sehr geringe Aktivität">2</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="inline-flex flex-wrap items-center justify-center gap-1.5 text-[0.78rem] text-[#aaa]"
+        aria-label="Erklärung der Farbstufen">
+        Intensität:
+        <span class="inline-block h-[18px] w-[18px] rounded-[3px] bg-[#1a4a7a]" aria-hidden="true"></span><span
+          class="sr-only">Stufe 1 –</span> sehr wenig,
+        <span class="inline-block h-[18px] w-[18px] rounded-[3px] bg-[#1e7a5a]" aria-hidden="true"></span><span
+          class="sr-only">Stufe 2 –</span> wenig,
+        <span class="inline-block h-[18px] w-[18px] rounded-[3px] bg-[#c7a800]" aria-hidden="true"></span><span
+          class="sr-only">Stufe 3 –</span> mittel,
+        <span class="inline-block h-[18px] w-[18px] rounded-[3px] bg-[#e07020]" aria-hidden="true"></span><span
+          class="sr-only">Stufe 4 –</span> viel,
+        <span class="inline-block h-[18px] w-[18px] rounded-[3px] bg-[#c0392b]" aria-hidden="true"></span><span
+          class="sr-only">Stufe 5 –</span> sehr viel
+      </p>
+    </section>
 
-            <!-- März -->
-            <div
-              id="monat-mar"
-              class="ev-pflege ev-not-tour ev-not-training ev-not-wettkampf scroll-mt-[175px] md:scroll-mt-[250px] max-md:scroll-mt-[125px] float-left mr-[2.66%] w-[23%] overflow-hidden rounded-lg border border-[#ddd] bg-[#f5f5f5] md:float-none md:mr-0 md:w-[calc(50%-8px)] max-md:float-none max-md:mb-3 max-md:mr-0 max-md:w-full"
-            >
-              <input type="checkbox" id="toggle-mar" class="peer/mar hidden" />
-              <label
-                for="toggle-mar"
-                aria-label="Veranstaltungen März 2026 anzeigen"
-                class="peer-checked/mar:after:content-['_−'] block cursor-pointer select-none bg-[#333] px-[18px] py-7 font-semibold text-white after:float-right after:font-bold after:content-['_+'] hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] max-md:px-[14px] max-md:py-4 max-md:text-[0.95rem]"
-              >
-                März 2026
-              </label>
-              <div class="peer-checked/mar:!block hidden px-[18px] py-4 max-md:p-[14px]">
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] first:mt-0 max-md:text-[0.9rem]">Einsteigerkurs – Niedersachsen</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>07.03.2026</strong> – Einsteigerkurs für neue
-                  Vereinsmitglieder im Deister bei Hannover. Leihräder
-                  verfügbar.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Frühjahrsauftakt – Rheinland-Pfalz</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>14.03.2026</strong> – Saisonauftakt im Pfälzerwald mit
-                  gemütlicher Gruppenrunde. Ca. 35 km, mittleres Niveau.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Vereinstreffen – Köln</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>14.03.2026</strong> – Regionaltreffen der
-                  Westmitglieder zur Planung der Frühjahrssaison.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Schotterweg-Tour – Moseltal</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>21.03.2026</strong> – Entspannte Schotterweg-Tour
-                  entlang der Mosel. Ca. 55 km, Einkehr ist eingeplant.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Streckenpflege – Hessen</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>28.03.2026</strong> – Gemeinsame Streckenpflege im
-                  Taunus. Material wird gestellt, Handschuhe mitbringen.
-                </p>
-              </div>
-            </div>
+    <section class="border-b border-[#3a3a3a] bg-[#2a2a2a] px-5 py-4" aria-label="Erklärung der Veranstaltungstypen">
+      <ul role="list"
+        class="mx-auto flex max-w-[900px] flex-wrap justify-center gap-x-7 gap-y-2 p-0 max-md:flex-col max-md:items-start">
+        <li class="flex items-center gap-1.5 text-[0.88rem] text-[#ccc]">
+          <span class="text-base" aria-hidden="true">&#127758;</span>
+          <strong class="text-white">Tour</strong> – Gruppenausfahrten &amp; Mehrtagestouren
+        </li>
+        <li class="flex items-center gap-1.5 text-[0.88rem] text-[#ccc]">
+          <span class="text-base" aria-hidden="true">&#127947;</span>
+          <strong class="text-white">Training</strong> – Fahrtechnik, Kurse &amp; Lager
+        </li>
+        <li class="flex items-center gap-1.5 text-[0.88rem] text-[#ccc]">
+          <span class="text-base" aria-hidden="true">&#127942;</span>
+          <strong class="text-white">Wettkampf</strong> – Rennen &amp; vereinsinterne Wettbewerbe
+        </li>
+        <li class="flex items-center gap-1.5 text-[0.88rem] text-[#ccc]">
+          <span class="text-base" aria-hidden="true">&#129309;</span>
+          <strong class="text-white">Pflege &amp; Treffen</strong> – Streckenpflege,
+          Vereinsabende &amp; Versammlungen
+        </li>
+      </ul>
+    </section>
 
-            <!-- April -->
-            <div
-              id="monat-apr"
-              class="ev-tour ev-not-training ev-not-wettkampf ev-not-pflege scroll-mt-[175px] md:scroll-mt-[250px] max-md:scroll-mt-[125px] float-left w-[23%] overflow-hidden rounded-lg border border-[#ddd] bg-[#f5f5f5] md:float-none md:w-[calc(50%-8px)] max-md:float-none max-md:w-full"
-            >
-              <input type="checkbox" id="toggle-apr" class="peer/apr hidden" />
-              <label
-                for="toggle-apr"
-                aria-label="Veranstaltungen April 2026 anzeigen"
-                class="peer-checked/apr:after:content-['_−'] block cursor-pointer select-none bg-[#333] px-[18px] py-7 font-semibold text-white after:float-right after:font-bold after:content-['_+'] hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] max-md:px-[14px] max-md:py-4 max-md:text-[0.95rem]"
-              >
-                April 2026
-              </label>
-              <div class="peer-checked/apr:!block hidden px-[18px] py-4 max-md:p-[14px]">
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] first:mt-0 max-md:text-[0.9rem]">Streckenbau-Workshop – Saarland</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>04.04.2026</strong> – Praktischer Workshop zum
-                  naturnahen Streckenbau im Saarbrücker Stadtwald. Schaufel und
-                  Handschuhe mitbringen.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Geländerennen – Thüringen</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>11.04.2026</strong> – Vereinsrennen auf
-                  anspruchsvollen Geländestrecken rund um den Rennsteig. Für
-                  alle Mitglieder offen.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Osterausfahrt – Nordseeküste</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>18.04.2026</strong> – Entspannte Mehrtagesfahrt
-                  entlang der Küste durch Schleswig-Holstein. Übernachtung in
-                  Vereinsunterkunft.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Vereinsausflug – Bayerischer Wald</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>19.04.2026</strong> – Dreitägiger Vereinsausflug in
-                  den Bayerischen Wald. Hüttenübernachtung, Anmeldeschluss
-                  05.04.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Frühjahrs-Langstrecke – Bodensee</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>25.04.2026</strong> – 70-km-Langstreckenfahrt rund um
-                  den Bodensee. Flaches Gelände, ideal für Ausdauertraining.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- /.events-row -->
-          <div class="mb-4 overflow-hidden md:flex md:flex-wrap md:gap-4 max-md:block">
-            <!-- Mai -->
-            <div
-              id="monat-mai"
-              class="ev-training ev-not-tour ev-not-wettkampf ev-not-pflege scroll-mt-[175px] md:scroll-mt-[250px] max-md:scroll-mt-[125px] float-left mr-[2.66%] w-[23%] overflow-hidden rounded-lg border border-[#ddd] bg-[#f5f5f5] md:float-none md:mr-0 md:w-[calc(50%-8px)] max-md:float-none max-md:mb-3 max-md:mr-0 max-md:w-full"
-            >
-              <input type="checkbox" id="toggle-mai" class="peer/mai hidden" />
-              <label
-                for="toggle-mai"
-                aria-label="Veranstaltungen Mai 2026 anzeigen"
-                class="peer-checked/mai:after:content-['_−'] block cursor-pointer select-none bg-[#333] px-[18px] py-7 font-semibold text-white after:float-right after:font-bold after:content-['_+'] hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] max-md:px-[14px] max-md:py-4 max-md:text-[0.95rem]"
-              >
-                Mai 2026
-              </label>
-              <div class="peer-checked/mai:!block hidden px-[18px] py-4 max-md:p-[14px]">
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] first:mt-0 max-md:text-[0.9rem]">Radmesse – Stuttgart</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>02.05.2026</strong> – Teilnahme an der regionalen
-                  Radmesse im Schönbuch. Gemeinsame Anreise ab
-                  Vereinstreffpunkt.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Langstrecken-Tour – Allgäu</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>23.05.2026</strong> – 80-km-Tour durch das Allgäuer
-                  Voralpenland. Nur für geübte Ausdauerfahrer.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Familientag – Münsterland</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>09.05.2026</strong> – Kinderfreundliche Radtour durch
-                  das Münsterland. Kurze Strecke, Picknick inklusive.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Abfahrtskurs – Harz</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>16.05.2026</strong> – Geführter Abfahrtskurs am
-                  Brocken für Fortgeschrittene. Schutzausrüstung Pflicht.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Abendausfahrt – Ruhrgebiet</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>30.05.2026</strong> – Stimmungsvolle Abendausfahrt
-                  durch den Revierpark Vonderort. Start 20:00 Uhr, Beleuchtung
-                  erforderlich.
-                </p>
-              </div>
-            </div>
-
-            <!-- Juni -->
-            <div
-              id="monat-jun"
-              class="ev-pflege ev-not-tour ev-not-training ev-not-wettkampf scroll-mt-[175px] md:scroll-mt-[250px] max-md:scroll-mt-[125px] float-left mr-[2.66%] w-[23%] overflow-hidden rounded-lg border border-[#ddd] bg-[#f5f5f5] md:float-none md:mr-0 md:w-[calc(50%-8px)] max-md:float-none max-md:mb-3 max-md:mr-0 max-md:w-full"
-            >
-              <input type="checkbox" id="toggle-jun" class="peer/jun hidden" />
-              <label
-                for="toggle-jun"
-                aria-label="Veranstaltungen Juni 2026 anzeigen"
-                class="peer-checked/jun:after:content-['_−'] block cursor-pointer select-none bg-[#333] px-[18px] py-7 font-semibold text-white after:float-right after:font-bold after:content-['_+'] hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] max-md:px-[14px] max-md:py-4 max-md:text-[0.95rem]"
-              >
-                Juni 2026
-              </label>
-              <div class="peer-checked/jun:!block hidden px-[18px] py-4 max-md:p-[14px]">
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] first:mt-0 max-md:text-[0.9rem]">Sommertour – Eifel</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>06.06.2026</strong> – Zweitägige Tour durch die
-                  Vulkaneifel mit Übernachtung am Laacher See.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Schnupperkurs – Köln</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>20.06.2026</strong> – Offener Schnupperkurs für
-                  Interessierte im Königsforst bei Köln. Leihräder verfügbar.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Geländelager – Chiemgau</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>13.06.2026</strong> – Dreitägiges Geländelager in den
-                  Chiemgauer Alpen. Geführte Touren, Videoanalyse,
-                  Hüttenübernachtung.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Stadtradeln – Bremen</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>20.06.2026</strong> – Vereinsteilnahme am Stadtradeln
-                  in Bremen. Gemeinsam Kilometer sammeln für den guten Zweck.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Streckenpflege – Thüringer Wald</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>27.06.2026</strong> – Gemeinschaftliche Streckenpflege
-                  im Thüringer Wald. Werkzeug wird gestellt, Verpflegung
-                  inklusive.
-                </p>
-              </div>
-            </div>
-
-            <!-- Juli -->
-            <div
-              id="monat-jul"
-              class="ev-tour ev-not-training ev-not-wettkampf ev-not-pflege scroll-mt-[175px] md:scroll-mt-[250px] max-md:scroll-mt-[125px] float-left mr-[2.66%] w-[23%] overflow-hidden rounded-lg border border-[#ddd] bg-[#f5f5f5] md:float-none md:mr-0 md:w-[calc(50%-8px)] max-md:float-none max-md:mb-3 max-md:mr-0 max-md:w-full"
-            >
-              <input type="checkbox" id="toggle-jul" class="peer/jul hidden" />
-              <label
-                for="toggle-jul"
-                aria-label="Veranstaltungen Juli 2026 anzeigen"
-                class="peer-checked/jul:after:content-['_−'] block cursor-pointer select-none bg-[#333] px-[18px] py-7 font-semibold text-white after:float-right after:font-bold after:content-['_+'] hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] max-md:px-[14px] max-md:py-4 max-md:text-[0.95rem]"
-              >
-                Juli 2026
-              </label>
-              <div class="peer-checked/jul:!block hidden px-[18px] py-4 max-md:p-[14px]">
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] first:mt-0 max-md:text-[0.9rem]">Alpenüberquerung – Berchtesgaden</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>11.07.2026</strong> – Mehrtägige Alpenüberquerung von
-                  Berchtesgaden nach Südtirol. Erfahrene Bergfahrer,
-                  Voranmeldung bis 30.06.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Feierabendausfahrt – Hamburg</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>23.07.2026</strong> – Wöchentliche Feierabendausfahrt
-                  im Forst Klövensteen. Jeden Donnerstag im Juli.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Fahrpark-Tag – Winterberg</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>04.07.2026</strong> – Gemeinsamer Tag im Fahrpark
-                  Winterberg. Tagestickets werden gemeinsam organisiert,
-                  Anmeldung bis 27.06.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Küstentour – Ostsee</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>18.07.2026</strong> – Zweitägige Radtour entlang der
-                  Ostseeküste zwischen Rostock und Stralsund. Gepäcktransport
-                  inklusive.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Vereinsgrillen – München</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>25.07.2026</strong> – Sommerliches Vereinsgrillen mit
-                  kurzer Ausfahrt im Englischen Garten. Familien und Gäste
-                  willkommen.
-                </p>
-              </div>
-            </div>
-
-            <!-- August -->
-            <div
-              id="monat-aug"
-              class="ev-wettkampf ev-not-tour ev-not-training ev-not-pflege scroll-mt-[175px] md:scroll-mt-[250px] max-md:scroll-mt-[125px] float-left w-[23%] overflow-hidden rounded-lg border border-[#ddd] bg-[#f5f5f5] md:float-none md:w-[calc(50%-8px)] max-md:float-none max-md:w-full"
-            >
-              <input type="checkbox" id="toggle-aug" class="peer/aug hidden" />
-              <label
-                for="toggle-aug"
-                aria-label="Veranstaltungen August 2026 anzeigen"
-                class="peer-checked/aug:after:content-['_−'] block cursor-pointer select-none bg-[#333] px-[18px] py-7 font-semibold text-white after:float-right after:font-bold after:content-['_+'] hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] max-md:px-[14px] max-md:py-4 max-md:text-[0.95rem]"
-              >
-                August 2026
-              </label>
-              <div class="peer-checked/aug:!block hidden px-[18px] py-4 max-md:p-[14px]">
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] first:mt-0 max-md:text-[0.9rem]">Sommerfest &amp; Vereinsrennen – Berlin</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>08.08.2026</strong> – Großes Vereinssommerfest mit
-                  Rennen, Grill und Lagerfeuer im Grunewald. Familien
-                  willkommen.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Schotterwegen-Tour – Mecklenburg</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>22.08.2026</strong> – Schotterweg-Tour durch die
-                  Mecklenburgische Seenplatte. Ca. 60 km, gemischtes Gelände.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Hochgebirgstour – Zugspitze</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>01.08.2026</strong> – Anspruchsvolle Hochgebirgstour
-                  rund um die Zugspitze. Nur für sehr erfahrene Bergfahrer,
-                  Voranmeldung erforderlich.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Feriencamp – Freiburg</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>15.08.2026</strong> – Einwöchiges Fahrrad-Feriencamp
-                  für Kinder von 8–14 Jahren im Schwarzwald. Anmeldung bis
-                  01.08.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Abendtour – Düsseldorf</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>29.08.2026</strong> – Entspannte Abendtour entlang des
-                  Rheins bei Düsseldorf. Ca. 25 km, gemütliches Tempo, Einkehr
-                  geplant.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- /.events-row -->
-          <div class="mb-4 overflow-hidden md:flex md:flex-wrap md:gap-4 max-md:block">
-            <!-- September -->
-            <div
-              id="monat-sep"
-              class="ev-wettkampf ev-not-tour ev-not-training ev-not-pflege scroll-mt-[175px] md:scroll-mt-[250px] max-md:scroll-mt-[125px] float-left mr-[2.66%] w-[23%] overflow-hidden rounded-lg border border-[#ddd] bg-[#f5f5f5] md:float-none md:mr-0 md:w-[calc(50%-8px)] max-md:float-none max-md:mb-3 max-md:mr-0 max-md:w-full"
-            >
-              <input type="checkbox" id="toggle-sep" class="peer/sep hidden" />
-              <label
-                for="toggle-sep"
-                aria-label="Veranstaltungen September 2026 anzeigen"
-                class="peer-checked/sep:after:content-['_−'] block cursor-pointer select-none bg-[#333] px-[18px] py-7 font-semibold text-white after:float-right after:font-bold after:content-['_+'] hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] max-md:px-[14px] max-md:py-4 max-md:text-[0.95rem]"
-              >
-                September 2026
-              </label>
-              <div class="peer-checked/sep:!block hidden px-[18px] py-4 max-md:p-[14px]">
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] first:mt-0 max-md:text-[0.9rem]">Herbst-Fahrlager – Schwarzwald</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>05.09.2026</strong> – Dreitägiges Fahrlager im
-                  herbstlichen Schwarzwald. Geführte Touren verschiedener
-                  Schwierigkeitsgrade.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Herbsttour – Sauerland</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>12.09.2026</strong> – Dreitägige Herbsttour durch das
-                  Sauerland mit Übernachtung in der Vereinshütte.
-                  Anmeldeschluss: 31.08.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Fahrtechnik-Workshop – Hannover</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>19.09.2026</strong> – Fortgeschrittenen-Fahrtechnik
-                  auf dem Übungsgelände in Hannover. Begrenzte Plätze, Anmeldung
-                  erforderlich.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Geländerennen – Dresden</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>26.09.2026</strong> – Regionaler Geländewettkampf in
-                  der Dresdner Heide. Zeitmessung und Pokale.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Vereinstreffen – Leipzig</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>27.09.2026</strong> – Regionaltreffen der
-                  Ostmitglieder mit Saisonrückblick und Planung des
-                  Winterprogramms.
-                </p>
-              </div>
-            </div>
-
-            <!-- Oktober -->
-            <div
-              id="monat-okt"
-              class="ev-tour ev-not-training ev-not-wettkampf ev-not-pflege scroll-mt-[175px] md:scroll-mt-[250px] max-md:scroll-mt-[125px] float-left mr-[2.66%] w-[23%] overflow-hidden rounded-lg border border-[#ddd] bg-[#f5f5f5] md:float-none md:mr-0 md:w-[calc(50%-8px)] max-md:float-none max-md:mb-3 max-md:mr-0 max-md:w-full"
-            >
-              <input type="checkbox" id="toggle-okt" class="peer/okt hidden" />
-              <label
-                for="toggle-okt"
-                aria-label="Veranstaltungen Oktober 2026 anzeigen"
-                class="peer-checked/okt:after:content-['_−'] block cursor-pointer select-none bg-[#333] px-[18px] py-7 font-semibold text-white after:float-right after:font-bold after:content-['_+'] hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] max-md:px-[14px] max-md:py-4 max-md:text-[0.95rem]"
-              >
-                Oktober 2026
-              </label>
-              <div class="peer-checked/okt:!block hidden px-[18px] py-4 max-md:p-[14px]">
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] first:mt-0 max-md:text-[0.9rem]">Oktobertour – Rhein-Main</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>03.10.2026</strong> – Feiertagsausfahrt durch den
-                  Taunus. Ca. 45 km, gemütliches Tempo, Einkehr in
-                  Vereinsgaststätte.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Herbstfarben-Tour – Franken</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>10.10.2026</strong> – Genussfahrt durch das
-                  herbstliche Franken rund um Rothenburg ob der Tauber. Alle
-                  Fahrniveaus.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Streckenpflege – Erzgebirge</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>17.10.2026</strong> – Herbstliche Streckenpflege im
-                  Erzgebirge vor dem Winter. Material und Verpflegung werden
-                  gestellt.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Abfahrtstag – Harz</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>24.10.2026</strong> – Geführter Abfahrtstag am
-                  Wurmberg. Schutzausrüstung erforderlich, Helmpflicht.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Fotoausfahrt – Moselfranken</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>31.10.2026</strong> – Entspannte Fotoausfahrt durch
-                  die herbstlichen Weinberge an der Mosel. Kamera mitbringen!
-                </p>
-              </div>
-            </div>
-
-            <!-- November -->
-            <div
-              id="monat-nov"
-              class="ev-pflege ev-not-tour ev-not-training ev-not-wettkampf scroll-mt-[175px] md:scroll-mt-[250px] max-md:scroll-mt-[125px] float-left mr-[2.66%] w-[23%] overflow-hidden rounded-lg border border-[#ddd] bg-[#f5f5f5] md:float-none md:mr-0 md:w-[calc(50%-8px)] max-md:float-none max-md:mb-3 max-md:mr-0 max-md:w-full"
-            >
-              <input type="checkbox" id="toggle-nov" class="peer/nov hidden" />
-              <label
-                for="toggle-nov"
-                aria-label="Veranstaltungen November 2026 anzeigen"
-                class="peer-checked/nov:after:content-['_−'] block cursor-pointer select-none bg-[#333] px-[18px] py-7 font-semibold text-white after:float-right after:font-bold after:content-['_+'] hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] max-md:px-[14px] max-md:py-4 max-md:text-[0.95rem]"
-              >
-                November 2026
-              </label>
-              <div class="peer-checked/nov:!block hidden px-[18px] py-4 max-md:p-[14px]">
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] first:mt-0 max-md:text-[0.9rem]">Saisonabschluss-Tour – Bodensee</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>07.11.2026</strong> – Saisonabschlusstour rund um den
-                  Bodensee. Gemütliches Tempo, Einkehr geplant.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Wintervorbereitung – Köln</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>07.11.2026</strong> – Workshop zur Wintervorbereitung
-                  des Fahrrads: Beleuchtung, Bereifung, Pflege. Werkzeug wird
-                  gestellt.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Nebelausfahrt – Lüneburger Heide</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>14.11.2026</strong> – Stimmungsvolle Herbsttour durch
-                  die nebelverhangene Lüneburger Heide. Ca. 30 km, alle
-                  Fahrniveaus.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Vereinsabend – Frankfurt</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>21.11.2026</strong> – Geselliger Vereinsabend mit
-                  Bilderschau der Saisonhöhepunkte und Planung 2027. Alle
-                  Mitglieder eingeladen.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Jahreshauptversammlung – Online</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>28.11.2026</strong> – Digitale Jahreshauptversammlung
-                  mit Vorstandswahl und Jahresbericht. Einladung folgt per
-                  E-Mail.
-                </p>
-              </div>
-            </div>
-
-            <!-- Dezember -->
-            <div
-              id="monat-dez"
-              class="ev-tour ev-not-training ev-not-wettkampf ev-not-pflege scroll-mt-[175px] md:scroll-mt-[250px] max-md:scroll-mt-[125px] float-left w-[23%] overflow-hidden rounded-lg border border-[#ddd] bg-[#f5f5f5] md:float-none md:w-[calc(50%-8px)] max-md:float-none max-md:w-full"
-            >
-              <input type="checkbox" id="toggle-dez" class="peer/dez hidden" />
-              <label
-                for="toggle-dez"
-                aria-label="Veranstaltungen Dezember 2026 anzeigen"
-                class="peer-checked/dez:after:content-['_−'] block cursor-pointer select-none bg-[#333] px-[18px] py-7 font-semibold text-white after:float-right after:font-bold after:content-['_+'] hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] max-md:px-[14px] max-md:py-4 max-md:text-[0.95rem]"
-              >
-                Dezember 2026
-              </label>
-              <div class="peer-checked/dez:!block hidden px-[18px] py-4 max-md:p-[14px]">
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] first:mt-0 max-md:text-[0.9rem]">Winterwaldtour – Spessart</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>05.12.2026</strong> – Stimmungsvolle Adventstour durch
-                  den winterlichen Spessart. Abschluss mit Glühwein am
-                  Lagerfeuer.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Fahrrad-Tauschbörse – Stuttgart</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>06.12.2026</strong> – Vereinsinterne Tauschbörse für
-                  gebrauchtes Fahrradzubehör und Ersatzteile. Eintritt frei.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Winterausfahrt – Erzgebirge</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>12.12.2026</strong> – Geführte Winterausfahrt durch
-                  den verschneiten Erzgebirgswald. Winterreifen empfohlen, warme
-                  Kleidung Pflicht.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Jahresrückblick &amp; Weihnachtsfeier – Frankfurt</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>19.12.2026</strong> – Vereinsweihnachtsfeier mit
-                  Jahresrückblick, Ehrungen und gemütlichem Beisammensein.
-                </p>
-                <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Silvesterausfahrt – Berlin</h3>
-                <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
-                  <strong>31.12.2026</strong> – Abschlussausfahrt des Jahres
-                  durch den Grunewald zum Jahreswechsel. Start 22:00 Uhr,
-                  Feuerwerk inklusive.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- /.events-row -->
-        </div>
-      </section>
-      <section
-        class="bg-[#f5f5f5] px-5 py-[60px] text-center max-md:px-4 max-md:py-9"
-        aria-labelledby="events-cta-heading"
-      >
-        <h2 id="events-cta-heading" class="mb-3.5 text-[1.8rem] text-[#111] max-md:text-[1.3rem]">
-          Noch kein Mitglied?
-        </h2>
-        <p class="mx-auto mb-7 max-w-[520px] text-base leading-[1.7] text-[#222]">
-          Alle Veranstaltungen stehen unseren Mitgliedern offen. Werde Teil des
-          Vereins und fahre mit uns das ganze Jahr.
+    <input type="radio" name="filter" id="filter-alle" class="peer/alle hidden" checked />
+    <input type="radio" name="filter" id="filter-tour" class="peer/tour hidden" />
+    <input type="radio" name="filter" id="filter-training" class="peer/training hidden" />
+    <input type="radio" name="filter" id="filter-wettkampf" class="peer/wettkampf hidden" />
+    <input type="radio" name="filter" id="filter-pflege" class="peer/pflege hidden" />
+    <div class="bg-[#222] p-5 text-center" role="radiogroup" aria-label="Veranstaltungen filtern">
+      <div class="inline-flex flex-wrap justify-center gap-2.5">
+        <label for="filter-alle"
+          class="inline-block cursor-pointer rounded-3xl border-2 border-[#555] px-[18px] py-2 text-[0.9rem] font-semibold text-[#ccc] transition-colors duration-200 hover:border-[#e8a000] hover:text-white peer-checked/alle:!border-[#e8a000] peer-checked/alle:!bg-[#e8a000] peer-checked/alle:!text-[#111]">Alle</label>
+        <label for="filter-tour"
+          class="inline-block cursor-pointer rounded-3xl border-2 border-[#555] px-[18px] py-2 text-[0.9rem] font-semibold text-[#ccc] transition-colors duration-200 hover:border-[#e8a000] hover:text-white peer-checked/tour:!border-[#e8a000] peer-checked/tour:!bg-[#e8a000] peer-checked/tour:!text-[#111]">&#127758;
+          Tour</label>
+        <label for="filter-training"
+          class="inline-block cursor-pointer rounded-3xl border-2 border-[#555] px-[18px] py-2 text-[0.9rem] font-semibold text-[#ccc] transition-colors duration-200 hover:border-[#e8a000] hover:text-white peer-checked/training:!border-[#e8a000] peer-checked/training:!bg-[#e8a000] peer-checked/training:!text-[#111]">&#127947;
+          Training</label>
+        <label for="filter-wettkampf"
+          class="inline-block cursor-pointer rounded-3xl border-2 border-[#555] px-[18px] py-2 text-[0.9rem] font-semibold text-[#ccc] transition-colors duration-200 hover:border-[#e8a000] hover:text-white peer-checked/wettkampf:!border-[#e8a000] peer-checked/wettkampf:!bg-[#e8a000] peer-checked/wettkampf:!text-[#111]">&#127942;
+          Wettkampf</label>
+        <label for="filter-pflege"
+          class="inline-block cursor-pointer rounded-3xl border-2 border-[#555] px-[18px] py-2 text-[0.9rem] font-semibold text-[#ccc] transition-colors duration-200 hover:border-[#e8a000] hover:text-white peer-checked/pflege:!border-[#e8a000] peer-checked/pflege:!bg-[#e8a000] peer-checked/pflege:!text-[#111]">&#129309;
+          Pflege &amp; Treffen</label>
+      </div>
+    </div>
+    <section
+      class="mx-auto my-10 max-w-[1100px] px-5 pb-10 peer-checked/tour:[&_.ev-tour]:!block peer-checked/tour:[&_.ev-not-tour]:!hidden peer-checked/training:[&_.ev-training]:!block peer-checked/training:[&_.ev-not-training]:!hidden peer-checked/wettkampf:[&_.ev-wettkampf]:!block peer-checked/wettkampf:[&_.ev-not-wettkampf]:!hidden peer-checked/pflege:[&_.ev-pflege]:!block peer-checked/pflege:[&_.ev-not-pflege]:!hidden max-md:px-4 max-md:pb-7"
+      aria-labelledby="events-heading">
+      <h2 id="events-heading" class="sr-only">Veranstaltungskalender 2026</h2>
+      <div class="mb-[30px]">
+        <p class="mb-[1.2em] text-[0.97rem] leading-[1.8] text-[#222] max-md:text-[0.9rem]">
+          Hier findest du alle geplanten Veranstaltungen der IU MTB Community
+          e. V. für das Jahr 2026 – übersichtlich nach Monaten gegliedert und
+          überregional nach Datum sortiert. Von Wettkämpfen und
+          Trainingstouren bis hin zu Vereinstreffen und
+          Streckenpflege-Aktionen: Für jeden ist etwas dabei.
         </p>
-        <a
-          href="mailto:kontakt@iu-mtb-community.de"
-          class="mx-2 inline-block rounded bg-[#333] px-7 py-[13px] text-base font-semibold text-white no-underline hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2 max-md:m-0 max-md:block max-md:w-full max-md:box-border max-md:text-center"
-          aria-label="E-Mail schreiben an kontakt@iu-mtb-community.de"
-          >E-Mail schreiben</a
-        >
-      </section>
-    </main>
-    <footer
-      role="contentinfo"
-      aria-label="Seitenfuß"
-      class="mt-10 overflow-hidden bg-[#333] px-5 pb-[15px] pt-[30px] text-white"
-    ></footer>
-  </body>
+        <p class="mb-[1.2em] text-[0.97rem] leading-[1.8] text-[#222] max-md:text-[0.9rem]">
+          Du kennst eine Veranstaltung, die hier noch fehlt? Melde sie gern
+          über unsere
+          <a href="team.html" class="text-[#005fcc] underline hover:text-[#003a99]">Kontaktseite</a> beim Team – wir
+          nehmen sie schnellstmöglich auf.
+        </p>
+        <p class="text-[0.97rem] leading-[1.8] text-[#222] max-md:text-[0.9rem]">
+          <strong>Bitte beachte:</strong> Alle aufgeführten Termine sind
+          verbindlich geplant. Sollte eine Veranstaltung dennoch nicht wie
+          geplant stattfinden können, wird sie rechtzeitig abgesagt. Da sich
+          der Stand jederzeit ändern kann, empfehlen wir dir, diese Seite
+          regelmäßig zu besuchen, um immer über die aktuellen Termine
+          informiert zu sein.
+        </p>
+      </div>
+      <div class="overflow-hidden">
+        <div class="mb-4 overflow-hidden md:flex md:flex-wrap md:gap-4 max-md:block">
+          <!-- Januar -->
+          <div id="monat-jan"
+            class="ev-tour ev-not-training ev-not-wettkampf ev-not-pflege scroll-mt-[175px] md:scroll-mt-[250px] max-md:scroll-mt-[125px] float-left mr-[2.66%] w-[23%] overflow-hidden rounded-lg border border-[#ddd] bg-[#f5f5f5] md:float-none md:mr-0 md:w-[calc(50%-8px)] max-md:float-none max-md:mb-3 max-md:mr-0 max-md:w-full">
+            <input type="checkbox" id="toggle-jan" class="peer/jan hidden" />
+            <label for="toggle-jan" aria-label="Veranstaltungen Januar 2026 anzeigen"
+              class="peer-checked/jan:after:content-['_−'] block cursor-pointer select-none bg-[#333] px-[18px] py-7 font-semibold text-white after:float-right after:font-bold after:content-['_+'] hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] max-md:px-[14px] max-md:py-4 max-md:text-[0.95rem]">
+              Januar 2026
+            </label>
+            <div class="peer-checked/jan:!block hidden px-[18px] py-4 max-md:p-[14px]">
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] first:mt-0 max-md:text-[0.9rem]">Wintertour
+                – Schwarzwald</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>10.01.2026</strong> – Gemeinsame Wintertour auf
+                verschneiten Wegen rund um Freiburg. Geeignet für erfahrene
+                Fahrer. Treffpunkt: Parkplatz Schauinsland.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Vereinstreffen –
+                Stuttgart</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>14.01.2026</strong> – Informelles Vereinstreffen zur
+                Saisonplanung 2026. Alle Mitglieder sind herzlich eingeladen.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Neujahrsausfahrt –
+                Ruhrgebiet</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>17.01.2026</strong> – Entspannte Ausfahrt zum
+                Jahresauftakt durch den Teutoburger Wald. Alle Fahrniveaus
+                willkommen.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Winterlager –
+                Brandenburg</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>24.01.2026</strong> – Zweitägiges Winterlager mit
+                Lagerfeuer und Nachtausfahrt durch die Märkische Schweiz. Zelt
+                und Schlafsack erforderlich.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Fahrtechnik-Training –
+                Münsterland</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>31.01.2026</strong> – Fahrtechnik auf flachem Gelände
+                für Einsteiger. Ideale Bedingungen für Kurventechnik und
+                Bremsübungen.
+              </p>
+            </div>
+          </div>
+
+          <!-- Februar -->
+          <div id="monat-feb"
+            class="ev-training ev-not-tour ev-not-wettkampf ev-not-pflege scroll-mt-[175px] md:scroll-mt-[250px] max-md:scroll-mt-[125px] float-left mr-[2.66%] w-[23%] overflow-hidden rounded-lg border border-[#ddd] bg-[#f5f5f5] md:float-none md:mr-0 md:w-[calc(50%-8px)] max-md:float-none max-md:mb-3 max-md:mr-0 max-md:w-full">
+            <input type="checkbox" id="toggle-feb" class="peer/feb hidden" />
+            <label for="toggle-feb" aria-label="Veranstaltungen Februar 2026 anzeigen"
+              class="peer-checked/feb:after:content-['_−'] block cursor-pointer select-none bg-[#333] px-[18px] py-7 font-semibold text-white after:float-right after:font-bold after:content-['_+'] hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] max-md:px-[14px] max-md:py-4 max-md:text-[0.95rem]">
+              Februar 2026
+            </label>
+            <div class="peer-checked/feb:!block hidden px-[18px] py-4 max-md:p-[14px]">
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] first:mt-0 max-md:text-[0.9rem]">
+                Schmalweg-Wettkampf – Bayern</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>07.02.2026</strong> – Vereinsinterner Wettkampf auf
+                den Wegen rund um Garmisch-Partenkirchen. Anmeldung
+                erforderlich.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Wintertour –
+                Nordrhein-Westfalen</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>07.02.2026</strong> – Geführte Tour durch den
+                Bergischen Wald bei Wuppertal. Ca. 40 km, mittleres Niveau.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Fahrrad-Pflegeworkshop
+                – Leipzig</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>14.02.2026</strong> – Wartung und Reparatur am eigenen
+                Fahrrad. Werkzeug wird gestellt, Ersatzteile bitte selbst
+                mitbringen.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Fahrtechnik-Workshop –
+                Sachsen</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>21.02.2026</strong> – Fahrtechnikkurs für Einsteiger
+                im Erzgebirge. Begrenzte Teilnehmerzahl.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Nachtausfahrt –
+                Freiburg</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>28.02.2026</strong> – Stimmungsvolle Nachtausfahrt mit
+                Stirnlampen durch den Schwarzwald. Beleuchtung und Helm
+                Pflicht.
+              </p>
+            </div>
+          </div>
+
+          <!-- März -->
+          <div id="monat-mar"
+            class="ev-pflege ev-not-tour ev-not-training ev-not-wettkampf scroll-mt-[175px] md:scroll-mt-[250px] max-md:scroll-mt-[125px] float-left mr-[2.66%] w-[23%] overflow-hidden rounded-lg border border-[#ddd] bg-[#f5f5f5] md:float-none md:mr-0 md:w-[calc(50%-8px)] max-md:float-none max-md:mb-3 max-md:mr-0 max-md:w-full">
+            <input type="checkbox" id="toggle-mar" class="peer/mar hidden" />
+            <label for="toggle-mar" aria-label="Veranstaltungen März 2026 anzeigen"
+              class="peer-checked/mar:after:content-['_−'] block cursor-pointer select-none bg-[#333] px-[18px] py-7 font-semibold text-white after:float-right after:font-bold after:content-['_+'] hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] max-md:px-[14px] max-md:py-4 max-md:text-[0.95rem]">
+              März 2026
+            </label>
+            <div class="peer-checked/mar:!block hidden px-[18px] py-4 max-md:p-[14px]">
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] first:mt-0 max-md:text-[0.9rem]">
+                Einsteigerkurs – Niedersachsen</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>07.03.2026</strong> – Einsteigerkurs für neue
+                Vereinsmitglieder im Deister bei Hannover. Leihräder
+                verfügbar.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Frühjahrsauftakt –
+                Rheinland-Pfalz</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>14.03.2026</strong> – Saisonauftakt im Pfälzerwald mit
+                gemütlicher Gruppenrunde. Ca. 35 km, mittleres Niveau.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Vereinstreffen – Köln
+              </h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>14.03.2026</strong> – Regionaltreffen der
+                Westmitglieder zur Planung der Frühjahrssaison.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Schotterweg-Tour –
+                Moseltal</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>21.03.2026</strong> – Entspannte Schotterweg-Tour
+                entlang der Mosel. Ca. 55 km, Einkehr ist eingeplant.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Streckenpflege –
+                Hessen</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>28.03.2026</strong> – Gemeinsame Streckenpflege im
+                Taunus. Material wird gestellt, Handschuhe mitbringen.
+              </p>
+            </div>
+          </div>
+
+          <!-- April -->
+          <div id="monat-apr"
+            class="ev-tour ev-not-training ev-not-wettkampf ev-not-pflege scroll-mt-[175px] md:scroll-mt-[250px] max-md:scroll-mt-[125px] float-left w-[23%] overflow-hidden rounded-lg border border-[#ddd] bg-[#f5f5f5] md:float-none md:w-[calc(50%-8px)] max-md:float-none max-md:w-full">
+            <input type="checkbox" id="toggle-apr" class="peer/apr hidden" />
+            <label for="toggle-apr" aria-label="Veranstaltungen April 2026 anzeigen"
+              class="peer-checked/apr:after:content-['_−'] block cursor-pointer select-none bg-[#333] px-[18px] py-7 font-semibold text-white after:float-right after:font-bold after:content-['_+'] hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] max-md:px-[14px] max-md:py-4 max-md:text-[0.95rem]">
+              April 2026
+            </label>
+            <div class="peer-checked/apr:!block hidden px-[18px] py-4 max-md:p-[14px]">
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] first:mt-0 max-md:text-[0.9rem]">
+                Streckenbau-Workshop – Saarland</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>04.04.2026</strong> – Praktischer Workshop zum
+                naturnahen Streckenbau im Saarbrücker Stadtwald. Schaufel und
+                Handschuhe mitbringen.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Geländerennen –
+                Thüringen</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>11.04.2026</strong> – Vereinsrennen auf
+                anspruchsvollen Geländestrecken rund um den Rennsteig. Für
+                alle Mitglieder offen.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Osterausfahrt –
+                Nordseeküste</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>18.04.2026</strong> – Entspannte Mehrtagesfahrt
+                entlang der Küste durch Schleswig-Holstein. Übernachtung in
+                Vereinsunterkunft.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Vereinsausflug –
+                Bayerischer Wald</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>19.04.2026</strong> – Dreitägiger Vereinsausflug in
+                den Bayerischen Wald. Hüttenübernachtung, Anmeldeschluss
+                05.04.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Frühjahrs-Langstrecke
+                – Bodensee</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>25.04.2026</strong> – 70-km-Langstreckenfahrt rund um
+                den Bodensee. Flaches Gelände, ideal für Ausdauertraining.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- /.events-row -->
+        <div class="mb-4 overflow-hidden md:flex md:flex-wrap md:gap-4 max-md:block">
+          <!-- Mai -->
+          <div id="monat-mai"
+            class="ev-training ev-not-tour ev-not-wettkampf ev-not-pflege scroll-mt-[175px] md:scroll-mt-[250px] max-md:scroll-mt-[125px] float-left mr-[2.66%] w-[23%] overflow-hidden rounded-lg border border-[#ddd] bg-[#f5f5f5] md:float-none md:mr-0 md:w-[calc(50%-8px)] max-md:float-none max-md:mb-3 max-md:mr-0 max-md:w-full">
+            <input type="checkbox" id="toggle-mai" class="peer/mai hidden" />
+            <label for="toggle-mai" aria-label="Veranstaltungen Mai 2026 anzeigen"
+              class="peer-checked/mai:after:content-['_−'] block cursor-pointer select-none bg-[#333] px-[18px] py-7 font-semibold text-white after:float-right after:font-bold after:content-['_+'] hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] max-md:px-[14px] max-md:py-4 max-md:text-[0.95rem]">
+              Mai 2026
+            </label>
+            <div class="peer-checked/mai:!block hidden px-[18px] py-4 max-md:p-[14px]">
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] first:mt-0 max-md:text-[0.9rem]">Radmesse –
+                Stuttgart</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>02.05.2026</strong> – Teilnahme an der regionalen
+                Radmesse im Schönbuch. Gemeinsame Anreise ab
+                Vereinstreffpunkt.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Langstrecken-Tour –
+                Allgäu</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>23.05.2026</strong> – 80-km-Tour durch das Allgäuer
+                Voralpenland. Nur für geübte Ausdauerfahrer.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Familientag –
+                Münsterland</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>09.05.2026</strong> – Kinderfreundliche Radtour durch
+                das Münsterland. Kurze Strecke, Picknick inklusive.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Abfahrtskurs – Harz
+              </h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>16.05.2026</strong> – Geführter Abfahrtskurs am
+                Brocken für Fortgeschrittene. Schutzausrüstung Pflicht.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Abendausfahrt –
+                Ruhrgebiet</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>30.05.2026</strong> – Stimmungsvolle Abendausfahrt
+                durch den Revierpark Vonderort. Start 20:00 Uhr, Beleuchtung
+                erforderlich.
+              </p>
+            </div>
+          </div>
+
+          <!-- Juni -->
+          <div id="monat-jun"
+            class="ev-pflege ev-not-tour ev-not-training ev-not-wettkampf scroll-mt-[175px] md:scroll-mt-[250px] max-md:scroll-mt-[125px] float-left mr-[2.66%] w-[23%] overflow-hidden rounded-lg border border-[#ddd] bg-[#f5f5f5] md:float-none md:mr-0 md:w-[calc(50%-8px)] max-md:float-none max-md:mb-3 max-md:mr-0 max-md:w-full">
+            <input type="checkbox" id="toggle-jun" class="peer/jun hidden" />
+            <label for="toggle-jun" aria-label="Veranstaltungen Juni 2026 anzeigen"
+              class="peer-checked/jun:after:content-['_−'] block cursor-pointer select-none bg-[#333] px-[18px] py-7 font-semibold text-white after:float-right after:font-bold after:content-['_+'] hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] max-md:px-[14px] max-md:py-4 max-md:text-[0.95rem]">
+              Juni 2026
+            </label>
+            <div class="peer-checked/jun:!block hidden px-[18px] py-4 max-md:p-[14px]">
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] first:mt-0 max-md:text-[0.9rem]">Sommertour
+                – Eifel</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>06.06.2026</strong> – Zweitägige Tour durch die
+                Vulkaneifel mit Übernachtung am Laacher See.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Schnupperkurs – Köln
+              </h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>20.06.2026</strong> – Offener Schnupperkurs für
+                Interessierte im Königsforst bei Köln. Leihräder verfügbar.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Geländelager –
+                Chiemgau</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>13.06.2026</strong> – Dreitägiges Geländelager in den
+                Chiemgauer Alpen. Geführte Touren, Videoanalyse,
+                Hüttenübernachtung.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Stadtradeln – Bremen
+              </h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>20.06.2026</strong> – Vereinsteilnahme am Stadtradeln
+                in Bremen. Gemeinsam Kilometer sammeln für den guten Zweck.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Streckenpflege –
+                Thüringer Wald</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>27.06.2026</strong> – Gemeinschaftliche Streckenpflege
+                im Thüringer Wald. Werkzeug wird gestellt, Verpflegung
+                inklusive.
+              </p>
+            </div>
+          </div>
+
+          <!-- Juli -->
+          <div id="monat-jul"
+            class="ev-tour ev-not-training ev-not-wettkampf ev-not-pflege scroll-mt-[175px] md:scroll-mt-[250px] max-md:scroll-mt-[125px] float-left mr-[2.66%] w-[23%] overflow-hidden rounded-lg border border-[#ddd] bg-[#f5f5f5] md:float-none md:mr-0 md:w-[calc(50%-8px)] max-md:float-none max-md:mb-3 max-md:mr-0 max-md:w-full">
+            <input type="checkbox" id="toggle-jul" class="peer/jul hidden" />
+            <label for="toggle-jul" aria-label="Veranstaltungen Juli 2026 anzeigen"
+              class="peer-checked/jul:after:content-['_−'] block cursor-pointer select-none bg-[#333] px-[18px] py-7 font-semibold text-white after:float-right after:font-bold after:content-['_+'] hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] max-md:px-[14px] max-md:py-4 max-md:text-[0.95rem]">
+              Juli 2026
+            </label>
+            <div class="peer-checked/jul:!block hidden px-[18px] py-4 max-md:p-[14px]">
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] first:mt-0 max-md:text-[0.9rem]">
+                Alpenüberquerung – Berchtesgaden</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>11.07.2026</strong> – Mehrtägige Alpenüberquerung von
+                Berchtesgaden nach Südtirol. Erfahrene Bergfahrer,
+                Voranmeldung bis 30.06.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Feierabendausfahrt –
+                Hamburg</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>23.07.2026</strong> – Wöchentliche Feierabendausfahrt
+                im Forst Klövensteen. Jeden Donnerstag im Juli.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Fahrpark-Tag –
+                Winterberg</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>04.07.2026</strong> – Gemeinsamer Tag im Fahrpark
+                Winterberg. Tagestickets werden gemeinsam organisiert,
+                Anmeldung bis 27.06.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Küstentour – Ostsee
+              </h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>18.07.2026</strong> – Zweitägige Radtour entlang der
+                Ostseeküste zwischen Rostock und Stralsund. Gepäcktransport
+                inklusive.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Vereinsgrillen –
+                München</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>25.07.2026</strong> – Sommerliches Vereinsgrillen mit
+                kurzer Ausfahrt im Englischen Garten. Familien und Gäste
+                willkommen.
+              </p>
+            </div>
+          </div>
+
+          <!-- August -->
+          <div id="monat-aug"
+            class="ev-wettkampf ev-not-tour ev-not-training ev-not-pflege scroll-mt-[175px] md:scroll-mt-[250px] max-md:scroll-mt-[125px] float-left w-[23%] overflow-hidden rounded-lg border border-[#ddd] bg-[#f5f5f5] md:float-none md:w-[calc(50%-8px)] max-md:float-none max-md:w-full">
+            <input type="checkbox" id="toggle-aug" class="peer/aug hidden" />
+            <label for="toggle-aug" aria-label="Veranstaltungen August 2026 anzeigen"
+              class="peer-checked/aug:after:content-['_−'] block cursor-pointer select-none bg-[#333] px-[18px] py-7 font-semibold text-white after:float-right after:font-bold after:content-['_+'] hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] max-md:px-[14px] max-md:py-4 max-md:text-[0.95rem]">
+              August 2026
+            </label>
+            <div class="peer-checked/aug:!block hidden px-[18px] py-4 max-md:p-[14px]">
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] first:mt-0 max-md:text-[0.9rem]">Sommerfest
+                &amp; Vereinsrennen – Berlin</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>08.08.2026</strong> – Großes Vereinssommerfest mit
+                Rennen, Grill und Lagerfeuer im Grunewald. Familien
+                willkommen.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Schotterwegen-Tour –
+                Mecklenburg</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>22.08.2026</strong> – Schotterweg-Tour durch die
+                Mecklenburgische Seenplatte. Ca. 60 km, gemischtes Gelände.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Hochgebirgstour –
+                Zugspitze</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>01.08.2026</strong> – Anspruchsvolle Hochgebirgstour
+                rund um die Zugspitze. Nur für sehr erfahrene Bergfahrer,
+                Voranmeldung erforderlich.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Feriencamp – Freiburg
+              </h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>15.08.2026</strong> – Einwöchiges Fahrrad-Feriencamp
+                für Kinder von 8–14 Jahren im Schwarzwald. Anmeldung bis
+                01.08.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Abendtour – Düsseldorf
+              </h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>29.08.2026</strong> – Entspannte Abendtour entlang des
+                Rheins bei Düsseldorf. Ca. 25 km, gemütliches Tempo, Einkehr
+                geplant.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- /.events-row -->
+        <div class="mb-4 overflow-hidden md:flex md:flex-wrap md:gap-4 max-md:block">
+          <!-- September -->
+          <div id="monat-sep"
+            class="ev-wettkampf ev-not-tour ev-not-training ev-not-pflege scroll-mt-[175px] md:scroll-mt-[250px] max-md:scroll-mt-[125px] float-left mr-[2.66%] w-[23%] overflow-hidden rounded-lg border border-[#ddd] bg-[#f5f5f5] md:float-none md:mr-0 md:w-[calc(50%-8px)] max-md:float-none max-md:mb-3 max-md:mr-0 max-md:w-full">
+            <input type="checkbox" id="toggle-sep" class="peer/sep hidden" />
+            <label for="toggle-sep" aria-label="Veranstaltungen September 2026 anzeigen"
+              class="peer-checked/sep:after:content-['_−'] block cursor-pointer select-none bg-[#333] px-[18px] py-7 font-semibold text-white after:float-right after:font-bold after:content-['_+'] hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] max-md:px-[14px] max-md:py-4 max-md:text-[0.95rem]">
+              September 2026
+            </label>
+            <div class="peer-checked/sep:!block hidden px-[18px] py-4 max-md:p-[14px]">
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] first:mt-0 max-md:text-[0.9rem]">
+                Herbst-Fahrlager – Schwarzwald</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>05.09.2026</strong> – Dreitägiges Fahrlager im
+                herbstlichen Schwarzwald. Geführte Touren verschiedener
+                Schwierigkeitsgrade.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Herbsttour – Sauerland
+              </h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>12.09.2026</strong> – Dreitägige Herbsttour durch das
+                Sauerland mit Übernachtung in der Vereinshütte.
+                Anmeldeschluss: 31.08.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Fahrtechnik-Workshop –
+                Hannover</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>19.09.2026</strong> – Fortgeschrittenen-Fahrtechnik
+                auf dem Übungsgelände in Hannover. Begrenzte Plätze, Anmeldung
+                erforderlich.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Geländerennen –
+                Dresden</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>26.09.2026</strong> – Regionaler Geländewettkampf in
+                der Dresdner Heide. Zeitmessung und Pokale.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Vereinstreffen –
+                Leipzig</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>27.09.2026</strong> – Regionaltreffen der
+                Ostmitglieder mit Saisonrückblick und Planung des
+                Winterprogramms.
+              </p>
+            </div>
+          </div>
+
+          <!-- Oktober -->
+          <div id="monat-okt"
+            class="ev-tour ev-not-training ev-not-wettkampf ev-not-pflege scroll-mt-[175px] md:scroll-mt-[250px] max-md:scroll-mt-[125px] float-left mr-[2.66%] w-[23%] overflow-hidden rounded-lg border border-[#ddd] bg-[#f5f5f5] md:float-none md:mr-0 md:w-[calc(50%-8px)] max-md:float-none max-md:mb-3 max-md:mr-0 max-md:w-full">
+            <input type="checkbox" id="toggle-okt" class="peer/okt hidden" />
+            <label for="toggle-okt" aria-label="Veranstaltungen Oktober 2026 anzeigen"
+              class="peer-checked/okt:after:content-['_−'] block cursor-pointer select-none bg-[#333] px-[18px] py-7 font-semibold text-white after:float-right after:font-bold after:content-['_+'] hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] max-md:px-[14px] max-md:py-4 max-md:text-[0.95rem]">
+              Oktober 2026
+            </label>
+            <div class="peer-checked/okt:!block hidden px-[18px] py-4 max-md:p-[14px]">
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] first:mt-0 max-md:text-[0.9rem]">Oktobertour
+                – Rhein-Main</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>03.10.2026</strong> – Feiertagsausfahrt durch den
+                Taunus. Ca. 45 km, gemütliches Tempo, Einkehr in
+                Vereinsgaststätte.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Herbstfarben-Tour –
+                Franken</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>10.10.2026</strong> – Genussfahrt durch das
+                herbstliche Franken rund um Rothenburg ob der Tauber. Alle
+                Fahrniveaus.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Streckenpflege –
+                Erzgebirge</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>17.10.2026</strong> – Herbstliche Streckenpflege im
+                Erzgebirge vor dem Winter. Material und Verpflegung werden
+                gestellt.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Abfahrtstag – Harz
+              </h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>24.10.2026</strong> – Geführter Abfahrtstag am
+                Wurmberg. Schutzausrüstung erforderlich, Helmpflicht.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Fotoausfahrt –
+                Moselfranken</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>31.10.2026</strong> – Entspannte Fotoausfahrt durch
+                die herbstlichen Weinberge an der Mosel. Kamera mitbringen!
+              </p>
+            </div>
+          </div>
+
+          <!-- November -->
+          <div id="monat-nov"
+            class="ev-pflege ev-not-tour ev-not-training ev-not-wettkampf scroll-mt-[175px] md:scroll-mt-[250px] max-md:scroll-mt-[125px] float-left mr-[2.66%] w-[23%] overflow-hidden rounded-lg border border-[#ddd] bg-[#f5f5f5] md:float-none md:mr-0 md:w-[calc(50%-8px)] max-md:float-none max-md:mb-3 max-md:mr-0 max-md:w-full">
+            <input type="checkbox" id="toggle-nov" class="peer/nov hidden" />
+            <label for="toggle-nov" aria-label="Veranstaltungen November 2026 anzeigen"
+              class="peer-checked/nov:after:content-['_−'] block cursor-pointer select-none bg-[#333] px-[18px] py-7 font-semibold text-white after:float-right after:font-bold after:content-['_+'] hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] max-md:px-[14px] max-md:py-4 max-md:text-[0.95rem]">
+              November 2026
+            </label>
+            <div class="peer-checked/nov:!block hidden px-[18px] py-4 max-md:p-[14px]">
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] first:mt-0 max-md:text-[0.9rem]">
+                Saisonabschluss-Tour – Bodensee</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>07.11.2026</strong> – Saisonabschlusstour rund um den
+                Bodensee. Gemütliches Tempo, Einkehr geplant.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Wintervorbereitung –
+                Köln</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>07.11.2026</strong> – Workshop zur Wintervorbereitung
+                des Fahrrads: Beleuchtung, Bereifung, Pflege. Werkzeug wird
+                gestellt.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Nebelausfahrt –
+                Lüneburger Heide</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>14.11.2026</strong> – Stimmungsvolle Herbsttour durch
+                die nebelverhangene Lüneburger Heide. Ca. 30 km, alle
+                Fahrniveaus.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Vereinsabend –
+                Frankfurt</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>21.11.2026</strong> – Geselliger Vereinsabend mit
+                Bilderschau der Saisonhöhepunkte und Planung 2027. Alle
+                Mitglieder eingeladen.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Jahreshauptversammlung
+                – Online</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>28.11.2026</strong> – Digitale Jahreshauptversammlung
+                mit Vorstandswahl und Jahresbericht. Einladung folgt per
+                E-Mail.
+              </p>
+            </div>
+          </div>
+
+          <!-- Dezember -->
+          <div id="monat-dez"
+            class="ev-tour ev-not-training ev-not-wettkampf ev-not-pflege scroll-mt-[175px] md:scroll-mt-[250px] max-md:scroll-mt-[125px] float-left w-[23%] overflow-hidden rounded-lg border border-[#ddd] bg-[#f5f5f5] md:float-none md:w-[calc(50%-8px)] max-md:float-none max-md:w-full">
+            <input type="checkbox" id="toggle-dez" class="peer/dez hidden" />
+            <label for="toggle-dez" aria-label="Veranstaltungen Dezember 2026 anzeigen"
+              class="peer-checked/dez:after:content-['_−'] block cursor-pointer select-none bg-[#333] px-[18px] py-7 font-semibold text-white after:float-right after:font-bold after:content-['_+'] hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:-outline-offset-[3px] focus-visible:outline-[#005fcc] max-md:px-[14px] max-md:py-4 max-md:text-[0.95rem]">
+              Dezember 2026
+            </label>
+            <div class="peer-checked/dez:!block hidden px-[18px] py-4 max-md:p-[14px]">
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] first:mt-0 max-md:text-[0.9rem]">
+                Winterwaldtour – Spessart</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>05.12.2026</strong> – Stimmungsvolle Adventstour durch
+                den winterlichen Spessart. Abschluss mit Glühwein am
+                Lagerfeuer.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Fahrrad-Tauschbörse –
+                Stuttgart</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>06.12.2026</strong> – Vereinsinterne Tauschbörse für
+                gebrauchtes Fahrradzubehör und Ersatzteile. Eintritt frei.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Winterausfahrt –
+                Erzgebirge</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>12.12.2026</strong> – Geführte Winterausfahrt durch
+                den verschneiten Erzgebirgswald. Winterreifen empfohlen, warme
+                Kleidung Pflicht.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Jahresrückblick &amp;
+                Weihnachtsfeier – Frankfurt</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>19.12.2026</strong> – Vereinsweihnachtsfeier mit
+                Jahresrückblick, Ehrungen und gemütlichem Beisammensein.
+              </p>
+              <h3 class="mb-1 mt-3 text-[0.95rem] font-semibold text-[#222] max-md:text-[0.9rem]">Silvesterausfahrt –
+                Berlin</h3>
+              <p class="text-[0.88rem] leading-[1.6] text-[#222] max-md:text-[0.85rem]">
+                <strong>31.12.2026</strong> – Abschlussausfahrt des Jahres
+                durch den Grunewald zum Jahreswechsel. Start 22:00 Uhr,
+                Feuerwerk inklusive.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- /.events-row -->
+      </div>
+    </section>
+    <section class="bg-[#f5f5f5] px-5 py-[60px] text-center max-md:px-4 max-md:py-9"
+      aria-labelledby="events-cta-heading">
+      <h2 id="events-cta-heading" class="mb-3.5 text-[1.8rem] text-[#111] max-md:text-[1.3rem]">
+        Noch kein Mitglied?
+      </h2>
+      <p class="mx-auto mb-7 max-w-[520px] text-base leading-[1.7] text-[#222]">
+        Alle Veranstaltungen stehen unseren Mitgliedern offen. Werde Teil des
+        Vereins und fahre mit uns das ganze Jahr.
+      </p>
+      <a href="mailto:kontakt@iu-mtb-community.de"
+        class="mx-2 inline-block rounded bg-[#333] px-7 py-[13px] text-base font-semibold text-white no-underline hover:bg-[#555] focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-[#005fcc] focus-visible:outline-offset-2 max-md:m-0 max-md:block max-md:w-full max-md:box-border max-md:text-center"
+        aria-label="E-Mail schreiben an kontakt@iu-mtb-community.de">E-Mail schreiben</a>
+    </section>
+  </main>
+  <footer role="contentinfo" aria-label="Seitenfuß"
+    class="mt-10 overflow-hidden bg-[#333] px-5 pb-[15px] pt-[30px] text-white"></footer>
+</body>
+
 </html>

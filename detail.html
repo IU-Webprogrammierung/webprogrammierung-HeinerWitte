@@ -1,828 +1,841 @@
 <!doctype html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Treffen und Trainings – IU MTB Community e. V.</title>
-    <meta
-      name="description"
-      content="Wöchentliche Gruppentouren und Fahrtechniktrainings für alle Schwierigkeitsgrade – von Einsteigern bis Profis. Übersicht aller Treffen der IU MTB Community e. V."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      media="print"
-      onload="this.media = 'all'"
-    />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      />
-    </noscript>
-    <!-- Tailwind CSS (Play CDN – kein Build-Schritt, siehe README für Hinweise zum Produktivbetrieb) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      // Projekt-eigene Breakpoints statt Tailwind-Standardwerten, damit sie zu
-      // den anderen Seiten passen: Tablet 769–1024px, Mobile ≤768px.
-      tailwind.config = {
-        theme: {
-          screens: {
-            'max-md': { max: '768px' },
-            md: { min: '769px', max: '1024px' },
-          },
-          extend: {
-            fontFamily: { sans: ['Inter', 'Arial', 'sans-serif'] },
-          },
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Treffen und Trainings – IU MTB Community e. V.</title>
+  <meta name="description"
+    content="Wöchentliche Gruppentouren und Fahrtechniktrainings für alle Schwierigkeitsgrade – von Einsteigern bis Profis. Übersicht aller Treffen der IU MTB Community e. V." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    media="print" onload="this.media = 'all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+  </noscript>
+  <!-- Tailwind CSS (Play CDN – kein Build-Schritt) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Projekt-eigene Breakpoints statt Tailwind-Standardwerten, damit sie zu
+    // den anderen Seiten passen: Tablet 769–1024px, Mobile ≤768px.
+    tailwind.config = {
+      theme: {
+        screens: {
+          'max-md': { max: '768px' },
+          md: { min: '769px', max: '1024px' },
         },
-      };
-    </script>
-    <script src="js/script.js" defer></script>
-  </head>
-  <body class="m-0 font-sans">
-    <a
-      href="#main-content"
-      class="absolute left-0 top-[-100px] z-[9999] bg-[#005fcc] px-5 py-2.5 font-bold text-white no-underline focus:top-0"
-      >Zum Hauptinhalt springen</a
-    >
-    <header
-      role="banner"
-      class="sticky top-0 z-[100] bg-[#333] px-5 py-2.5 max-md:px-4"
-    ></header>
-    <main id="main-content" role="main">
-      <section
-        class="bg-[#333] px-5 py-[60px] text-center max-md:px-4 max-md:py-8"
-        aria-labelledby="detail-hero-heading"
-      >
-        <div class="mx-auto max-w-[700px]">
-          <h2
-            id="detail-hero-heading"
-            class="mb-3.5 text-[2rem] text-white md:text-[1.6rem] max-md:text-[1.3rem]"
-          >
-            Treffen &amp; Trainings
-          </h2>
-          <p class="text-[1.05rem] leading-[1.75] text-[#ddd] max-md:text-[0.93rem]">
-            Jede Woche. Überall in Deutschland. Für alle Schwierigkeitsgrade –
-            von der ersten Runde bis zur Profi-Strecke.
-          </p>
-        </div>
-      </section>
-      <section
-        class="mx-auto mt-10 max-w-[1100px] px-5 pb-10 md:mt-8 md:px-5 md:pb-8 max-md:mt-6 max-md:px-4 max-md:pb-6"
-        aria-labelledby="detail-heading"
-      >
+        extend: {
+          fontFamily: { sans: ['Inter', 'Arial', 'sans-serif'] },
+        },
+      },
+    };
+  </script>
+  <script src="js/script.js" defer></script>
+</head>
+
+<body class="m-0 font-sans">
+  <a href="#main-content"
+    class="absolute left-0 top-[-100px] z-[9999] bg-[#005fcc] px-5 py-2.5 font-bold text-white no-underline focus:top-0">Zum
+    Hauptinhalt springen</a>
+  <header role="banner" class="sticky top-0 z-[100] bg-[#333] px-5 py-2.5 max-md:px-4"></header>
+  <main id="main-content" role="main">
+    <section class="bg-[#333] px-5 py-[60px] text-center max-md:px-4 max-md:py-8" aria-labelledby="detail-hero-heading">
+      <div class="mx-auto max-w-[700px]">
+        <h2 id="detail-hero-heading" class="mb-3.5 text-[2rem] text-white md:text-[1.6rem] max-md:text-[1.3rem]">
+          Treffen &amp; Trainings
+        </h2>
+        <p class="text-[1.05rem] leading-[1.75] text-[#ddd] max-md:text-[0.93rem]">
+          Jede Woche. Überall in Deutschland. Für alle Schwierigkeitsgrade –
+          von der ersten Runde bis zur Profi-Strecke.
+        </p>
+      </div>
+    </section>
+    <section class="mx-auto mt-10 max-w-[1100px] px-5 pb-10 md:mt-8 md:px-5 md:pb-8 max-md:mt-6 max-md:px-4 max-md:pb-6"
+      aria-labelledby="detail-heading">
+      <article class="mb-10 rounded-lg bg-[#f5f5f5] p-7 text-center max-md:p-5" aria-labelledby="detail-heading">
+        <h2 id="detail-heading" class="mb-4 text-[1.8rem] text-[#222] max-md:text-[1.3rem]">
+          Gemeinsam mehr erleben
+        </h2>
+        <p class="mb-3 text-[0.97rem] leading-[1.75] text-[#444] last:mb-0 max-md:text-[0.93rem]">
+          Mountainbiken macht alleine Spaß – aber gemeinsam macht es noch mehr
+          Spaß. In unserem Verein kommst du regelmäßig mit anderen Fahrern
+          zusammen, lernst neue Strecken kennen und wächst als Fahrer durch
+          den Austausch in der Gruppe. Egal ob du gerade erst anfängst oder
+          schon jahrelange Erfahrung mitbringst: Gemeinsame Aktivitäten
+          stärken nicht nur deine Fahrtechnik, sondern auch den Zusammenhalt
+          im Verein.
+        </p>
+        <p class="text-[0.97rem] leading-[1.75] text-[#444] max-md:text-[0.93rem]">
+          Wer gemeinsam fährt, motiviert sich gegenseitig, überwindet
+          Hemmschwellen und erlebt Momente, die man so schnell nicht vergisst.
+          Der Verein bietet dir den Rahmen dafür – du bringst die Begeisterung
+          mit.
+        </p>
+      </article>
+      <div class="mt-10 overflow-hidden md:flex md:items-start md:gap-[4%] max-md:mt-7 max-md:flex max-md:flex-col">
         <article
-          class="mb-10 rounded-lg bg-[#f5f5f5] p-7 text-center max-md:p-5"
-          aria-labelledby="detail-heading"
-        >
-          <h2
-            id="detail-heading"
-            class="mb-4 text-[1.8rem] text-[#222] max-md:text-[1.3rem]"
-          >
-            Gemeinsam mehr erleben
-          </h2>
-          <p class="mb-3 text-[0.97rem] leading-[1.75] text-[#444] last:mb-0 max-md:text-[0.93rem]">
-            Mountainbiken macht alleine Spaß – aber gemeinsam macht es noch mehr
-            Spaß. In unserem Verein kommst du regelmäßig mit anderen Fahrern
-            zusammen, lernst neue Strecken kennen und wächst als Fahrer durch
-            den Austausch in der Gruppe. Egal ob du gerade erst anfängst oder
-            schon jahrelange Erfahrung mitbringst: Gemeinsame Aktivitäten
-            stärken nicht nur deine Fahrtechnik, sondern auch den Zusammenhalt
-            im Verein.
+          class="float-left mr-[4%] w-[46%] md:float-none md:w-1/2 md:mr-0 max-md:order-1 max-md:float-none max-md:w-full"
+          aria-labelledby="gruppenausflug-heading">
+          <h3 id="gruppenausflug-heading" class="mb-3.5 text-[1.3rem] text-[#222] max-md:text-[1.1rem]">
+            Gruppentreffen &amp; gemeinsame Ausflüge
+          </h3>
+          <p class="mb-3 text-[0.97rem] leading-[1.75] text-[#222] last:mb-0 max-md:text-[0.93rem]">
+            Regelmäßig organisieren wir Gruppentreffen und mehrstündige
+            Ausflüge in die schönsten Mountainbike-Regionen Deutschlands. Vom
+            Schwarzwald über den Harz bis in die Alpen – unsere Touren führen
+            dich durch abwechslungsreiches Gelände für alle
+            Schwierigkeitsgrade.
           </p>
-          <p class="text-[0.97rem] leading-[1.75] text-[#444] max-md:text-[0.93rem]">
-            Wer gemeinsam fährt, motiviert sich gegenseitig, überwindet
-            Hemmschwellen und erlebt Momente, die man so schnell nicht vergisst.
-            Der Verein bietet dir den Rahmen dafür – du bringst die Begeisterung
-            mit.
+          <p class="mb-3 text-[0.97rem] leading-[1.75] text-[#222] last:mb-0 max-md:text-[0.93rem]">
+            Die Ausflüge werden im Voraus geplant und in unserem
+            Veranstaltungskalender angekündigt. Vor Ort kümmern sich erfahrene
+            Tourenführer um einen reibungslosen Ablauf, sodass du dich ganz
+            auf das Fahren konzentrieren kannst.
+          </p>
+          <p class="text-[0.97rem] leading-[1.75] text-[#222] max-md:text-[0.93rem]">
+            Nach jeder Tour trifft sich die Gruppe zum gemeinsamen Ausklang –
+            ob am Parkplatz, in einer Hütte oder beim nächsten Gasthaus. Diese
+            Momente des gemeinsamen Entspannens und Erzählens gehören für
+            viele unserer Mitglieder zum schönsten Teil des Vereinslebens.
           </p>
         </article>
-        <div
-          class="mt-10 overflow-hidden md:flex md:items-start md:gap-[4%] max-md:mt-7 max-md:flex max-md:flex-col"
-        >
-          <article
-            class="float-left mr-[4%] w-[46%] md:float-none md:w-1/2 md:mr-0 max-md:order-1 max-md:float-none max-md:w-full"
-            aria-labelledby="gruppenausflug-heading"
-          >
-            <h3
-              id="gruppenausflug-heading"
-              class="mb-3.5 text-[1.3rem] text-[#222] max-md:text-[1.1rem]"
-            >
-              Gruppentreffen &amp; gemeinsame Ausflüge
-            </h3>
-            <p class="mb-3 text-[0.97rem] leading-[1.75] text-[#222] last:mb-0 max-md:text-[0.93rem]">
-              Regelmäßig organisieren wir Gruppentreffen und mehrstündige
-              Ausflüge in die schönsten Mountainbike-Regionen Deutschlands. Vom
-              Schwarzwald über den Harz bis in die Alpen – unsere Touren führen
-              dich durch abwechslungsreiches Gelände für alle
-              Schwierigkeitsgrade.
+        <figure
+          class="float-left m-0 w-1/2 md:float-none md:w-[46%] max-md:order-2 max-md:float-none max-md:mt-4 max-md:w-full">
+          <img src="assets/gruppenausflug.jpg"
+            alt="Mitglieder der IU MTB Community auf einem gemeinsamen Gruppenausflug"
+            class="block h-auto w-full rounded-lg" />
+          <figcaption class="sr-only">
+            Mitglieder der IU MTB Community auf einem gemeinsamen
+            Gruppenausflug
+          </figcaption>
+        </figure>
+      </div>
+      <div
+        class="mt-[60px] overflow-hidden md:mt-10 md:flex md:flex-row-reverse md:items-start md:gap-[4%] max-md:mt-8 max-md:flex max-md:flex-col">
+        <figure
+          class="float-left mr-[4%] m-0 w-1/2 md:float-none md:mr-[4%] md:w-[46%] max-md:order-2 max-md:float-none max-md:mr-0 max-md:mt-4 max-md:w-full">
+          <img src="assets/gruppentraining.jpg" alt="Mitglieder der IU MTB Community beim gemeinsamen Gruppentraining"
+            class="block h-auto w-full rounded-lg" />
+          <figcaption class="sr-only">
+            Mitglieder der IU MTB Community beim gemeinsamen Gruppentraining
+          </figcaption>
+        </figure>
+        <article class="float-left w-1/2 md:float-none md:w-1/2 max-md:order-1 max-md:float-none max-md:w-full"
+          aria-labelledby="training-heading">
+          <h3 id="training-heading" class="mb-3.5 text-[1.3rem] text-[#222] max-md:text-[1.1rem]">
+            Trainingsmöglichkeiten für alle Schwierigkeitsgrade
+          </h3>
+          <p class="mb-3 text-[0.97rem] leading-[1.75] text-[#222] last:mb-0 max-md:text-[0.93rem]">
+            Ob du deine Grundtechnik festigen oder gezielt an speziellen
+            Fähigkeiten arbeiten möchtest – unser Vereinstraining bietet
+            beides. In allgemeinen Gruppentrainings werden Basisfertigkeiten
+            wie Bremstechnik, Kurvenfahrt und Balance gemeinsam geübt und
+            verfeinert.
+          </p>
+          <p class="mb-3 text-[0.97rem] leading-[1.75] text-[#222] last:mb-0 max-md:text-[0.93rem]">
+            Darüber hinaus bieten wir spezialisierte Einheiten für
+            Fortgeschrittene an: Abfahrtsrampen, Sprünge, steile Abfahrten und
+            technische Passagen werden unter Anleitung lizenzierter
+            Fahrtechniktrainer sicher erlernt. So entwickelst du dich in
+            deinem eigenen Tempo weiter – ohne Druck, aber mit klaren Zielen.
+          </p>
+          <p class="text-[0.97rem] leading-[1.75] text-[#222] max-md:text-[0.93rem]">
+            Das regelmäßige Training im Verein hält dich nicht nur
+            fahrtechnisch fit, sondern sorgt auch dafür, dass du sicherer und
+            entspannter auf neuen Strecken unterwegs bist. Und das Beste: Du
+            lernst dabei Menschen kennen, die genauso begeistert sind wie du.
+          </p>
+        </article>
+      </div>
+    </section>
+    <section class="mx-auto max-w-[1100px] px-5 py-[60px] max-md:px-4 max-md:py-8" aria-labelledby="levels-heading">
+      <h2 id="levels-heading"
+        class="mb-9 text-center text-[1.8rem] text-[#111] md:text-[1.5rem] max-md:mb-6 max-md:text-[1.3rem]">
+        Für welches Schwierigkeitsniveau bist du dabei?
+      </h2>
+      <div role="list" class="overflow-hidden md:flex md:gap-4 max-md:block">
+        <article role="listitem"
+          class="float-left mr-[4%] w-[30.66%] rounded-lg border-t-[5px] border-[#3a9e5f] bg-[#f5f5f5] px-6 py-7 md:float-none md:w-[calc(33.33%-11px)] md:mr-0 max-md:float-none max-md:mb-4 max-md:w-full max-md:mr-0"
+          aria-labelledby="level-einsteiger-heading">
+          <div class="mb-2.5 text-[1.1rem] tracking-[3px] text-[#3a9e5f]" aria-hidden="true">
+            ●●○○
+          </div>
+          <h3 id="level-einsteiger-heading" class="mb-2.5 text-[1.15rem] text-[#111]">Einsteiger</h3>
+          <p class="mb-4 text-[0.93rem] leading-[1.7] text-[#222]">
+            Erste Ausfahrten auf flachen Waldwegen und einfachen Strecken.
+            Tempo und Technik spielen noch keine große Rolle – hier geht es
+            ums Ankommen und Spaß haben.
+          </p>
+          <ul role="list" class="m-0 list-none p-0">
+            <li
+              class="border-b border-[#ddd] py-1.5 text-[0.9rem] leading-[1.7] text-[#333] last:border-b-0 before:mr-1 before:font-bold before:text-[#555] before:content-['✓_']">
+              Flaches bis leicht hügeliges Gelände</li>
+            <li
+              class="border-b border-[#ddd] py-1.5 text-[0.9rem] leading-[1.7] text-[#333] last:border-b-0 before:mr-1 before:font-bold before:text-[#555] before:content-['✓_']">
+              Strecken 10–25 km</li>
+            <li
+              class="border-b border-[#ddd] py-1.5 text-[0.9rem] leading-[1.7] text-[#333] last:border-b-0 before:mr-1 before:font-bold before:text-[#555] before:content-['✓_']">
+              Geführte Touren mit Trainer</li>
+            <li
+              class="border-b border-[#ddd] py-1.5 text-[0.9rem] leading-[1.7] text-[#333] last:border-b-0 before:mr-1 before:font-bold before:text-[#555] before:content-['✓_']">
+              Leihräder verfügbar</li>
+          </ul>
+        </article>
+        <article role="listitem"
+          class="float-left mr-[4%] w-[30.66%] rounded-lg border-t-[5px] border-[#e07b00] bg-[#f5f5f5] px-6 py-7 md:float-none md:w-[calc(33.33%-11px)] md:mr-0 max-md:float-none max-md:mb-4 max-md:w-full max-md:mr-0"
+          aria-labelledby="level-fortgeschrittene-heading">
+          <div class="mb-2.5 text-[1.1rem] tracking-[3px] text-[#e07b00]" aria-hidden="true">
+            ●●●○
+          </div>
+          <h3 id="level-fortgeschrittene-heading" class="mb-2.5 text-[1.15rem] text-[#111]">Fortgeschrittene</h3>
+          <p class="mb-4 text-[0.93rem] leading-[1.7] text-[#222]">
+            Technisch anspruchsvollere Strecken, längere Distanzen und
+            gezielte Fahrtechnik-Einheiten. Du kennst dein Fahrrad und willst
+            es weiterentwickeln.
+          </p>
+          <ul role="list" class="m-0 list-none p-0">
+            <li
+              class="border-b border-[#ddd] py-1.5 text-[0.9rem] leading-[1.7] text-[#333] last:border-b-0 before:mr-1 before:font-bold before:text-[#555] before:content-['✓_']">
+              Schmalwege und Wurzelpfade</li>
+            <li
+              class="border-b border-[#ddd] py-1.5 text-[0.9rem] leading-[1.7] text-[#333] last:border-b-0 before:mr-1 before:font-bold before:text-[#555] before:content-['✓_']">
+              Strecken 30–60 km</li>
+            <li
+              class="border-b border-[#ddd] py-1.5 text-[0.9rem] leading-[1.7] text-[#333] last:border-b-0 before:mr-1 before:font-bold before:text-[#555] before:content-['✓_']">
+              Technik-Workshops inklusive</li>
+            <li
+              class="border-b border-[#ddd] py-1.5 text-[0.9rem] leading-[1.7] text-[#333] last:border-b-0 before:mr-1 before:font-bold before:text-[#555] before:content-['✓_']">
+              Videoanalyse auf Anfrage</li>
+          </ul>
+        </article>
+        <article role="listitem"
+          class="float-left w-[30.66%] rounded-lg border-t-[5px] border-[#cc2200] bg-[#f5f5f5] px-6 py-7 md:float-none md:w-[calc(33.33%-11px)] max-md:float-none max-md:w-full"
+          aria-labelledby="level-profis-heading">
+          <div class="mb-2.5 text-[1.1rem] tracking-[3px] text-[#cc2200]" aria-hidden="true">
+            ●●●●
+          </div>
+          <h3 id="level-profis-heading" class="mb-2.5 text-[1.15rem] text-[#111]">Profis &amp; Experten</h3>
+          <p class="mb-4 text-[0.93rem] leading-[1.7] text-[#222]">
+            Steile Abfahrten, Abfahrtsrampen, Sprünge und anspruchsvolle
+            Geländestrecken. Für erfahrene Fahrer, die ihre Grenzen kennen und
+            gezielt erweitern wollen.
+          </p>
+          <ul role="list" class="m-0 list-none p-0">
+            <li
+              class="border-b border-[#ddd] py-1.5 text-[0.9rem] leading-[1.7] text-[#333] last:border-b-0 before:mr-1 before:font-bold before:text-[#555] before:content-['✓_']">
+              Geländerennen, Abfahrt, Fahrpark</li>
+            <li
+              class="border-b border-[#ddd] py-1.5 text-[0.9rem] leading-[1.7] text-[#333] last:border-b-0 before:mr-1 before:font-bold before:text-[#555] before:content-['✓_']">
+              Strecken 50–100+ km</li>
+            <li
+              class="border-b border-[#ddd] py-1.5 text-[0.9rem] leading-[1.7] text-[#333] last:border-b-0 before:mr-1 before:font-bold before:text-[#555] before:content-['✓_']">
+              Schutzausrüstung Pflicht</li>
+            <li
+              class="border-b border-[#ddd] py-1.5 text-[0.9rem] leading-[1.7] text-[#333] last:border-b-0 before:mr-1 before:font-bold before:text-[#555] before:content-['✓_']">
+              Alpen- und Hochgebirgstouren</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+    <section class="bg-[#f5f5f5] px-5 py-[60px] max-md:px-4 max-md:py-8" aria-labelledby="schedule-heading">
+      <h2 id="schedule-heading"
+        class="mx-auto mb-9 max-w-[1100px] text-center text-[1.8rem] text-[#111] md:text-[1.5rem] max-md:mb-6 max-md:text-[1.3rem]">
+        Regelmäßige Treffen – Wochenplan
+      </h2>
+      <table aria-labelledby="schedule-heading"
+        class="mx-auto w-full max-w-[1100px] overflow-hidden rounded-lg border-collapse text-[0.92rem] md:text-[0.88rem] max-md:block max-md:overflow-x-auto max-md:whitespace-nowrap max-md:text-[0.85rem] max-md:[-webkit-overflow-scrolling:touch]">
+        <caption class="sr-only">
+          Regelmäßige Vereinstreffen nach Wochentag, Uhrzeit, Art, Niveau und
+          Region
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col"
+              class="bg-[#333] px-4 py-3 text-left text-[0.85rem] font-bold uppercase tracking-[0.05em] text-white md:p-2.5 max-md:p-2.5">
+              Tag</th>
+            <th scope="col"
+              class="bg-[#333] px-4 py-3 text-left text-[0.85rem] font-bold uppercase tracking-[0.05em] text-white md:p-2.5 max-md:p-2.5">
+              Uhrzeit</th>
+            <th scope="col"
+              class="bg-[#333] px-4 py-3 text-left text-[0.85rem] font-bold uppercase tracking-[0.05em] text-white md:p-2.5 max-md:p-2.5">
+              Art</th>
+            <th scope="col"
+              class="bg-[#333] px-4 py-3 text-left text-[0.85rem] font-bold uppercase tracking-[0.05em] text-white md:p-2.5 max-md:p-2.5">
+              Niveau</th>
+            <th scope="col"
+              class="bg-[#333] px-4 py-3 text-left text-[0.85rem] font-bold uppercase tracking-[0.05em] text-white md:p-2.5 max-md:p-2.5">
+              Region</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="group bg-white transition-colors duration-150 focus-within:outline focus-within:outline-[3px] focus-within:-outline-offset-[3px] focus-within:outline-[#b87200]">
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              Dienstag</td>
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              17:30 Uhr</td>
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              Feierabendausfahrt</td>
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              <span
+                class="inline-block rounded-xl bg-[#3a9e5f] px-2.5 py-[3px] text-[0.8rem] font-semibold text-white">Einsteiger</span>
+            </td>
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              Nordrhein-Westfalen</td>
+          </tr>
+          <tr
+            class="group bg-white transition-colors duration-150 focus-within:outline focus-within:outline-[3px] focus-within:-outline-offset-[3px] focus-within:outline-[#b87200]">
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              Mittwoch</td>
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              18:00 Uhr</td>
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              Technik-Training</td>
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              <span
+                class="inline-block rounded-xl bg-[#e07b00] px-2.5 py-[3px] text-[0.8rem] font-semibold text-white">Fortgeschrittene</span>
+            </td>
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              Bayern &amp; Baden-Württemberg</td>
+          </tr>
+          <tr
+            class="group bg-white transition-colors duration-150 focus-within:outline focus-within:outline-[3px] focus-within:-outline-offset-[3px] focus-within:outline-[#b87200]">
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              Donnerstag</td>
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              17:00 Uhr</td>
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              Gruppenausfahrt</td>
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              <span
+                class="inline-block rounded-xl bg-[#3a9e5f] px-2.5 py-[3px] text-[0.8rem] font-semibold text-white">Einsteiger</span>
+            </td>
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              Hessen &amp; Rheinland-Pfalz</td>
+          </tr>
+          <tr
+            class="group bg-white transition-colors duration-150 focus-within:outline focus-within:outline-[3px] focus-within:-outline-offset-[3px] focus-within:outline-[#b87200]">
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              Samstag</td>
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              09:00 Uhr</td>
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              Tagestour</td>
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              <span
+                class="inline-block rounded-xl bg-[#e07b00] px-2.5 py-[3px] text-[0.8rem] font-semibold text-white">Fortgeschrittene</span>
+            </td>
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              Bundesweit rotierend</td>
+          </tr>
+          <tr
+            class="group bg-white transition-colors duration-150 focus-within:outline focus-within:outline-[3px] focus-within:-outline-offset-[3px] focus-within:outline-[#b87200]">
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              Samstag</td>
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              10:00 Uhr</td>
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              Geländetraining</td>
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              <span
+                class="inline-block rounded-xl bg-[#cc2200] px-2.5 py-[3px] text-[0.8rem] font-semibold text-white">Profis</span>
+            </td>
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              Alpen &amp; Mittelgebirge</td>
+          </tr>
+          <tr
+            class="group bg-white transition-colors duration-150 last:[&>td]:border-b-0 focus-within:outline focus-within:outline-[3px] focus-within:-outline-offset-[3px] focus-within:outline-[#b87200]">
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              Sonntag</td>
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              08:30 Uhr</td>
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              Vereinsausfahrt</td>
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              <span
+                class="inline-block rounded-xl bg-[#3a9e5f] px-2.5 py-[3px] text-[0.8rem] font-semibold text-white">Alle
+                Niveaus</span>
+            </td>
+            <td
+              class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
+              Bundesweit rotierend</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="bg-[#1a1a1a] px-5 py-[60px] text-center max-md:px-4 max-md:py-9" aria-labelledby="safety-heading">
+      <h2 id="safety-heading" class="mb-2 text-[1.8rem] text-white md:text-[1.6rem] max-md:text-[1.4rem]">
+        &#9888;&#65039; Sicherheitshinweise
+      </h2>
+      <p class="mb-9 text-[0.97rem] text-[#aaa]">
+        Diese Regeln gelten für alle Vereinstrainings und -touren – ohne
+        Ausnahme.
+      </p>
+      <ul role="list" class="mx-auto flex max-w-[720px] list-none flex-col gap-3 p-0 text-left">
+        <li
+          class="flex items-start gap-4 rounded-lg border-l-4 border-[#e8a000] bg-[#252525] p-5 max-md:flex-col max-md:gap-2.5">
+          <span
+            class="mt-[3px] shrink-0 whitespace-nowrap rounded-xl bg-[#e8a000] px-2.5 py-1 text-[0.72rem] font-bold uppercase tracking-[0.06em] text-[#111]"
+            aria-label="Pflicht">Pflicht</span>
+          <div class="flex-1">
+            <h3 class="mb-1.5 text-base font-bold text-white">Helm immer tragen</h3>
+            <p class="text-[0.9rem] leading-[1.6] text-[#bbb]">
+              Ein zertifizierter Helm (EN 1078 oder EN 1384) ist bei jedem
+              Vereinstraining und jeder geführten Tour Pflicht – ohne Helm
+              keine Teilnahme.
             </p>
-            <p class="mb-3 text-[0.97rem] leading-[1.75] text-[#222] last:mb-0 max-md:text-[0.93rem]">
-              Die Ausflüge werden im Voraus geplant und in unserem
-              Veranstaltungskalender angekündigt. Vor Ort kümmern sich erfahrene
-              Tourenführer um einen reibungslosen Ablauf, sodass du dich ganz
-              auf das Fahren konzentrieren kannst.
+          </div>
+        </li>
+        <li
+          class="flex items-start gap-4 rounded-lg border-l-4 border-[#e8a000] bg-[#252525] p-5 max-md:flex-col max-md:gap-2.5">
+          <span
+            class="mt-[3px] shrink-0 whitespace-nowrap rounded-xl bg-[#e8a000] px-2.5 py-1 text-[0.72rem] font-bold uppercase tracking-[0.06em] text-[#111]"
+            aria-label="Pflicht">Pflicht</span>
+          <div class="flex-1">
+            <h3 class="mb-1.5 text-base font-bold text-white">Fahrtüchtiges Fahrrad</h3>
+            <p class="text-[0.9rem] leading-[1.6] text-[#bbb]">
+              Bremsen, Licht und Reifendruck müssen vor jeder Tour geprüft
+              sein. Defekte Räder dürfen nicht an geführten Touren teilnehmen.
             </p>
-            <p class="text-[0.97rem] leading-[1.75] text-[#222] max-md:text-[0.93rem]">
-              Nach jeder Tour trifft sich die Gruppe zum gemeinsamen Ausklang –
-              ob am Parkplatz, in einer Hütte oder beim nächsten Gasthaus. Diese
-              Momente des gemeinsamen Entspannens und Erzählens gehören für
-              viele unserer Mitglieder zum schönsten Teil des Vereinslebens.
+          </div>
+        </li>
+        <li
+          class="flex items-start gap-4 rounded-lg border-l-4 border-[#e8a000] bg-[#252525] p-5 max-md:flex-col max-md:gap-2.5">
+          <span
+            class="mt-[3px] shrink-0 whitespace-nowrap rounded-xl bg-[#e8a000] px-2.5 py-1 text-[0.72rem] font-bold uppercase tracking-[0.06em] text-[#111]"
+            aria-label="Pflicht">Pflicht</span>
+          <div class="flex-1">
+            <h3 class="mb-1.5 text-base font-bold text-white">Notfallkontakt hinterlegen</h3>
+            <p class="text-[0.9rem] leading-[1.6] text-[#bbb]">
+              Alle Teilnehmer geben vor der Tour einen Notfallkontakt beim
+              Tourenführer an. Im Gebirge und bei Mehrtagestouren ist ein
+              vollgeladenes Mobiltelefon Pflicht.
             </p>
-          </article>
-          <figure
-            class="float-left m-0 w-1/2 md:float-none md:w-[46%] max-md:order-2 max-md:float-none max-md:mt-4 max-md:w-full"
-          >
-            <img
-              src="assets/gruppenausflug.jpg"
-              alt="Mitglieder der IU MTB Community auf einem gemeinsamen Gruppenausflug"
-              class="block h-auto w-full rounded-lg"
-            />
-            <figcaption class="sr-only">
-              Mitglieder der IU MTB Community auf einem gemeinsamen
-              Gruppenausflug
-            </figcaption>
-          </figure>
-        </div>
-        <div
-          class="mt-[60px] overflow-hidden md:mt-10 md:flex md:flex-row-reverse md:items-start md:gap-[4%] max-md:mt-8 max-md:flex max-md:flex-col"
-        >
-          <figure
-            class="float-left mr-[4%] m-0 w-1/2 md:float-none md:mr-[4%] md:w-[46%] max-md:order-2 max-md:float-none max-md:mr-0 max-md:mt-4 max-md:w-full"
-          >
-            <img
-              src="assets/gruppentraining.jpg"
-              alt="Mitglieder der IU MTB Community beim gemeinsamen Gruppentraining"
-              class="block h-auto w-full rounded-lg"
-            />
-            <figcaption class="sr-only">
-              Mitglieder der IU MTB Community beim gemeinsamen Gruppentraining
-            </figcaption>
-          </figure>
-          <article
-            class="float-left w-1/2 md:float-none md:w-1/2 max-md:order-1 max-md:float-none max-md:w-full"
-            aria-labelledby="training-heading"
-          >
-            <h3
-              id="training-heading"
-              class="mb-3.5 text-[1.3rem] text-[#222] max-md:text-[1.1rem]"
-            >
-              Trainingsmöglichkeiten für alle Schwierigkeitsgrade
-            </h3>
-            <p class="mb-3 text-[0.97rem] leading-[1.75] text-[#222] last:mb-0 max-md:text-[0.93rem]">
-              Ob du deine Grundtechnik festigen oder gezielt an speziellen
-              Fähigkeiten arbeiten möchtest – unser Vereinstraining bietet
-              beides. In allgemeinen Gruppentrainings werden Basisfertigkeiten
-              wie Bremstechnik, Kurvenfahrt und Balance gemeinsam geübt und
-              verfeinert.
+          </div>
+        </li>
+        <li
+          class="flex items-start gap-4 rounded-lg border-l-4 border-[#4a90d9] bg-[#252525] p-5 max-md:flex-col max-md:gap-2.5">
+          <span
+            class="mt-[3px] shrink-0 whitespace-nowrap rounded-xl bg-[#4a90d9] px-2.5 py-1 text-[0.72rem] font-bold uppercase tracking-[0.06em] text-white"
+            aria-label="Empfohlen">Empfohlen</span>
+          <div class="flex-1">
+            <h3 class="mb-1.5 text-base font-bold text-white">Schutzausrüstung ab S3</h3>
+            <p class="text-[0.9rem] leading-[1.6] text-[#bbb]">
+              Ab Schwierigkeitsgrad S3 werden Knie- und Schienbeinprotektoren
+              sowie Handschuhe dringend empfohlen. Ab S4 ist ein
+              Rückenprotektor Pflicht.
             </p>
-            <p class="mb-3 text-[0.97rem] leading-[1.75] text-[#222] last:mb-0 max-md:text-[0.93rem]">
-              Darüber hinaus bieten wir spezialisierte Einheiten für
-              Fortgeschrittene an: Abfahrtsrampen, Sprünge, steile Abfahrten und
-              technische Passagen werden unter Anleitung lizenzierter
-              Fahrtechniktrainer sicher erlernt. So entwickelst du dich in
-              deinem eigenen Tempo weiter – ohne Druck, aber mit klaren Zielen.
+          </div>
+        </li>
+        <li
+          class="flex items-start gap-4 rounded-lg border-l-4 border-[#4a90d9] bg-[#252525] p-5 max-md:flex-col max-md:gap-2.5">
+          <span
+            class="mt-[3px] shrink-0 whitespace-nowrap rounded-xl bg-[#4a90d9] px-2.5 py-1 text-[0.72rem] font-bold uppercase tracking-[0.06em] text-white"
+            aria-label="Empfohlen">Empfohlen</span>
+          <div class="flex-1">
+            <h3 class="mb-1.5 text-base font-bold text-white">Gruppenregeln einhalten</h3>
+            <p class="text-[0.9rem] leading-[1.6] text-[#bbb]">
+              Niemand fährt voraus ohne Rücksprache mit dem Tourenführer. Bei
+              Stürzen oder Pannen hält die gesamte Gruppe an – keiner bleibt
+              allein zurück.
             </p>
-            <p class="text-[0.97rem] leading-[1.75] text-[#222] max-md:text-[0.93rem]">
-              Das regelmäßige Training im Verein hält dich nicht nur
-              fahrtechnisch fit, sondern sorgt auch dafür, dass du sicherer und
-              entspannter auf neuen Strecken unterwegs bist. Und das Beste: Du
-              lernst dabei Menschen kennen, die genauso begeistert sind wie du.
-            </p>
-          </article>
-        </div>
-      </section>
-      <section
-        class="mx-auto max-w-[1100px] px-5 py-[60px] max-md:px-4 max-md:py-8"
-        aria-labelledby="levels-heading"
-      >
-        <h2
-          id="levels-heading"
-          class="mb-9 text-center text-[1.8rem] text-[#111] md:text-[1.5rem] max-md:mb-6 max-md:text-[1.3rem]"
-        >
-          Für welches Schwierigkeitsniveau bist du dabei?
-        </h2>
-        <div role="list" class="overflow-hidden md:flex md:gap-4 max-md:block">
-          <article
-            role="listitem"
-            class="float-left mr-[4%] w-[30.66%] rounded-lg border-t-[5px] border-[#3a9e5f] bg-[#f5f5f5] px-6 py-7 md:float-none md:w-[calc(33.33%-11px)] md:mr-0 max-md:float-none max-md:mb-4 max-md:w-full max-md:mr-0"
-            aria-labelledby="level-einsteiger-heading"
-          >
-            <div class="mb-2.5 text-[1.1rem] tracking-[3px] text-[#3a9e5f]" aria-hidden="true">
-              ●●○○
-            </div>
-            <h3 id="level-einsteiger-heading" class="mb-2.5 text-[1.15rem] text-[#111]">Einsteiger</h3>
-            <p class="mb-4 text-[0.93rem] leading-[1.7] text-[#222]">
-              Erste Ausfahrten auf flachen Waldwegen und einfachen Strecken.
-              Tempo und Technik spielen noch keine große Rolle – hier geht es
-              ums Ankommen und Spaß haben.
-            </p>
-            <ul role="list" class="m-0 list-none p-0">
-              <li class="border-b border-[#ddd] py-1.5 text-[0.9rem] leading-[1.7] text-[#333] last:border-b-0 before:mr-1 before:font-bold before:text-[#555] before:content-['✓_']">Flaches bis leicht hügeliges Gelände</li>
-              <li class="border-b border-[#ddd] py-1.5 text-[0.9rem] leading-[1.7] text-[#333] last:border-b-0 before:mr-1 before:font-bold before:text-[#555] before:content-['✓_']">Strecken 10–25 km</li>
-              <li class="border-b border-[#ddd] py-1.5 text-[0.9rem] leading-[1.7] text-[#333] last:border-b-0 before:mr-1 before:font-bold before:text-[#555] before:content-['✓_']">Geführte Touren mit Trainer</li>
-              <li class="border-b border-[#ddd] py-1.5 text-[0.9rem] leading-[1.7] text-[#333] last:border-b-0 before:mr-1 before:font-bold before:text-[#555] before:content-['✓_']">Leihräder verfügbar</li>
-            </ul>
-          </article>
-          <article
-            role="listitem"
-            class="float-left mr-[4%] w-[30.66%] rounded-lg border-t-[5px] border-[#e07b00] bg-[#f5f5f5] px-6 py-7 md:float-none md:w-[calc(33.33%-11px)] md:mr-0 max-md:float-none max-md:mb-4 max-md:w-full max-md:mr-0"
-            aria-labelledby="level-fortgeschrittene-heading"
-          >
-            <div class="mb-2.5 text-[1.1rem] tracking-[3px] text-[#e07b00]" aria-hidden="true">
-              ●●●○
-            </div>
-            <h3 id="level-fortgeschrittene-heading" class="mb-2.5 text-[1.15rem] text-[#111]">Fortgeschrittene</h3>
-            <p class="mb-4 text-[0.93rem] leading-[1.7] text-[#222]">
-              Technisch anspruchsvollere Strecken, längere Distanzen und
-              gezielte Fahrtechnik-Einheiten. Du kennst dein Fahrrad und willst
-              es weiterentwickeln.
-            </p>
-            <ul role="list" class="m-0 list-none p-0">
-              <li class="border-b border-[#ddd] py-1.5 text-[0.9rem] leading-[1.7] text-[#333] last:border-b-0 before:mr-1 before:font-bold before:text-[#555] before:content-['✓_']">Schmalwege und Wurzelpfade</li>
-              <li class="border-b border-[#ddd] py-1.5 text-[0.9rem] leading-[1.7] text-[#333] last:border-b-0 before:mr-1 before:font-bold before:text-[#555] before:content-['✓_']">Strecken 30–60 km</li>
-              <li class="border-b border-[#ddd] py-1.5 text-[0.9rem] leading-[1.7] text-[#333] last:border-b-0 before:mr-1 before:font-bold before:text-[#555] before:content-['✓_']">Technik-Workshops inklusive</li>
-              <li class="border-b border-[#ddd] py-1.5 text-[0.9rem] leading-[1.7] text-[#333] last:border-b-0 before:mr-1 before:font-bold before:text-[#555] before:content-['✓_']">Videoanalyse auf Anfrage</li>
-            </ul>
-          </article>
-          <article
-            role="listitem"
-            class="float-left w-[30.66%] rounded-lg border-t-[5px] border-[#cc2200] bg-[#f5f5f5] px-6 py-7 md:float-none md:w-[calc(33.33%-11px)] max-md:float-none max-md:w-full"
-            aria-labelledby="level-profis-heading"
-          >
-            <div class="mb-2.5 text-[1.1rem] tracking-[3px] text-[#cc2200]" aria-hidden="true">
-              ●●●●
-            </div>
-            <h3 id="level-profis-heading" class="mb-2.5 text-[1.15rem] text-[#111]">Profis &amp; Experten</h3>
-            <p class="mb-4 text-[0.93rem] leading-[1.7] text-[#222]">
-              Steile Abfahrten, Abfahrtsrampen, Sprünge und anspruchsvolle
-              Geländestrecken. Für erfahrene Fahrer, die ihre Grenzen kennen und
-              gezielt erweitern wollen.
-            </p>
-            <ul role="list" class="m-0 list-none p-0">
-              <li class="border-b border-[#ddd] py-1.5 text-[0.9rem] leading-[1.7] text-[#333] last:border-b-0 before:mr-1 before:font-bold before:text-[#555] before:content-['✓_']">Geländerennen, Abfahrt, Fahrpark</li>
-              <li class="border-b border-[#ddd] py-1.5 text-[0.9rem] leading-[1.7] text-[#333] last:border-b-0 before:mr-1 before:font-bold before:text-[#555] before:content-['✓_']">Strecken 50–100+ km</li>
-              <li class="border-b border-[#ddd] py-1.5 text-[0.9rem] leading-[1.7] text-[#333] last:border-b-0 before:mr-1 before:font-bold before:text-[#555] before:content-['✓_']">Schutzausrüstung Pflicht</li>
-              <li class="border-b border-[#ddd] py-1.5 text-[0.9rem] leading-[1.7] text-[#333] last:border-b-0 before:mr-1 before:font-bold before:text-[#555] before:content-['✓_']">Alpen- und Hochgebirgstouren</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-      <section
-        class="bg-[#f5f5f5] px-5 py-[60px] max-md:px-4 max-md:py-8"
-        aria-labelledby="schedule-heading"
-      >
-        <h2
-          id="schedule-heading"
-          class="mx-auto mb-9 max-w-[1100px] text-center text-[1.8rem] text-[#111] md:text-[1.5rem] max-md:mb-6 max-md:text-[1.3rem]"
-        >
-          Regelmäßige Treffen – Wochenplan
-        </h2>
-        <table
-          aria-labelledby="schedule-heading"
-          class="mx-auto w-full max-w-[1100px] overflow-hidden rounded-lg border-collapse text-[0.92rem] md:text-[0.88rem] max-md:block max-md:overflow-x-auto max-md:whitespace-nowrap max-md:text-[0.85rem] max-md:[-webkit-overflow-scrolling:touch]"
-        >
-          <caption class="sr-only">
-            Regelmäßige Vereinstreffen nach Wochentag, Uhrzeit, Art, Niveau und
-            Region
-          </caption>
-          <thead>
-            <tr>
-              <th scope="col" class="bg-[#333] px-4 py-3 text-left text-[0.85rem] font-bold uppercase tracking-[0.05em] text-white md:p-2.5 max-md:p-2.5">Tag</th>
-              <th scope="col" class="bg-[#333] px-4 py-3 text-left text-[0.85rem] font-bold uppercase tracking-[0.05em] text-white md:p-2.5 max-md:p-2.5">Uhrzeit</th>
-              <th scope="col" class="bg-[#333] px-4 py-3 text-left text-[0.85rem] font-bold uppercase tracking-[0.05em] text-white md:p-2.5 max-md:p-2.5">Art</th>
-              <th scope="col" class="bg-[#333] px-4 py-3 text-left text-[0.85rem] font-bold uppercase tracking-[0.05em] text-white md:p-2.5 max-md:p-2.5">Niveau</th>
-              <th scope="col" class="bg-[#333] px-4 py-3 text-left text-[0.85rem] font-bold uppercase tracking-[0.05em] text-white md:p-2.5 max-md:p-2.5">Region</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="group bg-white transition-colors duration-150 focus-within:outline focus-within:outline-[3px] focus-within:-outline-offset-[3px] focus-within:outline-[#b87200]">
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">Dienstag</td>
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">17:30 Uhr</td>
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">Feierabendausfahrt</td>
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5"><span class="inline-block rounded-xl bg-[#3a9e5f] px-2.5 py-[3px] text-[0.8rem] font-semibold text-white">Einsteiger</span></td>
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">Nordrhein-Westfalen</td>
-            </tr>
-            <tr class="group bg-white transition-colors duration-150 focus-within:outline focus-within:outline-[3px] focus-within:-outline-offset-[3px] focus-within:outline-[#b87200]">
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">Mittwoch</td>
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">18:00 Uhr</td>
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">Technik-Training</td>
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
-                <span class="inline-block rounded-xl bg-[#e07b00] px-2.5 py-[3px] text-[0.8rem] font-semibold text-white"
-                  >Fortgeschrittene</span
-                >
-              </td>
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">Bayern &amp; Baden-Württemberg</td>
-            </tr>
-            <tr class="group bg-white transition-colors duration-150 focus-within:outline focus-within:outline-[3px] focus-within:-outline-offset-[3px] focus-within:outline-[#b87200]">
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">Donnerstag</td>
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">17:00 Uhr</td>
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">Gruppenausfahrt</td>
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5"><span class="inline-block rounded-xl bg-[#3a9e5f] px-2.5 py-[3px] text-[0.8rem] font-semibold text-white">Einsteiger</span></td>
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">Hessen &amp; Rheinland-Pfalz</td>
-            </tr>
-            <tr class="group bg-white transition-colors duration-150 focus-within:outline focus-within:outline-[3px] focus-within:-outline-offset-[3px] focus-within:outline-[#b87200]">
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">Samstag</td>
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">09:00 Uhr</td>
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">Tagestour</td>
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
-                <span class="inline-block rounded-xl bg-[#e07b00] px-2.5 py-[3px] text-[0.8rem] font-semibold text-white"
-                  >Fortgeschrittene</span
-                >
-              </td>
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">Bundesweit rotierend</td>
-            </tr>
-            <tr class="group bg-white transition-colors duration-150 focus-within:outline focus-within:outline-[3px] focus-within:-outline-offset-[3px] focus-within:outline-[#b87200]">
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">Samstag</td>
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">10:00 Uhr</td>
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">Geländetraining</td>
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5"><span class="inline-block rounded-xl bg-[#cc2200] px-2.5 py-[3px] text-[0.8rem] font-semibold text-white">Profis</span></td>
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">Alpen &amp; Mittelgebirge</td>
-            </tr>
-            <tr class="group bg-white transition-colors duration-150 last:[&>td]:border-b-0 focus-within:outline focus-within:outline-[3px] focus-within:-outline-offset-[3px] focus-within:outline-[#b87200]">
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">Sonntag</td>
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">08:30 Uhr</td>
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">Vereinsausfahrt</td>
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">
-                <span class="inline-block rounded-xl bg-[#3a9e5f] px-2.5 py-[3px] text-[0.8rem] font-semibold text-white">Alle Niveaus</span>
-              </td>
-              <td class="border-b border-[#ddd] px-4 py-3 text-[#222] transition-colors duration-150 group-hover:bg-[#fdefc3] group-focus-within:bg-[#fdefc3] md:p-2.5 max-md:p-2.5">Bundesweit rotierend</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      <section
-        class="bg-[#1a1a1a] px-5 py-[60px] text-center max-md:px-4 max-md:py-9"
-        aria-labelledby="safety-heading"
-      >
-        <h2
-          id="safety-heading"
-          class="mb-2 text-[1.8rem] text-white md:text-[1.6rem] max-md:text-[1.4rem]"
-        >
-          &#9888;&#65039; Sicherheitshinweise
-        </h2>
-        <p class="mb-9 text-[0.97rem] text-[#aaa]">
-          Diese Regeln gelten für alle Vereinstrainings und -touren – ohne
-          Ausnahme.
-        </p>
-        <ul
-          role="list"
-          class="mx-auto flex max-w-[720px] list-none flex-col gap-3 p-0 text-left"
-        >
-          <li class="flex items-start gap-4 rounded-lg border-l-4 border-[#e8a000] bg-[#252525] p-5 max-md:flex-col max-md:gap-2.5">
-            <span class="mt-[3px] shrink-0 whitespace-nowrap rounded-xl bg-[#e8a000] px-2.5 py-1 text-[0.72rem] font-bold uppercase tracking-[0.06em] text-[#111]" aria-label="Pflicht">Pflicht</span>
-            <div class="flex-1">
-              <h3 class="mb-1.5 text-base font-bold text-white">Helm immer tragen</h3>
-              <p class="text-[0.9rem] leading-[1.6] text-[#bbb]">
-                Ein zertifizierter Helm (EN 1078 oder EN 1384) ist bei jedem
-                Vereinstraining und jeder geführten Tour Pflicht – ohne Helm
-                keine Teilnahme.
-              </p>
-            </div>
-          </li>
-          <li class="flex items-start gap-4 rounded-lg border-l-4 border-[#e8a000] bg-[#252525] p-5 max-md:flex-col max-md:gap-2.5">
-            <span class="mt-[3px] shrink-0 whitespace-nowrap rounded-xl bg-[#e8a000] px-2.5 py-1 text-[0.72rem] font-bold uppercase tracking-[0.06em] text-[#111]" aria-label="Pflicht">Pflicht</span>
-            <div class="flex-1">
-              <h3 class="mb-1.5 text-base font-bold text-white">Fahrtüchtiges Fahrrad</h3>
-              <p class="text-[0.9rem] leading-[1.6] text-[#bbb]">
-                Bremsen, Licht und Reifendruck müssen vor jeder Tour geprüft
-                sein. Defekte Räder dürfen nicht an geführten Touren teilnehmen.
-              </p>
-            </div>
-          </li>
-          <li class="flex items-start gap-4 rounded-lg border-l-4 border-[#e8a000] bg-[#252525] p-5 max-md:flex-col max-md:gap-2.5">
-            <span class="mt-[3px] shrink-0 whitespace-nowrap rounded-xl bg-[#e8a000] px-2.5 py-1 text-[0.72rem] font-bold uppercase tracking-[0.06em] text-[#111]" aria-label="Pflicht">Pflicht</span>
-            <div class="flex-1">
-              <h3 class="mb-1.5 text-base font-bold text-white">Notfallkontakt hinterlegen</h3>
-              <p class="text-[0.9rem] leading-[1.6] text-[#bbb]">
-                Alle Teilnehmer geben vor der Tour einen Notfallkontakt beim
-                Tourenführer an. Im Gebirge und bei Mehrtagestouren ist ein
-                vollgeladenes Mobiltelefon Pflicht.
-              </p>
-            </div>
-          </li>
-          <li class="flex items-start gap-4 rounded-lg border-l-4 border-[#4a90d9] bg-[#252525] p-5 max-md:flex-col max-md:gap-2.5">
-            <span
-              class="mt-[3px] shrink-0 whitespace-nowrap rounded-xl bg-[#4a90d9] px-2.5 py-1 text-[0.72rem] font-bold uppercase tracking-[0.06em] text-white"
-              aria-label="Empfohlen"
-              >Empfohlen</span
-            >
-            <div class="flex-1">
-              <h3 class="mb-1.5 text-base font-bold text-white">Schutzausrüstung ab S3</h3>
-              <p class="text-[0.9rem] leading-[1.6] text-[#bbb]">
-                Ab Schwierigkeitsgrad S3 werden Knie- und Schienbeinprotektoren
-                sowie Handschuhe dringend empfohlen. Ab S4 ist ein
-                Rückenprotektor Pflicht.
-              </p>
-            </div>
-          </li>
-          <li class="flex items-start gap-4 rounded-lg border-l-4 border-[#4a90d9] bg-[#252525] p-5 max-md:flex-col max-md:gap-2.5">
-            <span
-              class="mt-[3px] shrink-0 whitespace-nowrap rounded-xl bg-[#4a90d9] px-2.5 py-1 text-[0.72rem] font-bold uppercase tracking-[0.06em] text-white"
-              aria-label="Empfohlen"
-              >Empfohlen</span
-            >
-            <div class="flex-1">
-              <h3 class="mb-1.5 text-base font-bold text-white">Gruppenregeln einhalten</h3>
-              <p class="text-[0.9rem] leading-[1.6] text-[#bbb]">
-                Niemand fährt voraus ohne Rücksprache mit dem Tourenführer. Bei
-                Stürzen oder Pannen hält die gesamte Gruppe an – keiner bleibt
-                allein zurück.
-              </p>
-            </div>
-          </li>
-        </ul>
-      </section>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-      <section
-        class="bg-[#1a1a1a] px-5 py-[60px] text-center max-md:px-4 max-md:py-9"
-        aria-labelledby="equipment-heading"
-      >
-        <h2
-          id="equipment-heading"
-          class="mb-2.5 text-[1.8rem] text-white md:text-[1.6rem] max-md:text-[1.4rem]"
-        >
-          Ausrüstungs-Checkliste
-        </h2>
-        <p class="mb-8 text-[0.97rem] text-[#aaa]">
-          Was brauchst du für dein nächstes Training? Wähle dein Niveau und pack
-          die Tasche.
-        </p>
+    <section class="bg-[#1a1a1a] px-5 py-[60px] text-center max-md:px-4 max-md:py-9"
+      aria-labelledby="equipment-heading">
+      <h2 id="equipment-heading" class="mb-2.5 text-[1.8rem] text-white md:text-[1.6rem] max-md:text-[1.4rem]">
+        Ausrüstungs-Checkliste
+      </h2>
+      <p class="mb-8 text-[0.97rem] text-[#aaa]">
+        Was brauchst du für dein nächstes Training? Wähle dein Niveau und pack
+        die Tasche.
+      </p>
 
-        <input
-          type="radio"
-          name="equip-tab"
-          id="equip-einsteiger"
-          class="peer/e hidden"
-          checked
-        />
-        <input
-          type="radio"
-          name="equip-tab"
-          id="equip-fortgeschrittene"
-          class="peer/f hidden"
-        />
-        <input
-          type="radio"
-          name="equip-tab"
-          id="equip-profis"
-          class="peer/p hidden"
-        />
+      <input type="radio" name="equip-tab" id="equip-einsteiger" class="peer/e hidden" checked />
+      <input type="radio" name="equip-tab" id="equip-fortgeschrittene" class="peer/f hidden" />
+      <input type="radio" name="equip-tab" id="equip-profis" class="peer/p hidden" />
 
-        <div
-          role="radiogroup"
-          aria-label="Niveau auswählen"
-          class="mb-8 inline-flex flex-wrap justify-center gap-2.5 peer-checked/e:[&_label[for=equip-einsteiger]]:!border-[#e8a000] peer-checked/e:[&_label[for=equip-einsteiger]]:!bg-[#e8a000] peer-checked/e:[&_label[for=equip-einsteiger]]:!text-[#111] peer-checked/f:[&_label[for=equip-fortgeschrittene]]:!border-[#e8a000] peer-checked/f:[&_label[for=equip-fortgeschrittene]]:!bg-[#e8a000] peer-checked/f:[&_label[for=equip-fortgeschrittene]]:!text-[#111] peer-checked/p:[&_label[for=equip-profis]]:!border-[#e8a000] peer-checked/p:[&_label[for=equip-profis]]:!bg-[#e8a000] peer-checked/p:[&_label[for=equip-profis]]:!text-[#111]"
-        >
-          <label
-            for="equip-einsteiger"
-            id="tab-einsteiger"
-            class="cursor-pointer rounded-3xl border-2 border-[#555] px-[22px] py-2.5 text-[0.9rem] font-semibold text-[#ccc] transition-colors duration-200 hover:border-[#aaa] hover:text-white max-md:px-3.5 max-md:py-2 max-md:text-[0.82rem]"
-            >●●○○ Einsteiger</label
-          >
-          <label
-            for="equip-fortgeschrittene"
-            id="tab-fortgeschrittene"
-            class="cursor-pointer rounded-3xl border-2 border-[#555] px-[22px] py-2.5 text-[0.9rem] font-semibold text-[#ccc] transition-colors duration-200 hover:border-[#aaa] hover:text-white max-md:px-3.5 max-md:py-2 max-md:text-[0.82rem]"
-            >●●●○ Fortgeschrittene</label
-          >
-          <label
-            for="equip-profis"
-            id="tab-profis"
-            class="cursor-pointer rounded-3xl border-2 border-[#555] px-[22px] py-2.5 text-[0.9rem] font-semibold text-[#ccc] transition-colors duration-200 hover:border-[#aaa] hover:text-white max-md:px-3.5 max-md:py-2 max-md:text-[0.82rem]"
-            >●●●● Profis</label
-          >
+      <div role="radiogroup" aria-label="Niveau auswählen"
+        class="mb-8 inline-flex flex-wrap justify-center gap-2.5 peer-checked/e:[&_label[for=equip-einsteiger]]:!border-[#e8a000] peer-checked/e:[&_label[for=equip-einsteiger]]:!bg-[#e8a000] peer-checked/e:[&_label[for=equip-einsteiger]]:!text-[#111] peer-checked/f:[&_label[for=equip-fortgeschrittene]]:!border-[#e8a000] peer-checked/f:[&_label[for=equip-fortgeschrittene]]:!bg-[#e8a000] peer-checked/f:[&_label[for=equip-fortgeschrittene]]:!text-[#111] peer-checked/p:[&_label[for=equip-profis]]:!border-[#e8a000] peer-checked/p:[&_label[for=equip-profis]]:!bg-[#e8a000] peer-checked/p:[&_label[for=equip-profis]]:!text-[#111]">
+        <label for="equip-einsteiger" id="tab-einsteiger"
+          class="cursor-pointer rounded-3xl border-2 border-[#555] px-[22px] py-2.5 text-[0.9rem] font-semibold text-[#ccc] transition-colors duration-200 hover:border-[#aaa] hover:text-white max-md:px-3.5 max-md:py-2 max-md:text-[0.82rem]">●●○○
+          Einsteiger</label>
+        <label for="equip-fortgeschrittene" id="tab-fortgeschrittene"
+          class="cursor-pointer rounded-3xl border-2 border-[#555] px-[22px] py-2.5 text-[0.9rem] font-semibold text-[#ccc] transition-colors duration-200 hover:border-[#aaa] hover:text-white max-md:px-3.5 max-md:py-2 max-md:text-[0.82rem]">●●●○
+          Fortgeschrittene</label>
+        <label for="equip-profis" id="tab-profis"
+          class="cursor-pointer rounded-3xl border-2 border-[#555] px-[22px] py-2.5 text-[0.9rem] font-semibold text-[#ccc] transition-colors duration-200 hover:border-[#aaa] hover:text-white max-md:px-3.5 max-md:py-2 max-md:text-[0.82rem]">●●●●
+          Profis</label>
+      </div>
+
+      <div
+        class="mx-auto max-w-[560px] text-left md:max-w-[480px] peer-checked/e:[&_#panel-einsteiger]:!block peer-checked/f:[&_#panel-fortgeschrittene]:!block peer-checked/p:[&_#panel-profis]:!block">
+        <div id="panel-einsteiger" role="region" aria-labelledby="tab-einsteiger" class="hidden">
+          <ul role="list" class="m-0 list-none p-0">
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Fahrtüchtiges MTB (Hardtail oder Fully)
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span> Helm
+              (EN 1078 zertifiziert)
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Handschuhe
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Wasser (mind. 1,5 l)
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Kleines Werkzeug (Multitool, Reifenheber)
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Ersatzschlauch oder Flickzeug
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Funktionskleidung (kein Baumwoll-T-Shirt)
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Sonnenschutz &amp; Insektenschutz (saisonal)
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Mobiltelefon (für Notfälle)
+            </li>
+          </ul>
         </div>
-
-        <div
-          class="mx-auto max-w-[560px] text-left md:max-w-[480px] peer-checked/e:[&_#panel-einsteiger]:!block peer-checked/f:[&_#panel-fortgeschrittene]:!block peer-checked/p:[&_#panel-profis]:!block"
-        >
+        <div id="panel-fortgeschrittene" role="region" aria-labelledby="tab-fortgeschrittene" class="hidden">
+          <ul role="list" class="m-0 list-none p-0">
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Fully oder Hardtail mit Federgabel
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span> Helm
+              (EN 1078, Visier empfohlen)
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Knieprotektoren
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Handschuhe mit Polsterung
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Trinkrucksack (mind. 2 l)
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Erweitertes Werkzeug (Pumpe, Kettenöl)
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Tubeless-Reparaturset
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Energieriegel / Verpflegung
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Regenjacke (komprimierbar)
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Erste-Hilfe-Set (kompakt)
+            </li>
+          </ul>
+        </div>
+        <div id="panel-profis" role="region" aria-labelledby="tab-profis" class="hidden">
+          <ul role="list" class="m-0 list-none p-0">
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Fully mit Enduro- oder DH-Geometrie
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Fullface-Helm (für Abfahrt &amp; Gelände)
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Knie- &amp; Schienbeinprotektoren
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Rückenprotektor
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Ellenbogen- &amp; Schulterprotektoren
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Trinkrucksack (3+ l) mit Werkzeugfach
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Profiwerkzeug (Speichenschlüssel, Bremsbeläge)
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              CO₂-Kartuschen und Tubeless-Plug-Kit
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              GPS-Gerät / Navi-App offline geladen
+            </li>
+            <li
+              class="flex items-baseline gap-2.5 py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] max-md:text-[0.9rem]">
+              <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
+              Notfallkontakte &amp; Vereinsnotruf
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="bg-[#f9f9f9] px-5 py-[60px] text-center max-md:px-4 max-md:py-9"
+      aria-labelledby="trail-scale-heading">
+      <h2 id="trail-scale-heading" class="mb-2 text-[1.8rem] text-[#111] md:text-[1.6rem] max-md:text-[1.4rem]">
+        MTB-Schwierigkeitsskala S0 – S5
+      </h2>
+      <p class="mb-9 text-[0.97rem] text-[#666]">
+        Der internationale Standard für Trailschwierigkeiten – damit du weißt,
+        worauf du dich einlässt.
+      </p>
+      <ol role="list" class="mx-auto flex max-w-[720px] list-none flex-col gap-2.5 p-0 text-left">
+        <li
+          class="flex items-start gap-5 rounded-lg border border-[#e8e8e8] bg-white p-5 transition-shadow duration-200 hover:shadow-[0_3px_12px_rgba(0,0,0,0.08)] max-md:gap-3.5 max-md:p-4"
+          aria-labelledby="scale-s0">
           <div
-            id="panel-einsteiger"
-            role="region"
-            aria-labelledby="tab-einsteiger"
-            class="hidden"
-          >
-            <ul role="list" class="m-0 list-none p-0">
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Fahrtüchtiges MTB (Hardtail oder Fully)
-              </li>
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span> Helm
-                (EN 1078 zertifiziert)
-              </li>
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Handschuhe
-              </li>
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Wasser (mind. 1,5 l)
-              </li>
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Kleines Werkzeug (Multitool, Reifenheber)
-              </li>
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Ersatzschlauch oder Flickzeug
-              </li>
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Funktionskleidung (kein Baumwoll-T-Shirt)
-              </li>
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Sonnenschutz &amp; Insektenschutz (saisonal)
-              </li>
-              <li class="flex items-baseline gap-2.5 py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Mobiltelefon (für Notfälle)
-              </li>
-            </ul>
+            class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#27ae60] text-[0.9rem] font-bold text-white max-md:h-10 max-md:w-10 max-md:text-[0.8rem]"
+            aria-hidden="true">
+            S0
           </div>
-          <div
-            id="panel-fortgeschrittene"
-            role="region"
-            aria-labelledby="tab-fortgeschrittene"
-            class="hidden"
-          >
-            <ul role="list" class="m-0 list-none p-0">
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Fully oder Hardtail mit Federgabel
-              </li>
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span> Helm
-                (EN 1078, Visier empfohlen)
-              </li>
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Knieprotektoren
-              </li>
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Handschuhe mit Polsterung
-              </li>
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Trinkrucksack (mind. 2 l)
-              </li>
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Erweitertes Werkzeug (Pumpe, Kettenöl)
-              </li>
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Tubeless-Reparaturset
-              </li>
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Energieriegel / Verpflegung
-              </li>
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Regenjacke (komprimierbar)
-              </li>
-              <li class="flex items-baseline gap-2.5 py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Erste-Hilfe-Set (kompakt)
-              </li>
-            </ul>
-          </div>
-          <div
-            id="panel-profis"
-            role="region"
-            aria-labelledby="tab-profis"
-            class="hidden"
-          >
-            <ul role="list" class="m-0 list-none p-0">
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Fully mit Enduro- oder DH-Geometrie
-              </li>
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Fullface-Helm (für Abfahrt &amp; Gelände)
-              </li>
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Knie- &amp; Schienbeinprotektoren
-              </li>
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Rückenprotektor
-              </li>
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Ellenbogen- &amp; Schulterprotektoren
-              </li>
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Trinkrucksack (3+ l) mit Werkzeugfach
-              </li>
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Profiwerkzeug (Speichenschlüssel, Bremsbeläge)
-              </li>
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                CO₂-Kartuschen und Tubeless-Plug-Kit
-              </li>
-              <li class="flex items-baseline gap-2.5 border-b border-[#2e2e2e] py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] last:border-b-0 max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                GPS-Gerät / Navi-App offline geladen
-              </li>
-              <li class="flex items-baseline gap-2.5 py-2.5 text-[0.95rem] leading-[1.5] text-[#ddd] max-md:text-[0.9rem]">
-                <span class="shrink-0 text-base text-[#e8a000]" aria-hidden="true">✓</span>
-                Notfallkontakte &amp; Vereinsnotruf
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section
-        class="bg-[#f9f9f9] px-5 py-[60px] text-center max-md:px-4 max-md:py-9"
-        aria-labelledby="trail-scale-heading"
-      >
-        <h2
-          id="trail-scale-heading"
-          class="mb-2 text-[1.8rem] text-[#111] md:text-[1.6rem] max-md:text-[1.4rem]"
-        >
-          MTB-Schwierigkeitsskala S0 – S5
-        </h2>
-        <p class="mb-9 text-[0.97rem] text-[#666]">
-          Der internationale Standard für Trailschwierigkeiten – damit du weißt,
-          worauf du dich einlässt.
-        </p>
-        <ol
-          role="list"
-          class="mx-auto flex max-w-[720px] list-none flex-col gap-2.5 p-0 text-left"
-        >
-          <li class="flex items-start gap-5 rounded-lg border border-[#e8e8e8] bg-white p-5 transition-shadow duration-200 hover:shadow-[0_3px_12px_rgba(0,0,0,0.08)] max-md:gap-3.5 max-md:p-4" aria-labelledby="scale-s0">
-            <div
-              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#27ae60] text-[0.9rem] font-bold text-white max-md:h-10 max-md:w-10 max-md:text-[0.8rem]"
-              aria-hidden="true"
-            >
-              S0
-            </div>
-            <div class="flex-1">
-              <h3 id="scale-s0" class="mb-1.5 text-base font-bold text-[#111]">S0 – Einfach</h3>
-              <p class="mb-1 text-[0.9rem] leading-[1.6] text-[#555] last:mb-0">
-                Befestigte Wege, keine Hindernisse. Geeignet für absolute
-                Einsteiger und Kinder. Kein technisches Vorwissen nötig.
-              </p>
-              <p class="text-[0.85rem] text-[#888]">
-                <strong>Ausrüstung:</strong> Helm, fahrtüchtiges Rad
-              </p>
-            </div>
-          </li>
-          <li class="flex items-start gap-5 rounded-lg border border-[#e8e8e8] bg-white p-5 transition-shadow duration-200 hover:shadow-[0_3px_12px_rgba(0,0,0,0.08)] max-md:gap-3.5 max-md:p-4" aria-labelledby="scale-s1">
-            <div
-              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#2980b9] text-[0.9rem] font-bold text-white max-md:h-10 max-md:w-10 max-md:text-[0.8rem]"
-              aria-hidden="true"
-            >
-              S1
-            </div>
-            <div class="flex-1">
-              <h3 id="scale-s1" class="mb-1.5 text-base font-bold text-[#111]">S1 – Leicht</h3>
-              <p class="mb-1 text-[0.9rem] leading-[1.6] text-[#555] last:mb-0">
-                Naturbelassene Waldwege mit kleinen Wurzeln und Steinen. Leichte
-                Kurven, geringe Steigung. Grundkenntnisse im Bremsen und
-                Kurvenfahren ausreichend.
-              </p>
-              <p class="text-[0.85rem] text-[#888]">
-                <strong>Ausrüstung:</strong> Helm, Handschuhe
-              </p>
-            </div>
-          </li>
-          <li class="flex items-start gap-5 rounded-lg border border-[#e8e8e8] bg-white p-5 transition-shadow duration-200 hover:shadow-[0_3px_12px_rgba(0,0,0,0.08)] max-md:gap-3.5 max-md:p-4" aria-labelledby="scale-s2">
-            <div
-              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#f39c12] text-[0.9rem] font-bold text-white max-md:h-10 max-md:w-10 max-md:text-[0.8rem]"
-              aria-hidden="true"
-            >
-              S2
-            </div>
-            <div class="flex-1">
-              <h3 id="scale-s2" class="mb-1.5 text-base font-bold text-[#111]">S2 – Mittel</h3>
-              <p class="mb-1 text-[0.9rem] leading-[1.6] text-[#555] last:mb-0">
-                Schmalwege mit größeren Wurzeln, Steinen und engen Kurven.
-                Aktives Fahren erforderlich, Körpereinsatz und Gleichgewicht
-                notwendig.
-              </p>
-              <p class="text-[0.85rem] text-[#888]">
-                <strong>Ausrüstung:</strong> Helm, Knieprotektoren, Handschuhe
-              </p>
-            </div>
-          </li>
-          <li class="flex items-start gap-5 rounded-lg border border-[#e8e8e8] bg-white p-5 transition-shadow duration-200 hover:shadow-[0_3px_12px_rgba(0,0,0,0.08)] max-md:gap-3.5 max-md:p-4" aria-labelledby="scale-s3">
-            <div
-              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#e67e22] text-[0.9rem] font-bold text-white max-md:h-10 max-md:w-10 max-md:text-[0.8rem]"
-              aria-hidden="true"
-            >
-              S3
-            </div>
-            <div class="flex-1">
-              <h3 id="scale-s3" class="mb-1.5 text-base font-bold text-[#111]">S3 – Schwer</h3>
-              <p class="mb-1 text-[0.9rem] leading-[1.6] text-[#555] last:mb-0">
-                Steile Abfahrten, große Hindernisse, enge und verwinkelte
-                Passagen. Sehr gute Fahrtechnik und Körperbeherrschung
-                vorausgesetzt.
-              </p>
-              <p class="text-[0.85rem] text-[#888]">
-                <strong>Ausrüstung:</strong> Fullface-Helm, Knie- &amp;
-                Schienbeinprotektoren, Rückenprotektor
-              </p>
-            </div>
-          </li>
-          <li class="flex items-start gap-5 rounded-lg border border-[#e8e8e8] bg-white p-5 transition-shadow duration-200 hover:shadow-[0_3px_12px_rgba(0,0,0,0.08)] max-md:gap-3.5 max-md:p-4" aria-labelledby="scale-s4">
-            <div
-              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#c0392b] text-[0.9rem] font-bold text-white max-md:h-10 max-md:w-10 max-md:text-[0.8rem]"
-              aria-hidden="true"
-            >
-              S4
-            </div>
-            <div class="flex-1">
-              <h3 id="scale-s4" class="mb-1.5 text-base font-bold text-[#111]">S4 – Sehr schwer</h3>
-              <p class="mb-1 text-[0.9rem] leading-[1.6] text-[#555] last:mb-0">
-                Extreme Steilpassagen, große Sprünge, rutschiger Untergrund. Nur
-                für sehr erfahrene Fahrer. Fahrtechnische Fehler können zu
-                schweren Stürzen führen.
-              </p>
-              <p class="text-[0.85rem] text-[#888]">
-                <strong>Ausrüstung:</strong> Vollständige Schutzausrüstung
-                Pflicht
-              </p>
-            </div>
-          </li>
-          <li class="flex items-start gap-5 rounded-lg border border-[#e8e8e8] bg-white p-5 transition-shadow duration-200 hover:shadow-[0_3px_12px_rgba(0,0,0,0.08)] max-md:gap-3.5 max-md:p-4" aria-labelledby="scale-s5">
-            <div
-              class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#6c0a0a] text-[0.9rem] font-bold text-white max-md:h-10 max-md:w-10 max-md:text-[0.8rem]"
-              aria-hidden="true"
-            >
-              S5
-            </div>
-            <div class="flex-1">
-              <h3 id="scale-s5" class="mb-1.5 text-base font-bold text-[#111]">S5 – Extrem</h3>
-              <p class="mb-1 text-[0.9rem] leading-[1.6] text-[#555] last:mb-0">
-                Technisch maximal anspruchsvoll. Sturzgefahr mit
-                lebensgefährlichen Folgen. Ausschließlich für Experten mit
-                langjähriger Erfahrung und nur mit professioneller Begleitung.
-              </p>
-              <p class="text-[0.85rem] text-[#888]">
-                <strong>Ausrüstung:</strong> Vollständige
-                Profi-Schutzausrüstung, Begleitperson Pflicht
-              </p>
-            </div>
-          </li>
-        </ol>
-      </section>
-
-      <section
-        class="bg-[#1a1a1a] px-5 py-[60px] max-md:px-4 max-md:py-9"
-        aria-labelledby="download-heading"
-      >
-        <div
-          class="mx-auto flex max-w-[720px] flex-wrap items-start gap-7 rounded-xl border-2 border-[#e8a000] bg-gradient-to-br from-[#252525] to-[#2a2000] p-9 max-md:flex-col max-md:gap-5 max-md:p-5"
-        >
-          <div class="shrink-0 text-5xl leading-none" aria-hidden="true">&#128196;</div>
-          <div class="min-w-[200px] flex-1">
-            <h2 id="download-heading" class="mb-2.5 text-[1.4rem] text-white">
-              Trainingsplan herunterladen
-            </h2>
-            <p class="mb-4 text-[0.93rem] leading-[1.6] text-[#ccc]">
-              Unser strukturierter 12-Wochen-Trainingsplan für alle Niveaus –
-              mit Wochenprogramm, Technikübungen und Ausdauerzielen. Als PDF zum
-              Ausdrucken oder mobil nutzen.
+          <div class="flex-1">
+            <h3 id="scale-s0" class="mb-1.5 text-base font-bold text-[#111]">S0 – Einfach</h3>
+            <p class="mb-1 text-[0.9rem] leading-[1.6] text-[#555] last:mb-0">
+              Befestigte Wege, keine Hindernisse. Geeignet für absolute
+              Einsteiger und Kinder. Kein technisches Vorwissen nötig.
             </p>
-            <ul role="list" class="m-0 list-none p-0">
-              <li class="flex items-baseline gap-2 py-1 text-[0.88rem] text-[#aaa] before:shrink-0 before:text-[#e8a000] before:content-['–']">12 Wochen, 3 Einheiten pro Woche</li>
-              <li class="flex items-baseline gap-2 py-1 text-[0.88rem] text-[#aaa] before:shrink-0 before:text-[#e8a000] before:content-['–']">
-                Getrennte Pläne für Einsteiger, Fortgeschrittene und Profis
-              </li>
-              <li class="flex items-baseline gap-2 py-1 text-[0.88rem] text-[#aaa] before:shrink-0 before:text-[#e8a000] before:content-['–']">Technik-Checklisten und Progressionstabellen</li>
-              <li class="flex items-baseline gap-2 py-1 text-[0.88rem] text-[#aaa] before:shrink-0 before:text-[#e8a000] before:content-['–']">Ausfüllbares PDF-Format</li>
-            </ul>
+            <p class="text-[0.85rem] text-[#888]">
+              <strong>Ausrüstung:</strong> Helm, fahrtüchtiges Rad
+            </p>
           </div>
-          <a
-            href="assets/trainingsplan-iu-mtb-community.pdf"
-            class="inline-block shrink-0 self-center whitespace-nowrap rounded-md bg-[#e8a000] px-7 py-3.5 text-[0.95rem] font-bold text-[#111] no-underline transition-colors duration-200 hover:bg-[#c78800] hover:text-white max-md:w-full max-md:text-center"
-            download
-            aria-label="Trainingsplan als PDF herunterladen (fiktives Dokument)"
-            >PDF herunterladen ↓</a
-          >
+        </li>
+        <li
+          class="flex items-start gap-5 rounded-lg border border-[#e8e8e8] bg-white p-5 transition-shadow duration-200 hover:shadow-[0_3px_12px_rgba(0,0,0,0.08)] max-md:gap-3.5 max-md:p-4"
+          aria-labelledby="scale-s1">
+          <div
+            class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#2980b9] text-[0.9rem] font-bold text-white max-md:h-10 max-md:w-10 max-md:text-[0.8rem]"
+            aria-hidden="true">
+            S1
+          </div>
+          <div class="flex-1">
+            <h3 id="scale-s1" class="mb-1.5 text-base font-bold text-[#111]">S1 – Leicht</h3>
+            <p class="mb-1 text-[0.9rem] leading-[1.6] text-[#555] last:mb-0">
+              Naturbelassene Waldwege mit kleinen Wurzeln und Steinen. Leichte
+              Kurven, geringe Steigung. Grundkenntnisse im Bremsen und
+              Kurvenfahren ausreichend.
+            </p>
+            <p class="text-[0.85rem] text-[#888]">
+              <strong>Ausrüstung:</strong> Helm, Handschuhe
+            </p>
+          </div>
+        </li>
+        <li
+          class="flex items-start gap-5 rounded-lg border border-[#e8e8e8] bg-white p-5 transition-shadow duration-200 hover:shadow-[0_3px_12px_rgba(0,0,0,0.08)] max-md:gap-3.5 max-md:p-4"
+          aria-labelledby="scale-s2">
+          <div
+            class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#f39c12] text-[0.9rem] font-bold text-white max-md:h-10 max-md:w-10 max-md:text-[0.8rem]"
+            aria-hidden="true">
+            S2
+          </div>
+          <div class="flex-1">
+            <h3 id="scale-s2" class="mb-1.5 text-base font-bold text-[#111]">S2 – Mittel</h3>
+            <p class="mb-1 text-[0.9rem] leading-[1.6] text-[#555] last:mb-0">
+              Schmalwege mit größeren Wurzeln, Steinen und engen Kurven.
+              Aktives Fahren erforderlich, Körpereinsatz und Gleichgewicht
+              notwendig.
+            </p>
+            <p class="text-[0.85rem] text-[#888]">
+              <strong>Ausrüstung:</strong> Helm, Knieprotektoren, Handschuhe
+            </p>
+          </div>
+        </li>
+        <li
+          class="flex items-start gap-5 rounded-lg border border-[#e8e8e8] bg-white p-5 transition-shadow duration-200 hover:shadow-[0_3px_12px_rgba(0,0,0,0.08)] max-md:gap-3.5 max-md:p-4"
+          aria-labelledby="scale-s3">
+          <div
+            class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#e67e22] text-[0.9rem] font-bold text-white max-md:h-10 max-md:w-10 max-md:text-[0.8rem]"
+            aria-hidden="true">
+            S3
+          </div>
+          <div class="flex-1">
+            <h3 id="scale-s3" class="mb-1.5 text-base font-bold text-[#111]">S3 – Schwer</h3>
+            <p class="mb-1 text-[0.9rem] leading-[1.6] text-[#555] last:mb-0">
+              Steile Abfahrten, große Hindernisse, enge und verwinkelte
+              Passagen. Sehr gute Fahrtechnik und Körperbeherrschung
+              vorausgesetzt.
+            </p>
+            <p class="text-[0.85rem] text-[#888]">
+              <strong>Ausrüstung:</strong> Fullface-Helm, Knie- &amp;
+              Schienbeinprotektoren, Rückenprotektor
+            </p>
+          </div>
+        </li>
+        <li
+          class="flex items-start gap-5 rounded-lg border border-[#e8e8e8] bg-white p-5 transition-shadow duration-200 hover:shadow-[0_3px_12px_rgba(0,0,0,0.08)] max-md:gap-3.5 max-md:p-4"
+          aria-labelledby="scale-s4">
+          <div
+            class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#c0392b] text-[0.9rem] font-bold text-white max-md:h-10 max-md:w-10 max-md:text-[0.8rem]"
+            aria-hidden="true">
+            S4
+          </div>
+          <div class="flex-1">
+            <h3 id="scale-s4" class="mb-1.5 text-base font-bold text-[#111]">S4 – Sehr schwer</h3>
+            <p class="mb-1 text-[0.9rem] leading-[1.6] text-[#555] last:mb-0">
+              Extreme Steilpassagen, große Sprünge, rutschiger Untergrund. Nur
+              für sehr erfahrene Fahrer. Fahrtechnische Fehler können zu
+              schweren Stürzen führen.
+            </p>
+            <p class="text-[0.85rem] text-[#888]">
+              <strong>Ausrüstung:</strong> Vollständige Schutzausrüstung
+              Pflicht
+            </p>
+          </div>
+        </li>
+        <li
+          class="flex items-start gap-5 rounded-lg border border-[#e8e8e8] bg-white p-5 transition-shadow duration-200 hover:shadow-[0_3px_12px_rgba(0,0,0,0.08)] max-md:gap-3.5 max-md:p-4"
+          aria-labelledby="scale-s5">
+          <div
+            class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#6c0a0a] text-[0.9rem] font-bold text-white max-md:h-10 max-md:w-10 max-md:text-[0.8rem]"
+            aria-hidden="true">
+            S5
+          </div>
+          <div class="flex-1">
+            <h3 id="scale-s5" class="mb-1.5 text-base font-bold text-[#111]">S5 – Extrem</h3>
+            <p class="mb-1 text-[0.9rem] leading-[1.6] text-[#555] last:mb-0">
+              Technisch maximal anspruchsvoll. Sturzgefahr mit
+              lebensgefährlichen Folgen. Ausschließlich für Experten mit
+              langjähriger Erfahrung und nur mit professioneller Begleitung.
+            </p>
+            <p class="text-[0.85rem] text-[#888]">
+              <strong>Ausrüstung:</strong> Vollständige
+              Profi-Schutzausrüstung, Begleitperson Pflicht
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="bg-[#1a1a1a] px-5 py-[60px] max-md:px-4 max-md:py-9" aria-labelledby="download-heading">
+      <div
+        class="mx-auto flex max-w-[720px] flex-wrap items-start gap-7 rounded-xl border-2 border-[#e8a000] bg-gradient-to-br from-[#252525] to-[#2a2000] p-9 max-md:flex-col max-md:gap-5 max-md:p-5">
+        <div class="shrink-0 text-5xl leading-none" aria-hidden="true">&#128196;</div>
+        <div class="min-w-[200px] flex-1">
+          <h2 id="download-heading" class="mb-2.5 text-[1.4rem] text-white">
+            Trainingsplan herunterladen
+          </h2>
+          <p class="mb-4 text-[0.93rem] leading-[1.6] text-[#ccc]">
+            Unser strukturierter 12-Wochen-Trainingsplan für alle Niveaus –
+            mit Wochenprogramm, Technikübungen und Ausdauerzielen. Als PDF zum
+            Ausdrucken oder mobil nutzen.
+          </p>
+          <ul role="list" class="m-0 list-none p-0">
+            <li
+              class="flex items-baseline gap-2 py-1 text-[0.88rem] text-[#aaa] before:shrink-0 before:text-[#e8a000] before:content-['–']">
+              12 Wochen, 3 Einheiten pro Woche</li>
+            <li
+              class="flex items-baseline gap-2 py-1 text-[0.88rem] text-[#aaa] before:shrink-0 before:text-[#e8a000] before:content-['–']">
+              Getrennte Pläne für Einsteiger, Fortgeschrittene und Profis
+            </li>
+            <li
+              class="flex items-baseline gap-2 py-1 text-[0.88rem] text-[#aaa] before:shrink-0 before:text-[#e8a000] before:content-['–']">
+              Technik-Checklisten und Progressionstabellen</li>
+            <li
+              class="flex items-baseline gap-2 py-1 text-[0.88rem] text-[#aaa] before:shrink-0 before:text-[#e8a000] before:content-['–']">
+              Ausfüllbares PDF-Format</li>
+          </ul>
         </div>
-      </section>
-    </main>
-    <footer
-      role="contentinfo"
-      aria-label="Seitenfuß"
-      class="mt-10 overflow-hidden bg-[#333] px-5 pb-[15px] pt-[30px] text-white"
-    ></footer>
-  </body>
+        <a href="assets/trainingsplan-iu-mtb-community.pdf"
+          class="inline-block shrink-0 self-center whitespace-nowrap rounded-md bg-[#e8a000] px-7 py-3.5 text-[0.95rem] font-bold text-[#111] no-underline transition-colors duration-200 hover:bg-[#c78800] hover:text-white max-md:w-full max-md:text-center"
+          download aria-label="Trainingsplan als PDF herunterladen (fiktives Dokument)">PDF herunterladen ↓</a>
+      </div>
+    </section>
+  </main>
+  <footer role="contentinfo" aria-label="Seitenfuß"
+    class="mt-10 overflow-hidden bg-[#333] px-5 pb-[15px] pt-[30px] text-white"></footer>
+</body>
+
 </html>
