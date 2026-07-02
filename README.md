@@ -137,3 +137,16 @@ Die offizielle Empfehlung ist ein Build-Prozess, der das CSS *vorab* generiert:
 | Konfiguration | In jeder der 7 HTML-Dateien dupliziert | Eine zentrale ```tailwind.config.js``` |
 | Voraussetzung | Keine – läuft direkt im Browser | Node.js/npm lokal nötig |
 | Tailwinds eigene Empfehlung | Ausdrücklich **nicht für Produktivbetrieb** vorgesehen | Der empfohlene Standardweg |
+
+## Browser-Eignung für dieses Projekt
+
+**Kurzfassung:** Alle aktuellen Browser der letzten ca. 4 Jahre funktionieren problemlos – auf Desktop, Tablet und Mobil gleichermaßen. Es gibt keine Browser-spezifischen Einschränkungen zwischen den drei Ansichten, da alles über responsive CSS-Klassen (Tailwind-Breakpoints) gesteuert wird, nicht über unterschiedlichen Code.
+
+### Geeignet (empfohlen)
+
+| Browser | Ab Version | Grund |
+|---|---|---|
+| **Chrome / Edge** (Chromium) | ~90+ | Volle Unterstützung aller genutzten CSS-Features |
+| **Firefox** | ~90+ | Volle Unterstützung |
+| **Safari** (macOS/iOS) | ~15+ | Volle Unterstützung, inkl. iOS Safari für Mobile |
+| **Samsung Internet** | aktuell | Basiert auf Chromium, unproblematisch |
