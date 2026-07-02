@@ -150,3 +150,13 @@ Die offizielle Empfehlung ist ein Build-Prozess, der das CSS *vorab* generiert:
 | **Firefox** | ~90+ | Volle Unterstützung |
 | **Safari** (macOS/iOS) | ~15+ | Volle Unterstützung, inkl. iOS Safari für Mobile |
 | **Samsung Internet** | aktuell | Basiert auf Chromium, unproblematisch |
+
+## Mehrsprachigkeit / Internationalisierung (nicht umgesetzt)
+
+Das Projekt ist aktuell einsprachig (Deutsch, ```lang="de"``` fest in jeder HTML-Datei). Für eine mehrsprachige Erweiterung kämen bei einem reinen HTML/Tailwind-Projekt ohne Build-Prozess und ohne Backend grundsätzlich folgende Ansätze infrage:
+
+* **Parallele HTML-Dateien pro Sprache** (am ehesten zur aktuellen Architektur passend): für jede Seite eine zweite Version in einer eigenen Sprachordnerstruktur (z. B. ```/de/``` und ```/en/```), jeweils mit korrektem ```lang```-Attribut und ```hreflang```-Verweisen für SEO. Nachteil: Texteänderungen müssen manuell in jeder Sprachversion nachgezogen werden, der Pflegeaufwand wächst mit jeder Seite und Sprache.
+* **Ausgelagerte Übersetzungstexte** (z. B. ```de.json```/```en.json```) mit ```data-i18n```-Attributen im HTML und einem Skript, das die Inhalte beim Laden je nach gewählter Sprache einsetzt.
+* **Umstieg auf einen Static-Site-Generator** (z. B. Eleventy, Astro) mit nativer Mehrsprachigkeits-Unterstützung über gemeinsame Layouts und Sprachordner.
+
+**Bewusst nicht umgesetzt:** Sowohl die ausgelagerten Übersetzungstexte als auch ein Static-Site-Generator würden zusätzliche Technologien (JavaScript-Logik über die reine Header/Footer-Einbindung hinaus bzw. Node.js/npm und einen Build-Schritt) ins Projekt bringen. Das widerspricht der bewussten Architekturentscheidung dieses Projekts, ohne Build-Prozess und mit minimalem JavaScript auszukommen (siehe Abschnitt „Tailwind CSS: Play-CDN vs. Produktivumgebung"). Mehrsprachigkeit ist daher als mögliche künftige Erweiterung dokumentiert, aber nicht Teil der aktuellen Umsetzung.
