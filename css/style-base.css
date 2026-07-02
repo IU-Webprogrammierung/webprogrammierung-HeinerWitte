@@ -224,6 +224,9 @@ footer {
    HAMBURGER-MENÜ
    ═══════════════════════════════════════════ */
 
+/* Auf Desktop/Tablet gibt es kein Hamburger-Menü: Toggle komplett entfernen,
+   damit kein unsichtbarer Tab-Stopp entsteht. Im Mobile-Block wird die
+   Checkbox stattdessen fokussierbar versteckt (siehe unten). */
 .nav-toggle {
     display: none;
 }
@@ -317,9 +320,29 @@ footer {
         padding: 10px 16px;
     }
 
+    /* Steuer-Checkbox visuell verstecken, aber fokussierbar lassen
+       (Tastatur-Bedienung + Screenreader). Kein display:none. */
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        white-space: nowrap;
+    }
+
     /* Hamburger-Icon einblenden, header-bar ausblenden */
     .nav-toggle-label {
         display: flex;
+    }
+
+    /* Sichtbarer Fokusring am Hamburger-Icon bei Tastaturfokus der Checkbox */
+    .nav-toggle:focus-visible ~ .header-brand .nav-toggle-label {
+        outline: 3px solid #005fcc;
+        outline-offset: 2px;
+        border-radius: 3px;
     }
 
     .header-bar {
