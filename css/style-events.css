@@ -79,10 +79,18 @@
 }
 
 .events-intro {
-    font-size: 0.97rem;
-    line-height: 1.8;
-    color: #222;
     margin-bottom: 30px;
+
+    & p {
+        font-size: 0.97rem;
+        line-height: 1.8;
+        color: #222;
+        margin: 0 0 1.2em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 
     & a {
         color: #005fcc;
@@ -595,7 +603,7 @@
         padding: 20px 16px 28px;
     }
 
-    .events-intro {
+    .events-intro p {
         font-size: 0.9rem;
     }
 
