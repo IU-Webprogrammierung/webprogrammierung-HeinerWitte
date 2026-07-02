@@ -140,7 +140,7 @@ Die offizielle Empfehlung ist ein Build-Prozess, der das CSS *vorab* generiert:
 
 ## Browser-Eignung für dieses Projekt
 
-**Kurzfassung:** Alle aktuellen Browser der letzten ca. 4 Jahre funktionieren problemlos – auf Desktop, Tablet und Mobil gleichermaßen. Es gibt keine Browser-spezifischen Einschränkungen zwischen den drei Ansichten, da alles über responsive CSS-Klassen (Tailwind-Breakpoints) gesteuert wird, nicht über unterschiedlichen Code.
+Alle aktuellen Browser der letzten ca. 4 Jahre funktionieren problemlos – auf Desktop, Tablet und Mobil gleichermaßen. Es gibt keine Browser-spezifischen Einschränkungen zwischen den drei Ansichten, da alles über responsive CSS-Klassen (Tailwind-Breakpoints) gesteuert wird, nicht über unterschiedlichen Code.
 
 ### Geeignet (empfohlen)
 
