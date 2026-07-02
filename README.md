@@ -160,3 +160,15 @@ Das Projekt ist aktuell einsprachig (Deutsch, ```lang="de"``` fest in jeder HTML
 * **Umstieg auf einen Static-Site-Generator** (z. B. Eleventy, Astro) mit nativer Mehrsprachigkeits-Unterstützung über gemeinsame Layouts und Sprachordner.
 
 **Bewusst nicht umgesetzt:** Sowohl die ausgelagerten Übersetzungstexte als auch ein Static-Site-Generator würden zusätzliche Technologien (JavaScript-Logik über die reine Header/Footer-Einbindung hinaus bzw. Node.js/npm und einen Build-Schritt) ins Projekt bringen. Das widerspricht der bewussten Architekturentscheidung dieses Projekts, ohne Build-Prozess und mit minimalem JavaScript auszukommen (siehe Abschnitt „Tailwind CSS: Play-CDN vs. Produktivumgebung"). Mehrsprachigkeit ist daher als mögliche künftige Erweiterung dokumentiert, aber nicht Teil der aktuellen Umsetzung.
+
+## Darkmode
+
+Umgesetzt über Tailwinds eingebaute ```dark:```-Variante, gekoppelt an die Systemeinstellung des Besuchers (```prefers-color-scheme: dark```, Tailwinds Standardverhalten ohne zusätzliche Konfiguration):
+
+* Auf allen 7 Seiten wurde ```<body>``` um ```bg-white dark:bg-[#181818]``` ergänzt, damit die Grundfläche im Darkmode dunkel statt weiß ist.
+* Alle hellen Sektions-/Karten-Hintergründe (```bg-white```, ```bg-[#f5f5f5]```, ```bg-[#f9f9f9]```, ```bg-[#f2f2f2]```) sowie die zugehörigen dunklen Textfarben (```text-[#111]```, ```text-[#222]```, ```text-[#444]```, ```text-[#555]```, ```text-[#666]```) und hellen Rahmenfarben (```border-[#ddd]```, ```border-[#e0e0e0]```, ```border-[#e8e8e8]```) wurden jeweils um eine passende ```dark:```-Variante ergänzt (z. B. ```text-[#222] dark:text-[#ccc]```).
+* Bereits dunkle Sektionen (z. B. ```bg-[#333]```, ```bg-[#1a1a1a]```, ```bg-[#111]``` bei Header, Footer, Hero-Bannern) wurden bewusst **nicht** verändert, da sie im Darkmode bereits stimmig aussehen.
+* Kein JavaScript nötig – die Umschaltung erfolgt rein über CSS anhand der Betriebssystem-Einstellung des Nutzers.
+
+**Warum keine manuelle Umschaltmöglichkeit (Toggle-Button) umgesetzt wurde:** Ein Umschalter hätte entweder ein winziges JavaScript-Snippet zum Setzen einer ```dark```-Klasse auf ```<html>``` erfordert (Bruch mit der bisherigen „kein JS außer Header/Footer-Einbindung"-Linie), oder wäre als CSS-only-Variante (versteckte Checkbox + ```:checked```-Sibling-Selektor auf ```<body>```, analog zum Hamburger-Menü) machbar gewesen – dabei hätte sich die Auswahl aber bei jedem Seitenwechsel zurückgesetzt, da es bei 7 statischen Einzelseiten ohne ```localStorage``` (also ohne JavaScript) keine Möglichkeit gibt, die gewählte Einstellung über einen Seitenwechsel hinweg zu speichern. Die systembasierte Lösung liefert dagegen auf allen Seiten konsistent das vom Nutzer bereits im Betriebssystem gewählte Verhalten, ganz ohne diese Einschränkung.
+
