@@ -5,11 +5,11 @@ Entsprechend der Aufgabenstellung zur Finalisierungsphase ist hier stichpunktart
 ## Technologien
 
 * HTML (Hypertext Markup Language): Strukturiert den Inhalt (Texte, Bilder, Links)
-* CSS: Definiert das Design und Layout (Farben, Schriftarten, Abstände)    
+* CSS: Definiert das Design und Layout (Farben, Schriftarten, Abstände)
 * Javascript: script.js steuert seitenübergreifend den header und footer
 * Über ```.htaccess``` wird auf einem Apache-Webserver (Annahme, um die 404-Seite einzubinden zu können) auf die error.html-Seite umgeleitet, sobald ein Besucher eine nicht vorhandene Seite aufruft.
 
-**Änderung nach der Umstellung auf Tailwind CSS:** 
+**Änderung nach der Umstellung auf Tailwind CSS:**
 * Statt eigenem CSS wird jetzt ausschließlich Tailwind CSS (Play-CDN, ```<script src="https://cdn.tailwindcss.com">```) über Utility-Klassen direkt in den ```class```-Attributen der HTML-Dateien verwendet – es gibt keine eigenen CSS-Dateien mehr.
 
 ## Responsive Breakpoints
@@ -20,7 +20,7 @@ Einheitliches 2-Breakpoint-System, das in jeder HTML-Datei identisch über ```ta
 * **Mobile:** ```@media (max-width: 768px)```
 * Desktop ist das Default-Layout ohne eigene Media Query
 
-**Änderung nach der Umstellung auf Tailwind CSS:** 
+**Änderung nach der Umstellung auf Tailwind CSS:**
 * Die Breakpoints standen ursprünglich zentral in ```style-base.css```; da es keine eigenen CSS-Dateien mehr gibt, ist die gleiche Konfiguration jetzt in einem ```<script>```-Block im ```<head>``` jeder einzelnen HTML-Datei hinterlegt (```md``` = Tablet, ```max-md``` = Mobile als eigene, projektspezifische Screen-Namen statt Tailwinds Standardwerten).
 
 ## Projektstruktur
@@ -29,7 +29,7 @@ Einheitliches 2-Breakpoint-System, das in jeder HTML-Datei identisch über ```ta
 * Saubere Trennung in ```js/```, ```assets/```, ```components/```
 * ```components/header.html``` und ```components/footer.html``` werden von ```script.js``` per ```fetch()``` in jede Seite eingebunden, um Header/Footer nicht auf jeder Seite duplizieren zu müssen
 
-**Änderung nach der Umstellung auf Tailwind CSS:** 
+**Änderung nach der Umstellung auf Tailwind CSS:**
 * Der Ordner ```css/``` mit der gemeinsamen Basis (```style-base.css```) und 7 seitenspezifischen Dateien wurde komplett entfernt. Das Design entsteht jetzt ausschließlich über Tailwind-Utility-Klassen direkt in den HTML-Dateien, sodass keine separaten CSS-Dateien mehr gepflegt werden müssen.
 
 ## CSS-only Interaktionen
@@ -41,7 +41,7 @@ Einheitliches 2-Breakpoint-System, das in jeder HTML-Datei identisch über ```ta
 * **detail.html:** Tab-Umschaltung der Ausrüstungs-Checkliste per Radio-Button-Logik
 * **compliance.html:** Datenschutz-Akkordeon via ```<details>/<summary>```, sticky Inhaltsverzeichnis
 
-**Änderung nach der Umstellung auf Tailwind CSS:** 
+**Änderung nach der Umstellung auf Tailwind CSS:**
 * Die Monatsblöcke in events.html wurden von ```<details>/<summary>``` auf ein Checkbox-Muster (versteckte ```<input type="checkbox">``` + ```<label>``` + ```peer-checked:```) umgestellt, da sich ```<details>``` per CSS nicht zuverlässig automatisch öffnen ließ, wenn per Anchor-Link zu einem Monat gesprungen wird.
 
 ## CSS-Variablen & Layout
@@ -54,8 +54,8 @@ Einheitliches 2-Breakpoint-System, das in jeder HTML-Datei identisch über ```ta
 * Transitions auf Hover/Focus (Farbe, Transform, Border)
 * ```position: sticky``` für Header, Monatsnav, Compliance-TOC
 
-**Änderung nach der Umstellung auf Tailwind CSS:** 
-* Die eigenen CSS-Dateien (```style-base.css``` + 7 seitenspezifische Dateien in ```css/```) wurden vollständig durch Tailwind-Utility-Klassen (Play-CDN) ersetzt; der Ordner ```css/``` existiert nicht mehr. Damit entfielen auch die zuvor in ```:root``` definierten CSS-Variablen ```--header-height```, ```--header-height-tablet``` und ```--header-height-mobile``` sowie das native CSS Nesting (```&```-Selektor). 
+**Änderung nach der Umstellung auf Tailwind CSS:**
+* Die eigenen CSS-Dateien (```style-base.css``` + 7 seitenspezifische Dateien in ```css/```) wurden vollständig durch Tailwind-Utility-Klassen (Play-CDN) ersetzt; der Ordner ```css/``` existiert nicht mehr. Damit entfielen auch die zuvor in ```:root``` definierten CSS-Variablen ```--header-height```, ```--header-height-tablet``` und ```--header-height-mobile``` sowie das native CSS Nesting (```&```-Selektor).
 * Die sticky-Offsets für Header, Monatsnav und Compliance-TOC sind jetzt als feste Pixelwerte direkt in den Tailwind-Klassen hinterlegt (z. B. ```top-[123px] md:top-[162px] max-md:top-[70px]```)
 * Statt CSS Nesting kommt Tailwinds arbiträre Selektor-Syntax (```[&_...]```) direkt in den ```class```-Attributen zum Einsatz.
 
@@ -72,14 +72,14 @@ Einheitliches 2-Breakpoint-System, das in jeder HTML-Datei identisch über ```ta
 Einige Beispiele zur Umsetzung der Barrierefreiheit:
 
 * **serifenfreie Schrift**
-* **Kontrasterhöhung** 
+* **Kontrasterhöhung**
 * **Inhaltsbilder** haben beschreibende Texte
 * **ARIA-Attribute:** Accessible Rich Internet Applications und ist eine Gruppe von HTML-Attributen, die Webseiten für Menschen mit Behinderungen barrierefrei machen, insbesondere für Nutzer von Screenreadern. ARIA erweitert HTML um Semantik für komplexe, dynamische Inhalte (z.B. Menüs, Modale), die mit Standard-HTML nicht ausreichend beschrieben werden können, z. B. ```aria-label:``` HTML-Elementen wird eine textuelle Beschreibung für Screenreader hinzufügt
 * ```.sr-only```-Klasse für versteckte, aber screenreaderlesbare Inhalte
 * ```role-```Attribut ist ein wesentlicher Bestandteil von WAI-ARIA. Es teilt Hilfstechnologien wie Screenreadern mit, welche Funktion oder Bedeutung ein bestimmtes HTML-Element hat, insbesondere wenn dies nicht durch semantisches HTML (wie button, nav, header) ausgedrückt wird.
 * ```:focus-visible:``` Diese CSS-Pseudoklasse wird verwendet, um interaktive Elemente (Links / Buttons) nur dann visuell hervorzuheben, wenn sie über die Tastatur (z. B. Tab-Taste) fokussiert werden.
  * WCAG 2.4.1: Tastaturnutzer können Navigation mit einem Skip-Link zum Hauptinhalt überspringen
- 
+
 **Änderung nach der Umstellung auf Tailwind CSS:**
 * ```aria-current```/```aria-current="page"``` wurde aus dem Code entfernt: Da Header und Navigation per ```fetch()``` seitenübergreifend eingebunden werden, ließe sich das Attribut ohne JavaScript nicht korrekt pro Seite setzen – es hätte auf jeder Seite fälschlich denselben Link als „aktiv" markiert.
 * ```.sr-only``` ist keine eigene, projektdefinierte CSS-Klasse mehr, sondern die von Tailwind CSS mitgelieferte Standard-Utility-Klasse.
@@ -126,7 +126,7 @@ Die offizielle Empfehlung ist ein Build-Prozess, der das CSS *vorab* generiert:
 4. Ein Build-Befehl (```npx tailwindcss -i input.css -o output.css```), der das fertige, statische CSS einmal vorab erzeugt
 5. Die HTML-Dateien laden nur noch die fertige ```output.css``` per normalem ```<link rel="stylesheet">``` – kein ```<script>```-Tag, kein Laufzeit-Overhead
 
-**Warum trotzdem das CDN gewählt wurde:** Bei der Umsetzung war auf dem System kein Node.js/npm installiert, sodass kein ```npm install```/Build-Schritt selbst ausgeführt werden konnte und es sollten keine weiteren Technologien verwendet werden. Es wurde daraufhin die CDN-Variante gewählt, damit das Ergebnis sofort im Browser sichtbar ist, ohne dass zuerst Node installiert werden muss.
+**Warum trotzdem das CDN gewählt wurde:** Bei der Umsetzung war auf dem System kein Node.js/npm installiert, sodass kein ```npm install```/Build-Schritt selbst ausgeführt werden konnte und es sollten keine weiteren Technologien verwendet werden. Es wurde daraufhin die CDN-Variante gewählt, damit das Ergebnis sofort im Browser sichtbar ist.
 
 ### Die praktischen Unterschiede
 
@@ -151,7 +151,7 @@ Alle aktuellen Browser der letzten ca. 4 Jahre funktionieren problemlos – auf 
 | **Safari** (macOS/iOS) | ~15+ | Volle Unterstützung, inkl. iOS Safari für Mobile |
 | **Samsung Internet** | aktuell | Basiert auf Chromium, unproblematisch |
 
-## Mehrsprachigkeit / Internationalisierung (nicht umgesetzt)
+## Mehrsprachigkeit / Internationalisierung
 
 Das Projekt ist aktuell einsprachig (Deutsch, ```lang="de"``` fest in jeder HTML-Datei). Für eine mehrsprachige Erweiterung kämen bei einem reinen HTML/Tailwind-Projekt ohne Build-Prozess und ohne Backend grundsätzlich folgende Ansätze infrage:
 
@@ -172,3 +172,24 @@ Umgesetzt über Tailwinds eingebaute ```dark:```-Variante, gekoppelt an die Syst
 
 **Warum keine manuelle Umschaltmöglichkeit (Toggle-Button) umgesetzt wurde:** Ein Umschalter hätte entweder ein winziges JavaScript-Snippet zum Setzen einer ```dark```-Klasse auf ```<html>``` erfordert (Bruch mit der bisherigen „kein JS außer Header/Footer-Einbindung"-Linie), oder wäre als CSS-only-Variante (versteckte Checkbox + ```:checked```-Sibling-Selektor auf ```<body>```, analog zum Hamburger-Menü) machbar gewesen – dabei hätte sich die Auswahl aber bei jedem Seitenwechsel zurückgesetzt, da es bei 7 statischen Einzelseiten ohne ```localStorage``` (also ohne JavaScript) keine Möglichkeit gibt, die gewählte Einstellung über einen Seitenwechsel hinweg zu speichern. Die systembasierte Lösung liefert dagegen auf allen Seiten konsistent das vom Nutzer bereits im Betriebssystem gewählte Verhalten, ganz ohne diese Einschränkung.
 
+
+## Bewusste Einschränkungen der statischen Architektur
+
+Zwei Punkte sind bewusst in Kauf genommene Einschränkungen der gewählten Architektur (statische Einzelseiten, Header/Footer als per ```fetch()``` eingebundene Komponenten, kein weiteres JavaScript):
+
+* **Keine Markierung der aktiven Seite in der Hauptnavigation (```aria-current="page"```):** Da der Header auf allen 7 Seiten aus derselben Komponentendatei (```components/header.html```) injiziert wird, ist die Navigation auf jeder Seite identisch – sie „weiß" nicht, welche Seite gerade aktiv ist. Eine Markierung des aktiven Menüpunkts (visuell und per ```aria-current="page"``` für Screenreader) würde entweder zusätzliche JavaScript-Logik erfordern oder den Header pro Seite duplizieren – Letzteres würde den Vorteil der zentralen Komponente (Änderungen nur an einer Stelle) wieder aufheben. Beides widerspricht der Architekturentscheidung, weshalb darauf verzichtet wurde.
+* **Suchformular ohne Funktion:** Das Suchfeld im Header ist reines UI-Element ohne Backend. Eine echte Suche bräuchte entweder eine Serverkomponente oder eine clientseitige JavaScript-Suche (z. B. über einen vorab generierten Index) – beides zusätzliche Technologien, die bewusst nicht eingesetzt werden. Das Formular bleibt als gestalterisches Element und zur Demonstration der barrierefreien Formular-Auszeichnung (```role="search"```, ```aria-label```) erhalten.
+
+## Erkenntnisse / Lessons Learned
+
+Bei der Umsetzung des Projekts erarbeitete Erkenntnisse – inklusive der Irrwege, aus denen sie entstanden sind:
+
+* **```<details>```-Element hat eine harte Browsergrenze:** Der Inhalt eines ```<details>``` ohne ```open```-Attribut wird vom Browser gar nicht gerendert – das lässt sich durch kein CSS (auch nicht mit ```!important```) übersteuern. Erkenntnis: Für CSS-only auf-/zuklappbare Bereiche, die auch von außen gesteuert werden sollen, ist das Checkbox-Label-Muster (```peer-checked```) die robustere Wahl; die Monatsblöcke in events.html wurden deshalb von ```<details>/<summary>``` auf dieses Muster umgebaut.
+* **Tailwinds ```peer```/```group``` verlangen echte DOM-Nachbarschaft:** Mehrere Fehler (Events-Filter, Monats-Accordions) hatten dieselbe Ursache – das ```peer```-Element war kein tatsächliches Geschwisterelement der Elemente mit ```peer-checked:```-Klassen. Erkenntnis: Wenn ```peer-checked``` „nicht funktioniert", zuerst die DOM-Struktur prüfen, nicht die Klassen.
+* **Grenzen des Play-CDN-JIT:** Tief verschachtelte arbiträre Selektoren (Kombination aus Variante + ```[&_...]``` + Attributselektor + ```!important```) wurden vom CDN-Runtime wiederholt nicht zuverlässig generiert (Tabellen-Hover in detail.html, Ausrüstungs-Tabs). Erkenntnis: Einfache ID-basierte Selektoren sind den „cleveren" verschachtelten vorzuziehen.
+* **CSS-Spezifität verstehen statt ```!important``` einsetzen:** Der Tabellen-Hover-Fehler entstand, weil ```bg-white``` auf ```<td>``` gleichrangig mit ```group-hover:bg-...``` konkurrierte. Die Lösung war nicht mehr Gewalt (```!important```), sondern das Hintergrund-Utility eine Ebene nach oben auf ```<tr>``` zu verschieben – damit verschwand der Konflikt ganz.
+* **Zwei CSS-Mechanismen können sich gegenseitig blockieren:** ```:target``` (automatisches Öffnen beim Anspringen eines Ankers) und ```:checked``` (manuelles Auf-/Zuklappen) kämpfen um denselben Sichtbarkeits-Zustand – ein per ```:target``` geöffneter Bereich ließ sich manuell nicht mehr schließen. Ohne JavaScript ist das nicht auflösbar. Erkenntnis: Das Auto-Öffnen wurde bewusst wieder entfernt, statt ein halbfunktionierendes Feature zu behalten.
+* **Sticky Header verdecken Ankerziele:** Sprungziele brauchen ```scroll-margin-top``` (Tailwind: ```scroll-mt-[...]```), sonst landet die angesprungene Überschrift unter dem fixierten Header – in events.html (Monats-Schnellsprungleiste) und compliance.html (Inhaltsverzeichnis, Footer-Link zur Datenschutzerklärung) umgesetzt.
+* **Darkmode ist vor allem ein Vollständigkeitsproblem:** Die Farbe, die man beim systematischen Ergänzen der ```dark:```-Varianten übersieht, wird im Darkmode unsichtbar – so geschehen u. a. mit ```bg-[#f7f7f7]``` (Impressum-Seitenleiste), ```text-[#888]``` und Überschriften ganz ohne explizite Textfarbe (Standard-Schwarz auf dunklem Grund). Erkenntnis: Nach der Umstellung jede Seite visuell in beiden Modi prüfen – reines Suchen-und-Ersetzen genügt nicht.
+* **Kontraste rechnerisch prüfen statt schätzen:** Das Link-Blau ```#005fcc``` sah im Darkmode brauchbar aus, erfüllte aber mit 2,97:1 die WCAG-AA-Anforderung (4,5:1) nicht – per WCAG-Leuchtdichteformel nachgerechnet und auf ```#66b2ff``` (~7,9:1) angehoben (Details im Abschnitt „Darkmode").
+* **```fetch()```-Komponenten brauchen einen Webserver:** Die Header/Footer-Einbindung über ```js/script.js``` funktioniert nicht beim direkten Öffnen der HTML-Dateien über ```file://``` (Browser blockieren ```fetch``` auf lokale Dateien). Das Projekt muss über einen lokalen Webserver aufgerufen werden, hier mit der VS-Code-Erweiterung *Live Server*.
